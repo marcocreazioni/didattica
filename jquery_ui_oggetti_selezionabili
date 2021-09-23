@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingrandisci le immagini</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jquery.com/resources/demos/style.css">
+    <style>
+  #feedback { font-size: 1.4em; }
+  #selectable .ui-selecting { background: #FECA40; }
+  #selectable .ui-selected { background: #F39814; color: white; }
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+  /* selezionabili con riquadri */
+     #feedback2 { font-size: 1.4em; }
+  #selectable2 .ui-selecting { background: #FECA40; }
+  #selectable2 .ui-selected { background: #F39814; color: white; }
+  #selectable2 { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  #selectable2 li { margin: 3px; padding: 1px; float: left; width: 100px; height: 80px; font-size: 4em; text-align: center; }
+    </style>
+    
+    
+    

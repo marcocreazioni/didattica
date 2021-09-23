@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+class Fruit {
+  // Properties
+  public $name;
+  public $color;
+
+  // Methods
+  function set_name($name) {
+    $this->name = $name;
+  }
+  function set_color($color) {
+    $this->color = $color;
+  }
+  function get_color() {
+    return $this->color;
+  }
+  
+  function get_name() {
+    return $this->name;
+  }
+}
+
+$apple = new Fruit();
+$banana = new Fruit();
+$pesca = new Fruit();
+$apple->set_name('Mela');
+$banana->set_name('Banana');
+$pesca->set_name('Pesca');
+
+$apple->set_color('Verde');
+$banana->set_color('Gialla');
+$pesca->set_color('Arancione');
+echo "<table>"; 
+echo "<tr>". "<td>" . $apple->get_name() . "</td>" . "<td>"  . $apple->get_color() . "</td>" ."</tr>";  
+echo  "<tr>". "<td>" . $banana->get_name() . "</td>" . "<td>"  . $banana->get_color() . "</td>" ."</tr>";  
+echo  "<tr>". "<td>" . $pesca->get_name() . "</td>" . "<td>"  . $pesca->get_color() . "</td>" ."</tr>" ;  
+echo "</table>";
+?>
+ 
+</body>
+</html>

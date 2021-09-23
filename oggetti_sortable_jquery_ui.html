@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* blocco dell'oggetto sortable */
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; } 
+	
+#sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; border:1px solid black;background-color:white;}
+</style>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	  <link rel="stylesheet" href="https//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <!--script di jquery da utlizzare -->
+	  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+</head>
+<body>
+<ul id="sortable" style="margin: auto">
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4582/4582925.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4582/4582931.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4582/4582934.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4582/4582938.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4582/4582942.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4582/4582949.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4582/4582967.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4586/4586748.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4586/4586813.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4586/4586837.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4586/4586876.png" width="50px" height="50px" alt=""></li>
+  <li class="ui-state-default"><img src="https://image.flaticon.com/icons/png/128/4586/4586881.png" width="50px" height="50px" alt=""></li>
+</ul>	
+
+
+</body>
+</html>

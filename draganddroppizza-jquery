@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+<link rel="stylesheet" href="https//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <style>
+    #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+    #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; border: 1px solid black;background-image: url(https://www.giallozafferano.it/images/229-22980/Pizza-a-lunga-lievitazione_780x520_wm.jpg);color:white; }
+  </style>
+    <script>
+   $( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "<strong>inserito</strong>" );
+      }
+    });
+  } );
+  </script>  
+<meta charset="utf-8">
+<title>Documento senza titolo</title>
+</head>
+
+<body>
+  <div id="draggable" class="ui-widget-content">
+  <img src="https://cdn-icons.flaticon.com/png/512/5273/premium/5273841.png?token=exp=1635530998~hmac=cad7397a878bf7657056456faca3251b" style="width:50px;height:50px;" alt="pizza">
+</div> 
+    
+<div id="droppable" class="ui-widget-header">
+  <p>Inserisci</p>
+</div>    
+</body>
+</html>

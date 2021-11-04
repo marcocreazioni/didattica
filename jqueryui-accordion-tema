@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Qui si cambia il tema -->
+	  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/le-frog/jquery-ui.css">
+    <!- i link dei temi di jquery li scelgo in themes da questo link https://releases.jquery.com/ui/ e posso visualizzarli in anteprima da qui https://jqueryui.com/themeroller/#!zThemeParams=5d000080002c06000000000000003d8888d844329a8dfe02723de3e570162cf18d27450c454aa2f2e374d1d127fabb9ebc66c3ee5a70fb154870371702db6720bcd83f0eca39ba10d7f6bd647439767496f968435d183cbfecfa06b7949b71911400f68f7926a5fbb9566486570d0486c014f4e6e28d179e07e00d10d31c214aeae3962c8f2ae59d9ab9364ab92e3cd58ecf025ad698f15e5ba0c90a2c54071ddf7c156b9b3d4b22aedb0bd7f9b4f90e6e1ce24ceb5eb5eafa51808370969ffe4db384bd5d8e76eb3904f53bf8241fa42b40c9c5f127c5a7d57a2113e9d225893fa1232091f31e896139d2f88c2cade6e75a21ddf1be007170ba00eadaa99ce3de731cda79ca2878f4d4fb8a336123961300abddace84c05d6d3c7a27171e86545f358345c27747907701c73c862f426f71aa7861b7d4ce93261191cbeda5bdc4606ad96ebe1e3cdc22b542c7ab9544533b4e7cfe18af1c7a6e30ee74434d2088a4da21314853fa3467e765a7417d3e921934a5d940c869ecb0f6a7e01ed812b92968502b96acc66f18ee8c78b27e217b65ff031aa12e46f029737b9538a3cdff6706bf657fff405b9b7028bdaa925d2a298811890facd584427b784eb171080d0c0394442b6ddc24b2b116029aac0b2c6b2d665b600396aad8d92265f2868f97160648d1d758410db1289b5165be49f4571d6779ac29eb5ed0eb38fb79674a214def72f3482c9d3817ccda3dfff0a99c100 -->
+    
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <!--script di jquery da utlizzare -->
+	  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+</head>
+<body>
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div>
+ 
+
+</body>
+</html>

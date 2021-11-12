@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jquery</title>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.accordion.min.css" rel="stylesheet" type="text/css">
+<link href="bootstrap-5.1.1-dist/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.accordion.min.js"></script>
+ <script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
+<link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet">àò  
+
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6"><div id="Tabs1">
+  <ul>
+    <li><a href="#tabs-1">Servizio 1</a></li>
+    <li><a href="#tabs-2">Servizio 2</a></li>
+    <li><a href="#tabs-3">Servizio 3</a></li>
+    <li><a href="#tabs-4">Servizio 4</a></li>  
+  </ul>
+  <div id="tabs-1">
+    <p>Contenuto 1</p>
+  </div>
+  <div id="tabs-2">
+    <p>Contenuto 2</p>
+  </div>
+  <div id="tabs-3">
+    <p>Contenuto 3</p>
+  </div>
+    <div id="tabs-4">
+    <p>Contenuto 4</p>
+  </div>
+</div></div>
+    <div class="col-6">
+      <div id="Accordion1">
+        <h3><a href="#">Sezione 1</a></h3>
+        <div>
+          <p>Contenuto 1</p>
+        </div>
+        <h3><a href="#">Sezione 2</a></h3>
+        <div>
+          <p>Contenuto 2</p>
+        </div>
+        <h3><a href="#">Sezione 3</a></h3>
+        <div>
+          <p>Contenuto 3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="padding-top:10px;padding-bottom:10px">
+<div class="row">
+<div class="col-6"><div id="myScheduler"></div>
+<script>
+YUI().use(
+  'aui-scheduler',
+  function(Y) {
+    var events = [
+      {
+        content: 'Event1',
+        endDate: new Date(2021, 1, 1, 5),
+        startDate: new Date(2021, 1, 1, 1)
+      }
+    ];
+
+    var eventRecorder = new Y.SchedulerEventRecorder();
+    var weekView = new Y.SchedulerWeekView();
+
+    new Y.Scheduler(
+      {
+        boundingBox: '#myScheduler',
+        date: new Date(2021, 1, 1),
+        eventRecorder: eventRecorder,
+        items: events,
+        render: true,
+        views: [weekView]
+      }
+    );
+  }
+);</script>    </div>
+<div class="col-6"><div id="myDataTable"></div>
+    <script>YUI().use(
+  'aui-datatable',
+  function(Y) {
+    var columns = ['name', 'address', 'city', 'state'];
+
+    var data = [
+      {address: '1236 Some Street', city: 'San Francisco', name: 'John A. Smith', state: 'CA'},
+      {address: '3271 Another Ave', city: 'New York', name: 'Joan B. Jones', state: 'NY'},
+      {address: '9996 Random Road', city: 'Los Angeles', name: 'Bob C. Uncle', state: 'CA'},
+      {address: '1623 Some Street', city: 'San Francisco', name: 'John D. Smith', state: 'CA'},
+      {address: '9899 Random Road', city: 'Los Angeles', name: 'Bob F. Uncle', state: 'CA'},
+      {address: '9899 Bastioni Road', city: 'Florence', name: 'Bob Marley', state: 'Toscana'}
+        
+    ];
+
+    new Y.DataTable.Base(
+      {
+        columnset: columns,
+        recordset: data
+      }
+    ).render('#myDataTable');
+  }
+);</script></div>    
+    </div>    </div>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+$(function() {
+	$( "#Accordion1" ).accordion(); 
+});
+</script>
+</body>
+</html>

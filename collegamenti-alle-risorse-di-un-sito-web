@@ -1,0 +1,20 @@
+<!-- differenza tra collegamenti esterni e interni allo spazio web quando il contenuto e creato dentro il mio spazio -->
+
+un collegamento esterno prende il suo indirizzo da quello che compare sul browser
+<img src="https://cdn.pixabay.com/photo/2022/01/19/00/36/sea-6948569_1280.jpg">
+<a href="https://pixabay.com/it/photos/mare-rocce-montagne-croazia-costa-6948569/">
+
+un collegamento interno invece non prevedere l'inserimento di tutto l'indirizzo ma solo il nome dell'immagine compresa della sua estensione e che sia stata 
+caricata nella cartella principale del sito web(cartella di root) (public_html - Www) ovvero la cartella dove è presente il file index (index.php o index.html)
+<img src="sea-6948569_1280.jpg"> <img src="/sea-6948569_1280.jpg">
+<a href="readme.html"></a>
+
+Se poszioniamo il documento o l'immagine all'interno di una cartella creata dentro la cartella principale nell'indirizzo deve essere inclusa anche il nome
+della cartella dove ovete posizionato il contenuto (ad esempio il nome della cartella è img l''indirizzo da inserire sarà il seguente:
+
+<img src="img/sea-6948569_1280.jpg"> <img src="/img/sea-6948569_1280.jpg">
+<a href="img/readme.html"> <a href="/img/readme.html">
+
+
+
+

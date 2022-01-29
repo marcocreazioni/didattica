@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> La mia Pagina</title>
+</head>
+<body>
+<!--  Collegamenti ipertestuali con diversi attributi -->
+<a href="httos://libero.it" target="_new"> Apre il link in una finestra </a>
+<a href="httos://libero.it" target="_blank"> Apre il link in una scheda </a>
+<a href="httos://libero.it" target="_self"> Apre nella stessa scheda ma posso non metterlo </a>
+<a href="httos://libero.it" target="_blank" rel="nofollow"> Si usa rel sono nel collegamento aad un sito che non sia il nostro </a>
+
+<button> Crea un bottone</button> per poterlo collegare occorre inserirlo nel tag a
+
+<!--Sintatti del collegamento con bottone-->
+<a href="https://tuosito.it" target="_new"> <button>Bottone</button> </a>
+
+<!-- Collagamento con altri punti della pagina (il segnalibro) I FASE Creare i segnalibri ovverro i punti di destinazione -->
+ciao<a name="segnalibro">contenuto del segnalibro </a>
+
+<!-- Collagamento con altri punti della pagina (il segnalibro) II FASE Creare i collegamenti ai segnalibri -->
+<a href="#segnalibro">Vai al segnalibro</a>
+
+<!-- Collegare e far aprire un indirizzo email -->
+<a href="mailto:info@marcocreazioni.it" > info@marcocreazioni.it </a>
+<!-- Collegare e far aprire un indirizzo email  a piu destinatari-->
+<a href="mailto:dest1@mail.it,dest2@mail.it">Invia email</a>
+
+<!-- Collegare e far aprire un indirizzo email con l'aggiunta di un oggetto-->
+<a href="mailto:info@marcocreazioni.it?subject=Richiesta informazioni" > info@marcocreazioni.it </a>
+
+<!-- Collegare un numero di telefono con +39seguito dal numero di telefono -->
+<a href="tel:+39061234567"> 06 123 4567 </a>
+
+<!-- COllegare alla chat di whatsapp con immagine esterna si inserisce il sito di whatsapp per i collegamenti web https://wa.me/ seguito dal prefisso che si 
+indica con lo 0 piu il numero del paese ad esempio per l'italia 039 seguito dal numero di telefono-->
+<a href="https://wa.me/0393209013280"><img src="https://meteoclari.it/wp-content/uploads/2020/11/WhatsApp-icon-PNG.png" width="50px" height="50px"></a>
+
+<!-- COllegare alla chat di whatsapp con immagine esterna si inserisce il sito di whatsapp per i collegamenti web https://wa.me/ seguito dal prefisso che si 
+indica con lo 0 piu il numero del paese ad esempio per l'italia 039 seguito dal numero di telefono con messaggio di cortesia aggiungendo ?text= seguito dal
+messaggio. Se vi sono degli spazi inserite %20 al posto dello spazio nel link-->
+
+<a href="https://wa.me/0393209013280?text=ti%20contatto%20dal%20sito%20web"><img src="https://meteoclari.it/wp-content/uploads/2020/11/WhatsApp-icon-PNG.png" width="50px" height="50px"></a>
+
+</body>
+</html>

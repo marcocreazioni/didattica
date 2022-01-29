@@ -1,0 +1,20 @@
+Tag immagine
+
+<img src="https://cdn.pixabay.com/photo/2022/01/19/00/36/sea-6948569_1280.jpg">
+
+Tag immagine con dimensioni prestabilite da me width per la larghezza e height per l'altezza possono essere inseriti con il suffisso px o senza
+
+<img src="https://cdn.pixabay.com/photo/2022/01/19/00/36/sea-6948569_1280.jpg" width="100px" height="100px">
+
+<img src="https://cdn.pixabay.com/photo/2022/01/19/00/36/sea-6948569_1280.jpg" width="100" height="100">
+
+Se non ridimensiono in altezza o in larghezza manterra la proporzionalità dell'immagine
+
+<img src="https://cdn.pixabay.com/photo/2022/01/19/00/36/sea-6948569_1280.jpg" width="100px" height="auto">
+
+Inserimento dell'immagine in responsive e che si adegui alle dimensioni dei dispositivi e andiamo ad indicare la larghezza in percentuale rispetto al foglio
+cio siginifica che se voglio l'immagine a tutto schermo devo inserire il valore di larghezza al 100%
+<img src="https://cdn.pixabay.com/photo/2022/01/19/00/36/sea-6948569_1280.jpg" width="100%" height="auto">
+
+Gli attibuti al e title faranno in modo che l'immagine sia indicizzato meglio sui motori
+<img src="https://cdn.pixabay.com/photo/2022/01/19/00/36/sea-6948569_1280.jpg" width="100%" height="500" alt="montagna e mare" title="la mia montagna">

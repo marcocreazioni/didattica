@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   
+<meta charset="utf-8">
+<title>One Page Site</title>
+    <meta name="Description" content="Realizza siti web da noi e con noi">     
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#home">Realizzazione siti</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#chisono">Chi sono</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#lemieskill">Le mie skill</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#imieiservizi">Servizi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contatti" >Contatti</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>   
+<div class="container-fluid" style="background: rgba(115,111,224,1.00);color-white;"><a name="home" ></a>
+<div class="row"><div classe="col" style="margin-top: 15px;margin-bottom:15px;">
+    <div class="card">
+  <div class="card-header">
+    Costruisci ora il tuo sito web con noi per promuovere la tua vetrina
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">La tua vetrina per il tuo negozio</h5>
+    <p class="card-text">Sito chiavi in mano in apoena 30 giorni.Che aspetti contattami adesso</p>
+    <a href="#contatti" class="btn btn-primary">Contattami</a>
+  </div>
+</div>
+    
+    </div>
+    
+    
+    </div>
+    </div>  
+<div class="container-fluid"><a name="chisono"></a>
+<div class="row"><div class="col" style="margin-top:15px;"><div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://media-exp1.licdn.com/dms/image/C5603AQHx86iMMaUCWg/profile-displayphoto-shrink_200_200/0/1575642858415?e=1648684800&v=beta&t=rz1a-PWjMQjH0uKRzW_n4m7oV4OFU3mwYef0OkZ6Vww" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Marco Consiglio Web Master</h5>
+        <p class="card-text">Realizzazione siti web in wordpress e HTML5 responsive e adatto ad ogni dispositivo.</p>
+        
+      </div>
+    </div>
+  </div>
+</div></div><div class="col" style="margin-top:15px;"><div class="card" style="width: 100%;">
+  <div class="card-body">
+    <h5 class="card-title">Da sempre appassionato</h5>
+    <p class="card-text">Amante dell'informatica con la passione di realizzare siti web per i propri amici fino al lavorare per piccole, medie, grandi aziende e professionisti.</p>
+    <a href="#lemieskill" class="btn btn-primary">Scopri le mie skill</a>
+  </div>
+</div></div></div>    
+    </div>
+<div class="container-fluid" style="background: rgba(115,111,224,1.00);padding-bottom: 15px;"><a name="lemieskill" ></a>
+<div class="row" style=""><div class="col" style="margin-top:15px;"><div class="card">
+  
+  <div class="card-body">
+    <h5 class="card-title">Le mie skill</h5>
+    <p class="card-text"><p>HTML</p> <div class="progress">
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+</div></p><p>CSS</p>
+    <div class="progress">
+  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+</div><p><br>BOOTSTRAP</p>
+    <div class="progress">
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+</div><p><br>WORDPRESS</p>
+    <div class="progress">
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 90%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+   
+  </div>
+</div></div></div>   
+    </div>
+<div class="container-fluid" style="margin-top:15px;"><a name="imieiservizi"></a>
+<div class="row"><div class="col"><ul class="list-group">
+  <li class="list-group-item">Siti Web</li>
+  <li class="list-group-item">Consulenza Seo</li>
+  <li class="list-group-item">Landing Page</li>
+  <li class="list-group-item">Creazioni Email</li>
+  <li class="list-group-item">Assistenza e Gestione Siti</li>
+</ul></div><div class="col"><ul class="list-group">
+  <li class="list-group-item">300€</li>
+  <li class="list-group-item">50€</li>
+  <li class="list-group-item">99€</li>
+  <li class="list-group-item">10€</li>
+  <li class="list-group-item">99€</li>
+</ul></div></div>    
+    </div>
+<div class="container-fluid" style="background: rgba(115,111,224,1.00);padding-top:15px;padding-bottom: 15px;"><a name="contatti" style="background: rgba(115,111,224,1.00)"></a>
+    <div class="row"><div class="col"><div class="card" style="width: 100%;">
+  <div class="card-body">
+    <h5 class="card-title">Contattami ora</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Dove Siamo</h6>
+    <p class="card-text"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.2895675544464!2d12.528240215108873!3d41.90813347151378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f63d6056cd1df%3A0xc28b21905f0c82d7!2sVia%20Tiburtina%2C%2036%2C%20Roma%20RM!5e0!3m2!1sit!2sit!4v1643709969222!5m2!1sit!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+    <h6 class="card-subtitle mb-2 text-muted">Email e Telefono</h6>
+    <a href="mailto:info@marcocreazioni.it" class="card-link">info@marcocreazioni.it</a>
+    <a href="tel:+393209013280" class="card-link"> +39 320 9013280</a>
+  </div>
+</div></div></div></div>  
+<div class="containter-fluid" style="background: rgba(187,184,184,0.92);padding-top: 30px;padding-bottom: 30px;"><center>By Marcocreazioni.it di Marco Consiglio</center></div>    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- come integrare il css all'interno dell'html e viene richiamato dall'attributo style o dal tag style-->
+
+<!-- CSS in Linea  (Gerarchimente è il piu importante)-->
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<p> il mio paragrafo <p>
+<p style="color: red;">Il mio paragrafo scritto in rosso (sintassi del css in linea: proprietà + ":" + il valore da attribuire "valore" + ";" + ' " ') </p>  
+</body>
+</html>
+
+
+<!-- CSS integrato  (Gerarchimente è al secondo posto) e va inserito all'interno del tag ("head")-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p { color: red; 
+}
+// Tutti i paragrafi saranno colorati di rosso //
+</style>
+</head>
+<body>
+<p>il mio paragrafo <p>
+<p>Il mio paragrafo scritto in rosso </p> 
+</body>
+</html>
+
+<!-- CSS esterno  (Gerarchimente è al terzo posto) e va inserito all'interno del tag ("head") ma senza il tag style-->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="mio.css" type="text/css"> 
+<!-- collegamento ad un documento realizzato in linguaggio CSS -->
+</head>
+<body>
+<p>il mio paragrafo <p>
+<p>Il mio paragrafo scritto in rosso </p> 
+</body>
+</html>

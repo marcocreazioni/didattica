@@ -1,0 +1,53 @@
+<!-- Localizzazione degli utenti per lingua -->
+
+<!DOCTYPE html>
+<html lang="en-Us">
+<head>
+</head>
+<body>
+...
+</body>
+</html>
+<!---come creare un sito in multilingua in condice puro -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="alternate" hreflang="x-default"
+       href="https://www.example.com/index.html" /> Link del sito originale
+<link rel="alternate" hreflang="en-us"
+       href="https://www.example.com/index_en.html" /> Link della pagine in lingua inglese
+<link rel="alternate" hreflang="es"
+       href="https://www.example.com/index_es.html" /> Link della pagine in lingua spagnolo
+<link rel="alternate" hreflang="de"
+       href="https://www.example.com/index_de.html" /> Link della pagine in lingua tedesca
+<!-- Se voglio obbligare google a non attivare la traduzione inseriamo nell' (Head) il meta tag -->
+<meta name="googlebot" content="notranslate"/>
+</head>
+<body>
+...
+</body>
+</html>
+
+<!-- Traduzione del sito con Google translate -->
+<!DOCTYPE html>
+<html>
+<head>
+<title> La mia pagina </title>
+</head>
+<body>
+<!--inserire il div subito dopo il tag (Body) -->
+<div id="google_translate_element"></div> 
+
+<!--gli script vanno inserite prima della chiusura del tag (body) -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></body>
+</html>
+
+
+
+

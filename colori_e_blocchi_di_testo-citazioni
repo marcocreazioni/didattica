@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color: lightblue;color:blue;" >
+<h1 style="color: green"> Il mio titolo</h1>
+<p style="background-color: yellow;color: black;">Do not forget to buy <mark style="background-color: orange;">milk</mark> today.</p>
+<p style="color:#25aec2;background-color:#8427bf"> Paragarafo successivo </p>
+<!-- Q = virgolette--> <!--blockquote = citazione con rientro -->
+<blockquote style="background-color: rgb(153,227,158)"><q> la casa è bella </q></blockquote>
+<!---address blocco indirizzo -->
+<address style="background-color: rgba(23,80,175,0.3"> Lire Spa, <br>
+via dei maestri 12<br>
+roma (RM) </address>
+<!--abbr per gli acronimi e le sigle -->
+<abbr style="background-color: hsl(298,81%,89%)">CTT</abbr>
+<!--cite citare con testo in corsivo-->
+<cite style="background-color: hsla(298,81%,89%,0.5)">Valore di trasparenza</cite>
+<!--sintassi del colore in css -->
+<!--
+Backgroun-color = cambia lo sfondo color =cambia il colore del testo
+
+background-color: lightblue; (indicazione del colore in inglese)
+background-color: #8427bf; (indicazione del colore in esadecimale)
+background-color: rgb(153,227,158); (indicazione del colore in rgb)
+background-color: background-color: rgba(23,80,175,0.3 (indicazione del colore in rgba dove l'ultimo valore di trasparenza va indicato in un intervallo tra 0 e 1)
+background-color: hsl(298,81%,89%); (indicazione del colore hsl [luminosità saturazione])
+background-color: hsla(298,81%,89%,0.5); (indicazione del colore hsl [luminosità saturazione] con indicazione sulla trasparenza va indicato in un intervallo tra 0 e 1)
+-->
+</body>
+</html>

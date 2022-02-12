@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<!-- importazione di un carattere google font -->
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+<!--importare font su un sito web che appartiene a me -->
+<style>
+@font-face {
+  font-family: 'Miofont';
+  font-display: swap;
+  src: url(miofonts.otf) format('otf');
+</style>
+
+</head>
+<body>
+<!-- inserire un carattere importato più delle riserve -->
+<h2 style="font-family:'Montserrat',helvetica,arial">Voglio usare Montserrat</h2>
+<!-- creare eccezioni all'interno di un blocco di testo con span -->
+
+<h1 style="color:Tomato;font-family:helvetica;"><span style="color:green;font-weight:bolder;font-size:45pt">H</span>ello Worl<span style="color:green;">d</span></h1>
+
+<p style="color:DodgerBlue;font-family:arial">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+<p style="color:MediumSeaGreen;font-family:'Courgette',handwriting">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<!-- Altre proprietà che possiamo dare al font 
+font-family: scegliamo il font da utlizzare
+font-weight: il peso del carattere dal thin,light,bold,bolder,in altenativa usare un valore da 100 (piu sottile) a 900 piu spesso
+font-size: inidica la grandezza è può essere indicata in: pt, px, em, %,vw
+letter-spacing: spaziatura tra le lettere word-spacing: spaziatura tra le parole
+line-hight: interlinea indicata in px pt ecc spazio tra due righe
+text-indent: rientro della prima riga
+white-space: nowrap; non mettere a capo i testi
+-->
+<p style="font-family:Montserrat;font-weight:600;font-size: 16pt;letter-spacing:10px;word-spacing:30px;"> La casa del gallo si era moltiplicata a dismisura </p>
+
+
+
+</body>
+</html>

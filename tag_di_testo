@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<!-- Commenti -->
+<h1 align="center">Titolo Grande</h1>
+<hr>
+<h2 align="right">This is a Heading</h2>
+<h3 align="left">This is a Heading</h3>
+<h4>This is a <mark>Heading</mark></h4>
+<h5>This is a Heading</h5>
+<h6>This is a Heading</h6>
+<p><i>Aggiunta</i> <br>di <strong>un testo.</strong></p>
+<p align="justify"> La <u>casa</u> del gallo di <sup>p</sup>rov<sub>a</sub>Allinea in modo giusticato il testo di un paragrafo o di quelsiasi blocco di testo di una pagina web  </p>
+<p align="justify"> Agire con il testo. E vedete come tenderà a riempire lo spazio che il paragrafo vuole occupare</p>
+<blockquote> Testo per una citazione
+</blockquote>
+<address>
+Roma Srl
+Via Rossi 12
+00100
+Roma
+</address>
+<code>IL CODICE UTILIZZA L'HTML</code>
+</body>
+</html>

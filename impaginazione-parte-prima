@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+header {background-color: yellow;
+        padding: 1px;
+        margin-top: -8px;
+        width:105%;
+        margin-left: -8px;
+}
+h1 {text-align: center;}
+nav {background-color: pink;
+     padding: 1px;
+     margin-top: -20px;
+}
+li {display:inline-block
+}
+section {background-color: lightblue;
+}
+article {background-color: lightgreen;
+}
+aside {background-color: orange; 
+}
+div {background-color: lightgrey;
+     width:50%;
+     height:200px;
+     padding: 60px 10px 30px 60px;
+     margin: auto;
+     border: 2px solid black;
+}
+footer{background-color: tomato;
+       padding: 10px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Testata del sito</h1>
+</header>
+<nav><ul><li>Home&nbsp;</li><li>Chi siamo</li></ul></nav>
+<section>
+<article><p>Il mio paragrafo è il seguente</p></article><aside><img src="https://images.pexels.com/photos/11284548/pexels-photo-11284548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width="200px"></aside>
+</section>
+<div><p>Si posizione ovunque all'interno di una pagina</p></div>
+<footer>Copyright 2022</footer>
+</body>
+</html>
+

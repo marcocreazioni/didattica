@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+/*  square:quadratini,circle:cerchi, none: nessun punto elenco,                  */
+ul {list-style-type: square;
+/*  inside:punto all'interno del testo,outside:punto all'esterno,                  */
+list-style-position: inside;
+/*  inside:punto all'interno del testo,outside:punto all'esterno,                  */
+}
+#menu {display: inline-block;}
+/*  upper-roman:numerazione romana, lower-alpha: elencp alfabetico,                  */
+ol {list-style-type: lower-alpha;
+}
+.punti-immagine {list-style-image: url('immagine.png');
+  
+ list-style-position: inside;
+
+}
+</style>
+</head>
+<body>
+<!-- elenco testuale -->
+<ul>
+ <li><a href="#">Primo</a> </li>	
+ <li>Secondo</li>
+ <ul><li>Secondo di uno </li><li>Secondo di due</li>
+      <ul><li>Secondo di uno di uno</li></ul>  
+ </ul>  
+ <li>Terzo</li>
+</ul>
+<hr>
+<!-- elenco testuale con punti immagine -->
+<ul class="punti-immagine">
+ <li><a href="#">Primo</a> </li>	
+ <li>Secondo</li>
+ <ul class="punti-immagine"><li>Secondo di uno </li><li>Secondo di due</li>
+      <ul class="punti-immagine"><li>Secondo di uno di uno</li></ul>  
+ </ul>  
+ <li>Terzo</li>
+</ul>
+<hr>
+<!--elenco numerico -->
+<ol>
+ <li><a ref="#">Primo</a> </li>	
+ <li>Secondo</li>
+ <ol><li>Secondo di uno </li><li>Secondo di due</li>
+      <ol><li>Secondo di uno di uno</li></ol>  
+ </ol>  
+ <li>Terzo</li>
+</ol>
+
+<hr>
+<!--elenco numerico -->
+<ul style="background-color:yellow">
+<a href="#"><li id="menu">Primo&nbsp;  </li></a>	
+ <li id="menu">Secondo&nbsp; </li>
+ <li id="menu">Terzo&nbsp; </li>
+</ul>
+</body>
+</html>

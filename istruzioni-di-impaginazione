@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- l'attributo lang contraddistingui la lingua della pagina -->
+<html lang="it">
+<head>
+<title>CSS Template</title>ù
+<!-- Tag che dici al browser che la pagina è in carattere latini -->
+<meta charset="utf-8"> 
+<!-- Tag che dici al browser che la pagina deve scalare i contenuti e adattarli al display -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+/*  box-sizing: border-box; */
+    color: orange; 
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  /* display: none (rimuove l'oggetto facendo scalare i contenuti */
+  /* display: block (permette ad un oggetto che non è un blocco (h1,span,p ecc che non sono normalmente dei blocchi di occupare lo spazio di una riga o d
+  piu righe portando i contenuti esterni a capo*/
+  /* display: inline-block (permette a piu oggeti di occupare una singola linea */
+  /* visibility: hidden (rimuove l'oggetto non facendo scalare i contenuti */
+  
+  /* position: fixed (consente ad un blocco di agganciarsi ai margini della pagina e possono essera date indicazioni sulla posizione grazie alle istriuzione 
+                      top: -px ; bottom: -px ; left: -px ; right: -xpx;)
+  /* position: static (proprieta intrinseca e consente ad un blocco di non essere sovrapposto con un altro)                   
+  
+  /* position: relative (consente ad un blocco di spostarsi al di sopra di un altro blocco possono essera date indicazioni sulla posizione grazie alle istriuzione 
+                      top: -px ; bottom: -px ; left: -px ; right: -xpx; le posizioni sono relative rispetto al blocco ospitato)
+  /*  position: absolute (consente ad un blocco di spostarsi al di sopra di un altro blocco possono essera date indicazioni sulla posizione grazie alle istriuzione 
+                      top: -px ; bottom: -px ; left: -px ; right: -xpx; con la differenza che la posizione delle misure sono relative alla pagine)  absolute va al
+                      di sopra di tutti gli ogggeti con altre proprieta position fixed compreso; 
+  
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+ 
+  width: 100%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+;
+  padding: 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+  overflow: hidden; /* fa in modo che i contenuti che non rientrano nell'altezza del blocco vengano nascosti */
+  overflow: auto; /* fa apparire tutti i contenuti aprendo una barra di scorrimento verticale */
+  overflow: scroll; /* fa apparire tutti i contenuti aprendo una barra di scorrimento verticale e barra di scorrimento orizzontale */
+  overflow: visible;  /* mostra tutti i contenuti non rispettando l'altezza del blocco èed è proprietà intrinseca di tutti i blocchi */
+ /* overflow-x: auto/scoll/hidden /* fa apparire  o meno tutti i contenuti di un blocco in orizzoantele */
+ /* overflow-Y: auto/scoll/hidden /* fa apparire  o meno tutti i contenuti di un blocco in verticale */
+}
+
+/* Clear floats after the columns */
+
+  
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+<header>
+  <h2>Cities</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>

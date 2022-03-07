@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+header {background-color: yellow;
+        text-align: center;
+        padding: 1px;
+        margin-top: -8px; 
+        margin-left: -8px;
+        margin-right: -8px;
+        
+        
+}
+nav {
+     height:37px;
+     text-align:left;
+    
+    
+     }
+section {background-color: lightgreen;
+         padding: 1px;
+         margin-top: -8px;
+         margin-left: -8px;
+         margin-right: -8px;
+}
+img { margin: auto;
+      display: block;
+      border: 1px solid white;
+}
+
+footer {background-color: tomato;
+        padding: 1px;
+         margin-top: -8px;
+         margin-left: -8px;
+         margin-right: -8px;
+        
+        
+        
+}
+a {text-decoration: none;
+}
+li {list-style-type: none;
+    display: inline-block;
+    
+    
+    }
+
+</style>
+</head>
+<body>
+<header>
+<h1> Il mio contentuto </h1>
+
+
+<nav>
+<ul><li><a href="#">Home</a></li><li><a href="#">&nbsp;Chi siamo</a></li></ul>
+</nav>
+</header>
+
+<section>
+<h3 style="padding-left:30px;padding-top:10px">La casa di mattoni</h3><p style="padding:5px;">Un luogo pieno di Mattoni</p> 
+
+<img src="https://cdn.pixabay.com/photo/2016/11/23/13/48/beach-1852945_1280.jpg" width="50%">
+
+</section>
+<section>
+<p>I galli cantavano spaesati</p>
+</section>
+
+<footer>
+<p>Didattica</p>
+</footer>
+<!--abbiamo sfruttato i margini negativi -->
+</body>
+</html>

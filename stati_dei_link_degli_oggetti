@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*  link non visitato */
+a:link {
+  color: red;
+}
+
+/* link visitato */
+a:visited {
+  color: green;
+}
+
+/* comportamento al passaggio del mouse */
+a:hover {
+  color: hotpink;
+}
+
+/* link premuto */
+a:active {
+  color: blue;
+}
+div {widht:500px; 
+     height: 200px;
+     background-image: linear-gradient(90deg, tomato,orange);
+     padding-left: 10px;
+     padding-top: 5px;
+}
+/* Nei comportamenti si aggiungono solo le istruzioni che vogliamo cambiare quando vogliamo ottenere quel comportamento
+nel caso in questione abbiamo voluto al passagio del mouse cambiare il colore del testo nel blocco, e sfondo del blocco, sovrascrivendo in pratica
+background-image*/
+
+div:hover {color: white;
+           background-color: tomato;
+           background-image: linear-gradient(tomato,tomato);
+}
+</style>
+</head>
+<body>
+
+<h2>Styling a link depending on state</h2>
+
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+
+<a href="#">prova</a><br>
+<div><h1>Il mio blocco</h1></div>
+</body>
+</html>

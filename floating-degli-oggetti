@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*Float è il comando per spostare un blocco nella posizione sinistra o destra con proprieta "left e right" lasciando uno spazio libero dalla parte opposta
+dove possono inserirsi gli altri oggetti */
+header{background-color: yellow;
+   float: left;
+   width: 50%;
+}
+div {background-color: orange;
+   float: left;
+   width: 50%;
+}
+/* il comando clear impedisce agli oggetti di occupare lo spazio libero utlizzato dagli altri blocchi del comando float */
+section { background-color: lightblue; 
+       display: block;
+       clear: left;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<header>My First Heading</header>
+<div>My first paragraph.</div>
+<section>Eccezione ad un testo </section>
+
+</body>
+</html>

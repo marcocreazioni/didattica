@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*Media Query consentono di far assumere un comportamento diverso agli oggetti in moda da ottenere delle proprietà responsive la sintassi da utlizzare è "@media only screen" o "@media all" piu il compertamento che devono assumere gli oggetto che va indicato tra parentesi (max-width: x px o min-width, widht o i comandi con height) è la parentesi graffa che deve includere tutte le istruzioni css che devono cambiare. Se si stabilisce una dimensiaone massima bisogna come ad esempio anche una dimensione minima con le relative istruzioni */
+@media only screen and (max-width: 300px) {
+header {width: 100%;
+        color: white;
+        background-color: purple;
+        
+       }
+div    {color: white;
+        clear: left;
+        width: 100%;
+        background-color: tomato;
+       }
+}
+
+@media only screen and (min-width: 301px) {
+header{background-color: yellow;
+   float: left;
+   width: 50%;
+
+       }
+div {background-color: orange;
+   float: left;
+   width: 50%;
+     }
+}     
+section { background-color: lightblue; 
+       display: block;
+       clear: left;
+       /*min-width: il blocco non puo diventare piu piccolo delle dimensioni stabilite */
+       min-width: 150px;
+       /*max-width: il blocco non puo diventare piu grandi delle dimensioni stabilite */
+       max-width: 300px;
+       
+}
+
+
+</style>
+
+</head>
+<body>
+
+<header>Io sono header</header>
+<div>Io sono il div</div>
+<section>Eccezione ad un testo </section>
+
+</body>
+</html>
+

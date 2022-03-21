@@ -1,0 +1,39 @@
+/*Copiare da windows font o dalla cartella dei caratteri il file con la famiglia di caratteri da importare
+Successivamente creare un file CSS e inserire le seguenti istruzioni */
+
+
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+  font-family: 'RoyalSignage_1.4'; /* in font family va inserito il nome del carattere che compare aprendolo */
+  src: url(/RoyalSignage_1.4-Regular.otf) format('otf'); /*in src va indicato il percorso con il nome del file che vogliamo importare mettiamo solo lo slash
+                                                           se  vogliamo caricare il caricare il carattere nella cartella principale del sito */ 
+}
+
+
+/* una volta creato il documento css con le istruzioni dobbiamo incorporare il file css in tutte le pagine inserendo nella sezione <head> il
+seguente codice*/ 
+
+<link rel="stylesheet" href="nomedelvostrofile.css" type="txt/css">
+
+pASSAGGIO SUCCESSIVO RICHIAMARE NEL TAG HTML NELLA SEZIONE HEAD LA FAMIGLIA DI FONT
+COME DA ESEMPIO
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home Page</title>
+<link href="carattere.css" rel="stylesheet" type="text/css">   
+<style type="text/css">
+
+body {
+    background-color: rgba(227,115,117,1);
+    font-family: 'Royal Signage_1.4', arial;
+}
+h1 {font-family: 'Royal Signage_1.4', arial}
+
+}
+</style>
+
+</head>
+

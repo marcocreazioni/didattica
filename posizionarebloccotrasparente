@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home Page - Web 3</title>
+<style type="text/css">
+@import url("webfonts/Minerva/stylesheet.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+
+body,td,th {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 900;
+    color: rgba(234,33,36,1);
+    word-spacing: 10px;
+    font-size: 16pt;
+}
+h1 {font-family: 'Nunito Sans', sans-serif;
+    font-weight:900;}
+body {
+    background-color: rgba(117,148,224,1);
+    background-image: url(img/pietra.jpg);
+    background-repeat: repeat;
+   
+}
+.trasparente {background-color:white;
+              opacity:0.5;
+              min-height: 400px;
+    
+    
+}
+.annidato {color:black;
+           position:relative;
+           top: -400px;
+}
+</style>
+ 
+</head>
+
+<body>
+<div class="trasparente">
+   
+</div>
+<div class="annidato"> <h1 style="text-align: center;">Sito in costruzione</h1>
+    <p style="text-align: center">Presto saremo <strong>online,</strong> vi aspettiamo </p>
+    <p style="text-align: center">Nellla modalità di progettazione dei contenuti potrei lavorare direttamente da qui<br>
+    in questo modo mi mette un accapo con una sola interline.</p>
+    <p style="text-align: center">Se non uttilizzo il tasto maiuscolo lui crea un nuovo <em>pargrafo</em>.</p></div>    
+</body>
+</html>

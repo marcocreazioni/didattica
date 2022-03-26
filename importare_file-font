@@ -25,6 +25,8 @@ COME DA ESEMPIO
 <title>Home Page</title>
 <link href="carattere.css" rel="stylesheet" type="text/css">   
 <style type="text/css">
+<!-- Importazione alternative del foglio di stile -->
+@import url ("carattere.css");
 
 body {
     background-color: rgba(227,115,117,1);

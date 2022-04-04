@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Immagine in mapping</title>
+</head>
+
+<body>
+<div style="width:100%;height:528px;background-color:yellow;margin:auto" >    
+<img src="immagini/europe-63026_1920.jpg" alt="" width="100%" height="528" usemap="#Map" style="margin:auto"/>
+<map name="Map">
+  <area shape="rect" coords="186,274,362,410" href="https://it.wikipedia.org/wiki/Francia" target="_new" alt="Francia">
+  <area shape="rect" coords="497,258,637,344" href="https://it.wikipedia.org/wiki/Polonia" alt="Polonia" target="_new">
+  <area shape="poly" coords="771,485,746,481,716,502,749,509,770,488" href="https://it.wikipedia.org/wiki/Cipro" target="_new" alt="Cipro">
+</map>
+</div>
+    <a href="https://it.wikipedia.org/wiki/Spagna" target="new">
+        <div style="position:relative;top:-165px;left:50px; background-color:trasparent;width:80px;height:80px;" ></div>
+    </a>
+</body>
+</html>

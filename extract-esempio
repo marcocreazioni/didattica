@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<style>
+header { 
+    width: 100%;
+	height: 109px;
+	border-color: #3e3b3a;
+	border-style: solid;
+	background-image: -webkit-linear-gradient(90deg, #88d0cf 0%, #2727d5 100%);
+	background-image: -moz-linear-gradient(90deg, #88d0cf 0%, #2727d5 100%);
+	background-image: -o-linear-gradient(90deg, #88d0cf 0%, #2727d5 100%);
+	background-image: linear-gradient(0deg, #88d0cf 0%, #2727d5 100%);
+    vertical-align: middle;
+    }
+
+    h2 {
+    font-family: Lato;
+	color: #20e192;
+	font-size: 18pt;
+	font-weight: 700;
+    
+    } 
+    .menu {
+    font-family: Lato;
+	color: #f4ed18;
+	font-size: 14pt;
+	font-weight: 700;
+    padding-top: 50px;
+    }
+    
+    </style>    
+<meta charset="utf-8">
+<title>Pagina Estratta da photoshop</title>
+    
+</head>
+
+<body>
+<header>
+<table style="width: 100%"> 
+<tr><td><img src="immagini/Shape_1_1.png" alt="logo"></td><td style="padding-top: -25px;"><h2>Dino PIANTE fiori</h2></td><td>&nbsp;</td><td><p class="menu"> Home </p>
+    </td><td><p class="menu">Servizi</p></td><td><p class="menu"> Contatti</p></td></tr>    
+
+
+ </table>   
+</header>
+    
+</body>
+</html>

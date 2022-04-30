@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><style>
+.nav-link:hover{
+      display:block;
+      color:orange;
+      }
+.nav-link {color:black;
+      }      
+      
+      
+      
+      </style>
+      
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	
+  </head>
+  <body>
+  <div class="container-fluid" style="min-height: 500px;opacity:0.5;margin-left:0px;padding-right: :5px;overflow-x: hidden;background-image: url('https://images.unsplash.com/photo-1650964600810-6880e6c422e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');background-size:100%;background-repeat:no-repeat;"></div>
+    <nav class="navbar navbar-expand-lg" style="background-color:rgba(128,128,128,0.6);position:relative;top:-100px;color:black;"> <a class="navbar-brand" href="#" style="color:black">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> </div>
+          </li>
+          <li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+         
+        
+        </form>
+      </div>
+    </nav>
+<div class="container-fluid" style="min-height: 500px;opacity:0.5;margin-left:0px;padding-right: :5px;overflow-x: hidden;background-image: url('https://images.unsplash.com/photo-1651218190245-894906f440a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80');background-size:100%;background-repeat:no-repeat;margin-top:-55px">
+  <div class="row" style="padding-top:30px">
+    <div class="col">
+      <div class="card"> <img class="card-img-top" src="img/card-img.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a> </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"> <img class="card-img-top" src="img/card-img.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a> </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"> <img class="card-img-top" src="img/card-img.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- body code goes here -->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script> 
+  <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>

@@ -6,8 +6,10 @@
            text-shadow: 2px 1px black;}
 
       
-</style>  
+</style>
+<!-- link per poter aggiungere icone a pulsanti ed altri oggetti -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+      
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,7 +71,9 @@
         <div class="carousel-item active"> <img src="https://cdn.pixabay.com/photo/2022/04/21/19/42/birds-7148194_1280.jpg" alt="First slide" width="100%" height="400px" class="d-block mx-auto">
           <div class="carousel-caption">
             <h5 class="capzione">Prima slide</h5>
-           <a href="tel:+39123456790"><button type="button" class="btn btn-danger"><i class="bi bi-telephone-fill"></i>  Chiamaci</button></a>
+           <a href="tel:+39123456790"><button type="button" class="btn btn-danger">
+	   <!--qui è stata aggiunta un icona del telefono -->
+	   <i class="bi bi-telephone-fill"></i>  Chiamaci</button></a>
           </div>
           </div>
         </div>

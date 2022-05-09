@@ -2,14 +2,18 @@
 <html lang="it">
   <head>
     <style>
-      .capzione {font-size:48px;
+.capzione {font-size:48px;
            text-shadow: 2px 1px black;}
-
+/*CSS che modifica la card lista come un menu*/        
+li a:hover {text-decoration:none;
+            color: orange;
+}
+        
+.list-group-item:hover{background-color:deepskyblue;
+        }        
       
-</style>
-<!-- link per poter aggiungere icone a pulsanti ed altri oggetti -->
+</style>  
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-      
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,11 +73,10 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active"> <img src="https://cdn.pixabay.com/photo/2022/04/21/19/42/birds-7148194_1280.jpg" alt="First slide" width="100%" height="400px" class="d-block mx-auto">
+        
           <div class="carousel-caption">
             <h5 class="capzione">Prima slide</h5>
-           <a href="tel:+39123456790"><button type="button" class="btn btn-danger">
-	   <!--qui è stata aggiunta un icona del telefono -->
-	   <i class="bi bi-telephone-fill"></i>  Chiamaci</button></a>
+           <a href="tel:+39123456790"><button type="button" class="btn btn-danger"><i class="bi bi-telephone-fill"></i>  Chiamaci</button></a>
           </div>
           </div>
         </div>
@@ -101,7 +104,47 @@
           <!--chiusura della quarta slide-->
     
       <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
-
+      
+  <div class="container" style="padding-top:20px;"></div>
+  <div class="row" style="padding-bottom: 20px;background-color:aliceblue">
+    <div class="col-6">
+      <div class="card">
+          <!--Rimuovere mb4-->
+          <img class="card-img-top" src="https://cdn.pixabay.com/photo/2022/04/12/01/07/pacific-gull-7126935_1280.jpg" alt="Parnice">
+        <div class="card-body" style="background-color:orange;">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a> </div>
+      </div>
+    </div>
+    <div class="col-6">     <div class="card">
+          <!--Rimuovere mb4-->
+          <img class="card-img-top" src="https://cdn.pixabay.com/photo/2022/05/04/09/13/bordeaux-7173548_1280.jpg" alt="versailles">
+        <div class="card-body" style="background-color:deepskyblue">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a> </div>
+      </div></div>
+  </div>
+  <div class="row">
+        <div class="col-3">
+            <!--Card con lista -trasformata in menu vedere anche il css nell'head-->
+          <div class="card" style="width:100%;">
+            <div class="card-header"> Menu verticale&nbsp; </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> <a href="#">List Item 1</a></li>
+               <li class="list-group-item"><a href="#">List Item 2</a></li>
+               <li class="list-group-item"><a href="#">List Item 3</a></li>
+               <li class="list-group-item">
+               <a href="#">List Item 4</a></li>
+               
+              </ul>
+          </div>
+        &nbsp;</div>
+        <div class="col-3">Inserite qui il contenuto</div>
+        <div class="col-3">Inserite qui il contenuto</div>
+        <div class="col-3">Inserite qui il contenuto</div>
+  </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-3.4.1.min.js"></script>
 

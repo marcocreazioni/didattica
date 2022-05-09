@@ -141,8 +141,21 @@ li a:hover {text-decoration:none;
               </ul>
           </div>
         &nbsp;</div>
-        <div class="col-3">Inserite qui il contenuto</div>
-        <div class="col-3">Inserite qui il contenuto</div>
+        <div class="col-6"><div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="https://cdn.pixabay.com/photo/2022/04/23/20/51/nature-7152461__480.jpg" class="card-img" alt="albero">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        
+      </div>
+    </div>
+  </div>
+</div></div>
+       
         <div class="col-3">Inserite qui il contenuto</div>
   </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 

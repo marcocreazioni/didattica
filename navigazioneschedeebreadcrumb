@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <style>
+.capzione {font-size:48px;
+           text-shadow: 2px 1px black;}
+/*CSS che modifica la card lista come un menu*/        
+        li a:hover {
+        text-decoration: none;
+        font-weight:bold;
+        color: white;    
+        }
+        .list-group-item:hover {background-color:cyan;}
+        li i {color:darkblue;
+        font-size:14pt;}
+        li i:hover {color:yellow;}
+        
+</style>  
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Paget</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="custom.css" rel="stylesheet" type="text/css">
+
+      
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-image: url('immagini/digitalart1 (8).jpg')">
+    <img src="https://cdn-icons-png.flaticon.com/512/7414/7414201.png" width="30" height="30" alt="logo didattica"> 
+   <a class="navbar-brand" href="#">&nbsp; Didattica</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"> <a class="nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="#" >Chi Siamo</a> </li>
+          <!--qui inzia il dropdown-->
+            <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Servizi </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <!--Inizio della lista degli elementi in dropdown-->
+            <a class="dropdown-item" href="#">Web Design</a>
+            <a class="dropdown-item" href="#">Grafica</a>
+           <!--  <div class="dropdown-divider"></div> questo tag è un divisore -->
+              <a class="dropdown-item" href="#">Fotografia</a>
+              <a class="dropdown-item" href="#">Logo grafica</a>
+                
+                <!--Qui terminano le voci del dropdown-->
+                </div>
+                
+          </li>
+           <!--Qui finisce il drop-down--> 
+          <li class="nav-item active"> <a class="nav-link" href="#">Dove Siamo</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="#">Contatti</a> </li>
+            
+        <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Blog </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> </div>
+          </li>    
+            
+            
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+<div class="container-fluid" style="padding-top:10px">
+   <div class="row">
+     <nav aria-label="breadcrumb">
+ 
+</nav>
+
+<nav aria-label="breadcrumb">
+  
+</nav>
+
+<nav aria-label="breadcrumb" >
+  <ol class="breadcrumb" style="background-color:yellow">
+    <li class="breadcrumb-item"><a href="index.html" id="br">Home</a></li>
+    <li class="breadcrumb-item"><a href="paginaconbootstrap.html" id="br1">Servizi</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Altri oggetti</li>
+  </ol>
+</nav>  
+    </div>
+<div class="row" style="margin-left:10px;margin-right: 10px">
+    <div class="row">
+  <div class="col-3">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+      <!--Inserimento nuova voce del menu-->  
+     <a class="nav-link" id="v-pills-custom-tab" data-toggle="pill" href="#v-pills-custom" role="tab" aria-controls="v-pills-custom" aria-selected="false">Custom</a>  
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.</div>
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.</div>
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.</div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.</div>
+    <!--Aggiunta di blocco-->
+        <div class="tab-pane fade" id="v-pills-custom" role="tabpanel" aria-labelledby="v-pills-custom-tab">Papere no galium veritas cave canem lorem ipsum dolor scripta manent.ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod</div>
+    
+    </div>
+  </div>
+</div>
+    
+    
+    
+    </div> 
+    </div>    
+  
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/popper.min.js"></script> 
+      <script src="js/bootstrap-4.4.1.js"></script>
+
+  </body>
+</html>

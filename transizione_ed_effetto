@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <style>
+.capzione {font-size:48px;
+           text-shadow: 2px 1px black;}
+/*CSS che modifica la card lista come un menu*/        
+        li a:hover {
+        text-decoration: none;
+        font-weight:bold;
+        color: white;    
+        }
+        .list-group-item:hover {background-color:cyan;}
+        li i {color:darkblue;
+        font-size:14pt;}
+        li i:hover {color:yellow;}
+/*Animazione */
+   /* 
+Define this in your CSS 
+.bgColor = Replace it by the name you want to give your animation
+.bgAnimObj = Assign this class to the object you want to apply the effect
+*/
+
+#anima {
+	background: #1abc9c;
+	animation: bgColor 2s;
+}
+
+/* 
+Define the keyframe and changes
+*/
+
+
+/* Standard syntax */
+@keyframes bgColor {
+	from {
+		background: red;
+	}
+	to {
+		background: orange;
+	}
+}
+        /*Effetto da dare card mouse*/
+#effetto:hover {
+        background-color: aqua;
+        border: 2px solid aqua; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ;  
+        } 
+      /*Effetto foto card mouse*/  
+#fotouno {
+ filter: grayscale(100%);          
+        } 
+#fotouno:hover { 
+filter: grayscale(0%);
+filter: brightness(100%);        }       
+.sovraimpressione:hover {
+ position: absolute;
+  top: 70%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+    color:white;
+        }   
+.sovraimpressione {color:rgba(0,0,0,0.00);
+width: 100%; 
+height:100%;
+z-index: 1;
+position:relative;
+    
+}
+ /* 
+Define this in your CSS 
+.ease-inAnimation = Replace it by the name you want to give your animation
+.easeinAnimObj = Assign this class to the elements to which you want to apply the animation
+*/
+
+.entra {
+	position: relative;
+	color:navy;
+	/* Standard syntax */
+	animation-name: ease-inAnimation;
+	animation-duration: 4s;
+	animation-timing-function: ease-in;
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+	
+	animation-play-state: running;
+}
+
+/* 
+Define the keyframe and changes
+*/
+
+/* Standard syntax */
+@keyframes ease-inAnimation {
+	0% {
+		top: -500px;
+        color:navy;
+	}
+	100% {
+		top: 0;
+        color:orange;
+	}
+}       
+</style>  
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Paget</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="custom.css" rel="stylesheet" type="text/css">
+
+      
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-image: url('immagini/digitalart1 (8).jpg')">
+    <img src="https://cdn-icons-png.flaticon.com/512/7414/7414201.png" width="30" height="30" alt="logo didattica"> 
+   <a class="navbar-brand" href="#">&nbsp; Didattica</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"> <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="#">Chi Siamo</a> </li>
+          <!--qui inzia il dropdown-->
+            <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Servizi </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <!--Inizio della lista degli elementi in dropdown-->
+            <a class="dropdown-item" href="#">Web Design</a>
+            <a class="dropdown-item" href="#">Grafica</a>
+           <!--  <div class="dropdown-divider"></div> questo tag è un divisore -->
+              <a class="dropdown-item" href="#">Fotografia</a>
+              <a class="dropdown-item" href="#">Logo grafica</a>
+                
+                <!--Qui terminano le voci del dropdown-->
+                </div>
+                
+          </li>
+           <!--Qui finisce il drop-down--> 
+          <li class="nav-item active"> <a class="nav-link" href="#">Dove Siamo</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="#">Contatti</a> </li>
+            
+        <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Blog </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> </div>
+          </li>    
+            
+            
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  <div class="container-fluid">
+      <div class="row" style="padding-top:30px;padding-left:10px;padding-bottom:30px;background-color:cyan"><h1 style="margin:auto;display:block" class="entra" >Contatti</h1></div> 
+      <div class="row" style="padding-top:20px;">
+    <!-- Card -->      
+      <div class="card" id="anima" style="width:100%">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+      </div>
+<!--nuova riga-->
+       <div class="row" style="padding-top:20px;">
+    <div class="col-4">
+       
+        <div class="card" style="width: 100%;" id="effetto">
+  <img src="https://cdn.pixabay.com/photo/2022/05/27/06/34/tre-cime-di-lavaredo-7224478__340.jpg" class="card-img-top" alt="..." id="fotouno">
+   <div class="sovraimpressione">Servizi</div>       
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+      </div>     <div class="col-4">
+           </div>
+    <div class="col-4"></div> 
+     <div class="col-4"></div>        
+      </div>
+      
+      
+      </div>
+      
+
+  
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/popper.min.js"></script> 
+      <script src="js/bootstrap-4.4.1.js"></script>
+
+  </body>
+</html>

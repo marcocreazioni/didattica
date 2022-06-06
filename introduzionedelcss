@@ -33,7 +33,7 @@ p { color: red;
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="mio.css" type="text/css"> 
+<link rel="stylesheet" href="nome_assegnato.css" type="text/css">
 <!-- collegamento ad un documento realizzato in linguaggio CSS -->
 </head>
 <body>

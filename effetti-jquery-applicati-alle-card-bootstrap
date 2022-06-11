@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mcc | Il mio sito web</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <!--Jquery javascript -->  
+      <!-- installazione di jquery--> 
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<!-- installazione di jquery UI -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>  
+    <!-- il css esterno di jquery ui -->  
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+  <link rel="stylesheet" href="https://code.jquery.com/resources/demos/style.css">
+  <!--evenutale css da integrare -->
+<style>
+    .toggler { width: 500px; height: 200px; position: relative; }
+    #button { padding: .5em 1em; text-decoration: none; }
+ /*   #effect { width: 240px; height: 170px; padding: 0.4em; position: relative; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; } */
+    .ui-effects-transfer { border: 2px dotted gray; }    
+</style>
+<!--script di funzionamento dei singoli oggetti -->
+<script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+</script>
+<!--Script di funzionamento degli effetti -->      
+<script>
+  $( function() {
+    // run the currently selected effect
+    function runEffect() {
+      // get effect type from
+      var selectedEffect = $( "#effectTypes" ).val();
+ 
+      // Most effect types need no options passed by default
+      var options = {};
+      // some effects have required parameters
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "transfer" ) {
+        options = { to: "#button", className: "ui-effects-transfer" };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+ 
+      // Run the effect
+      $( "#effect" ).effect( selectedEffect, options, 500, callback );
+    };
+ 
+    // Callback function to bring a hidden box back
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+    };
+ 
+    // Set effect from select menu value
+    $( "#button" ).on( "click", function() {
+      runEffect();
+      return false;
+    });
+  } );
+  </script>      
+      
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-image: url('https://cdn.pixabay.com/photo/2020/06/20/09/30/digital-paper-5320292_960_720.jpg');font-weight:800;height: 80px">
+      <img src="https://cdn-icons-png.flaticon.com/512/6608/6608329.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;&nbsp;
+      <a class="navbar-brand" href="index.html">Mcc</a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupphj  ortedContent1" STYLe="right">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"> <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+        <li class="nav-item active"> <a class="nav-link" href="#">Chi Siamo</a> </li>
+        <li class="nav-item active"> <a class="nav-link" href="#">Dove Siamo</a> </li>
+       
+          <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Servizi </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="#">Seo</a>
+            <a class="dropdown-item" href="#">Sem</a>
+            <a class="dropdown-item" href="#">Grafica</a>
+              </div> </li>  
+          
+        <li class="nav-item active"> <a class="nav-link" href="#">Contatti</a> </li>
+       
+          <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Blog </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="#">Internet</a>
+            <a class="dropdown-item" href="#">Mobile</a>
+            <a class="dropdown-item" href="#">Social</a>
+            <a class="dropdown-item" href="#">Grafica Pubblicitaria</a> </div>
+        </li>
+       
+      </ul>
+
+     
+      </div> </nav>
+<div class="container-fluid" style="padding-top:10px;">
+  <div class="row">
+  <div class="col">
+    <div class="jumbotron" id="effect">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead"> <a class="btn btn-primary btn-lg" href="#" role="button" id="button">Learn more</a> </p>
+    </div>
+
+	
+
+
+      </div>  
+    </div>    
+   </div>
+   <div class="container-fluid">
+    <div class="row">
+    <div class="col-6">
+    <!--accordion di jquery ui -->
+    <div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div>    
+        
+        </div>
+    <div class="col-6">
+<!--oggetto con gli effetti -->
+
+ 
+<select name="effects" id="effectTypes" style="visibility:hidden">
+   <option value="explode" selected></option>
+  
+</select>
+ 
+
+ 
+        
+        
+        </div>  
+    </div>  
+    </div>   
+      
+    <!-- body code goes here -->
+
+
+	
+	<script src="js/popper.min.js"></script> 
+	
+	<script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>

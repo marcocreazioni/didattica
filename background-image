@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*background image si usa solo negli sfondi */
+
+/* aggiungiamo linear gradient se vogliamo creare uno sfondo sfumato è accetta tre valori nella parentesi tonda il primo (l'angolo
+della sfumatura oppure il punto di parteza della sfumatura indicato con "to", seguito da tutti gli altri colori seguti da virgola)
+
+h1 {background-image:linear-gradient(to top,#2c1c97,#26dcd6);
+}
+/* aggiungiamo radial gradient se vogliamo una sfumatura che parta del centro del blocco puo accettare anche solo due valori
+nella parentesi tondo (red, tomato) inoltre accanto ad un almeno dei valori possiamo indicare /
+
+h2 {background-image:radial-gradient(blue 40%,cyan 70%);
+}
+div { width: 400px;
+     height: 150px;
+     background-color: yellow;
+     color: black;
+/* Con background image seguito da due punti e url('inseriamo il link che vogliamo come sfondo */     
+     background-image: url('https://cdn.pixabay.com/photo/2022/06/07/03/25/rice-fields-7247360_1280.jpg');
+     
+/* Con background size inseriamo: due valori per larghezza e altezza se vogliamo sfondo con dimensioni specifice oppure possiamo
+inserire le proprietà "container" se vogliamo il contenuto centrato o "cover" se vogliamo che l'immagine si distribuisca nello spazio */
+ background-size: container;
+ 
+ /* Con background position indichiamo se l'immagine non ha la proprietà cover la segliamo la posizione che voglioamo che venga
+ visaulizzata usando i valori: top center botto */
+ background-position: top right;
+ 
+ /* Con background repeat se l'immagine non ha la proprieta cover ne la proprietà containter indica che l'immaginie non si deve 
+ ripetere per no reapet in alternativa con repeat-x si ripete in orrizzonale e repeat-y in verticale 
+     background-repeat: no-repeat;
+ 
+ /*Con background attachment possiamo inserire un immagine di sfondo ad un oggetto di blocco (div/section/ ecc) che reagisco con il
+ resto dei contenuti. con la modalita scroll l'immagine rimane in linea con il testo mentre con la modalità fixed l'immagine rimane
+ in posizione fissa sullo schermo */
+ 
+     background-attachment: scroll;
+     
+ }    
+</style>
+</head>
+<body style="background-color:rgba(44,28,151,0.8);color: white;">
+<div><p> un blocco con dei contenuti</p></div>
+
+<h2>Il mio titolo</h2>
+<p> Il mio colore del testo diventa di colore bianco</p>
+<h1> TITOLO CON SFUMATURA </h1>
+</body>
+</html>

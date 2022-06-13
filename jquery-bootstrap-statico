@@ -1,158 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="it">
+
+ <head>
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jquery</title>
+    <title>Mcc | Il mio sito web</title>
     <!-- Bootstrap -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
-<!--Jquery-->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<!--Jquery UI-->
-<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js" integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"></script>      
-    <link rel="stylesheet" href="https//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
-  <!--script della funzione accordion -->  
-      <script>
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <!--Jquery javascript -->  
+      <!-- installazione di jquery--> 
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<!-- installazione di jquery UI -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>  
+    <!-- il css esterno di jquery ui -->  
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+  <link rel="stylesheet" href="https://code.jquery.com/resources/demos/style.css">
+  <!--evenutale css da integrare -->
+<style>
+    .toggler { width: 500px; height: 200px; position: relative; }
+    #button { padding: .5em 1em; text-decoration: none; }
+ /*   #effect { width: 240px; height: 170px; padding: 0.4em; position: relative; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; } */
+    .ui-effects-transfer { border: 2px dotted gray; }    
+</style>
+<!--script di funzionamento dei singoli oggetti -->
+<script>
   $( function() {
     $( "#accordion" ).accordion();
   } );
-  </script>
-     <script>
+</script>
+<!--Script di funzionamento degli effetti -->      
+<script>
   $( function() {
-    $( "#menu" ).menu();
+    // run the currently selected effect
+    function runEffect() {
+      // get effect type from
+      var selectedEffect = $( "#effectTypes" ).val();
+ 
+      // Most effect types need no options passed by default
+      var options = {};
+      // some effects have required parameters
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "transfer" ) {
+        options = { to: "#button", className: "ui-effects-transfer" };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+ 
+      // Run the effect
+      $( "#effect" ).effect( selectedEffect, options, 500, callback );
+    };
+ 
+    // Callback function to bring a hidden box back
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+    };
+ 
+    // Set effect from select menu value
+    $( "#button" ).on( "click", function() {
+      runEffect();
+      return false;
+    });
   } );
-  </script> 
-      <style>
-  .ui-menu { width: 100%; }
-  </style>
-    </head>
+  </script>      
+      
+  </head> 
+
   <body>
-    <!--navbar -->  
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-image: url('immagini/digitalart1 (8).jpg')">
+    <img src="https://cdn-icons-png.flaticon.com/512/7414/7414201.png" width="30" height="30" alt="logo didattica"> 
+   <a class="navbar-brand" href="#">&nbsp; Didattica</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"> <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="#">Chi Siamo</a> </li>
+          <!--qui inzia il dropdown-->
+            <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Servizi </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <!--Inizio della lista degli elementi in dropdown-->
+            <a class="dropdown-item" href="#">Web Design</a>
+            <a class="dropdown-item" href="#">Grafica</a>
+           <!--  <div class="dropdown-divider"></div> questo tag è un divisore -->
+              <a class="dropdown-item" href="#">Fotografia</a>
+              <a class="dropdown-item" href="#">Logo grafica</a>
+                
+                <!--Qui terminano le voci del dropdown-->
+                </div>
+                
+          </li>
+           <!--Qui finisce il drop-down--> 
+          <li class="nav-item active"> <a class="nav-link" href="#">Dove Siamo</a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="#">Contatti</a> </li>
+            
+        <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Blog </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> </div>
+          </li>    
+            
+            
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="sendmail.php" method="post">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
+      <div class="row" style="padding-top:30px;padding-left:10px;padding-bottom:30px;background-color:cyan"><h1 style="margin:auto">Nuovo&nbsp;</h1>
+      </div> 
+      <div class="row" style="padding-top:20px;">
+      <div class="col-1"></div>
+        
+      <div class="col-10">
+  <!--Accordion html di jquery ui-->
+   <div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div>
+          </div> 
+      <div class="col-1"></div>
     </div>
   </div>
-</nav>      
- <!--fine navbar-->
-<div class="container-fluid">
-      <div class="row">
-     <div class="col">     
-    <div id="accordion" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
-	<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-active ui-state-active" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0" style="background-color: aliceblue;"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span><a href="#" style="text-decoration:none;color:black">Section 1</a></h3>
-	<div style="height: 215.9px;" class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
-		<p>
-		Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-		ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-		amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-		odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-		</p>
-	</div>
-	<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1" style="background-color: aliceblue;"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#" style="text-decoration:none;color:black">Section 2</a></h3>
-	<div style="height: 215.9px; display: none;" class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true">
-		<p>
-		Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-		purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-		velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-		suscipit faucibus urna.
-		</p>
-	</div>
-	<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="false" aria-expanded="false" tabindex="-1" style="background-color: aliceblue;"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#" style="text-decoration:none;color:black">Section 3</a></h3>
-	<div style="height: 215.9px; display: none;" class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true">
-		<p>
-		Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-		Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-		ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-		lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-		</p>
-		<ul>
-			<li>List item one</li>
-			<li>List item two</li>
-			<li>List item three</li>
-		</ul>
-	</div>
-	<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="-1" style="background-color: aliceblue;"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#" style="text-decoration:none;color:black">Section 4</a></h3>
-	<div style="height: 215.9px; display: none;" class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-8" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true">
-		<p>
-		Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-		et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-		faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-		mauris vel est.
-		</p>
-		<p>
-		Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-		Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-		inceptos himenaeos.
-		</p>
-	</div>
+<div class="row">
+<div class="col">
+ 
 </div>
-          </div>  
-    
+</div>  
+      
+      
   
-    <div class="col">
-<ul id="menu">
-  <li>
-    <div><span class="ui-icon ui-icon-disk"></span>Save</div>
-  </li>
-  <li>
-    <div><span class="ui-icon ui-icon-zoomin"></span>Zoom In</div>
-  </li>
-  <li>
-    <div><span class="ui-icon ui-icon-zoomout"></span>Zoom Out</div>
-  </li>
-  <li class="ui-state-disabled">
-    <div><span class="ui-icon ui-icon-print"></span>Print...</div>
-  </li>
-  <li>
-    <div>Playback</div>
-    <ul>
-      <li>
-        <div><span class="ui-icon ui-icon-seek-start"></span>Prev</div>
-      </li>
-      <li>
-        <div><span class="ui-icon ui-icon-stop"></span>Stop</div>
-      </li>
-      <li>
-        <div><span class="ui-icon ui-icon-play"></span>Play</div>
-      </li>
-      <li>
-        <div><span class="ui-icon ui-icon-seek-end"></span>Next</div>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <div>Learn more about this menu</div>
-  </li>
-</ul></div>
-    </div>
-      </div>      
-  </body>
+   
+	
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/popper.min.js"></script> 
+      <script src="js/bootstrap-4.4.1.js"></script>
+   </body>
 </html>

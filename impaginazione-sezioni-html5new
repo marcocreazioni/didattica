@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+header {background-color:yellow;
+padding: 1px;
+text-align: center;
+font-size: 175%;
+margin:-8px;
+}
+nav {background-color:cyan;
+padding: 1px;
+/*margin-top: 8px; */
+margin: -8px;
+
+}
+ul {list-style-type: none;
+   
+}
+li { display: inline-block;
+     padding: 2px;
+}
+section {background-color: green;
+padding: 10px;
+margin: -8px;
+
+/*Header-nav-section aggiungono alcuni pixel al padding */
+
+}
+footer {background-color: tomato;
+padding: 1px;
+margin: -8px;
+
+}
+
+</style>
+</head>
+<body>
+<header><h2>Il mio testo</h2></header>
+
+<nav><ul><li>Home</li><li>Servizi</li></ul></nav>
+
+<section><p>L'acqua bolle in pentola</p></section>
+
+
+
+
+
+<footer>Testo del footer</footer>
+</body>
+</html>

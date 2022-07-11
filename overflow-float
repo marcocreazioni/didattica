@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+section {
+  background-color: lightblue;
+   width: 99%;
+   margin-left: -8px;
+   padding: 10px;
+   overflow: auto;
+   
+}
+
+img {
+float: right;
+margin-top: -55px;
+}
+</style>
+</head>
+<body>
+
+
+<section>
+<p>This is a paragraph.</p>
+
+
+<img src="https://cdn.pixabay.com/photo/2015/08/21/18/19/sparerips-899306_960_720.jpg" width="200px">
+</section>
+
+</body>
+</html>

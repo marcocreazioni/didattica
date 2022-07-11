@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+nav { background-color: yellow;
+}
+section {background-color: orange;
+         padding: 5px;
+         border: 1px solid;
+         column-count: 4;
+         column-gap: 5px;
+}
+
+
+</style>
+</head>
+<body>
+<nav><ul><li>Voce 1</li><li>Voce 2</li></ul> </nav>
+
+<section>
+<p>La campagna si aprì con un'offensiva del Regio Esercito italiano a partire dalle sue basi in Albania (controllata dagli italiani fin dall'aprile 1939) verso la regione dell'Epiro in Grecia, mossa decisa da Benito Mussolini al fine di riequilibrare lo stato dell'alleanza con la Germania nazista e di riaffermare il ruolo autonomo dell'Italia nel conflitto mondiale in corso. Malamente pianificata dal generale Sebastiano Visconti Prasca ed eseguita con forze numericamente insufficienti e scarsamente equipaggiate, l'offensiva italiana andò incontro a un disastro: bloccato l'attacco nemico, le forze greche del generale Alexandros Papagos, appoggiate da unità aeree della Royal Air Force britannica, passarono decisamente al contrattacco respingendo le unità italiane oltre la frontiera e continuando ad avanzare in profondità nel territorio albanese. La sostituzione di Visconti Prasca, prima con il generale Ubaldo Soddu e poi con il generale Ugo Cavallero, non portò a grandi miglioramenti per le forze italiane, rinforzate in maniera caotica da un flusso disorganizzato di truppe e alle prese con una pessima situazione logistica; solo a fine febbraio 1941 il fronte italiano poté infine essere stabilizzato. </p>
+
+
+
+</section>
+
+</body>
+</html>

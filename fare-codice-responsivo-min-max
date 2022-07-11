@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Tag per poter adattare e scalare lo schermom in base al dispositivo -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+nav { background-color: yellow;
+}
+section {background-color: orange;
+}
+/* Schermo con le dimensioni minime di 600px */
+@media (min-width:600px) {
+  nav {
+    float: left;
+    width: 25%;
+    
+    
+  }
+  section {
+    margin-left: 25%;
+   
+  }
+}
+img {widht:100%;
+     height: 200px;
+}
+/*Schermo delle dimensioni massime di 599px */
+@media (max-width:599px) {
+
+  nav li {
+    display: inline;
+    background-color: grey;
+    Padding: 10px;
+    border:1px white solid;
+  }
+}
+/*Schermo con le dimensione nell'intervallo tra 200px e 400px */
+
+@media (min-width: 200px) and (max-width: 400px) {
+body {background-color: yellow;
+}
+img {display: none;
+}
+
+}
+</style>
+</head>
+<body>
+<nav><ul><li>Voce 1</li><li>Voce 2</li></ul> </nav>
+
+<section>
+<p>This is a paragraph.</p>
+
+
+<img src="https://cdn.pixabay.com/photo/2015/08/21/18/19/sparerips-899306_960_720.jpg">
+</section>
+<section>
+<p>Qui c'è una seconda sezione</p>
+</section>
+</body>
+</html>

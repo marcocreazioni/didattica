@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Iframe</title>
+<link href="../miocss.css" rel="stylesheet" type="text/css">
+<meta name="Author" content="Marco">
+<meta name="description" content="Pagina che parla degli iframe">
+<meta name="keywords" content="iframe, parlare, pagina html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<!--Testata del sito web-->
+<header>Inserite qui il contenuto del nuovo tag header</header>
+<!--Area della navigazione-->    
+<nav>Inserite qui il contenuto del nuovo tag nav</nav>
+<!--Area dei contenuti-->    
+<main>
+<section style="width:550px;height:300px;overflow:auto;">
+    <!--Con overflow i contenuti non possono invaderne altri vicini, con la proprieta overflow:auto facciamo comparire le barre di scorrimento se invece non le vogliamo mettiamo overflow:hidden-->
+    <p style="color:white;font-size:24pt">La casa del canneto, suonava con il vento che era sempre piu forte ed insopportabile<br>Non ne potavano piu quelle persone in quella abitazione. Era tremendo accettare una situazione simile.<br>Non credo che si pottesse dire in quella abitazione che si potesse dire io ci abito</p>
+    </section>
+  <section style="width:550px;height:300px;overflow:hidden;"><iframe src="https://it.wikipedia.org/wiki/Pagina_principale" width="100%" height="400px"></iframe></section>
+</main>
+<!--Aree del footer-->    
+<footer>Inserite qui il contenuto del nuovo tag footer</footer>
+</body>
+</html>

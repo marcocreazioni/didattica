@@ -32,7 +32,7 @@ function MM_swapImage() { //v3.0
 </script>
 </head>
 
-<body onLoad="MM_preloadImages('img/39.jpg')">
+<body onLoad="MM_preloadImages('img/39.jpg','../img/Screenshot_4.jpg')">
 <header class="header"><h1 class="testata">Il mio titolo</h1></header>
 <nav>&nbsp;</nav>
 <main>
@@ -51,10 +51,10 @@ function MM_swapImage() { //v3.0
 <source src="Emotions.mp3" type="audio/mp3">
 <source src="Emotions.wav" type="audio/wav">       
     </audio>
-  <a href="servizi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','img/39.jpg',1)"><img src="img/Screenshot_4.jpg" alt="rollover" width="238" height="136" id="Image1"></a> 
+   
 </section>    
 </main>
 <footer>
-&nbsp;</footer>
+<a href="../dreamweaverephotoshop.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','../img/Screenshot_4.jpg',1)"><img src="../img/39.jpg" alt="tigre e logo" width="250px" height="250px" id="Image2"></a> </footer>
 </body>
 </html>

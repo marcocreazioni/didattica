@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+ <title>Proprieta del css</title>
+ <style>
+.salve {
+  width:100px;
+  margin:auto;
+ /* height:100px;*/
+  background-color:coral;
+  text-align: center;
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-top: 5px solid red;
+  border-right: 5px solid green;
+  border-bottom: 5px solid cyan;
+  border-left:5px solid black;
+}
+.ciao {
+  width:100px;
+  margin: auto;
+  background-color:lightpink;
+  text-align: center;
+  padding: 3px 10px 10px 20px; /*1 valore 4 lati 2 valori (sopra e sotto)(sinistra destra) 3 valori 4 valori (si applica l'orologio)*/
+  border-width: 5px 5px 5px 5px;
+  border-style: solid;
+  border-color: brown;
+  /*border: 5px solid red; */
+}
+body {background-image: url(https://writingmachine.wpenginepowered.com/wp-content/uploads/2014/10/bg-pattern-triangles.png);
+background-size:250px 250px}
+ </style>   
+<!--testo-->
+</head>
+<body>
+ <p class="salve">Testo</p></div>  
+ <p class="ciao">Testo</p>
+
+</body>
+</html>

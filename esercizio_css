@@ -1,0 +1,20 @@
+<doctype HTML!>
+ <html></html><head>
+<style>
+.primo {color:magenta;
+font-size:28pt;
+background-color: yellow;}
+.secondo {text-align:center;}
+h1 {color:darkgreen;font-family: Papyrus;}
+
+
+</style>   
+</head>
+ <body>
+<p class="primo">primo</p>
+<p class="secondo">Secondo</p>
+<h1>Titolo</h1>
+
+
+ </body>   
+</doctype>

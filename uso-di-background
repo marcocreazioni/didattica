@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"  href="stile.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+ <title>Proprieta del css</title>
+ <style>
+
+ p , div {
+   border-radius: 25px;
+   text-align: center;
+   width: 50%;
+   margin: 0 auto;
+   text-shadow: -1px 1px red ;
+   box-shadow: 2px 2px red;
+   font-size: 16pt;
+   font-weight:600;
+   font-family: Titillium Web;
+ }
+ .casa {text-align:right;
+
+ }
+ .primo {color: navy;
+    background-color: rgba(255,123,0,0.75);
+   
+ }
+ .secondo {
+   
+   /*sfumatura sfumata */ 
+   background-image: linear-gradient(270deg,red,#f4f556)
+ }
+ 
+ .terzo {
+   background-image: radial-gradient(red 25%,orange 75%)
+ }
+ .quarto {
+   background-image: url('https://cdn.pixabay.com/photo/2023/01/23/09/26/cat-7738210_1280.jpg');
+   /*Proprietà di image */
+   background-size: 50px 50px; /*se utlizziamo background size
+   indicando una dimensione in pixel posso utilizzare che è repeat */
+   background-repeat: repeat; /*repeat no-repat,reapet-x orizzontale,reapeat y in verticale */
+
+}
+.quinto {
+   background-image: url('https://cdn.pixabay.com/photo/2023/01/23/09/26/cat-7738210_1280.jpg');
+   background-size: cover;/*contain immagine scalata e ripetuta - cover l'immagine verra allargata alla
+   larghezza del blocco  e non occorre repet */ 
+   background-repeat: no-repeat;
+}
+.sesto {
+   background-image: url('https://cdn.pixabay.com/photo/2023/01/23/09/26/cat-7738210_1280.jpg');
+   background-size: 600px 500px;
+   background-position: bottom center; /*qui posso inserire le coordinate della posizione dell'immagine
+   da mostrare */
+   
+
+}
+body {background-image: url(https://writingmachine.wpenginepowered.com/wp-content/uploads/2014/10/bg-pattern-triangles.png);
+background-size:250px 250px}
+ </style>   
+<!--testo-->
+</head>
+<body>
+   
+<p class="primo">testo piu grande.<br>paragrafo lungo</p>
+<p class="secondo">Sfumatura Lineare</p>
+<p class="terzo">Sfumatura Radiale</p>
+<p class="quarto">Immagine di sfondo</p>
+<p class="quinto">Sfondo copertina</p>
+<div class="sesto">Posizione di sfondo</div>
+<div class="casa" style="border-radius:75px"><h1>Ciao</h1></div>
+</body>
+</html>

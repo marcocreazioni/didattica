@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Titolo Pagine</title>
+<meta name="description" content="descrzione pagina">
+<style>
+header {background-color: darkcyan;
+        text-align: center;
+        color:white;
+        padding: 1px;
+}
+nav { background-color: aquamarine;
+      padding: 1px;
+
+}
+/*trasforma un elenco verticale a orizzontale */
+li {list-style-type: none;
+     display:inline-block;
+     width: 50px;
+    }
+/*trasformazione dei link in voci di menu */    
+li a {text-decoration: none;
+      color:darkblue}    
+main { background-color: cornflowerblue;
+       
+}
+/*sezioni del sito */
+section {background-color: cyan;
+         padding-left:5px;
+         padding-top:1px;
+         
+         
+}
+.ciao {background-image:url(https://cdn.pixabay.com/photo/2023/02/22/19/13/sencha-7807228_1280.jpg);
+       background-size: cover;
+       background-position: center; 
+       color: white;
+       height:200px;
+       /*display: none; Rimuove l'oggetto e lascia un vuoto che può essere occupato da altri oggetti;
+       visibility:hidden; Rumuove l'oggetto ma non lascia un vuoto qundi altro oggetti non possono prenderne il posto; */
+       
+}
+.addio {height:380px;
+    /*barre di scorrimento orizzontali e verticali */
+        overflow:scroll;
+}
+/*fine sezioni */
+footer {background-color: lightgray;
+        padding-left:5px;
+        height: 130px;
+     /*i contenuti vengono ritagliati rispetto alla dimensioni del blocco */   
+       overflow:hidden; 
+        }
+/*overflow-x aggisce sulle barre orizzontali e overflow-y su quelle verticali */
+</style>
+</head>
+<body>
+<!--Testata-->   
+<header><h1>Testata</h1>
+</header>
+<!--Navigazione-->
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Servizi</a></li>
+    </ul>
+</nav>
+<!--Contenuto-->
+<main>
+<section class="ciao"><p>Sono fiero di editare questo contenuto</p></section>
+<section class="addio"><p>Il web design è una disciplina essenziale per creare siti web attraenti e funzionali. La scelta di colori, tipografia, layout e immagini può influenzare l'esperienza dell'utente e la percezione del marchio. La progettazione responsiva è cruciale per adattare il sito alle diverse dimensioni dei dispositivi e la navigazione intuitiva deve facilitare la ricerca di informazioni. L'accessibilità è fondamentale per permettere a tutti gli utenti di fruire del sito, anche a quelli con disabilità. L'uso di tecniche di SEO aiuta a posizionare il sito sui motori di ricerca, mentre le analisi dei dati consentono di monitorare il successo del sito e apportare miglioramenti. Inoltre, è importante tenere sempre in considerazione le ultime tendenze e innovazioni per creare siti web moderni ed efficaci.</p></section>    
+</main>
+<!--piè di pagina-->
+<footer><code>By volta</code><img src="https://cdn.pixabay.com/photo/2022/09/29/10/46/grass-7487114_1280.jpg" width="100%"></footer>
+
+
+</body>
+</html>

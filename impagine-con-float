@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Titolo Pagine</title>
+<meta name="description" content="descrzione pagina">
+<style>
+body {margin: 0;}
+  .testata {background-color: aquamarine;
+            text-align: center;
+            width:70%; 
+            padding: 5px;
+ /*float vuol dire posizionati a destra(right)lasciando spazio libero a sinistra e viceversa */
+            float:left;
+        }
+
+              
+ .nav {background-color: rgb(111, 213, 131);
+       width: 30%; 
+       padding: 5px;
+       margin-left: 70%;
+        }
+
+ .ciao {background-color:orange;
+        width:100%;
+        
+        padding: 5px;
+       
+ }
+.addio {
+    /*blocca il comando float */
+    clear: both;
+    background-color: beige;
+    padding: 5px;
+
+ } 
+
+ li {display: inline-block;
+ width:50px;
+ color:white;
+ }
+
+li a {color:white;
+      text-decoration:none;              }
+
+</style>
+</head>
+<body>
+<!--Testata-->   
+<div class="testata">
+     <p>Testata</p>
+</div>
+
+<!--Navigazione-->
+<div class="nav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Servizi</a></li>
+    </ul>
+</div>
+
+
+<div class="ciao"><p>Sono fiero di editare questo contenuto</p></div>
+<div class="addio"><p>Il web design è una disciplina essenziale per creare siti web attraenti e funzionali. La scelta di colori, tipografia, layout e immagini può influenzare l'esperienza dell'utente e la percezione del marchio. La progettazione responsiva è cruciale per adattare il sito alle diverse dimensioni dei dispositivi e la navigazione intuitiva deve facilitare la ricerca di informazioni. L'accessibilità è fondamentale per permettere a tutti gli utenti di fruire del sito, anche a quelli con disabilità. L'uso di tecniche di SEO aiuta a posizionare il sito sui motori di ricerca, mentre le analisi dei dati consentono di monitorare il successo del sito e apportare miglioramenti. Inoltre, è importante tenere sempre in considerazione le ultime tendenze e innovazioni per creare siti web moderni ed efficaci.</p></div>    
+
+
+<div><code>By volta</code><img src="https://cdn.pixabay.com/photo/2022/09/29/10/46/grass-7487114_1280.jpg" width="100%"></div>
+
+
+</body>
+</html>

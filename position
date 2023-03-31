@@ -1,99 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Documento senza titolo</title>
+<title>Titolo Pagine</title>
+<meta name="description" content="descrzione pagina">
 <style>
-header {background-color: yellow;
-        padding: 1px;
+    /*position relative - position-fixed- position-absoulute; */
+body {margin: 0;
 }
-nav {background-color:transparent;
-    padding: 1px;
-    position: relative;
-    top: -40px;
-    bottom: 0px;
-    z-index: 0;
+.uno {background-color: aquamarine;
+     padding: 1px;
+     position:fixed;
+     width:100%;
+     /*Position fixed- fissa un oggetto in un punto dello schermo */
+     /* le coordinate sono top,left,right,bottom */
+     top: 0px;  
+ }
+.due {background-color: rgb(111, 213, 131);
+padding: 1px
 }
-li {display:inline-block;
-    padding:5px;}    
-
-section{background-color: grey;
-        padding: 1px;
-        margin-bottom: 20px;
-        position:relative;
-        
+.tre {background-color:transparent;
+      padding:30px;
+      position:relative;
+/*position relative permette ad un oggetto di spostarsi sopra ad un altro oggetto */
+      top: 500px;
+      color:white  
 }
-footer{background-color:orange;
-    padding: 1px;
-    position:fixed;
-    bottom:0px;
-    width:100%;
-    margin-left:-8px;
-    
+.addio {background-color: blanchedalmond;
+        margin-top: -70px
+} 
+ li {display: inline-block;
+ width:50px;
+ color:white;
+ }
+li a {color:white;
+      text-decoration:none;
 }
-#main {
-       background-color:aqua;
-       margin-top: -60px;
-       padding:1px;
-       border:2px solid blue;
-      
-       
-         
-    }
-* {box-sizing: border-box;
-font-family: arial;    
-}
-    
-</style>    
-    
+.tre p 
+/*tutti gli oggetti sono invece in position static */
+</style>
 </head>
-
 <body>
-<header><h1 style="color:tomato">Il mio <span style="color:black">sito</span> web</h1></header>
-<nav>
+   
+<div class="uno">
+     <p>Testata</p>
+</div>
+
+<div class="due">
     <ul>
-        <li>Home</li><li>Servizi</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Servizi</a></li>
     </ul>
-</nav> 
-    
-<div id="main">
-    <p>La casa del gallo canta tre volte</p>
-</div> 
-    
-<section>
- <p> Super Metroid (スーパーメトロイド Sūpā Metoroido?) è un videogioco di tipo avventura dinamica a tema fantascientifico, progettato da Nintendo Research  Development 1, programmato da Intelligent Systems e pubblicato nel 1994 dalla Nintendo per il Super Nintendo Entertainment System. È il terzo capitolo della saga di Metroid ed è passato alla storia per essere stato, con la sua cartuccia da 24 megabit, per qualche tempo il più esteso e impegnativo videogioco in termini di memoria. La trama è cronologicamente situata tra Metroid II: Return of Samus (1991) e Metroid: Other M (2010). L'obiettivo della protagonista, Samus Aran, è rintracciare e recuperare il cucciolo di Metroid rapito dal suo rivale Ridley e portato sul pianeta Zebes.
+</div>
 
-Super Metroid risulta essere un platform in 2D carico di elementi d'azione e d'avventura, dove Samus deve affrontare sul pianeta le forze ostili native e i pirati spaziali, suoi acerrimi nemici, potenziandosi con gli oggetti che trova lungo il cammino. È un gioco che fa dello spirito esplorativo del giocatore un punto centrale, poiché a differenza degli altri platform che lo hanno preceduto, il suo sviluppo non è esclusivamente lineare ed è ricco di aree nascoste.
+<div class="tre"><p>Sono fiero di editare questo contenuto</p></div>
 
-Scritto e diretto da Yoshio Sakamoto e prodotto da Makoto Kano, con le musiche di Kenji Yamamoto e Minako Hamano, il videogioco venne pubblicato in Giappone il 19 marzo 1994. Grazie alla sua grafica evoluta, al suo gameplay caratteristico, all'atmosfera e all'efficace sonoro, fu subito accolto positivamente, ricevette numerosi riconoscimenti e viene tuttora considerato un classico della Nintendo e uno dei migliori videogiochi mai realizzati. Nonostante il gran successo, alla sua uscita riscosse basse vendite in Giappone, ma raggiunse risultati migliori in Nord America e in Europa. È stato in seguito distribuito per le console Wii e Wii U. Nel 2014, in occasione del 20º anniversario dell'uscita del gioco, si è svolta una mostra apposita nella biblioteca Regenstein dell'Università di Chicago. </p>
- <p>o storico statunitense di origine ebreo-austriaca Raul Hilberg ha evidenziato gli elementi di continuità presenti nella politica antisemita del regime nazista, riscontrando notevoli congruenze tra le misure antiebraiche di discriminazione e segregazione adottate nell'arco dei secoli dalla Chiesa cattolica (a partire dal IV secolo dopo Cristo) e dal potere secolare fin dal Medioevo e le norme legislative e burocratiche adottate in Germania dal 1933, dopo l'assunzione del potere da parte di Adolf Hitler[26]. Accanto a questi elementi di continuità, Hilberg sottolinea gli aspetti di assoluta novità e di inaudita criminalità anti-ebraica caratterizzanti l'azione del regime nazista durante i suoi dodici anni di potere[27].
-Membri delle SA invitano al boicottaggio anti-ebraico del 1º aprile 1933
 
-Lo storico Enzo Collotti ha analizzato i caratteri specifici della diffusione dell'antisemitismo in Europa dopo la prima guerra mondiale: in primo luogo l'autore interpreta il fenomeno dell'accentuarsi dell'ostilità verso gli ebrei in correlazione con i sentimenti di catastrofe di civiltà dopo la guerra mondiale e con la necessità di individuare facili obiettivi su cui far ricadere le responsabilità delle difficoltà esistenziali e materiali del dopoguerra. In secondo luogo l'antisemitismo si caratterizzò anche come reazione alla presunta "cospirazione giudeo-bolscevica" del comunismo sovietico che sembrava minacciare i valori della società tradizionale cristiana. Elemento che permise di cristallizzare i fermenti antisemiti fu la riscoperta e la divulgazione dei fittizi Protocolli dei savi di Sion che sembravano confermare la tesi del "complotto ebraico" contro la civiltà europea[28].
+<div class="addio"><p>Il web design è una disciplina essenziale 
+    per creare siti web attraenti e funzionali. La scelta di colori, 
+    tipografia, layout e immagini può influenzare l'esperienza dell'utente 
+    e la percezione del marchio. La progettazione responsiva è cruciale per 
+    adattare il sito alle diverse dimensioni dei dispositivi e la navigazione 
+    intuitiva deve facilitare la ricerca di informazioni. L'accessibilità è 
+    fondamentale per permettere a tutti gli utenti di fruire del sito, anche a 
+    quelli con disabilità. L'uso di tecniche di SEO aiuta a posizionare il sito 
+    sui motori di ricerca, mentre le analisi dei dati consentono di monitorare il
+     successo del sito e apportare miglioramenti. Inoltre, è importante tenere 
+     sempre in considerazione le ultime tendenze e innovazioni per creare siti 
+     web moderni ed efficaci.</p></div>    
 
-L'antisemitismo di Adolf Hitler venne esposto nel suo libro del 1925, Mein Kampf, che, inizialmente ignorato, divenne popolare in Germania quando Hitler acquistò potere politico. Il 1º aprile 1933, poco dopo l'elezione di Hitler al cancellierato, il fanatico antisemita Julius Streicher, con la partecipazione delle Sturmabteilung e attraverso le colonne della rivista antisemita Der Stürmer da lui diretta, organizzò una giornata di boicottaggio di tutte le attività economiche tedesche gestite da ebrei (l'ultima impresa gestita da ebrei rimasta in Germania venne chiusa il 6 luglio 1939). Nonostante la fredda accoglienza da parte della popolazione tedesca che fece rientrare il boicottaggio dopo solo un giorno, questa politica servì a introdurre una serie di progressivi atti antisemiti che sarebbero poi culminati nella Shoah. Gran parte della storiografia ritiene peraltro che l'obiettivo dello sterminio fisico non fosse fin dall'inizio il fine ultimo della politica antiebraica nazista e che, almeno fino al 1938, si ritenne possibile, mediante crescenti pressioni, forzare l'emigrazione in massa degli ebrei. Tuttavia è indubbio che i dirigenti nazisti non agirono in modo sistematico e coerente in questo senso, non svilupparono adeguate misure politico-diplomatiche e al contrario protestarono con alcuni paesi per l'accoglienza riservata agli ebrei[29].
 
-Il processo di distruzione degli ebrei d'Europa richiese in primo luogo una precisa individuazione dell'obiettivo da colpire; la burocrazia ministeriale tedesca elaborò quindi una serie di disposizioni amministrative per identificare "ariani" e "non ariani" che, pur definite propagandisticamente "leggi razziali" (Rassengesetze), si basavano invece sul criterio della religione praticata e non su presunte caratteristiche biologico-razziali dell'individuo. Il primo decreto fu il cosiddetto Arierparagraph del 7 aprile 1933 che definiva "non ariani" non solo gli ebrei puri (Volljuden, con quattro nonni ebrei) ma anche gli ebrei per tre quarti, per metà e per un quarto[30].
-Adolf Hitler durante una cerimonia al raduno di Norimberga del 1934
+<div>
+<code>By volta</code>
+<img src="https://cdn.pixabay.com/photo/2022/09/29/10/46/grass-7487114_1280.jpg" width="100%">
+</div>
 
-Le leggi di Norimberga ("legge per la protezione del sangue e dell'onore tedeschi" e "legge sulla cittadinanza del Reich"), promulgate in fretta e dopo una stesura di pochi giorni il 14 settembre 1935, di fatto esclusero le persone definite "ebrei" da ogni aspetto della vita sociale tedesca e furono opera principalmente degli alti funzionari del ministero degli Interni Wilhelm Stuckart e Bernhard Lösener. Questi decreti modificarono i criteri di inclusione, codificando l'esistenza accanto agli "ariani" e agli "ebrei" di una "terza razza", quella dei Mischlinge di secondo e primo grado (con uno o due nonni ebrei ma non di fede ebraica)[31]. Sulla base di queste leggi fondamentali l'apparato politico-amministrativo del Reich sviluppò una lunga serie di nuove disposizioni e decreti che delinearono la cosiddetta "soluzione economica del problema ebraico". Gli ebrei tedeschi vennero quindi estromessi dalla funzione pubblica con il decreto del 7 aprile 1933 che portò al licenziamento dei dipendenti statali, compresi medici, avvocati e militari[32].
 
-Il passaggio successivo della "soluzione economica" furono le cosiddette "arianizzazioni" delle attività ebraiche autonome, dei servizi, dell'industria e del commercio: nell'aprile 1938 il ministero dell'Interno stabilì il concetto giuridico di "impresa ebraica" su cui basare i trasferimenti delle attività ebraiche ai nuovi proprietari tedeschi, ma fin dal 1933 erano in corso le "arianizzazioni volontarie" che prevedevano il trasferimento delle imprese su base teoricamente volontaria. Sottoposti a crescenti pressioni per liquidare o vendere le loro attività economiche gli imprenditori ebrei si rassegnarono, si affrettarono a vendere, in alcuni casi fecero resistenza. Nel 1938 cominciò la fase delle "arianizzazioni coatte" (zwangsarisierung) in cui il proprietario ebreo era costretto a vendere ed era rappresentato da un "mandatario" tedesco. Infine una nuova serie di decreti proibirono agli ebrei l'esercizio di alcuni tipi di servizi, delle professioni mediche, dell'avvocatura, del commercio al dettaglio; il 3 dicembre 1938 i ministri dell'Economia e dell'Interno, Walther Funk e Wilhelm Frick, firmarono un decreto che imponeva agli ebrei di vendere tutte le attività industriali, i valori mobili, terre, foreste e altri beni immobiliari[33]. Hilberg 1999, pp. 36-7, 49.
-Violenze ed emigrazione forzata
-
-Le politiche antiebraiche della Germania nazista ebbero una svolta con il pogrom del 9-10 novembre 1938, passato alla storia con il nome di «Notte dei cristalli» (Kristallnacht); organizzato su impulso principale di Joseph Goebbels e dei funzionari del partito nazista, il pogrom provocò numerose vittime ed ingenti danni materiali. In un primo bilancio redatto dalle stesse autorità naziste (una lettera di Reinhard Heydrich a Hermann Göring dell'11 novembre 1938) si parla di almeno 815 negozi distrutti, 171 case incendiate, 191 sinagoghe bruciate, cui si aggiungono 36 ebrei uccisi, 36 gravemente feriti e oltre 20 000 deportati: 10 911 a Dachau (provenienti da Germania meridionale e Austria), 9 828 a Buchenwald (Germania centrale), e più di 6 000 a Sachsenhausen (Germania settentrionale)[34] In realtà, le conseguenze furono molto più serie. In quello che rimane il colpo più grave inferto al patrimonio artistico e culturale ebraico d'Europa, più di 1 400 sinagoghe e case di preghiera ebraiche vennero incendiate, causando danni irreparabili e, nella maggior parte dei casi, la loro totale distruzione.[35] Tra di loro erano alcuni tra i monumenti più importanti ed significativi dell'architettura sinagogale tedesca, come il Leopoldstädter Tempel di Vienna, la Sinagoga maggiore di Francoforte sul Meno, la Sinagoga nuova di Hannover, la Sinagoga nuova di Breslavia, e molte altre. Migliaia di appartamenti e negozi furono distrutti e saccheggiati. Le vittime furono circa 400, oltre ai molti che nei giorni e mesi successivi periranno nei campi di concentramento.[36]
-Sinagoga di Monaco distrutta durante la Notte dei cristalli
-
-La violenza incontrollata della Notte dei Cristalli provocò accese polemiche nella dirigenza nazista: Heinrich Himmler, il capo delle SS, riteneva inefficaci queste azioni e accusò Goebbels, principale promotore del pogrom, di "sete di potere"[37]; mentre Hermann Göring mostrò preoccupazioni economiche legate ai danni provocati ai beni materiali e ai risarcimenti delle compagnie assicurative tedesche, e per possibili ripercussioni internazionali. In discussione non erano le politiche antisemitiche, ma le loro modalità di attuazione, perché avvenissero in modo più ordinato e conveniente. Secondo i diari di Goebbels, Hitler, rapidamente informato delle violenze, in un primo momento decise di "far continuare le manifestazioni" perché "per una volta è bene far sentire agli ebrei la furia della gente"[38]; in seguito intervenne e, di fronte alle numerose reazioni negative, assegnò, tramite Martin Bormann, a Göring l'incarico di trovare una soluzione coordinata della "questione ebraica"[39]. Il 12 novembre 1938 si tenne una riunione generale presso il ministero dell'Aviazione con la presenza di oltre cento funzionari; Göring valutò il problema ebraico principalmente dal punto di vista della convenienza economica per la Germania, criticò iniziative incontrollate, propose la confisca dei beni e delle attività ebraiche e annunciò la creazione di una "ammenda di riparazione" per i danni del pogrom da far pagare agli ebrei stessi. Goebbels parlò di misure di discriminazione sociale mentre Reinhard Heydrich propose l'obbligatorietà di un distintivo di riconoscimento (proposta rifiutata da Hitler)[40]. In quello stesso giorno Göring promulgò una serie di ordinanze con l'imposizione della multa e l'esclusione definitiva degli ebrei dall'economia tedesca a partire dal 1º gennaio 1939[41].
-
-Il 24 gennaio 1939 Göring diede l'incarico a Reinhard Heydrich, capo dell'SD, di trovare "una soluzione al problema ebraico, secondo le circostanze del momento"[42]; la scelta della dirigenza del Reich, dopo le misure di esclusione dalla vita economica e sociale, si basava sull'incremento massimo delle politiche di emigrazione forzata fino a rendere la Germania "libera da ebrei". Il comandante della Gestapo, Heinrich Müller, divenne il responsabile dell'Agenzia centrale per emigrazione ebraica di Berlino, mentre un ruolo fondamentale nel programma di emigrazione forzata venne assunto dal tenente colonnello SS Adolf Eichmann, già distintosi in precedenza per i suoi successi[43]. Eichmann, attivo nella sezione II-112 dell'SD e poi responsabile del "dipartimento giudaico" delle SS (Judenreferat), esperto di questioni ebraiche, aveva partecipato dal 1937 al programma di emigrazione degli ebrei tedeschi in Palestina (attivato fin dal 1933 con l'Haavara Agreement) e poi, nell'ottobre 1938, aveva diretto con successo la sezione emigrazione costituita a Vienna dopo l'Anschluss, che aveva forzato la partenza di 50 000 ebrei austriaci in sei mesi[44]. </p>    
-</section>
-<img src="https://cdn.pixabay.com/photo/2022/06/20/20/22/hedgehog-7274554_1280.jpg" alt="porcospino" widht="150px;" height="150px" style="margin-bottom:100px;">
-<div>    
-<p style="background-color:rgba(255,255,255,0.80);color:black;margin-bottom:100px;position:relative;top:-150px;left:30px;padding:2px;width:150px;">Porcospino</p></div>    
-<footer>
-<p>Questo è il footer</p>    
-</footer> 
-    
 </body>
 </html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+body {font-family:arial;
+background-color:lightgreen;
+margin: 0 auto;
+}
+.blocco {background-color:yellow;
+         padding: 1px;
+         width:50%; /*devi essere più grande di */
+         height: 200px;
+         overflow: hidden;   }
+.blocco h1 {text-align: center;
+}
+.blocco p {text-align: justify;
+           font-size: 12px;
+          
+}
+.blocco img {width: 100%;
+height: 100px;}
+
+.blocco2 {background-color:orange;
+         padding: 1px;
+         width:50%; /*devi essere più grande di */
+         height: 200px;
+         overflow: hidden;  
+         position: relative;
+         top: -202px;
+         left:50%;
+         z-index: 0; /oggetto su sfondo -1 va sullo sfondo 0 va sopra perchè in relative 1 l'oggetto va in primo piano*/
+         }
+.blocco2 h1 {text-align: center;
+}
+.blocco2 p {text-align: justify;
+           font-size: 12px;
+           
+}
+.blocco2 img {width: 100%;
+             height: 100px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="blocco">
+<h1>My <span style="color:red">First Heading</span></h1>
+<p>Il mio paragrafo ora è giustificato bene.</p>
+<img src="https://cdn.pixabay.com/photo/2023/03/22/20/16/muffin-7870491_1280.jpg">
+</div>
+<div class="blocco2">
+<h1>My <span style="color:red">First Heading</span></h1>
+<p>Il mio paragrafo ora è giustificato bene.</p>
+<img src="https://cdn.pixabay.com/photo/2023/03/22/20/16/muffin-7870491_1280.jpg">
+</div>
+
+</body>
+</html>

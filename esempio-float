@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin: 0}    
+.uno {background-color: yellow;
+      padding:5px;
+      min-height: 500px;
+      width:500px;
+      margin: 0 auto;
+      box-shadow: 2px 2px
+      }    
+img {float:right;
+    margin-top: -50px;
+    margin-left: 200px;
+}    
+.testuale {float:left;
+}  
+.footer {clear:both;}
+</style>    
+<title>Page Title</title>
+</head>
+<body>
+<div class="uno">
+   <div class="testuale">   
+   <h1>This is a Heading</h1>
+    <p>This is a paragraph.
+    continuo a scrivere del testo<br>
+    e continuo a scrivere<br>
+    e continuo a scrivere
+    </p>
+    </div>
+<img src="https://it.learnlayout.com/images/ilta.png">
+   <div class="footer"><p>Descrizione dell'articolo con cavia da laboratorio davvero moltor interessante</p></div>
+</div>
+
+</body>
+</html> 

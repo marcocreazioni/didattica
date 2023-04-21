@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin: 0;
+}
+.uno {width:  10%; 
+      background-color:yellow;
+      float: left;
+}
+.due {width:  20%; 
+     background-color:orange;
+     float: left;
+}
+.tre {width:  30%;
+     background-color:green;
+     float: left;
+     }
+.quattro {width: 40% ;
+     background-color:coral;
+     float: left;
+ }
+.cinque {width: 50%; 
+     background-color:cyan;
+     float: left;
+}
+@media (max-width: 380px) {
+.uno , .due , .tre, .quattro, .cinque {
+width:100%;
+
+}
+</style>
+</head>
+<body>
+
+<div class="cinque">
+<p>Resize</p></div>
+<div class="tre">
+<p>Resize</p></div>
+<div class="due">
+<p>Resize</p></div>
+</body>
+</html>

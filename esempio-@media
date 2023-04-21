@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-color:yellow;
+margin: 0;
+}
+.uno {background-color:orange;
+      padding: 10px;
+      height:150px;
+      font-family: arial;
+      font-size: 36pt;
+      background-image: url('https://cdn.pixabay.com/photo/2023/04/09/11/05/mountains-7911302_1280.jpg');
+     background-position:center;
+}
+.due {background-color:green;
+      padding: 10px;
+      height: 150px;
+      font-family: arial;
+      font-size: 36pt;
+}
+.tre-desktop {width: 100%;
+      background-color:green;
+            }
+.tre-cellulare button {padding: 10px;
+             background-color:cyan;
+             margin: 10px;
+             border-radius: 15px;
+             border: none;
+             }
+
+/* Per gli schermi piu grandi di 800px la pagina deve dividersi in due blocchi l'uno accanto all'altro*/
+@media (min-width:501px) {
+.uno {width: 50%;
+      float: right;
+      font-size: 36pt;
+      text-align: center;
+      background-size: 800px;
+      background-position: center;
+     }
+.due {width: 50%;
+      font-size: 36pt;
+      text-align: center;
+      }
+.tre-cellulare {display: none;
+}      
+} 
+/*qui si chiude l'impaginazione delle schermo oltre gli 800px;
+/* Per gli schermi piu piccolo di 500px la pagina deve dividersi in due blocchi l'uno accanto all'altro*/
+@media (max-width:500px) {
+.uno {background-color: blue;
+     font-size: 24pt;
+     text-align: right;
+       background-size: 700px;
+      background-position: center;
+     }
+.due {background-color:white;
+      text-align: right;
+      font-size: 24pt;
+     }
+.tre-desktop {display: none; 
+             }
+}
+/* Per gli schermi piu piccolo di 500px la pagina deve dividersi in due blocchi l'uno accanto all'altro*/
+</style>
+</head>
+<body>
+
+<h2>CSS Padding</h2>
+<div class="uno">Primo Blocco</div>
+<div class="due">Secondo Blocco </div>
+<div class="tre-desktop">
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/L-Rl-p-dgfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>       </iframe> 
+  </div>
+
+<div class="tre-cellulare">
+ <center>
+   <a href="https://youtu.be/L-Rl-p-dgfg">
+   <button>Guarda il video</button>
+   </a>
+
+ </center>
+</div>
+
+</body>
+</html>
+
+

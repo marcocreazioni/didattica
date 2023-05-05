@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { margin: 0;
+}
+/*Precursore alla base dei framework */
+.colonna {width: 50%;
+          float: left;
+}
+.color-green {background-color: green;
+              
+  
+}
+.color-cyan {background-color: cyan;
+}
+.center {text-align:center;
+}
+.right {text-align: right;
+}
+.wh {color:white;
+}
+</style>
+</head>
+<body>
+<div class="colonna color-green center wh">Colonna 1</div>
+<div class="colonna color-cyan right">Colonna 2</div>
+
+
+</body>
+</html>

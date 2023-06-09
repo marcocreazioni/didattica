@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>La mia pagina</title>
+ <meta name="description" content="descrizione per lo snippet di ricerca">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<style>
+/* Colore del link diverso al passaggio del mouse */
+.nav-link:hover {color:yellow;font-weight:500px}
+.nav-link {color:white;font-weight:500px}
+.active {color:yellow}
+#cerca:hover {background-color:lightsalmon;}
+</style>
+<!--INserimento della icona della scheda del browser nella sezione type dopi "image/inserire l'esensione"-->
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/9835/9835813.png" sizes="32x32">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    
+</div>
+<!--Differenza tra containter e container-fluid: e che il primo lascia un margine in entrambi lati
+l'altro no-->
+<div class="container-fluid" style="background-color: aquamarine;">
+  <!--dentro ogni containter deve essere presente una o piu righe-->
+  <!--1 riga-->
+  <div class="row" style="background-color:yellow">
+
+       <!--1 colonna-->
+       <div class="col" style="background-color:coral">
+        <p>QUesto contenuto è nella colonna uno</p>
+       </div>
+       <!--2 colonna-->
+       <div class="col" style="background-color:orchid">
+       <p>QUesto contenuto è nella colonna due</p>
+       </div>
+       <!--3 colonna-->
+       <div class="col" style="background-color:rgb(26, 15, 100);color:white;">
+        <p>QUesto contenuto è nella colonna tre</p>
+        </div>
+        <!--4 colonna-->
+        <div class="col" style="background-color:rgb(229, 204, 12)">
+          <p>QUesto contenuto è nella colonna quattro</p>
+          </div>
+
+  </div>   
+   <!--2 riga in ogni colonna dichiariamo quanti spazi deve occupare -->
+   <div class="row" style="background-color:yellowgreen">
+        <!--1 colonna della seconda riga col-xl- seguito dagli spazi da occupare è il totale degli spazi
+        disponibili non deve superare  il numero 12-->
+      <div class="col-xl-2" style="background-color: blanchedalmond;">
+      
+      </div>
+       <!--2 colonna della seconda riga xl-->    
+       <div class="col-xl-2" style="background-color: rgb(226, 166, 217);">
+        <p>QUesto contenuto è in una colonna in una riga successiva</p>
+       </div>
+       <!--3 colonna della seconda riga xl--> 
+       <div class="col-xl-8" style="background-color: rgb(160, 150, 251);">
+       
+       </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>La mia pagina</title>
+ <meta name="description" content="descrizione per lo snippet di ricerca">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<style>
+/* Colore del link diverso al passaggio del mouse */
+#manutop:hover {font-weight:500px}
+#menutop: {color:white;font-weight:800px}
+
+#cerca:hover {background-color:lightsalmon;}
+
+#menu {text-decoration:none;}
+.list-group-item:hover {background-color:darkblue;color:white;font-weight: 800;}
+
+
+</style>
+<!--INserimento della icona della scheda del browser nella sezione type dopi "image/inserire l'esensione"-->
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/9835/9835813.png" sizes="32x32">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-image:linear-gradient(red,orange)"; data-bs-theme="dark">
+      <!--Cambiare lo sfondo della barra di navigazione-->  
+      <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="https://cdn-icons-png.flaticon.com/128/9835/9835813.png" alt="Bootstrap" width="30" height="24">&nbsp;Codice OG<sup>&copy;</sup></a>
+            <!--nel tag img src posiziono il logo dell'azienda-->
+           <!--Titoli della barra di navizione-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+               <!--Menu hamburger che si attiva quando lo schermo rimpicciolisce-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!--Raggruppamento delle voci del menu per allinare il menu usare il padding-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left:10px;">
+              <!--Navi item sono le singole voci del menu--> 
+              <li class="nav-item">
+                 <!-- Se aggiungiamo la voce "active" a nav link posso rendere piu forte il carattere-->
+                <a class="nav-link" id="menutop"  aria-current="page" href="#">Home</a>
+              </li>
+               <!--Voce del menu--> 
+              <li class="nav-item">
+                <a class="nav-link" id="menutop" href="#">Link</a>
+              </li>
+              <!--Fine voce del menu-->
+              <li class="nav-item">
+                <a class="nav-link" id="menutop" href="#"> <i class="bi bi-telephone" style="font-size:12pt"></i> Voce del Menu</a>
+              </li>
+              <!--navi item dropdown per creare un menu a discesa-->
+              <li class="nav-item dropdown">
+                 <!--intestazione del menu a discesa-->
+                <a class="nav-link dropdown-toggle" id="menutop" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                     <!--elementi del menu a discessa hanno la classe dropdown-item-->
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Voce del menu</a></li>
+                      <!--Dropdown-diver è un separatore delle voci del menu-->
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Nuova voce</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <!--Termine del dropdown-->
+               <!--nuovo dropdown-->
+               <li class="nav-item dropdown">
+                <!--intestazione del menu a discesa-->
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Servizi
+               </a>
+               <ul class="dropdown-menu">
+                    <!--elementi del menu a discessa hanno la classe dropdown-item-->
+                 <li><a class="dropdown-item" href="#">Immagini</a></li>
+                 <li><a class="dropdown-item" href="#">Video</a></li>
+                 <li><a class="dropdown-item" href="#">Audio</a></li>                 
+               
+               </ul>
+             </li>
+
+ <li class="nav-item">
+                <!--Aggiungendo alla class nav-link la voce disabled rendiamo il link inattivo-->
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <!--Modulo di ricerca-->
+        <form class="d-flex" role="search">
+              
+              <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
+             
+              <button class="btn btn-warning" type="submit">Cerca</button>
+            </form>  
+          </div>
+        </div>
+      </nav>
+<!--Qui inizia il carosello-->
+<div id="carouselExampleCaptions" class="carousel slide">
+  <!--Area con i trattini che indicano le slide-->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <!--inserire il segnaposto per una successiva slide con nella riga 103 con un butten e inserendo il data-bs-slide successivo-->
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+  </div>
+<!--inizio gruppo slide-->
+  <div class="carousel-inner">
+<!--Prima slide-->
+    <div class="carousel-item active">
+      <!--immagine del carosello-->
+      <img src="https://cdn.pixabay.com/photo/2023/05/17/03/41/pheasant-7998988_1280.jpg" class="d-block w-100" alt="uccello pettirosso" style="height: 480px;">
+      <!--Testo in sovra impressione del carosello-->
+      <div class="carousel-caption d-none d-md-block">
+        <h2 style="background-color:rgba(245,245,245,0.2);width: 100%">First slide label</h2>
+        
+      </div>
+
+    </div>
+<!--Seconda slide-->
+    <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2023/05/15/18/14/bird-7995668_1280.jpg" class="d-block w-100" alt="..."  style="height: 480px;">
+      
+      <div class="carousel-caption d-none d-md-block">
+        <!--contenuto che voglio mettere in sovra impressione sulla slide-->
+        <a href="#"><button class="btn" style="background-color:coral;box-shadow:2px 2px;">Scopri di più</button></a>
+      </div>
+
+    </div>
+<!--Terza Slide-->
+    <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2023/05/21/06/00/bird-8007868_1280.jpg" class="d-block w-100" alt="..."  style="height: 480px;">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+<!--Quarta slide-->
+<div class="carousel-item">
+  <img src="https://cdn.pixabay.com/photo/2019/12/08/19/06/bird-4681934_1280.jpg" class="d-block w-100" alt="..."  style="height: 480px;">
+  <div class="carousel-caption d-none d-md-block">
+    <h5>Quarta slide</h5>
+    <p>Some representative placeholder content for the third slide.</p>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+  <!--fine del gruppo slide-->
+
+  <!--Navigazione tra le slide-->
+  <!--Pulsante indietro-->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Prima</span>
+  </button>
+  <!--Pulsante avanti-->
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Dopo</span>
+  </button>
+
+</div>
+<!--Differenza tra containter e container-fluid: e che il primo lascia un margine in entrambi lati
+l'altro no-->
+
+<div class="container-fluid" >
+    <div class="row">
+         <div class="col-xl-6" style="background-color: aquamarine;padding-top:10px;padding-bottom:10px;">
+          <!--Card di bootstrap per allargarla come la colonna-->
+          <div class="card" style="width: 100%;">
+            <!--Testata dalla card-->
+            <img src="https://cdn.pixabay.com/photo/2023/05/25/11/28/fox-8016957_1280.jpg" class="card-img-top" alt="volpe">
+            <!--Corpo della card-->
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          </div>
+         <div class="col-xl-6" style="background-color: rgb(133, 199, 9);padding-top:10px;padding-bottom:10px;">
+           <!--Card di bootstrap per allargarla come la colonna-->
+           <div class="card" style="width: 100%;">
+            <!--Testata dalla card-->
+            <iframe class="card-img-top" width="100%" height="500" src="https://www.youtube.com/embed/4souhdJwDek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+            <!--Corpo della card-->
+            <div class="card-body">
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.1230741800623!2d12.489655975738298!3d41.890210171240376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1686938468201!5m2!1sit!2sit" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+              <a href="#" class="btn btn-warning">Pulsante</a>&nbsp;<a href="#" class="btn btn-warning">Pulsante 2</a>
+            </div>
+          </div>
+        
+        
+        
+        
+        
+        
+        
+        </div>
+    </div>
+</div>
+
+<div class="conteiner-fluid" style="padding-top: 25px;padding-bottom: 30px;padding-left: 20px;"> <!--contenitore-->
+     <div class="row"><!--riga-->
+        <div class="col-xl-6"><!--1 colonna-->
+
+           <div class="card" style="width: 100%;box-shadow: 2px 2px black;">
+            <ul class="list-group list-group-flush">
+              <a href="#" id="menu"><li class="list-group-item">1 voce</li></a>
+              <a href="#" id="menu"><li class="list-group-item">2 voce</li></a>
+              <a href="#" id="menu"><li class="list-group-item">3 voce</li></a><!--voce dell'elenco-->
+              <a href="#" id="menu"><li class="list-group-item">4 voce</li></a>
+            </ul>
+          </div>
+
+        </div> <!--chiusura colonna 1 -->
+
+        <div class="col-xl-6"><!--2 colonna-->
+          
+          <nav><!--navigazione tra le schede-->
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+              <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Disabled</button>
+              <!--inserimento di una quinta scheda-->
+              <!--inserimento di un punto di navigazione: cambio l'id (nav-servizi-tab), il data-bs-target (#nav-servizi), aria-controls (nav-servizi) e ho rimosso disabled e inserito nello spazio prima del button il nome della scheda-->
+              <button class="nav-link" id="nav-servizi-tab" data-bs-toggle="tab" data-bs-target="#nav-servizi" type="button" role="tab" aria-controls="nav-servizi" aria-selected="false">Servizi</button>
+            </div>
+          </nav>
+
+          <div class="tab-content" id="nav-tabContent"><!--contenuti delle schede-->
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+              <!--all'interno di ogni scheda posso inserire qualsiasi cosa-->
+               <!--inserisco la card di bootstrap-->
+                 <div class="card" style="padding-top:15px;width:400px">
+
+                   <div class="card-header"><!--testata-->
+                    Testata della card
+                   </div>
+
+                   <div class="card-body"> <!--body il contenuto-->
+
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                   </div>
+
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">Scheda 2</div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">Scheda 3</div>
+            <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">Scheda 4</div>
+            <!--inserimento del pannello della scheda servizi inserita nella navigazione-->
+            <!--inserimento della scheda:cambio l'id usando quello che abbiamo inserito in aria controls e sostituiamo il contenuti di aria-lalledby con il contenuto dell'id dell'aria navigazioni ovvero nav-servizi-tab  -->
+            <div class="tab-pane fade" id="nav-servizi" role="tabpanel" aria-labelledby="nav-servizi-tab" tabindex="0">Scheda 5</div>
+
+
+          </div>
+
+
+
+
+
+        </div><!--chiusura colonna 2-->
+
+     </div><!--chiusura riga-->
+</div><!--chiusura contenitore-->
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

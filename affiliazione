@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>La mia pagina</title>
+ <meta name="description" content="descrizione per lo snippet di ricerca">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<style>
+/* Colore del link diverso al passaggio del mouse */
+#manutop:hover {font-weight:500px}
+#menutop: {color:white;font-weight:800px}
+
+#cerca:hover {background-color:lightsalmon;}
+
+#menu {text-decoration:none;}
+.list-group-item:hover {background-color:darkblue;color:white;font-weight: 800;}
+
+
+</style>
+<!--INserimento della icona della scheda del browser nella sezione type dopi "image/inserire l'esensione"-->
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/9835/9835813.png" sizes="32x32">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-image:linear-gradient(red,orange)"; data-bs-theme="dark">
+      <!--Cambiare lo sfondo della barra di navigazione-->  
+      <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="https://cdn-icons-png.flaticon.com/128/9835/9835813.png" alt="Bootstrap" width="30" height="24">&nbsp;Codice OG<sup>&copy;</sup></a>
+            <!--nel tag img src posiziono il logo dell'azienda-->
+           <!--Titoli della barra di navizione-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+               <!--Menu hamburger che si attiva quando lo schermo rimpicciolisce-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!--Raggruppamento delle voci del menu per allinare il menu usare il padding-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left:10px;">
+              <!--Navi item sono le singole voci del menu--> 
+              <li class="nav-item">
+                 <!-- Se aggiungiamo la voce "active" a nav link posso rendere piu forte il carattere-->
+                <a class="nav-link" id="menutop"  aria-current="page" href="#">Home</a>
+              </li>
+               <!--Voce del menu--> 
+              <li class="nav-item">
+                <a class="nav-link" id="menutop" href="#">Link</a>
+              </li>
+              <!--Fine voce del menu-->
+              <li class="nav-item">
+                <a class="nav-link" id="menutop" href="#"> <i class="bi bi-telephone" style="font-size:12pt"></i> Voce del Menu</a>
+              </li>
+              <!--navi item dropdown per creare un menu a discesa-->
+              <li class="nav-item dropdown">
+                 <!--intestazione del menu a discesa-->
+                <a class="nav-link dropdown-toggle" id="menutop" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                     <!--elementi del menu a discessa hanno la classe dropdown-item-->
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Voce del menu</a></li>
+                      <!--Dropdown-diver è un separatore delle voci del menu-->
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Nuova voce</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <!--Termine del dropdown-->
+               <!--nuovo dropdown-->
+               <li class="nav-item dropdown">
+                <!--intestazione del menu a discesa-->
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Servizi
+               </a>
+               <ul class="dropdown-menu">
+                    <!--elementi del menu a discessa hanno la classe dropdown-item-->
+                 <li><a class="dropdown-item" href="#">Immagini</a></li>
+                 <li><a class="dropdown-item" href="#">Video</a></li>
+                 <li><a class="dropdown-item" href="#">Audio</a></li>                 
+               
+               </ul>
+             </li>
+
+ <li class="nav-item">
+                <!--Aggiungendo alla class nav-link la voce disabled rendiamo il link inattivo-->
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <!--Modulo di ricerca-->
+        <form class="d-flex" role="search">
+              
+              <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
+             
+              <button class="btn btn-warning" type="submit">Cerca</button>
+            </form>  
+          </div>
+        </div>
+      </nav>
+<div class="container" style="padding-top:50px;paddig-bottom:10px">
+     <div class="row">
+     <div class="col-xl-3" style="padding-top:10px;paddig-bottom:10px">
+        <!--Prodotto 1-->
+        <div class="card" style="width: 100%">
+        <img src="https://cdn.pixabay.com/photo/2012/04/14/13/15/digital-camera-33879_1280.png" class="card-img-top" alt="Foto Camera digitale sony">
+          <div class="card-body">
+          <h5 class="card-title">199€</h5>
+          <p class="card-text">Foto Camera Digitale Professionale</p>
+            <ul>
+                <li>Zoom 4x</li>
+                <li>Risoluzione 48mpx</li>
+                <li>Led Alta definizione</li>
+            </ul>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="TG973PWZXTZSC" />
+                <input type="hidden" name="currency_code" value="EUR" />
+                <input type="image" src="https://www.paypalobjects.com/it_IT/i/btn/btn_cart_LG.gif" border="0" name="submit" title="PayPal, il metodo semplice e sicuro per pagare online" alt="Aggiungi al carrello" />
+              </form>
+          
+          </div>
+        </div>
+    </div>
+     <div class="col-xl-3" style="padding-top:10px;paddig-bottom:10px">
+        <div class="card" style="width: 100%">
+            <img src="https://cdn.pixabay.com/photo/2012/04/14/13/15/digital-camera-33879_1280.png" class="card-img-top" alt="Foto Camera digitale sony">
+              <div class="card-body">
+              <h5 class="card-title">199€</h5>
+              <p class="card-text">Foto Camera Digitale Professionale</p>
+                <ul>
+                    <li>Zoom 4x</li>
+                    <li>Risoluzione 48mpx</li>
+                    <li>Led Alta definizione</li>
+                </ul>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="TG973PWZXTZSC" />
+                    <input type="hidden" name="currency_code" value="EUR" />
+                    <input type="image" src="https://www.paypalobjects.com/it_IT/i/btn/btn_cart_LG.gif" border="0" name="submit" title="PayPal, il metodo semplice e sicuro per pagare online" alt="Aggiungi al carrello" />
+                  </form>
+              
+              </div>
+            </div>
+    
+    
+    </div>
+     <div class="col-xl-3" style="padding-top:10px;paddig-bottom:10px">   <div class="card" style="width: 100%">
+        <img src="https://cdn.pixabay.com/photo/2012/04/14/13/15/digital-camera-33879_1280.png" class="card-img-top" alt="Foto Camera digitale sony">
+          <div class="card-body">
+          <h5 class="card-title">199€</h5>
+          <p class="card-text">Foto Camera Digitale Professionale</p>
+            <ul>
+                <li>Zoom 4x</li>
+                <li>Risoluzione 48mpx</li>
+                <li>Led Alta definizione</li>
+            </ul>
+           
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="TG973PWZXTZSC" />
+                <input type="hidden" name="currency_code" value="EUR" />
+                <input type="image" src="https://www.paypalobjects.com/it_IT/i/btn/btn_cart_LG.gif" border="0" name="submit" title="PayPal, il metodo semplice e sicuro per pagare online" alt="Aggiungi al carrello" />
+              </form>
+          
+          </div>
+        </div>
+    
+    
+    </div>
+     <div class="col-xl-3" style="padding-top:10px;paddig-bottom:10px">
+        <div class="card" style="width: 100%">
+            <img src="https://cdn.pixabay.com/photo/2012/04/14/13/15/digital-camera-33879_1280.png" class="card-img-top" alt="Foto Camera digitale sony">
+              <div class="card-body">
+              <h5 class="card-title">199€</h5>
+              <p class="card-text">Foto Camera Digitale Professionale</p>
+                <ul>
+                    <li>Zoom 4x</li>
+                    <li>Risoluzione 48mpx</li>
+                    <li>Led Alta definizione</li>
+                </ul>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="TG973PWZXTZSC" />
+                    <input type="hidden" name="currency_code" value="EUR" />
+                    <input type="image" src="https://www.paypalobjects.com/it_IT/i/btn/btn_cart_LG.gif" border="0" name="submit" title="PayPal, il metodo semplice e sicuro per pagare online" alt="Aggiungi al carrello" />
+                  </form>
+              
+              </div>
+            </div>
+    
+    </div>
+     
+     </div>
+    </div>
+
+<div class="container" style="padding-top: 20px;padding-bottom:50px">
+   <div class="row">
+    <div class="col-xl-6">
+        <div class="card" style="width: 100%;padding:10px">
+            <img src="https://m.media-amazon.com/images/I/8137DSe7VHL._AC_SL1500_.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Jumper PC Portatile</h5>
+              <p class="card-text">Ottieni una nuova prospettiva con Windows 11: da un menu Start ringiovanito a nuovi modi per connetterti alle tue persone, notizie, giochi e contenuti preferiti, Windows 11 è il luogo perfetto per pensare, esprimere e creare in modo naturale percorso. </p>
+              <a href="https://amzn.to/3NS34gK" class="btn btn-warning">Acquista Ora</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-xl-6">
+        <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=marcocreazion-21&language=it_IT&o=29&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0C3B2X8SL&linkId=3969cb0575b081886fffb1844937c0bd"></iframe>
+        <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:100%;height:480px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=marcocreazion-21&language=it_IT&o=29&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0C3B2X8SL&linkId=ca23635e02153ba99d078efdf7affcad"></iframe>
+    </div>
+
+
+   </div>
+
+</div>
+      
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+ <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/f9dbfd174d4fe8c40f3aaf18/script.js"></script> <!-- End cookieyes banner --> 
+</body>
+</html>

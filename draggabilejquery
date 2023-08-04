@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!---Jquery core 3.7-->
+     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>    
+    <!--Juery ui-->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+     <!--tema grafico jquery ui-->     
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+     <!--Stile della demo-->
+     <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+     <!--oggetto draggabile css-->
+<style>
+        #draggable , #draggabledue { width: 150px; height: 150px; padding: 0.5em;
+        background-image: url(' https://pngimg.com/uploads/cappuccino/cappuccino_PNG75.png'); 
+        background-size: cover; 
+        border: none;   
+        background-color: transparent;  
+    }
+        </style>
+  <!--script funzionamento-->      
+  <script>
+    $( function() {
+      $( "#draggable" ).draggable();
+    } );
+    </script>
+    <!--script funzionamento secondo-->
+    <script>
+        $( function() {
+          $( "#draggabledue" ).draggable();
+        } );
+        </script>
+  
+</head>
+<body>
+    
+    <div id="draggable" class="ui-widget-content">
+       
+      </div>
+    <div id="draggabledue" class="ui-widget-content">
+
+     </div> 
+
+
+
+
+
+</body>
+</html>

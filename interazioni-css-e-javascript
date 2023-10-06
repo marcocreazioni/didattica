@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* usiamo il linguaggio css (css in pagina) sempre in serito in head */    
+.titolo {background-color: blueviolet;} 
+
+
+</style>
+<script></script>
+<!--Collegamento ad un documento scritto in css-->
+<link rel="stylesheet" href="stile.css">
+<!--Collegamento ad un documento scritto javascript-->
+<script src="javascript.js"></script>
+</head>
+
+<body>
+<!--Con la voce style come attributo html css in linea-->
+<h1 align="center" style="color:red" class="titolo">Tipo Html</h1>
+<!--Con la voce on+click integriamo nell'html il javascript-->
+<button onclick="alert(ciao)">ciao</button>
+
+
+<script>
+//commento in javascript (javascript in pagina)    
+var a = 5;
+var b = 10;
+
+</script>
+</body>
+
+
+
+
+
+</html>

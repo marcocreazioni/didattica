@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Writing into an Alert Dialog Box with JavaScript</title>
+</head>
+<body>
+    <script>
+     
+    // Displaying a variable value 
+     var prezzo = 360;
+     var iva = 0.22; 
+     var valoreiva = prezzo * iva;
+     var prezzoivato = prezzo + valoreiva;
+    
+   document.write("Prezzo comprensivo di Iva: " + prezzoivato + "€<br>");
+   document.write("Iva: " + valoreiva + "€");
+    </script>
+</body>

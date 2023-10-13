@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Infinity</title>
+</head>
+<body>
+<!--esempio dell'uso della variabile null e prompt assegnato ad una variabile -->
+    <script>
+     var casa = 2;
+     var villa = 3; 
+     var somma = casa + villa;
+     
+     var casa = null;
+     var casa = prompt("valore interesse al 10%");
+    
+     var interessedue = casa*0.10;
+     var casa = null;
+     var casa = prompt("valore interesse al 20%");
+     var interesse = casa *0.20;
+    
+    document.write(somma + "<br>"); 
+    document.write(interessedue + "<br>");
+    document.write(interesse);
+    
+    
+    </script>
+</body>
+</html>

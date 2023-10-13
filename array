@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Varabile</title>
+</head>
+<body>
+    <script>
+    // Creating arrays
+                  
+    var colors = ["Red", "Yellow", "Green", "Orange"];
+    var cities = ["London", "Paris", "New York"];
+      
+     var abbinamenti = colors[1] + " " + cities[2];
+     var abbinamentodue = colors[0] + " " + cities[1];
+      
+    // Printing array values
+    document.write(colors[1] + "<br>");   // Output: Red
+    document.write(cities[2] + "<br>");   // Output: New York
+    document.write(abbinamenti + "<br>");  
+   document.write(abbinamentodue);  
+    </script>
+</body>
+</html>

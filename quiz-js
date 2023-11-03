@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Comparison Operators</title>
+</head>
+<body>
+    <script>
+    var x = prompt ("il serpente a tre teste si chiama?");
+    var y = 35;
+    var z = "idra";
+    if (x === z) {
+      alert("la risposte esatta");
+    }
+      else { 
+       alert("hai toppato");
+      }
+    </script>
+</body>
+</html>

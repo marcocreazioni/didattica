@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Assignment Operators</title>
+</head>
+<body>
+    <script>
+    var x;    // Declaring Variable
+ 
+    x = [5 , 10, 7];
+    x[1] += 40;
+    x[0] += 40;   
+    x[1] *= 2;
+       
+      
+      document.write(x[1] + " € <br>"); // Prints: 125
+      document.write(x[0] + " €");
+    </script>
+</body>
+</html>

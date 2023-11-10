@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Multiple If Else Statement</title>
+</head>
+<body>
+    <script>
+    var now = new Date();
+    var dayOfWeek = now.getDay(); // Sunday - Saturday : 0 - 6
+    
+    if(dayOfWeek == 5) {
+        document.write("A<br>");
+    } else if(dayOfWeek == 0) {
+        document.write("B");
+    } else {
+        document.write("C");
+    }
+    </script>
+  
+     <script>
+     var c = prompt("inserisci un età"); 
+     
+     if (c<18) {
+       document.write ("Sei un minorenne");
+       }
+       else if (c==18) {
+         document.write ("Sei finalmente maggiorenne beviti una birra"); 
+       }
+       else if (c==19) {
+         document.write ("ah bravo");
+       }
+       else {
+         document.write ("ora puoi guardarti il filmato");
+       }
+     </script>
+  
+  
+  
+  
+  
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Multiple If Else Statement</title>
+</head>
+<body>
+    <script>
+      var eta = prompt("scrivi la tua eta");
+      // IPOTESI A
+      if ( (eta >=18) && (eta  <55) )
+      { 
+      document.write("sei maggiorenne! bravo ora puoi prendere la patente di guida")
+      }
+       //IPOTESI B 
+      
+       else if ((eta >50) && (eta <65)) {
+         document.write("stai per andare in pensione");
+      
+       }
+      else if (eta >= 65) 
+      {
+        document.write("puoi andare in pensione complimenti")
+      }
+     
+      //  IPETESI D 
+      else if ( eta < 3) {
+        document.write ("ciao bimbo!!!!")
+      }
+     
+      // ALTRI IPOTESI
+      else { 
+        document.write("sei vecchio di "  + eta)
+      }
+      </script>
+  </body> </html>

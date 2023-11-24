@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Function Passed as Argument to Other Function</title>
+</head>
+<body>
+    <script> /*ogni funzione deve essere associato un nome. Una funzione puo avere degli argomenti altrimenti la lasciamo vuota */
+    function nome()
+/* dentro la parentesi graffa devo inserire le operazione che deve svolgere una funzione* / 
+    {
+      var peter = "Peter";  
+/* ogni funzione deve contenere un coomendo "return" che specifica il risultato di una funzione */
+      return "Hello " + peter;
+    }
+      
+     function cognome(){
+       var cognome = prompt("metti il cognome a Peter"); 
+        if (cognome== "Jack") {
+          return "Ah Bravo";
+       
+            }
+       
+       else {  return cognome;
+            }
+     
+     }
+   /* successivamente possiamo utilizzare delle variabili esterne alla funzione che possono prendere ed operazioni con i risultati delle fuzioni  */ 
+ 
+    var stampa = nome() + " "  + cognome(); 
+      
+      
+    document.write(stampa); // Output: Hello, Peter
+    </script>
+</body>
+</html>

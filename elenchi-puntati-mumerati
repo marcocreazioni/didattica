@@ -1,0 +1,57 @@
+!DOCTYPE html>
+<html>
+<head>
+<title>Home Page</title>
+<meta name="description" content="descrizione">
+
+
+</head> 
+
+
+<body>
+ <!-- Blocco di un elenco -->
+ <ul><!--elenco puntato-->
+    <li>Capitolo 1</li>
+    <ul>
+        <li>Paragrafo 1</li>
+        <li>Paragrafo 2</li>
+        <li>Paragrafo 3</li>
+        <ul>
+           <li>Frase 3.1</li>
+           <li>Frase 3.2</li>
+        </ul>    
+    </ul>
+    <li>Capitolo 2</li>
+    <li>Capitolo 3</li>
+    <li>Capitolo 4</li>
+ </ul> 
+ <ol>
+    <li>Sezione 1</li>
+        <ul>
+            <li>Testuale</li>
+        </ul>
+    <li>Sezione 2</li>
+        <ol>
+            <li>Sotto Sezione 2</li>
+            <li>Sotto Sezione 3</li>
+            <ol>
+                <li>Sotto Sezione 3.1</li>
+            </ol>
+        </ol>
+    <li>Sezione 3</li>
+ </ol>  
+
+
+<!--Blocco per indirizzi in corsivo-->
+ <address>Blocco in corsivo</address>
+ <!--blocco di codice-->   
+ <code>Paragrafo come macchina da scrivere 
+b {color:red}    
+</code>
+<!--
+  <blockquote>Citazione: Le papere galleggiano
+    <br>con rientro del testo
+  </blockquote>
+  -->
+</body>
+</html>

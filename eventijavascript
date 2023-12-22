@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Click Event</title>
+</head>
+<body onload="window.alert(d)">
+<script>
+  var casa="ATR";
+  var pane="2023!"
+  
+  var ciao = casa + " " + pane;
+  </script>    
+    <p id="testo"></p>
+  
+    <button type="button" style="background-color:orange;padding:10px" onclick="alert(ciao);">clicca qui</button>
+    <a href="#" onclick="alert('You have clicked a link!');">Scopri il codice sconto</a> <br><br>
+  <hr>
+    <p id="casa" style="font-size:24pt"></p>
+  
+  <img src="https://cdn.pixabay.com/photo/2023/12/08/09/13/vine-8437282_1280.jpg" onmouseover="alert('azione')" style="widht:10px;height:50px">
+ <script>
+   var a = "il mio testo";
+   var b = " & ";
+   var c = "il tuo testo";
+  
+   var d = a + b + c;
+  
+  </script>
+  <br><br>
+  <button type="button" style="background-color:orange;padding:10px" onclick="alert(d)">Scrivi</button>
+  
+ 
+  <button type="button" style="background-color:orange;padding:10px" oncontextmenu="alert(d)">Scrivi</button>
+  <button type="button" style="background-color:orange;padding:10px" onkeydown="alert(d)">Scrivi</button>
+   <button type="button" style="background-color:orange;padding:10px" onclick="document.getElementById('casa').innerHTML = d;">Scrivi</button>
+
+
+  
+</body>
+</html>

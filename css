@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--CSS ESTERNO-->
+<link href="fogliostile.css" rel="stylesheet" type="text/css">    
+<!--CSS IN PAGINA-->
+<style>
+@import url(/fogliostile.css);
+p { color:orange;
+
+}
+/* commento in css : i selettori class */
+.primo {color:aqua;
+}
+.secondo {color:greenyellow;
+
+}
+
+
+/* commento in css : i selettori id */
+#uno { color:violet;}
+
+</style>
+</head>
+<body>
+    <h1>CSS come modfica dell'aspetto dei contenti </h1>
+    <!--CSS IN LINEA-->
+    <p id="uno">Paragrafo color corallo</p>
+    <p style="color:green">Paragrafo colore verde</p>
+    
+    <p id="uno">Paragrafo di colore arancione</p>
+    <ul class="primo">
+       <li>A</li>
+       <li>B</li>
+   </ul>
+
+   <ul class="secondo">
+    <li>TA</li>
+    <li>BD</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="vogliocambiarlo">Paragrafo che cambiera colore</p>
+<!--Interazioni con il dom-->
+<script>
+/*creamo una funzione usando function e ci assegnamo un nome ad esempio cambia colore*/
+function cambiacolore() {
+    
+    /*nella funzione inseriamo la possibilita che un oggetto html con un determinato id cambi colore del carattere e peso del carattere stesso
+    con  document.getElementById("id del tag html che vogliamo cambiare") poi aggiungiamo il " . " e decidiamo di modificarea il css con "style" e poi ancora  "." e indicare le proprieta
+    del css che vogliamo cambiare poi aggiungiamo  simbolo uguale "opzione legata alla proprieta " */
+
+    
+    document.getElementById("vogliocambiarlo").style.fontWeight ="bolder";
+    document.getElementById("vogliocambiarlo").style.color ="red";
+}
+</script>
+
+<!--librerie style di javascript le trovate qui "https://www.w3schools.com/jsref/prop_style_alignitems.asp" -->
+<!--Inseriamo la funzione javascript collegandola ad un pulsante con onclick dove nelle virgolette inseriamo la funzione appena creata -->
+
+<button onclick="cambiacolore()">clicca qui per cambiare colore</button>
+    
+</body>
+</html>

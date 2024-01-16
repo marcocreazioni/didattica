@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documenti</title>
+    <meta name="description" content="Pagina contententi documenti">
+    <meta name="keywords" content="documenti,pagina con documenti">
+    <link href="style.css" rel="stylesheet" type="text-css">
+    <!--favicon-->
+    <link href="free.png"  rel="icon" type="image/png" sizes="16x16">
+<style>
+/* * {margin: 0px;
+}  */  
+header {
+    background-color: #306EFF;
+    color: rgb(255,255,255);
+    height: auto;
+    padding: 1px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
+    padding: 10px;
+}
+nav { background-color: hsl(61,94%,91%);
+      padding: 1px;
+      margin-left: -8px;
+      margin-right: -8px;
+}
+main { background-color: rgba(20, 13, 114,0.7);
+       padding: 1px;
+       margin-left: -8px;
+    margin-right: -8px;
+}
+section { background-image: linear-gradient(270deg,orange,red,purple);
+    height: 150px;
+
+}
+article {background: radial-gradient(red 30%,orange 70%);
+   
+}
+footer {background-image: url('https://cdn.pixabay.com/photo/2015/02/09/14/31/blonde-629726_960_720.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-attachment: scroll;
+        padding: 1px;
+        margin-left: -8px;
+        margin-right: -8px;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Testata della pagina</h1>
+    </header>
+    <nav>
+         <ul>
+             <li>Home</li>
+             <li>Servizi</li>
+         </ul>
+    </nav>
+    <main>
+     <section>
+           <p>Primo paragrafo</p>
+
+     </section>
+     <section>
+          <p>Secondo paragrafo</p>
+
+
+     </section>
+     <article>
+         <h2>Titolo articolo</h2>
+         <p>Il primo articolo</p>
+     </article>
+     <aside>
+         <ul>
+            <li>Prima</li>
+            <li>Seconda</li>
+         </ul>
+     </aside>
+    </main>
+    <footer>
+        <code>Sito by noi</code>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*reset dei margini */
+ * { margin: 0px;
+
+ }       
+.primo {background-color:aquamarine;
+        padding: 5px;
+        
+}
+    
+ .secondo {background-color:bisque;
+           width: 300px ;
+           height: 50px;
+          /* margin-left: 240px;
+           margin-top: 40px;
+           margin-bottom: 30px; 
+           margin-right: 4000px;*/
+           /* margin: auto; */
+           /* 1 valore imposta tutti e 4 i margini, 2 valori il primo stabilisce
+           il margine superiore e inforiore, il secondo il margine di destra
+           e sinistra 4 valori partendo da top right bottom e left*/
+           margin-top: 0px;
+           /*solid linea dotted punti tratteggiati dashed linee tratteggiate double
+           inset (aggunge spazio verso l'interno e outset (aggiunge spazio esterno)tridimensionale double doppia linea 
+           groove crea una cornice*/
+           /*border: 10px groove red;
+           border-top: 5px double black;
+           border-left: 2px solid orange;
+           border-right: none;
+           border-bottom: 10px dashed purple; */
+           border: 10px;
+           border-style: ridge;
+           border-color: blue;
+           border-radius: 25px 5px 10px 30px;
+           padding: 10px;
+           padding-top: 40px;
+           padding-bottom: 60px;
+           padding-left: 40px;
+           padding-right: 70px;
+           padding: 4px 2px 40px 5px;
+           
+
+}   
+
+
+
+    </style>
+</head>
+<body>
+ <div class="primo">
+  <h1>Titolo</h1>
+  <p> Acquistare un compressore scroll <br>
+    su FR Compressori è una scelta intelligente<br> 
+    per una serie di motivi. Questi dispositivi<br>
+    sono ampiamente utilizzati in una varietà di <br>
+    applicazioni industriali e commerciali grazie alle <br>
+    loro numerose vantaggi. Di seguito, esploreremo <br>
+    almeno 10 motivi convincenti per considerare <br>
+    l’acquisto di un compressore scroll da FR Compressori.</p>
+    <figure>
+     <img src="https://cdn.pixabay.com/photo/2024/01/07/16/27/chinese-reed-8493547_960_720.jpg" width="50px"  height="50px">
+    </figure>
+ </div>
+ <div class="secondo">No tag all'interno</div>   
+
+</body>
+</html>

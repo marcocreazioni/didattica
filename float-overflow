@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*reset dei margini */
+ * { margin: 0px;
+
+ }       
+.primo {background-color:aquamarine;
+        padding: 10px;
+        text-align: justify;
+        color: white;
+        text-shadow: 1px 1px black;
+        width: 500px;
+        height: 150px;
+        /*quando un blocco a dimensioni specifiche con le proprieta overflow
+        facciamo che i contenuti non occupino lo spazio esterno al blocco*/
+        /*auto atttiva barra di scorrimento verticale e orizzontale
+         overflo x attiva solo la barra orizzontale e overflo y solo quella
+         verticale */ /*scroll e auto attivano le barre di scorrimento  mentre
+         hidden rende visibile che rientrano nelle dimensioni del blocco dissativando
+         le barre di scorrimento */
+         overflow: hidden;
+         float:left;
+         
+
+}
+h1 {color:red;
+}
+p {color:orange;
+   margin-top: 10px;
+
+
+}
+span { color: aliceblue;
+
+}
+
+img {margin-top: 0px;
+     margin-left: 450px;
+     border: 2px solid orange;
+     width: 150px;
+     height: 150px;
+     box-shadow: 2px 2px black;
+}
+    
+ .secondo {background-color:bisque;
+           width: 300px ;
+           height: 50px;
+          /* margin-left: 240px;
+           margin-top: 40px;
+           margin-bottom: 30px; 
+           margin-right: 4000px;*/
+           /* margin: auto; */
+           /* 1 valore imposta tutti e 4 i margini, 2 valori il primo stabilisce
+           il margine superiore e inforiore, il secondo il margine di destra
+           e sinistra 4 valori partendo da top right bottom e left*/
+           margin-top: 0px;
+           /*solid linea dotted punti tratteggiati dashed linee tratteggiate double
+           inset (aggunge spazio verso l'interno e outset (aggiunge spazio esterno)tridimensionale double doppia linea 
+           groove crea una cornice*/
+           /*border: 10px groove red;
+           border-top: 5px double black;
+           border-left: 2px solid orange;
+           border-right: none;
+           border-bottom: 10px dashed purple; */
+           border: 10px;
+           border-style: ridge;
+           border-color: blue;
+           border-radius: 25px 5px 10px 30px;
+           padding: 10px;
+           padding-top: 40px;
+           padding-bottom: 60px;
+           padding-left: 40px;
+           padding-right: 70px;
+           padding: 4px 2px 40px 5px;
+          float: left;
+    
+
+}   

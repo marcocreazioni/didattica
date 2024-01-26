@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+footer {
+        height:120px;
+</style>
+<h1>HTML Style Object</h1>
+<h2>The backgroundColor Property</h2>
+
+<button type="button" onclick="myFunction()">Set background color</button>
+<button type="button" onclick="trasparent()">Resetta</button>
+<button type="button" onclick="footercenter()">footer</button>
+<script>
+function myFunction() {
+  document.body.style.backgroundColor = "red";
+}
+function trasparent() {
+  
+  document.body.style.backgroundColor = "white";
+} 
+function footercenter() {
+ var a = 5;
+ var b = 10;
+ var c = "by istitutovolta";
+ document.getElementById("ciao").innerHTML = c;
+ document.getElementById("ciao").style.textAlign = "center"; 
+ document.getElementById("ciao").style.position = "fixed";
+ document.getElementById("ciao").style.bottom = "10px";
+ document.getElementById("ciao").style.marginLeft = "50%";
+ document.body.style.backgroundColor = "gray";
+
+} 
+
+</script>
+
+<footer id="ciao" > s
+</footer>
+</body>
+</html>

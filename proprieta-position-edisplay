@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+* {
+    margin: 0px;
+}    
+.titolo { 
+    text-align: center;
+    background-color: aqua;
+    padding: 1px;
+    height: 200px;
+    margin-left: -8px;
+    margin-right: -8px;
+    /*tutti gli oggetti in posizione statica si posizionano un sotto l'altro */
+    position: static;
+    width: 100%;
+
+}
+.titolo h1 { margin-top: 50px;
+}
+
+nav {padding: 1px;
+     background-color: transparent;
+     /* con la posizione relative scompare l'impostazione margin dalla proprieta del css e sostituite da top,left,right bottom 
+     quando attiviamo la position relativi deve essere sempre valorizzate la dimensione dell'oggetto e di porsi al di sopra di un altro oggetto*/
+     position: relative;
+     left: -8px;
+     right: -8px;
+     top: -90px;
+     width: 100%;
+
+}
+nav li { 
+    list-style-type: none;
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+}
+nav ul {margin-top: 25px;
+}
+nav ul a {color: white;
+          font-weight: bold;
+}
+.paragrafo {
+margin-top: -68px;
+margin-bottom: 0px;
+height: 300px;
+overflow: hidden;
+
+}
+.immagine {
+           width: 50%;
+           /* pongo un oggetto al di sopra di altri */
+           position: absolute;
+           z-index: -1;
+           left: 0px;
+           
+}
+.testo { 
+           width: 50%;
+           height: auto;
+           top: -400px;
+           bottom: 0;
+
+}
+footer { 
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: purple;
+    /*fixed permette di ancorare un blocco al browser e non alla pagina */
+    position: fixed;
+    /*inserire le coordinate rispetto a dove dobbiamo agganciare l'oggetto */
+    bottom: 0px;
+    text-align: center;
+}
+footer code {
+    top: 20px;
+}
+.bloccouno, .bloccodue, .bloccotre, .bloccoquattro {
+width: 24%;
+border: 1px solid black;          
+height: 175px;
+/* display: inline; mette in linea glio oggetti cancellando le dimensioni */
+/* display: inline-block; mette in line gli oggetti e conserva le dimensioni */
+/* display: block; trasforma gli oggetti o testi in blocchi dimensionabili */
+/* display: grid; consente di creare una griglia con un contenitore grande all'interno di un contentore piccole */
+display: inline-block;
+}
+.bloccouno {
+ /*   visibility:hidden;  proprieta per nascondre un oggetto ma non la dimensione che occupa */
+/*   display: none; permetto di nascondere un oggetto compreso la dimensione che occupa */
+
+}
+
+</style>
+</head>
+<body>
+    <div class="titolo">
+<h1> Titolo</h1>
+
+    </div class="titolo">
+    <nav>
+<ul>
+<a href="#"><li>Home</li></a>
+<a href="#"><a href="#"><li>Contatti</li></a>
+</ul>
+
+
+    </nav>
+    <div class="paragrafo">
+<img src="https://cdn.pixabay.com/photo/2024/01/18/14/46/train-8517089_960_720.jpg" class="immagine">
+<p class="testo">
+
+La stazione si presenta come una moderna cattedrale di luce e trasparenza. <br>
+Immersa in un contesto urbano, essa si distingue per la sua architettura audace e innovativa.<br>
+La caratteristica predominante della stazione è la sua imponente galleria avvolta da ampie superfici vetrate. <br>
+Questi vasti pannelli di vetro, trasparenti e luminosi, si estendono dal pavimento al soffitto, creando un effetto quasi sospeso nel tempo e nello spazio.
+
+</p>
+    </div>
+<div class="linea" style="position:static"><hr></div>
+
+    
+<div class="bloccouno">1</div>
+<div class="bloccodue">2</div>
+<div class="bloccotre">3</div>
+<div class="bloccoquattro">4</div>
+
+<footer>
+    <code>by volta</code>    
+
+    </footer>
+</body>
+</html>

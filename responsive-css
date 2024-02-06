@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {margin: 0px;
+}
+/*proprieta cellulare */
+  @media (max-width:420px) {
+    
+
+.mario 
+{ width: 100%;
+    height: 200px;
+background-color:cyan;
+text-align: center;
+
+}
+.francesco { width: 100%%;
+background-color:green;
+text-align: center;
+height: 200px;
+}
+
+                        }
+ /*Proprietà tablet e desktop */                       
+@media (min-width:420px){
+
+.mario  
+ { 
+width: 50%;
+height: 200px;
+background-color: yellow;
+float: right;
+text-align: center;
+
+ }
+
+ .francesco { width: 50%;
+background-color:orange;
+text-align: center;
+height: 200px;
+ }
+                     }
+
+</style>
+</head>
+<body>
+ <div class="mario">Contenuto</div>
+ <div class="francesco">Contenuto</div>
+</body>
+</html>

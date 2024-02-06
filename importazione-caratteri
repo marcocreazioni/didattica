@@ -1,0 +1,75 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--importazione carattere html-->
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet"> 
+    <!--importazione di un carattere nel css-->
+   
+<style>
+    /*importazione nel linguaggio css */
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+ /*Importazione carattere da file personalizzato */
+ @font-face {
+    font-family: 'Skincake';
+    src: url('Skincake.ttf');
+ }
+* {margin: 0%;}
+
+p , h2, h3 , h4, h5, h6 {
+    font-family: 'Protest Revolution', sans-serif;
+}
+h1 {font-family: 'Skincake';}
+p { padding-top:10px;
+}
+header {text-align: center;
+}
+/*proprieta cellulare */
+  @media (max-width:420px) {
+    
+p {font-family: 'Playfair Display', serif}
+.mario 
+{ width: 100%;
+    height: 200px;
+background-color:cyan;
+text-align: center;
+
+}
+.francesco { width: 100%%;
+background-color:green;
+text-align: center;
+height: 200px;
+}
+
+                        }
+ /*Proprietà tablet e desktop */                       
+@media (min-width:420px){
+
+.mario  
+ { 
+width: 50%;
+height: 200px;
+background-color: yellow;
+float: right;
+text-align: center;
+
+ }
+
+ .francesco { width: 50%;
+background-color:orange;
+text-align: center;
+height: 200px;
+ }
+                     }
+
+</style>
+</head>
+<body>
+    <header><h1>Benvenuti</h1></header>
+ <div class="mario"><p>Contenuto</p></div>
+ <div class="francesco"><p>Contenuto</p></div>
+</body>
+</html>

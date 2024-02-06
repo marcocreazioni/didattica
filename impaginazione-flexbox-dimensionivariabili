@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.contenitore {
+    display: flex;
+    width: 100%;
+    border: 2px solid;
+}
+.blox {width:25%;
+        border:1px solid;
+        text-align: center;
+}
+   .primo {
+    background-color: red;
+    flex: 1;
+    }
+    .secondo {
+    background-color:orange;
+    flex: 3;
+    }
+    .terzo {
+    background-color:purple;
+    color: white;
+    flex: 3;
+    }
+    .quarto {
+    background-color: cyan;
+    flex: 1;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <div class="contenitore">
+    <div class="blox primo">contenuto</div>
+    <div class="blox secondo">contenuto</div>
+    <div class="blox terzo">contenuto</div>
+    <div class="blox quarto">contenuto</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="mio-framework.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header><h1>Benvenuti</h1></header>
+     <div class="grande sf1 gamma"><p>contenitore</p>
+    <div class="medio sf2 beta"><p>contenitore 1</p></div>
+    <div class="medio sf1 epsylon"><p>contenitore 2</p></div>
+    
+    
+    
+    
+    </div>
+</body>
+</html>

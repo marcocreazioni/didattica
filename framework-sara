@@ -1,0 +1,51 @@
+/* Framework di Sara */
+body {margin: 0px}
+
+/*colori del mio framework */
+.alfa {color:#F22771}
+.beta {color:#F26D9E}
+.gamma {color:#0460D9}
+.delta {color:#F20505}
+.epsylon {color: #0D0D0D}
+
+/*Sfondi   */
+.sf1 {background-image: linear-gradient(45deg,#F22771,#9e073f)}
+.sf2 {background-image: linear-gradient(45deg,#0460D9,#0b19e6)} 
+
+/* Famiglia di caratteri */ 
+h1, h2 , h3, h4 , h5, h6, p {
+    font-family:verdana, sans serif;
+}
+/*contenitori griglia*/
+.grande {width: 101%;
+         min-height: 60px;
+         overflow:hidden;
+}
+.medio {width: 50%;
+       float: left;
+       min-height: 60px;
+       margin: 0px;       
+    }
+.piccoli {width: 25%;
+          float:left;
+          min-height: 60px;
+          padding: 5px}
+.superpiccoli {width: 13,3333%;
+                float:left;
+                min-height: 60px;
+                padding: 5px}
+p {padding: 5px;}
+
+
+
+@media (max-width:420px) {
+
+.piccoli {width:100%;}
+.medio {width: 100%;
+        clear:both;}
+.superpiccoli {width:50%;
+              clear:both;}
+
+}
+header {text-align: center;}
+    

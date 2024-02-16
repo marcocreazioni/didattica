@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$x = 5;
+$y = 20;
+$z = 3;
+
+function myTest() {
+  global $x, $y;
+  $y = $x + $y;
+  echo $y;
+  
+} 
+
+
+function prodotto() {
+ global $x, $z;
+  $t = $x * $z;
+ echo "<br><strong>$t</strong>";
+} 
+ 
+myTest(); 
+prodotto();
+
+
+
+
+?>
+
+</body>
+</html>

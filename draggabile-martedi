@@ -1,0 +1,50 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <style>
+    #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+    #droppable { border: 1px solid; width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+    </style>
+    
+  <!-- instellazione del core --> 
+ <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> 
+ <!--interfaccia di jquery-->
+ <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>  
+    <!--script di funzionamento-->
+  <script>
+    $( function() {
+      $( "#draggable" ).draggable();
+      $( "#droppable" ).droppable({
+        drop: function( event, ui ) {
+          $( this )
+            .addClass( "ui-state-highlight" )
+            .find( "p" )
+              .html( "<b style='color:red'>Bravo! hai centrato!</b>" );
+        }
+      });
+    } );
+    </script>
+
+
+
+
+</head>
+<body>
+
+<!--html-->
+<div id="draggable" class="ui-widget-content">
+    <img src="https://pngimg.com/uploads/apple/apple_PNG12440.png" width="50px"> 
+  </div>
+   
+  <div id="droppable" class="ui-widget-header">
+    <p>Metti qui</p>
+  </div>
+
+
+</body>
+</html>

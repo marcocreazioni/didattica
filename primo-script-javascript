@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--Javascript Esterno-->
+<script src="file.js"></script>
+</head>
+<body>
+     <h1 id="risultato" style="text-align: center;"></h1>
+<!--javascript interna da inserire sempre prima della fine del tag body-->
+<script>    
+var mario = prompt("inserisci la prima variabile");
+var alfredo = prompt("inserisci la seconda variabile");
+var somma = mario * alfredo;
+
+document.getElementById("risultato").innerHTML = somma;
+</script> 
+<!--stampa sull'oggeto con id "risultato"-->
+
+
+
+</body>
+</html>

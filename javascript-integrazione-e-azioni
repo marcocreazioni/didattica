@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--Javascript Esterno-->
+<script src="file.js"></script>
+</head>
+<body>
+<!--javascript interna-->
+<script>    
+var mario = 5;
+var alfredo = 10;
+var somma = mario * alfredo;
+//e' consentito stampare la variabile solo in un modo tra quelli inseriti qui sotto"
+//console.log stampa la variabile sulla console del browser
+console.log(somma);
+//Document.write Stampa la variabile nel punto dove viene inserito lo script
+documen.write(somma);
+//alter stampa la veriabile su un popup
+alert(somma);
+//stampa su un oggetto html con l'id "risultato"
+document.getElementById("risultato").innerHTML somma;
+</script> 
+<!--stampa sull'oggeto con id "risultato"-->
+<h1 id="risultato"></h1>
+
+<button onmouseover="alert(somma)">Click Me</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1 id="risultato" style="text-align: center;"></h1>
+<!--javascript interna da inserire sempre prima della fine del tag body-->
+<script>  
+  
+}
+function mq() {
+    var base =  prompt ('inserisci la base');
+    var altezza = prompt ('inserisci la base');
+    return base * altezza / 2;
+
+}
+document.write ("l'area del quadrato è:" + mq());
+
+
+</script> 

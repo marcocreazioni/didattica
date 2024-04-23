@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maggiorenne</h1>
+
+ <script>
+var eta = prompt('dimmi la tua età?');
+/* if condizione che si deve verificare la condizione (){operazione da svolgere}*/
+   if (eta>=18){ 
+    alert('bravi sei maggiorenne puoi vedere il nostro sito');
+   } 
+   /* in else indichiamo come si deve comportare se la condizione non si verifica {} */
+   else
+   { 
+    alert('vai via da questo sito web');
+   }
+
+ </script>
+
+
+
+    
+</body>
+</html>

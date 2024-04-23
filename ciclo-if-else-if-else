@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maggiorenne</h1>
+
+ <script>
+var eta = prompt('dimmi la tua età?');
+/* if condizione che si deve verificare la condizione (){operazione da svolgere}*/
+   if (eta>=18 && eta<65)  { 
+    alert('bravi sei maggiorenne puoi vedere il nostro sito');
+   } 
+   /* in else if indichiamo se si verifica anche questa condizione {} */
+   else if (eta>=65){
+   alert('verifica se puoi prendere la pensione')
+
+   }
+/* in else if indichiamo se si verifica anche questa condizione {} */
+   else if (eta>=0 && eta<=6) {
+    alert('viva masha e orso')
+  }
+/* con else indichiamo l'ipotesi che non si verifcano tutte le altre condizioni*/
+   else
+   { 
+    alert('vai via da questo sito web');
+   }
+
+ </script>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+<script>  
+var numero = 23; /*numeri intero*/
+var floating = 23.5; /*numero a virgola mobile floating  */
+var esponenziale = 23.5e2; /*  numero esponenzia */
+/* var funzione = funtion casa() { return = "casa" }; */ 
+var stringa = "Testi"; /*stringhe */
+var booleana = true; /* true o false vero o falso */ 
+var test = numero > floating; 
+var casa = "il pane";
+var casa = null; /*una variabile che resetta un valore assegnato in precedenza */
+var casa = prompt ('sostituisci pane con'); /*variabili inserite dall'utente */
+var oggetto = {
+        "colore:" : "rosso",
+        "materiale" : "acciaio",
+        "potenza": 10 
+    };
+    /*elenchi di variabili */
+var lista = ["Mario", "Rossi" , "Via torino 126"];
+   /*funzioni assegnate ad una variabile */
+var funzione = function(){ 
+    return  5 + 6; 
+}
+    
+document.write (numero + " " + typeof(numero) + "<br>" );
+document.write (floating + " " + typeof(floating) + "<br>" );
+document.write (esponenziale + " " + typeof(esponenziale) + "<br>");
+document.write (stringa + " " + typeof(stringa) + "<br>");
+document.write (booleana + " " + typeof(booleana) + "<br>");
+document.write (test +  " " + typeof(test) + "<br>");
+document.write (casa +  " " + typeof(casa) + "<br>");
+document.write (oggetto +  " " + typeof(oggetto) + "<br>");
+document.write (lista[1] + " " + lista[0] + " " + lista[2] + " " + typeof(lista[1]) + "<br>");
+document.write (funzione() +  " " + typeof(funzione()));
+</script> 
+<!--stampa sull'oggeto con id "risultato"-->
+</body>
+</html>

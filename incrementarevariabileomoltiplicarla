@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>calcolo iva</h1>
+<script>
+
+
+var iva = prompt('inserisci');
+/* non richiamare l'assegnazione della viaribile */
+iva *= 1.22;
+document.write("il valore ivato è :" + iva + " €" + "<br>"); // Prints: 50
+
+</script>
+
+    
+</body>
+</html>

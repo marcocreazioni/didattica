@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+   <script>
+    let preferenza = prompt('che cibo ti piace?');
+  /* variabile da testare per le diverse ipotesi */
+	switch(preferenza)
+    
+    {
+        /* per tutte le ipotesi non verificate dagli altri casi */
+		default: 
+			document.write("bravo ti piace tutto");
+			break;
+         /* ipotesi che scrivano pizza */   
+		case "pizza":
+			document.write("bravo la pizza è buona.");
+			break; 
+            /* ipotesi che scrivano baba */   
+		case "baba":
+			document.write("sono contento che ti piace baba.");
+            break; 
+              /* ipotesi che scrivano casatiello */ 
+        case "casatiello":
+         document.write("Forza casatiello");   
+	}
+    </script>
+   
+  
+</body>
+</html>

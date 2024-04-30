@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div><p id="mio">Ciao</p></div>
+<!--onclick al click
+    onmouseover al passaggio del mouse
+    
+    richiama la funzione javascript tra virgolotte ""-->
+<button onclick="colore()">Meraviglia</button>
+
+
+
+
+
+
+
+<script>
+/*la funzione richiama l'attivita da svolgere e il cambiamento da apportare"*/
+function colore()
+{
+    document.body.style.background = "yellow";
+    document.getElementById("mio").style.color = "orange";
+    document.getElementById("mio").style.fontFamily = "verdana";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p> Compila i campi sottostanti</p>
+<form id="calcolatore">
+<label> Valore A</label>
+<input type="text" name="campo-a" value="100"><br><br>
+<label> Valore B</label>
+<input type="text" name="campo-b" value="200"><br><br>
+<label> Valore C</label>
+<input type="text" name="campo-c" value="300">
+
+</form><br>
+<button onclick="miafunzione()">Clicca</button><br><br>
+
+<p id="stampa"></p>
+<script>
+function miafunzione() {
+    var x = document.getElementById("calcolatore");
+    var text = "";
+    /* for prendi almeno piu di un valore dove il prima valore dell'elenco va indicato i=0
+    inseriamo il ; per indicare il massimo valore che voglio prendere con la proprieta lenght stabiliamo il 
+    limite massimo di valori da prendere dalla variabile X; come terzo elemento facciamo incrementare la variabile i
+    con tutti i valori presenti nel modulo*/
+    for (var i = 0; i < x.length ;i++) {
+        /*operazione da compiere con l'elenco */
+        text += x.elements[i].value + " ";
+        
+    }
+     
+     document.getElementById("stampa").innerHTML = casa;
+}

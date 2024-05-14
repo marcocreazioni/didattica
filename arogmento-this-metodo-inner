@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2>
+<!--con la funzione this all'interno degli argomenti della funzione nomefunzione(this) consente di richiamare un oggetto senza document...by id -->
+<h2 onclick="changeText(this)">Click on this text!</h2>
+<p onclick="casa(this)">Home</p>
+<!-- .innerHTML consente di inserire come valore valore nelle virgolette qualsiasi codice HTML -->
+<script>
+function changeText(ciao) {
+  ciao.innerHTML = "Ooops!";
+}
+
+function casa(prova) {
+  prova.innerHTML = "<span style='color:orange'>Home & Garden</span>";
+}
+
+</script>
+
+</body>
+</html>

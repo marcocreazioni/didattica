@@ -1,0 +1,60 @@
+<?php
+$reddito = 55000;
+$indice = 1880;
+/* 1 detrazione e II detrazione */
+$giorni = 365;
+$numerogiorni = 5;
+$annogiorni = $numerogiorni / $giorni;
+
+$detrazioni = $indice * $annogiorni;
+/* 2 detrazione */
+$quoziente = 28000 - $reddito;
+$divisore_quoziente = $quoziente / 13000;
+$quoziente2 = 1190 * $divisore_quoziente;
+
+$detrazione2 = $quoziente2 * $annogiorni;
+$detrazione2bis = 1910 + $detrazione2;
+/*3 detrazione */
+$quozionte_3 = 50000 - $reddito;
+$divisore_quoziente3 = $quozionte_3 / 22000;
+
+$detrazione3 = 1910 * $divisore_quoziente3;
+$detrazione3bis = $detrazione3 * $annogiorni;
+
+if ($reddito <= 15000) {
+    echo "Ti spettano su 5 giorni di lavoro le seguenti detrazione: $detrazioni €";
+
+} else if (($reddito > 15000) && ($reddito <= 28000)) {
+    
+    
+    echo "Ti spettano su 5 giorni di lavoro le seguenti detrazione per un reddito di 20.000€: $detrazione2bis €";
+
+}
+
+else if (($reddito > 28000) && ($reddito <= 50000)) {
+    
+    
+    echo "Ti spettano su 5 giorni di lavoro le seguenti detrazione per un reddito di 30.000€: $detrazione3bis €";
+
+}
+
+else if ($reddito > 50000) {
+    
+    
+    echo "Non ti spettano detrazioni ";
+
+}
+
+
+ else
+{
+    echo "Non ti spettano detrazioni";
+
+}
+
+
+echo "<p> Detrazioni per i redditi fino a 15000€: $detrazioni € ";
+
+/*la possibilita di inserire il numero dei giorni e l'indicazione del reddito in modo da applicare la giusta detrazione */ 
+
+?>

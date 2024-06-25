@@ -1,0 +1,59 @@
+CODICE DELLA PAGINA HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="funzioni.php" method="post" autocomplete="off">
+       <label>Valore 1</label>
+        <input type="numer" name="a"><br><br>
+        <label>Valore 2</label>
+        <input type="numer" name="b"><br><br>
+        <label>Valore 3</label>
+        <input type="numer" name="c"><br><br>
+         <input type="submit" value="Invia">
+
+    </form>
+    
+</body>
+</html>
+
+CODICE DELLA PAGINA IN PHP "funzioni.php"
+<?php
+
+
+/*funzione con argomenti anche quando richiamo la funzione devo inserire i valori che sono stati ammessi */
+function calcolo($valore,$valore2,$valore3) {
+   $somma = $valore + $valore2 + $valore3;
+       
+         function poster() {
+            return 5+6;
+          }
+/* all'interno della funzione possiamo inserire anche delle condizioni che devono verificarsi per essere applicata */
+             if ($somma>0) { 
+
+   echo "<p align='center' style='font-size:40pt;color:orange'> " . $somma + poster() ." €" . "</p>";
+                           } 
+             else { 
+                    function pasta() {
+                    return 5+5; }
+   echo "<p align='center' style='font-size:40pt;color:orange'> ti do il risultato solo se mi va ora ti restituisco:" . pasta(). "</p>";
+                  }
+}
+/*gli argomenti delle funzioni innanzitutto devono essere della stessa tipologia ammessa della funzione e possiamo noi stessi o prelevarli da un modulo */
+calcolo($_POST["a"],$_POST["b"],$_POST["c"]);
+
+/*Funzioni personalizzate e richiamo delle funzioni con funzione nidificata e -funzioni condizionali- */
+
+
+
+
+
+
+
+
+
+?>

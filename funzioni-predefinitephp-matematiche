@@ -1,0 +1,41 @@
+/*codice html */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <h4> Facciamo la radice quadrata</h4>
+    <form action="matematica.php" method="post">
+     <lable></lable>
+     <input type="number" name="fare-radice"><br><br>
+     <input type="submit" value="Invia">
+    </form>
+
+
+
+
+</body>
+</html> 
+
+/* codice php */
+<?php
+function radice($valore) {
+     
+    $numero = $valore;
+    /*sqrt fa la radice quadrata, rand(minimo,massimo) numero casuale, date la data, time e mktime funzioni sul tempo */
+    echo sqrt($numero)."</br>"."<hr>";
+
+}
+radice($_POST["fare-radice"]);
+
+
+echo "<b>Bene ora che sai la radice quadrata ti dico i numeri per il lotto:" . "<br>" . "<marquee>" . rand(1,90) . " " .  rand(1,90) . 
+" " . rand(1,90) ." " . rand(1,90) ." "  . rand(1,90) . " " . rand(1,90) . " ". date("d/m/y") ." " .time();
+
+
+?>

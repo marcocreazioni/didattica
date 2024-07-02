@@ -1,0 +1,33 @@
+/*contenuto incluso in questo file */
+<?php
+
+echo "<header style='background:yellow;width:100%;padding: 10px;margin-top:0px'><h1 style='color:red;'>" . "BENVENUTI SUL MIO SITO OGGI E' IL: " . date("d/m/y") . "</h1></header>"
+
+?>
+
+
+
+
+/*documento che include altri file */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php include "header.php"; ?>
+    
+    <h4> Facciamo la radice quadrata</h4>
+    <form action="matematica.php" method="post">
+     <lable></lable>
+     <input type="number" name="fare-radice"><br><br>
+     <input type="submit" value="Invia">
+    </form>
+
+
+
+
+</body>
+</html> 

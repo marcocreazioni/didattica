@@ -1,0 +1,139 @@
+/* Pagina Madre inserimentoradice.php
+______________________________________________________________
+
+<?php 
+echo "<!DOCTYPE html><html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>";
+    include 'resetcss.php';
+
+
+echo "
+</head>
+<body>";
+     include 'header.php'; 
+     /* corpo del sito web */
+echo "
+    <h4> Facciamo la radice quadrata</h4>
+    <form action='matematica.php' method='post'>
+     <lable></lable>
+     <input type='number' name='fare-radice'><br><br>
+     <input type='submit' value='Invia'>
+    </form></br><br> ";
+
+    include 'body.php';
+
+    include 'footer.php';
+    /* funzioni javascript */ 
+    include 'javascript.php';
+
+echo "</body></html>";
+?>
+
+/* pagina php del codice di reset.css */
+______________________________________________________
+<?php 
+echo "<link rel='stylesheet' href='reset.css'> ";
+echo "<style type='text/css'>
+BODY {overflow-x: hidden;}
+</style>";
+
+?>
+
+/*contenuto di reset.css */
+______________________________________________________
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* pagina php del codice di header.php */
+________________________________________
+<?php
+
+echo "<header style='background:yellow;width:100%;height: 80px;margin-top:0px'><h1 style='color:red;'>" . "BENVENUTI SUL MIO SITO OGGI E' IL: " . date("d/m/y") . "</h1></header>"; 
+
+?>
+/*  pagina php del codice di body.php con fopen e fread  */
+_________________________________________________
+
+<?php
+    /*scelte e contenuto del file da collegare */
+    $file = 'contenuto.html';
+    /* fopen apre il file per la lettura e vuole almeno due argomenti come la variabile con il file da aprire e una variabile di lettira "r" */
+    $aprifile = fopen($file,"r");
+    /*fread legge il file aperto e utlizza come argomenti della funzione la variabile del file aperto e le dimensioni in byte del file da aprire */
+    $content = fread($aprifile,"116");
+   /* stampo la variabile che legge il file */
+    echo "$content";
+?>
+
+/* inserimento del codice della pagina contenuto.html grande 116 byte*/
+_______________________________________________________________________
+
+<h1 align="center" style="font-family:arial;color:darkblue;">SALVE SONO UN FILE DI TESTO E VOGLIO ESSERE APERTO</h1>
+
+/* pagina php del codice di footer.php */
+________________________________________
+
+<?php
+
+echo "<footer style='background:lightgreen;width:100%;position:fixed;bottom:0px;margin 0px;height:200px' id='footer'><h1 style='color:red;'>" . "Creato da: " .  "</h1></footer>"; 
+
+?>
+/* pagina php del codice di javascript.php */
+________________________________________
+
+<?php
+echo "<script src='cursore.js'></script>";
+?>
+
+/* pagina javascript del codice di cursore.js */
+
+document.getElementById("footer").style.backgroundColor = "blue";
+
+
+
+
+

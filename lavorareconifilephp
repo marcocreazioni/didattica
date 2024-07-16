@@ -1,0 +1,37 @@
+<?php
+
+$file = "newfile.html";
+/* funzione predefinita che rinomina un file nella cartella */
+
+/* rimozione dei file della cartella */
+$delete = "bitnami.css";
+unlink ($delete);
+
+$newcartella = "immagini";
+mkdir ($newcartella);
+/*copia di una file in una nuova cartella pressupponendo che la cartella sia presente altrimenti va creata con mkdir */
+$favicon = "favicon.ico";
+$copyfavicon = "immagini/favicon.ico";
+copy ($favicon,$copyfavicon);
+/* scan dir scansione i contenuti della cartella */
+$scansione = scandir ($newcartella);
+/*funzione glob() crea un modello di ricerda dei file di una directori per tipo */
+$modello = glob("immagini/*.txt"); 
+echo $modello;
+
+$file =  rename($file,"newfile2.html");
+
+$file =  "newfile2.html";    
+$aprifile = fopen($file,"r");
+$content = fread($aprifile,"116");
+  
+
+if ($file == "newfile.html") {
+    echo  "";
+} else { 
+
+echo "$content";
+   
+};
+
+?>

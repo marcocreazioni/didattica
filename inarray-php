@@ -1,0 +1,20 @@
+/* creazione di un quiz in php parte del documento html */
+<form action="domanda.php" method="post">
+ <label>Come si chiama il canarino giallo del cartoon della warner </label>
+<input type="text" name="quiz">
+    <input type="submit" value="invia">
+</form>
+/* contenuto del file php */
+<?php
+$rispostepossibili = array('titty','tittie','titti');
+$risposta = $_POST['quiz'];
+
+if (in_array($risposta, $rispostepossibili)) {
+   
+    echo "bravissimo! è esatto";
+}
+else {
+   echo "hai toppatto torna a guardare i cartoon";
+}
+
+?>

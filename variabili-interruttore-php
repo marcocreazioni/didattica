@@ -1,0 +1,35 @@
+<?php
+$valore = 2;
+$pasta = 2;
+$condizione = 1;
+
+/* $valore deve essere un numero maggiore di 3 */
+
+if ($valore <= 3 && $pasta <= 3) {
+    $condizione = 1;
+} 
+else {
+    $condizione = 0;
+}
+
+
+
+
+
+
+
+
+
+/* if per l'accensione e lo spegnimento dell'interruttore 1 corrisponde ad acceso */
+if ($condizione == 1) {
+ echo "ACCESO";
+
+
+
+} else
+
+/* else condizioni diverse da acceso */
+{ 
+  echo "SPENTO";
+
+}

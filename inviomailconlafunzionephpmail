@@ -1,0 +1,60 @@
+/* HTML */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modulo di Contatto</title>
+</head>
+<body>
+    <h2>Contattaci</h2>
+    <p>Complate il modulo con le informazioni</p>
+    <form action="mail.php" method="post" autocomplete="on">
+        <p>
+            <label for="inputName">Nome:<sup>*</sup></label>
+            <input type="text" name="if(mail($to, $subject, $message, $headers)){
+                echo 'Your mail has been sent successfully.';
+            } else{
+                echo 'Unable to send email. Please try again.';
+            }
+            " id="inputName">
+        </p>
+        <p>
+            <label for="inputEmail">Email:<sup>*</sup></label>
+            <input type="text" name="email" id="inputEmail">
+        </p>
+        <p>
+            <label for="inputSubject">Oggetto:</label>
+            <input type="text" name="subject" id="inputSubject">
+        </p>
+        <p>
+            <label for="inputComment">Message:<sup>*</sup></label>
+            <textarea name="message" id="inputComment" rows="5" cols="30"></textarea>
+        </p>
+        <input type="submit" value="invia">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
+
+/* PHP */
+<?php
+$subject = $_POST['subject'];
+$from = $_POST['email'];
+$name = $_POST['name'];
+$message = '<html><body><p>Messaggio inviato da: ' . $name . '</p>' . '<p align="center" style="color:orange,font-family:arial">' . $_POST['message'] . '</p></html></body>';
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+ 
+// Create email headers
+$headers .= 'From: '.$from."\r\n".
+    'Reply-To: '.$from."\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+    if(mail("info@marcocreazioni.it", $subject, $message, $headers)){
+        echo 'Si la mail è stata inviata con sucesso.';
+    } else{
+        echo 'No la mail non è stata inviata con sucesso.';
+    }
+    
+
+?>

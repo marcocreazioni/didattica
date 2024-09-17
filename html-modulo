@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dettagli Fatturazione</title>
+
+            </head>
+<style>
+* {font-family: Arial,Helvetica;
+} 
+label {font-weight: 800;
+       color: #3c3c3c;
+}
+
+
+.titolo {
+text-align:left;
+padding-left:20px;
+font-size: 14px;
+}
+.involucro { 
+margin: auto;
+width: 60%;
+border: 0px solid black;
+height: 600px;
+padding-left: 20px;
+padding-top: 10px;
+font-size: 11px;
+font-weight: 500;
+background-color: antiquewhite;
+box-shadow: 1px 1px black;
+
+/* COn il # indichiamo il css dei campi del modulo */
+}
+#nome , #cognome , #citta , #provincia , #cap , #tel {
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 500px;
+    width: 80%;
+}
+
+#nomesocieta , #via , #indirizzo , #oggetto , #mail {
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 500px;
+    width: 89.7%;
+}
+#invia {background-color: rgb(20, 21, 88);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 500px;
+
+}
+
+/* righe e colonne per impaginarci dentro i campi */
+.row {width: 98%;
+      border: 0px solid;
+      padding: 10px;}
+
+.col {width: 48%;
+      border: 0px solid;
+      float: left;
+      padding: 10px;
+}
+</style>
+
+
+
+    <body>
+        <h3 class="titolo">Dettagli Fatturazione</h3>
+         <div class="involucro">
+           <form action="inviofattura.php" method="post" autocomplete="on">
+                
+                <div class="col">    
+                <label>Nome</label><br>
+                <input type="text" id="nome" name="nome" required> 
+                </div>
+                 <div class="col">
+                <label>Cognome</label><br>
+                <input type="text" id="cognome" name="cognome" required> 
+                  </div>
+                 <div class="row">
+                    <label>Nome società</label><br>
+                    <input type="text" id="nomesocieta" name="nomesocieta"> 
+                </div>
+                <div class="row">
+                    <label>Via</label><br>
+                    <input type="text" id="via" name="via"> 
+                </div>
+                <div class="row">
+                    <label>Indirizzo</label><br>
+                    <input type="text" id="indirizzo" name="indirizzo"> 
+                </div>
+                <div class="col">    
+                    <label>Citta</label><br>
+                    <input type="text" id="citta" name="citta"> 
+                    </div>
+                     <div class="col">
+                    <label>Provincia</label><br>
+                    <input type="text" id="provincia" name="provincia"> 
+                      </div>
+                      <div class="col">    
+                        <label>Cap</label><br>
+                        <input type="text" id="cap" name="cap"> 
+                        </div>
+                         <div class="col">
+                        <label>Tel</label><br>
+                        <input type="tel" id="tel" name="tel" required> 
+                        </div>
+                        <div class="row">
+                            <label>Oggetto</label><br>
+                            <input type="text" id="oggetto" name="oggetto"> 
+                        </div>
+                        <div class="row">
+                            <label>Mail</label><br>
+                            <input type="mail" id="mail" name="mail"> 
+                        </div>
+                        <br>
+                        <input type="submit" value="invia" id="invia">
+                </div>
+
+
+                
+           </form>
+          
+
+    </body>
+</html>

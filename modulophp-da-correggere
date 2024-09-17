@@ -1,0 +1,42 @@
+<?php
+$nome = $_POST["nome"]; 
+$cognome = $_POST["cognome"]; 
+$nomesocieta = $_POST["nomesocieta"]; 
+$via = $_POST["via"];
+$indirizzo = $_POST["indirizzo"];
+$citta = $_POST["citta"];
+$provincia = $_POST["provincia"];
+$cap =  $_POST["cap"];
+$telefono = $_POST["tel"];
+$oggetto = $_POST["oggetto"];
+$mail = $_POST["mail"];
+
+
+$messaggio = "<table><tr><td style='border:1px solid,padding: 5px'>" . $nome . "</td>" . "<td style='border:1px solid'>" . $cognome . "</td></tr>"
+. "<tr>" . "<td style='border:1px solid,padding: 5px'>" . $nomesocieta . "</td>" . "<td style='border:1px solid'>" . $via . "</td></tr>"
+. "<tr>" . "<td style='border:1px solid,padding: 5px'>" . $via . "</td><td>" . "<td style='border:1px solid'>" . $indirizzo . "</td></tr>"  
+. "<tr>" . "<td style='border:1px solid,padding: 5px'>" . $citta . "</td><td>" . "<td style='border:1px solid'>" . $provincia . "</td></tr>"
+.  "<tr>" . "<td style='border:1px solid,padding: 5px'>" . $cap . "</td><td>" . "<td style='border:1px solid'>" . $telefono . "</td></tr>"
+.  "<tr>" . "<td style='border:1px solid,padding: 5px'>" . $oggetto . "</td><td>" . "<td style='border:1px solid'>" . $mail . "</td></tr>" . "</table>";
+
+
+
+echo $messaggio;
+
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+ 
+// Create email headers
+$headers .= 'From: '.$from."\r\n".
+    'Reply-To: '.$from."\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+    if(mail("info@marcocreazioni.it", $oggetto, $messaggio, $headers)){
+        echo 'Si la mail è stata inviata con sucesso.';
+    } else{
+        echo 'No la mail non è stata inviata con sucesso.';
+    }
+    
+
+
+?>

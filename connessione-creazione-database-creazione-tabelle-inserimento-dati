@@ -1,0 +1,70 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "archivio";
+
+// Crea la connessione $servername, $username; $passord ; $database (se c'è gia o è gia stato creato)
+$connessione = mysqli_connect($servername, $username, $password, $database);
+// Verrifica la connessio
+if (!$connessione) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+
+//-----------------------------------------------------------------------------
+// Create database serve per creare database
+$sql = "CREATE DATABASE Archivio"; 
+
+/*Gestione degli errori */
+if (mysqli_query($connessione, $sql)) {
+  echo "Database connesso e creato archivio";
+} else {
+  echo "C'è un errore di connessionessione: " . mysqli_error($connessione);
+}
+
+//------------------------------------------------------------------------------------
+
+/* Creazione della tabella "Clienti" con i campi (ID (tipologia di dato: "PRIMARY KEY" = Campo Primario "NOT NULL" = Non vuoto, "VAR CHAR" =
+Stringa di caratteri con valore (numero di caratteri), INT = Valori a numeri interi esempi 1 2 3, FLOAT = Numeri interi e con la virgola 1.0 1.1 1.3) 
+AUT_INCREMENT = Ogni campo compilato assume un numero progressivo UNIQUE = Campo privo di doppiani*/
+
+$sqlarchivio = "CREATE TABLE clienti(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT UNIQUE,
+                                       NOME VARCHAR(30) NOT NULL,
+                                       COGNOME VARCHAR(30) NOT NULL,
+                                       EMAIL VARCHAR(60) NOT NULL UNIQUE,
+                                       TELEFONO  VARCHAR(30) NOT NULL UNIQUE
+                                        )"; 
+
+/* Gestione degli errori */
+if(mysqli_query($connessione, $sqlarchivio)){
+  echo "Tabella Creata con successo";
+} else{
+  echo "Non posso creare la tabella $sqlarchivio. " . mysqli_error($connessione);
+
+
+
+//------------------------------------------------------------------------------------
+/* Inserimento dati in una tabella */
+
+$Sqlinserimento = "INSERT INTO clienti (NOME, COGNOME, EMAIL, TELEFONO) VALUES (
+                                                                                'Mario',
+                                                                                'Rossi',
+                                                                                'info@marcocreazioni.it',
+                                                                                '+39 3209013280'
+                                                                                 )";
+
+/* Gestione dell'errore */
+if(mysqli_query($connessione, $Sqlinserimento)){
+  echo "Informazione inserita con sucesso.";
+} else{
+  echo "ERROR: Could not able to execute $sqlinserimento. " . mysqli_error($connessione);
+}
+
+
+
+/* Funzione che permette di terminare la connessione del database */
+mysqli_close($connessione);
+
+/*Inserimento dati in una tabella */
+
+?> 

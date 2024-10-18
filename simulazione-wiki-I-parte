@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <title>Title Page</title>
+<style>
+    * {font-family:sans-serif;
+    }
+    a {
+      text-decoration: none;  
+    }
+</style>
+       
+       
+    </head>
+    <body>
+      <p align="left">
+        <strong>Scipione Piàttoli</strong> (<a href="#">Firenze, 10 novembre 1739</a> – <a href="#">Löbichau, 12 aprile 1809</a>)
+        è stato un <a href="#">intellettuale</a>, <a href="#">scrittore</a> e <a href="#">prete italiano</a>, 
+        appartenente<br> all'Ordine degli <a href="#">Scolopi</a>, attivo anche come <a href="#">figura politica</a> in <a href="#">Polonia</a>. 
+        Insegnò per dieci anni all'<a href="#">Università di
+        Modena</a> come semplice abate e <br>chierico secolare e in seguito, migrato in Polonia, divenne uomo
+        di fiducia del <a href="#">re Stanislao</a> e un importante esponente dell'<a href="#">Illuminismo polacco</a>,<br> dove contribuì alla stesura della <a href="#">Costituzione</a> (1791). 
+    </p>
+    <p align="left">
+Durante il suo periodo a Modena sostenne e promosse con lo scritto <i><a href="#">Saggio intorno al 
+luogo del seppellire</a></i> (1774) 
+   </p>
+    </body>
+</html>

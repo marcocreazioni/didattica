@@ -1,0 +1,74 @@
+/* FILE HTML inserimento in archivio */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserimento in archivio</title>
+    <style>
+        * {font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+   <p>Inserisci le informazioni nel nostro archivio</p>
+    <form action="connessione.php" method="post">
+     <label>Nome</label><br>
+      <input type="text" name="nome" required><br><br>
+     <label>Cognome</label><br>
+     <input type="text" name="cognome" required><br><br>
+     <label>Email</label><br>
+     <input type="email" name="email" required><br><br>
+     <label>Telefono</label><br>
+     <input type="tel" name="telefono" required><br><br>
+
+     <input type="submit" value="invia">
+
+   </form> 
+</body>
+</html>
+___________________________________________________________________________________________________
+FILE PHP CONNESSIONE.PHP
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "archivio";
+
+// Crea la connessione $servername, $username; $passord ; $database (se c'è gia o è gia stato creato)
+$connessione = mysqli_connect($servername, $username, $password, $database);
+// Verrifica la connessio
+if (!$connessione) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+
+/*VARIABILI DEL MODULO */
+$inserimentonome = $_POST['nome'];
+$inserimentocognome = $_POST['cognome'];
+$inserimentoemail = $_POST['email'];
+$inserimentotelefono = $_POST['telefono'];
+
+$inserimentoutentionline = "INSERT INTO clienti (NOME,COGNOME,EMAIL,TELEFONO) VALUES ('$inserimentonome',
+                                                                                      '$inserimentocognome',
+                                                                                      '$inserimentoemail',
+                                                                                      '$inserimentotelefono'
+                                                                                      )";
+
+
+/* Gestione dell'errore */
+if(mysqli_query($connessione, $inserimentoutentionline)){
+  echo "Informazione inserita con sucesso.";
+} else{
+  echo "No che diamine ho generato un errorre $inserimentoutentionline. " . mysqli_error($connessione);
+}
+
+
+/* Funzione che permette di terminare la connessione del database */
+mysqli_close($connessione);
+
+/*Inserimento dati in una tabella */
+
+?> 
+
+

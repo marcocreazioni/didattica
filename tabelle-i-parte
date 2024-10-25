@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* table ,tr , td , th {border: 1px solid black}
+*/
+
+</style>
+</head>
+<body>
+    <!---Tabella nell'esempio faccimo una tabella a tre righe e tre colonne-->
+<table width="100%">
+       <!--I RIGA--> 
+     <tr>
+        <!--TH= Cella di intestazione che differisce dalla cella normale 
+        per il carattere grassetto applicato alla cella-->
+         <th>Nome</th> 
+         <th>Cognome</th> 
+         <th>Email</th>
+     </tr>
+       <!--II RIGA--> 
+     <tr>
+        <!--TD= Cella-->
+         <td>Mario</td>
+         <td>Rossi</td>
+         <td><a href="mailto:Mario@gmail.com">Mario@gmail.com </a></td>
+
+     </tr>
+         <!--III RIGA--> 
+     <tr>
+        <td>Alberto</td>
+        <td>Fioravanti</td>
+        <td><a href="mailto:alberto@yahoo.it">alberto@yahoo.it</a></td>
+     </tr>
+</table>
+<!--tabella wiki-->
+<table>
+   <tr>
+        <td>
+            <p> 
+                Il centesimo di lira (L. 0,01), volgarmente detto centesimino, è stato il più piccolo taglio delle monete in lire italiane.<br>
+                Come le monete da 2, 5 e 10 centesimi coeve è fatto di una lega di bronzo composta per il 960‰ di rame e per il 40‰ di stagno.<br>
+                Le monete da 1 centesimo furono coniate tra il 1861 e il 1918 per poi essere ritirate dalla circolazione nel 1924.    
+            </p>
+            <p>
+                <!--incorporazione di un video di youtube-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qkzjd5k2vUM?si=iwyNak_DTfrgrHGp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </p>
+        </td>
+        <td>
+             <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg" width="140px" width="140px">
+        </td>
+   </tr>
+</table>
+
+
+
+</body>
+</html>

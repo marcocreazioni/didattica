@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!--Elenco Puntato-->
+    <ul>
+        <li>Pane</li>
+        <ul>
+            <li>Pane di segale</li>
+            <ul>
+                <li>Segale Integrale</li>
+                <li>Segale Raffinata</li>
+            </ul>
+            <li>Pane d'orzo</li>
+        </ul>
+        <li>Pasta</li>
+        <li>Sale</li>
+        <li>Olio</li>
+       
+    </ul>
+  <!--Elenco Numerato-->
+    <ol>
+        <li>Pollo</li>
+        <ol>
+            <li>Pollo Padovano</li>
+            <!--Inserisco un elenco puntanto all'interno di un elenco numerato-->
+            <ul>
+                <li>Piuma Gialla</li>
+                <li>Piuma Pezzata</li>
+            </ul>
+            <li>Pollo Ischitano</li>
+        </ol>
+        <li>Tacchino</li>
+        <li>Maiale</li>
+        <li>Manzo</li>
+    </ol>
+
+</body>
+</html>

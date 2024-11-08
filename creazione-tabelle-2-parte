@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+table ,tr , td , th {border: 1px solid black}
+
+
+</style>
+</head>
+<body>
+    <!---Tabella nell'esempio faccimo una tabella a tre righe e tre colonne-->
+<table width="100%">
+       <!--I RIGA--> 
+     <tr>
+        <!--TH= Cella di intestazione che differisce dalla cella normale 
+        per il carattere grassetto applicato alla cella
+        Applicare una larghezza specifica ad una cella significa applicare
+        la stessa larghezza a tutta la colonna-->
+         <th width="100px">Nome</th> 
+         <a href="/elenchi.html"><th>Cognome</th></a> 
+         <th>Email</th>
+     </tr>
+       <!--II RIGA--> 
+     <tr>
+        <!--TD= Cella-->
+         <td>Mario</td>
+         <td>Rossi</td>
+         <td><a href="mailto:Mario@gmail.com">Mario@gmail.com </a></td>
+
+     </tr>
+         <!--III RIGA--> 
+     <tr>
+        <td >Alberto</td>
+        <td>Fioravanti</td>
+        <!--Attributo rowspan consente ad un cella td o th di occupare lo spazio
+        di una o piu celle in orizzontale dentro le virgolette si inserisce il numero di 
+        celle da occupare-->
+        <td rowspan="2"><a href="mailto:alberto@yahoo.it">alberto@yahoo.it</a></td>
+     </tr>
+     <!--IV RIGA-->
+     <tr>
+        <!--Attributo colspan consente ad un cella td o th di occupare lo spazio
+        di una o piu celle in orizzontale dentro le virgolette si inserisce il numero di 
+        celle da occupare-->
+        <td colspan="2">Francesco Alberto</td>
+        <!--Mettere in commentazione i tag permette di non rendere visibile
+        l'oggetto nella pagina ma lascia una traccia nel codice -->
+        <!--<td><a href="mailto:pec@alberto.it">pec@alberto.it</a></td> -->
+     </tr>
+
+</table>
+
+
+
+</body>
+</html>

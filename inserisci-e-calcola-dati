@@ -1,0 +1,136 @@
+/*Pagina di inserimento dati */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {font-family: sans-serif;
+        }
+        .box {
+        margin:20px;
+        padding: 50px;
+        background-color: antiquewhite;
+        border:1px solid black;
+        }
+        p {
+        margin:20px;
+        padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <p>Ciao Prima di aggiungere la merce <a href="creatabella.php">clicca qui</a> per creare la tabella</p>
+    <div class="box">
+   <p>Inserisci le informazioni nel nostro archivio</p>
+    <form action="calcolatoreiva.php" method="post">
+     <label>Inserisci la Merce</label><br>
+      <input type="text" name="merce" required><br><br>
+     <label>Inserisci il prezzo</label><br>
+     <input type="number" name="prezzo" required><br><br>
+     <label>Inserisci Aliquota iva</label><br>
+     <select name="iva" required>
+       <option value="1.22">22%</option> 
+       <option value="1.10">10%</option>
+       <option value="1.05">5%</option>
+       <option value="1.04">4%</option>
+    </select>
+        <br><br>
+    <input type="submit" value="invia">
+
+   </form> 
+   <p>Visualizza i dati archiviati</p>
+   <!--inserire la richiesta al database-->
+  <a href="/stampa-dati-con-iva.php"><button>Clicca qui</button></a>
+
+</div>
+</body>
+</html>
+/*creazione tabella */
+<?php
+/*connessine al database */
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "archivio";
+
+$connessione = mysqli_connect($servername, $username, $password, $database);
+// Verrifica la connessione
+if (!$connessione) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+/*creazione della tabella merci in archivio */
+$sqlarchivio = "CREATE TABLE merci    (ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT UNIQUE,
+                                       MERCE VARCHAR(120) NOT NULL,
+                                       PREZZO DECIMAL(65,2) NOT NULL,
+                                       IVA DECIMAL(12,2) NOT NULL,
+                                       PREZZOIVATO DECIMAL(12,2) GENERATED ALWAYS AS (PREZZO * IVA)
+                                      
+                                       /* PREZZOIVATO AS MERCE * IVA  ma MariaDB vuole GENERETED ALWAYS IN AGGIUNTA A AS*/ 
+                                        )"; 
+
+/* Gestione degli errori */
+if(mysqli_query($connessione, $sqlarchivio)){
+  echo "<p style='margin:10px;'>Tabella Creata con successo torna al modulo <a href='Calcolatoreiva.html'>qui</a></p>";
+} else {
+  echo "Non posso creare la tabella $sqlarchivio. " . mysqli_error($connessione);
+}
+/* Funzione che permette di terminare la connessione del database */
+mysqli_close($connessione);
+
+
+?> 
+/*Stampa a schermo dei dati */
+<?php 
+/*connessine al database */
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "archivio";
+
+// Crea la connessione $servername, $username; $passord ; $database (se c'è gia o è gia stato creato)
+$connessione = mysqli_connect($servername, $username, $password, $database);
+// Verrifica la connessio
+if (!$connessione) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+
+  /* creazione della variabile con la funzione SELECT */ 
+  $visualizzadati = "SELECT ID , MERCE, PREZZO, IVA, PREZZOIVATO FROM merci";
+  /* $calcoloiva = "SELECT PREZZO * IVA FROM merci"; */
+  
+
+/* con la funzione mysqli_query(con 2 argomenti, il primo e la variabbile connessione e il secondo argomento era la query) */
+ if ($risultato = mysqli_query($connessione,$visualizzadati)) {
+               /*my sqli_num_rows crea la tabella dove inserire i dati con verifica dei risultati */                                               
+           if (mysqli_num_rows($risultato)>0){
+
+               echo "<table style='border:1px'>" . "<tr>"."<th>Merce</th>" . "<th>Prezzo</th>" . "<th>Iva</th>" . "<th>Prezzo Ivato</th>" . "<tr>";
+               /* ysqli_fetch_array recupera i dati della tabella e inserite all'interno di risultato dove i dati vengono inseriti in delle celle */
+        while($row = mysqli_fetch_array($risultato)){
+                echo "<tr>";
+                    echo "<td>" . $row['MERCE'] . "</td>";
+                    echo "<td>" . $row['PREZZO'] . "</td>";
+    /*                echo "<td>" . $row['IVA'] . "</td>";  se voglio l'aliquota cambio il formato percentuale in echo*/
+                    echo "<td>" . ($row['IVA'] -1)*100 .  "%</td>";
+                    echo "<td>" . $row['PREZZOIVATO'] . "</td>";
+                echo "</tr>"; 
+            }
+               echo "</table>"; 
+               // Inserisci tutti risultati mysqli_free_result($risultato) serve a mostrare tutti dati nell'elenco
+                mysqli_free_result($risultato);
+              
+           }
+            else { 
+               echo "Mi spiace non ci sono righe.";
+            };  
+  }
+  else {
+  echo "Non posso eseguire la query $visualizzadati" . mysqli_error($link);
+};
+
+/* Funzione che permette di terminare la connessione del database */
+mysqli_close($connessione);
+
+?>

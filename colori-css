@@ -1,0 +1,61 @@
+<html>
+ <head>
+ <title>Titolo della pagina</title>
+ <meta name="description" content="descrizione della pagina sulla ricerca">
+ <!--tag per poter far indicizzare sulla ricerca una pagina web "index" indicizza "noindex" la pagina non compare sulla ricerca -->
+ <meta name="robots" content="index,follow">
+ <meta name="author" content="Marco Consiglio">
+<!-- tag per poter fare in modo che i contenuti del body scalano di dimensioni in base al dispositivo-->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+/* qui devo usare il linguaggio del css tag html {parametro : (due punti) (uno spazio) valore del parametro ; (punto e virgola) se unia iscrtruzione
+chiudere con la parentesi graffa } */    
+h1 {color: DodgerBlue;
+
+}
+p { color: #9D4E47;
+
+}
+ (quantita di rosso;quantita di verde;quantita di blue) i valori massimi per ogni quantita +
+non vanno oltre il valore 255 (255,255,255) otterro il colore nero, mentre (0,0,0) otterro quindi il colore bianco */
+li { color: rgb(204, 0, 153);
+
+}
+/* scriviamo hsl per la tipologia di colore e i parametri sono tono(colore hue(di partenza)saturation(quantità-intesita del colore)(luminosita)) */
+blockquote {color: hsl(150, 100%, 40%);
+
+}
+/* vedi rgb per i primi tre valori l'ultimo è il grado di trasparenza e va da 0 per trasparenza massima a 1 nessuno trasparenza per indicare un
+percentuale ad esempio con meta trasparenza ovvero al 50% inseriamo come valore 0.5 */
+address strong {color: rgba(255,0,102,0.5);
+
+} 
+address {
+    color:green;
+}
+/* proprita width serve per dare delle dimensioni in larghezza agli oggetti, e la proprieta height l'altezza, con color il colore del testo
+e con background-color il colere di sfondo dell'oggetto */
+div {width: 200px;
+     height: 200px;
+     background-color: beige;
+     color: darkorange;
+
+}
+ </style>
+ </head>
+ <body>
+<ul>
+    <li>Home Page</li>
+    <li>Servizi</li>
+    <li>Contatti</li>
+</ul>
+<h1>Titolo grande in pagina</h1>
+<p>Paragrafo con i contenuti</p>
+<blockquote>Questa è una citazione ovvero un paragrafo con un rientro a sinistra</blockquote>
+<address>
+    <strong>Testo con il mio </strong>
+     inidirizzo
+
+</address>
+<div><p>Contenitore</p></div>
+

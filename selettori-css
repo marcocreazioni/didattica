@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabella</title>
+    <style>
+table { border: 1px solid;
+    /* border collapse si usa nella tabella e negli oggetti che presento uno spazione tra le due linee del bordo
+    si applica alle proprieta della tabella e accatta come unico parametro "collapse" */
+        border-collapse: collapse;
+
+}
+td {text-align:center;
+    border: none;
+    
+    
+    
+}
+tr {background-color: #FDD866;
+    
+}
+/* Per richiamare un oggetto battezzato con il nome di una classe usiamo il . seguito dal nome che è stato dato alla classe */
+.p {text-align:left;
+
+}
+.blue {background-color: #9BC0EA;
+
+}
+.i {background-color: white;
+}
+#Titolo {text-align:center;
+         color: green;
+
+}
+    </style>
+</head>
+<body>
+    <!--con class si da un nome ad un oggetto html e si richiama lo stesso nome usando il " . " un altro modo per battezzare un oggetto
+    è usare id e per richiamarlo nel css usiamo il "#" seguito dal nome -->
+ <h1 id="Titolo"> Tabella in Excel</h1>   
+ <table>
+    <!--riga di intestazione-->
+   <tr class="i">
+      <th>Prodotto</th> <th>Vendite<br>Gennaio</th><th>Vendite<br>Febbraio</th>
+   </tr>
+
+   <tr style="background-color: #9BC0EA;">
+      <td class="p">Prodotto 1</td><td style="text-align:center;">6858</td><td style="text-align:center;">3984</td>
+   </tr>
+   <tr style="background-color: #FDD866;">
+    <td class="p">Prodotto 2</td><td style="text-align:center;">8361</td><td style="text-align:center;">5663</td>
+   </tr>
+   <tr class="blue">
+    <td class="p">Prodotto 3</td><td>8096</td><td>5722</td>
+   </tr>
+   <tr>
+    <td class="p">Prodotto 4</td><td>2712</td><td>4583</td>
+   </tr>
+   <tr class="blue">
+    <td class="p">Prodotto 5</td><td>8920</td><td>6024</td>
+   </tr>
+   <tr >
+    <td class="p">Prodotto 6</td><td>8061</td><td>7323</td>
+   </tr>
+   <tr class="blue">
+    <td class="p">Prodotto 7</td><td>2024</td><td>6825</td>
+   </tr>
+   <tr>
+    <td class="p">Prodotto 8</td><td>4631</td><td>2500</td>
+   </tr>
+ </table>
+</body>
+</html>

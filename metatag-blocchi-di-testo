@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+
+    <meta charset="UTF-8"> 
+    <!--charset indica la codifica dei caratteri e dell'alfabeto latino -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--tag abilitante la modifica dei contenuti scalando li in base al dispositivo-->
+   
+    <title>Titolo sulla ricerca</title>
+     <!--tag che indica il titolo della pagine nei motori di ricerca indicato nel rich snippet e sulla scheda del browser-->
+     
+    <meta name="description" content="descrizione della pagina web che sto realizzando">
+     <!-- descrizione della pagine che compare sui i motori di ricerca-->
+    
+     <meta name="keyword" content="parola chiave, chiave, parola">
+     <!-- parole chiave per  i motori di ricerca-->
+
+     <meta name="author" content="marco consiglio">
+          <!-- autore della pagina web-->
+    <meta name="generetor" content="visual studio code">
+          <!-- applicazione che ha generato la pagina -->
+    <meta name="robots" content="index,follow">
+        <!-- istruzione per i crawler/spybots/bots -->
+
+</head>
+<body>
+    <!--L'identazione: è il modo di formattare(progettazione del layout del codice)
+    il codice di una pagina secondo gli standard w3c-->
+    <!--Linguaggio CSS puo cambiare le proprieta intrinseche degli oggetti html-->
+    <!--da h1 a h6-->
+    <h1>TItolo grande</h1>
+    <h2>Titolo</h2>
+    <h3>Titolo</h3>
+    <h4>Titolo</h4>
+    <h5>Titolo</h5>
+    <h6>Titolo</h6>
+    <!--Hr crea una linea dritta-->
+    <hr>
+    <!--p crea un bloggo paragrafo-->
+    <p>Questo è un paragrafo 
+    <!--del testo barrato-->    
+    <del>gdag</del> ma 
+    <!--Testo sottolineato-->
+    <u>paragrafo</u>
+    nel paragrafo 
+    <!--br mette un testo a capo-->
+    <br> possiamo 
+    <!--strong mette un testo in grassetto-->
+    <strong>aggiungere <i>altri</i></strong>
+    <!--i Mette un testo in corsivo--> 
+    <i>oggetti</i> 
+    all'interno di 
+    <!--b mette un testo in grassetto*-->
+    <b>essi</b></p>
+    <p>La casa misura 120 
+   <!--sup Mette il testo in apice-->
+    <sup>m<strong>q</strong></sup> 
+    <!--sub Mette il testo in pedice-->
+    <sub>Pedice</sub>
+    <!--Mark serve per evidenziare il testo-->
+    <mark>Testo <strong>evidenziato</strong></mark></p>
+    <!--address html5 indica un blocco indirizzo-->
+    <address>Roma Via Grimaldi 8 <br>00100 Roma</address>
+    <!--blockquote testo con rientro della prima riga-->
+    <blockquote>L'acqua è poca e la papera non galleggia</blockquote>
+    <!--code blocco html5 per avere un testo in courier new-->
+    <code>Testo in modalità macchina da scrivere</code>
+    <!--marquee permetto in testo e scorrimento-->
+    <marquee>Testo in <mark>scorrimento</mark></marquee>
+
+
+
+
+
+
+</body>
+</html>

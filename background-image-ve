@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priprieta e parametri css</title>
+<style>
+/*Dare larghezza e altezza ad un contenitore: Paragrafi, Div, Header, Nav, article, aside, ul, ol, table, p, footer, section */
+
+.box { 
+    /*larghezza */
+    width: 50%;
+    /*altezza */
+    height: 300px;
+    /*sfondo monocolore*/
+    background-color: aquamarine;   
+    /* sfondo sfumato  (nel prima parametro prima dei coloro e possobile dare un inclinazione in gradi di un angolo, 90 deg = angolazione di 90° alla sfumatura,
+    inseriamo i diversi coloro seguite dalle virgole)*/
+    /* background-image: linear-gradient(45deg,red,orange,yellow); */
+
+    /* al posto dei gradi dell'angolo e possibile dare anche una direzione da a "to bottomt", Bottom dal basso, right da destra, left da sinistra, top dall'alto */
+    background-image: linear-gradient(to bottom,red,orange,yellow);
+
+    /*colore del testo */
+    color: yellow;
+}
+/* il contenitore che al proprio interno altri contenitore può fare ereditare a questi le proprietà del contenitore esterno */
+/* inserendo 2 selettori il primo del contenitore seguito dallo spazione e del contenitore al suo interno discipliniamo la proprieto solo
+dell'oggetto contenuto nel primo contenitore escludendo gli altri esterni al primo contenutitore */
+/*
+.box .testo2 { 
+color: orange;
+}
+*/
+.box > .testo-2 {
+    color: orange;
+}
+/*selettore speciale che permette di modificare tutte le proprieta di una pagina */
+* {
+    /*text-align serve per allineare il testo */
+   text-align:center;
+} 
+/* gerarchia del css: Css in linea > css in pagina > css esterni */
+/* Le istruzioni dei contenitori piu piccoli > contenitori piu grandi */
+/* L'ulitma istruzione in ordine della pagina > prima istruzione */
+body {
+    background-color: lightcoral;
+}
+.box-2 {
+    width: 50%;
+    /*altezza */
+    height: 300px;
+    /*sfondo sfumato con sfumatura che parte dal centro inseriamo i diversi coloro seguite dalle virgole 
+    il primo colore e il colore di partenza che parte dal centro, insieme al colore possiamo anche indicare in % la quantità di ciascun colore 
+    nel formato prima colore e poi percetutale* se nel primo paramentro inserisco una forma cambia anche la distribuzione della sfumatura
+    ad esempio nel primo paramentro uso un cerchio*/
+
+    background-image: radial-gradient(circle,red 30%,orange 70%)
+}
+.box-3 {
+    border: 1px solid;
+    width: 100%;
+    /*altezza */
+    height: 700px;
+    /* Mettiamo come sfondo una fotografia */
+    background-image: url('https://cdn.pixabay.com/photo/2019/07/25/05/32/animal-4361698_960_720.jpg'); 
+    /* Grandezza dell'immagine da mettere come sfondo con dimensioni in px* larghezza e il secondo altezza */
+    /* "background-image: trasparent" rende lo sfondo trasparent */
+    /* background-size: 200px 290px; */
+    /* Proprieta in size: "cover" l'immagine si distribuisce nel riguadro, "content" scala l'immagine di sfondo
+      "contein" rispetta le dimensione dell'immagine originale */ 
+    background-size: cover;
+    /* Ripetizione dell'immagine: valore "no reapeat" l'immagine non si ripete, "repet" l'immagine si ripete 
+    orizzontalmente e verticalmente, ripetizione solo orizzontale che "repeat-x", mentre "repeat-y" si ripete verticalmente*/
+    Background-repeat: no-repeat;
+    /* istruzione di compatibilità per browser safari(su SO - Linux) e Mozilla da
+    inserire davanti alla proprietà sperimentale 
+    -webkit-
+    -moz- */
+    /* background-position accetta alcuni valori per scegliere una porzione soltanto
+    dell'immagine e puo accetto 1 parametro o 2 parametri "center" "bottom" "top" "left" e "right" 
+    e combinabili per le altre posizione ad esempio in alto a destra "top right" */
+    background-position: top right;
+    /* applica la trasparenza ad un tag div accetta de valori tra 0 e 1 - (nuove versione
+    ammettono l'opacita in percentuale) */
+    opacity: 50%;
+
+}
+
+body {
+    background-image: linear-gradient(to right,red,orange); */
+    background-size: 200px 200px;
+    /*background-repeat: repeat; */
+    
+}
+</style>
+</head>
+<body>
+<!-- <div class="box">
+   
+    <p class="testo">Qui ho del testo
+    </p>
+
+   <p class="testo-2">Secondo paragrafo
+   </p>
+
+
+</div> -->
+<!--<div class="box-2">
+<p class="testo-2">Paragrafo</p>
+</div> -->
+<div class="box-3">
+<p class="testo-2">Paragrafo</p>
+
+</div>
+
+ </body>
+</html>

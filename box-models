@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proprieta del box model</title>
+<style>
+/*Dare larghezza e altezza ad un contenitore: Paragrafi, Div, Header, Nav, article, aside, ul, ol, table, p, footer, section */
+
+.box { 
+    /*larghezza */
+    width: 50%;
+    /*altezza */
+    height: 300px;
+    /*sfondo monocolore*/
+    background-color: aquamarine;   
+    /* sfondo sfumato  (nel prima parametro prima dei coloro e possobile dare un inclinazione in gradi di un angolo, 90 deg = angolazione di 90° alla sfumatura,
+    inseriamo i diversi coloro seguite dalle virgole)*/
+    /* background-image: linear-gradient(45deg,red,orange,yellow); */
+
+    /*colore del testo */
+    color: yellow;
+}
+/* il contenitore che al proprio interno altri contenitore può fare ereditare a questi le proprietà del contenitore esterno */
+/* inserendo 2 selettori il primo del contenitore seguito dallo spazione e del contenitore al suo interno discipliniamo la proprieto solo
+dell'oggetto contenuto nel primo contenitore escludendo gli altri esterni al primo contenutitore */
+/*
+.box .testo2 { 
+color: orange;
+}
+*/
+.box > .testo-2 {
+    color: orange;
+}
+/*selettore speciale che permette di modificare tutte le proprieta di una pagina */
+
+
+.box-3 {
+    border: 1px solid;
+    width: 500px;
+    /*altezza */
+    height: 500px;
+    /* Mettiamo come sfondo una fotografia */
+    background-color:green;
+   /*box model per posizionare un oggetto all'interno o all'interno di un altro oggetto*/
+   /* margin (rappresenta la distanza di un oggetto dal bordo schermo) - padding e border possono essere definiti in modalita short (valori base
+   in unica istruzione )
+   i valori sono inseriti in sequenza come una lancetta di orologio che 
+   va in senso orario il il primo valore è il top* (attenzione solo un parametro
+   il margine si applichera a tutti è 4 lati) il secondo valore indica il margin-right
+   (attenzione inserendo solo due parametri il primo paramentro applichera 
+   il margin per il top ma anche per il bottom, mentro per il secondo applichera
+   quel margine per right e left) il terzo parametro disciplina il bottom e il quarto
+   paramentro il right
+   */ 
+   /*se vogliamo far coincidere la posizione dell'oggetto con il bordo schermo
+   posso sfruttare un valore negativo */
+   margin: 20px 0px 0px 10px; 
+   /* con la proprieta margin e il parametro auto metto l'oggetto al centro dello 
+   schermo 
+   margin: auto;
+   margin-top:20px;
+   */
+   
+   /* e un modalita di singola proprieta: valore dove definiscoo
+   un parametro per volta indicandoli in px e sono ammessi anche valori negativi  
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 200px;
+   margin-right: 200px;
+*/
+/* padding (rappresenta la distanza di un oggetto dal suo contenitore) - padding e border possono essere definiti in modalita short (valori base
+   in unica istruzione )
+   i valori sono inseriti in sequenza come una lancetta di orologio che 
+   va in senso orario il il primo valore è il top* (attenzione solo un parametro
+   il padding si applichera a tutti è 4 lati) il secondo valore indica il padding-right
+   (attenzione inserendo solo due parametri il primo paramentro applichera 
+   il padding per il top ma anche per il bottom, mentro per il secondo applichera
+   quel rientro per right e left) il terzo parametro disciplina il bottom e il quarto
+   paramentro il right
+   */ 
+   /*se vogliamo far coincidere la posizione dell'oggetto con il bordo schermo
+   posso sfruttare un valore negativo */
+   padding: 20px 30px 50px 50px; 
+     
+   /* e un modalita di singola proprieta: valore dove definiscoo
+   un parametro per volta indicandoli in px e sono ammessi anche valori negativi  
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-left: 200px;
+   padding-right: 200px;
+*/   
+   /* le regole del border sono simile al margin */
+   /*tipologia 
+   border-style: solid;
+   /*spessore
+   border-width: 10px;
+  colore 
+   border-color: aqua; */
+
+
+   /* short in unica istruzione (spessore, tipologia, colore)
+   tipologie: solid, dotted, dashed ,double,inset(interno),outset (esterno), ridge,
+   e groove la proprieta hidden lascia lo spessore, none elimina borod e spessore */
+   border: 10px ridge aqua;
+   /* o per singoli lati 
+   border-top: 20px solid;
+   border-left: 30px solid;
+   border-right:45px solid;
+   border-bottom:30px solid;
+  */
+  /* border radius arrotonada gli angoli di un riquadro e si puo definire per tutti
+  e 4 lati con la regola dell'orologio*/
+   border-radius: 25px 0px 50px 10px;
+}
+ /* la proprietà padding parametrata ad 1px attiva come un interruttore
+ la proprieta intrinseche dei contenitore html5 */
+header {background-color: orange;
+        padding: 1px;
+        
+}
+nav {background-color: green;
+    padding: 1px;
+}
+section {background-color: cyan;
+         padding: 1px;
+}
+footer {background-color: red;
+       padding: 1px;
+
+}
+
+
+
+</style>
+</head>
+<body>
+<header>Testata</header>
+<nav>Qui va il il menu</nav>
+<section>Sezione</section>
+<footer>Pie di pagina</footer>
+<!-- <div class="box">
+   
+    <p class="testo">Qui ho del testo
+    </p>
+
+   <p class="testo-2">Secondo paragrafo
+   </p>
+
+
+</div> -->
+<!--<div class="box-2">
+<p class="testo-2">Paragrafo</p>
+</div> -->
+<div class="box-3">
+<p class="testo-2">Paragrafo</p>
+
+</div>
+
+ </body>
+</html>

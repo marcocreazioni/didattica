@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- richiamo le famiglie di caratteri google nella sezione head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+   <!--fine richiamo carattere google-->
+   
+   <style>
+    /*Proprieta del css del testo */
+    /*allineamento con text-align centro,sinistra,destra e giustificato */
+    h1 {text-align:center;
+    /* Text-transform cambio un testo da maiuscolo e minusco, o metto le iniziali in 
+       maiuscolo */    
+        text-transform:uppercase;
+    /* associo al titolo quel carattere importato */    
+       font-family: "Leckerli One", serif;
+    /*font-style detta lo stile del carattere dal normale, al corsivo addirittura obliquo*/   
+       font-style:italic;
+    /* word spacing permette di spazioare le singole parole*/
+       word-spacing: 10px;         
+  
+    }
+    /*importazione di un carattere del css da google fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+    /*importazione di un carattere personalizzato */
+    @font-face {
+        font-family: "High Speed";
+        src: url(font/HighSpeed.ttf);
+        font-weight: 400;
+           }
+
+    p {text-align:justify;
+    /* Rientro della prima riga del paragrafo */    
+       text-indent: 30px;
+    /* Proprieta dei font (font-size detta le dimensioni del carattere puo essere indicato in
+    punti (pt,em,px)*/
+        font-size: 12pt;
+     /* font-weight detta lo spessore di un font puo essere indicato in bold,bolder ecc, ho in un
+     indice che va da 100 a 900 dove 100 e lo spessore piu sottile */  
+        font-weight: 400;
+     /* font-family detta le tipologie di caratteri (sans serif e serif )
+     la prima famiglie e proprietari in assenza della prima famiglia prendera 
+     quello forinito dopo la virgola */
+
+        font-family: "Titillium Web", sans-serif;
+    
+    }
+    /* text-decoration solo se il testo ha una sottolineature */
+    p a {text-decoration:none;
+
+    }
+
+    div {width: 500px ;
+      height: 300px;
+      background-color: red ;
+
+      margin: auto;
+      /* Uso nel bloco il text align se voglio disciplinare il testo inserito all'interno
+      del blocco allora anche al blocco do la proprieta text-align */
+      text-align:center;
+      color: white;
+      }
+      /* Inserendo uno spazio tra i selettori possiamo disciplinare tutti gli oggetti
+      che hanno quel tag all'interno del contenitore. Il contenitore va indicato per primo
+      e poi successivamente il tag che si trova all'interno */
+      div p {
+        text-align: center;
+        font-family: "High Speed", sans-serif;
+        font-size: 24pt;
+      }
+      span {
+        font-weight: 700;
+        font-style: oblique;
+        color:purple;
+      }
+   </style>
+</head>
+<body>
+    
+    <h1>Il mio titolo</h1>
+    <p>In questi giorni è uscita la notizia che la Fondazione Milano-Cortina, che si sta occupando dell’organizzazione di Olimpiadi e Paralimpiadi invernali del 2026, ha individuato la pista di Lake Placid (nello stato di New York) come luogo alternativo per le gare di bob, skeleton e slittino, nel caso in cui dovessero esserci problemi nei lavori per la pista di Cortina. Secondo il programma le gare dovrebbero svolgersi a Cortina, nella pista che sta venendo restaurata dopo diversi ritardi e controversie legate all’impatto ambientale dei lavori, all’utilizzo che ne verrà fatto dopo le Olimpiadi e al costo di 81,6 milioni di euro, considerato molto elevato.
+     Proprio per questi 
+     <!--Span è un blocco di eccezione e permette di associare ad una parte del testo
+     particolari proprieta possiamo usare il blocco span-->
+     <span>iniziali</span> ritardi il <strong><a href="#">Comitato</a></strong> olimpico internazionale, che diverse volte aveva fatto sapere di essere contrario al rifacimento della pista di Cortina e di non essere convinto che i tempi saranno rispettati, ha chiesto agli organizzatori di indicare comunque un piano B: Lake Placid, appunto. L’impianto statunitense ha già ospitato i Giochi olimpici invernali nel 1932 e nel 1980 e l’anno prossimo ospiterà i Mondiali di skeleton, ed è quindi già pronto; chi lo gestisce inoltre lo metterebbe a disposizione gratuitamente per Milano-Cortina, scrive il Wall Street Journal.<br>
+    Dalla Fondazione Milano-Cortina confermano che Lake Placid offriva le migliori condizioni economiche e organizzative e per questo motivo è stata scelta come sede alternativa, ma dicono anche che quasi certamente non sarà necessaria, perché il rifacimento della pista di Cortina starebbe rispettando i tempi. Simico, la società che si occupa della costruzione degli impianti per le Olimpiadi, ha detto che ne è stato completato il 67 per cento. A marzo è programmato il primo collaudo completo della pista con atleti e Comitato olimpico.<br>
+    L’ottimismo sarebbe invece un po’ ingiustificato secondo Marina Menardi, presidente del Comitato Civico Cortina: «Si stanno sbilanciando molto, ma se uno si fa un giro dalle parti del cantiere si chiede come sia possibile che tra un paio di mesi la pista sia finita», dice. Finora hanno ghiacciato 36 metri su 1.650 e, racconta Menardi, solamente per costruire la curva Cristallo, una delle più grandi, ci hanno messo circa un mese: «Ci sono parti della pista che devono ancora cominciare a costruire». Se i tempi non verranno rispettati, agli organizzatori non resterebbe che spostare le gare negli Stati Uniti.</p>
+
+<div>
+    <h2> Oggetto testuale</h2>
+    <h5> Sotto Titolo</h5>
+    <p>Paragrafo</p>
+
+
+</div>
+<!--solo i blocchi di tipo testo accettano text-align: li,p,h1 a h6,address,blockquote ecc -->
+</body>
+</html>

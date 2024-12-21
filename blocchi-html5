@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   header {
+    background-color: aquamarine;
+    padding: 1px;
+   }   
+   nav {
+    background-color: lightblue;
+    padding: 1px;
+   }  
+   section {
+    background-color:lightsalmon;
+    padding: 1px;
+       }
+    footer {
+     background-color: lightgreen; 
+     padding: 1px;  
+    }   
+    article {
+        background: lightseagreen;
+    }
+    aside {
+        background: lightskyblue;
+    }
+    div {background: lightgoldenrodyellow;
+    }
+    </style>
+</head>
+<body>
+<!--Tag di blocco di impaginazione-->
+<!--Tag header della testata-->
+<header>
+   <h1>Testata</h1> 
+</header>
+<!--Tag nav della navigazione-->
+<nav>
+    <ul>
+        <li>Home</li>
+        <li>Servizi</li>
+        <li>Contatti</li>
+    </ul>
+</nav>
+<!--Tag secetion sezioni centrali della pagina-->
+
+<section>
+
+    <p>Sezioni della pagina</p>
+</section>
+<section>
+    <p>Sezioni della pagina</p>
+</section>
+<section>
+    <p>Sezioni della pagina</p>
+    <div>Blocco generico</div>
+</section>
+<section>
+  <!--Tag articolo blocco di sinistra-->
+  
+    <article>
+     Il mio articolo
+
+    </article>
+  <!--Tag aside di affiancamento all'articolo-->  
+    <aside>Area di destra</aside>
+    
+    <p>Sezioni della pagina</p>
+</section>
+<!-- Tag del pie di pagina  -->
+<footer>
+Pie di pagina
+</footer>
+</body>
+</html>

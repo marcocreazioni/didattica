@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Elenchi</h1>
+ <!--Inizio del blocco elenco puntanto-->   
+    <ul> 
+        <li><a href="#">Pane</a></li>
+        <a href="#"><li>Pasta</li></a>
+        <li>Olio</li>
+            <ul>
+                <li>Olio di Semi</li>
+                   <ul> 
+                      <li>Di Girasole</li>
+                      <li>Di Mais</li>
+                      <li>Di Soia</li>
+                   </ul>
+                <li>Olio di Oliva</li>
+            </ul>
+        <li>Pasta</li>
+    </ul>
+<!--fine del blocco elenco puntato-->
+ <!--Inzio del blocco elenco numerato-->   
+    <ol>
+        <li><strong>Primo</strong></li>
+            <ol>
+                <li>Primo di uno</li>
+                <ol>
+                    <li>Prima di uno e di uno</li>
+                    <li>Prima di uno e di due</li>
+                </ol>
+                <li>Primo di due</li>
+                <li>Primo di tre</li>
+            </ol>
+        <li>Secondo</li>
+            <ul>
+                <li>Secondo di uno</li>
+                <li>Secodno di due</li>
+            </ul>
+        <li>Terzo</li>
+        <li>Quarto</li>
+    </ol>
+<!--fine del blocco elenco numerato-->
+
+    
+</body>
+</html>

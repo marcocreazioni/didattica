@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td, th {
+            border: 1px solid;
+        }
+        table {border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelle</h1>
+    <hr>
+    <!--Table è il contenitore della tabella con width-->
+    <table width="100%">
+        <!--thead testata (non obbligatori)-->
+           <thead> 
+            <!--con tr traccio le righe della tabella (obbligatori) valign rappresenta l'allineamento 
+            verticale-->
+               <tr>
+                <!--indico le celle di intestazione, ogni celle cella rappresenta una colonna-->
+                    <th width="200px" height="100px" valign="top">
+                        Nome
+                    </th>  
+                    <th width="200px" valign="top">
+                        Cognome
+                    </th>
+                    <th width="100px" valign="top">
+                        Eta'
+                    </th>
+               </tr>    
+           </thead>
+        <!--tbody corpo della tabella (non obbligatorio)-->   
+           <tbody> 
+               <tr> 
+                    <td align="center">
+                        Mario
+                    </td>
+                    <!--Pre unire verticalmente due celle uso l'attributo rowspan seguite
+                    dal numero di celle che voglio unire-->
+                    <td align="center" rowspan="2">
+                        Paolini
+                    </td>
+                    <td align="center">
+                        50
+                    </td>
+               </tr>
+               <tr>
+                <td align="center">
+                    Alfredo
+                </td>
+                <td align="center">
+                    44
+                </td>
+               </tr>  
+               <tr>
+                <td align="center">
+                    Giovanni
+                </td>
+                <td align="center">
+                    Allievi
+                </td>
+                <td align="center">
+                    22
+                </td>
+               </tr>
+
+           </tbody>
+          <!--tfoot pie di pagina della tabella (non obbligatori)--> 
+            <tfoot>
+               <tr>
+                <!--con l'attributo colspan indico quante celle in orizzontale posso unire-->
+                   <td align="center" colspan="2">Nominativo</td>
+                   <td align="center">Età</td>
+                </tr>
+            </tfoot>
+            <!--Tag descrittivo-->
+            <caption>Nominativi</caption>
+    </table>
+        <!--contanitore con illustrazione-->
+        <figure>
+    <img src="https://cdn.pixabay.com/photo/2023/12/14/20/24/christmas-balls-8449615_960_720.jpg">
+    <!--didascalia delle immagine per l'indice-->   
+    <figcaption>Figura 1.0</figcaption>
+       </figure>
+       
+</body>
+</html>

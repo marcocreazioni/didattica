@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* Proprieta css che si applica a tutta la pagina */ 
+* {font-family: sans-serif;}
+/*Proprieta che condiziona solo il corpo pagina */
+body {
+   margin: 5%; 
+}
+/* Alcune accortezza per il design responsivo:: margini in %, larghezza in %;
+e proprieta automatiche per l'altezza  o fit-content */
+img {
+    width: 50%;
+    height: auto;
+/* Larghezza massima del contenuto all'ingrandimento dello schermo */
+    max-width: 600px;
+/* min-width imposta invere la larghezza minimo dove non è possibile 
+diminuire l'oggetto alle dimensioni minime delle schermo */
+    min-width: 300px;
+
+/* le immagini possono essere corrette nel css medienta l'uso di
+filtri il cui parametro viene applicato in % 
+
+    blur(50%)
+    "sfocatura"
+    brightness()
+    "luminosita"
+    contrast()
+    "contrasto"
+    drop-shadow()
+    "ombreggiature"
+    grayscale()
+    "scala di grigio"
+    hue-rotate()
+    "scostamento dei colori"
+    invert()
+    "effetto negativo"
+    opacity()
+    "trasparenza"
+    saturate()
+    "Quantita di colore nell'immagine"
+    sepia()
+    effetto seppia
+
+*/
+   filter: sepia(90%);
+   border-radius: 50%;
+   
+}
+a:hover {color: red;
+} 
+a:visited {color:black:
+}         
+img:hover {
+        box-shadow: 10px 10px red;
+}
+
+/* stati dell'attivita del mouse che vengono indicate con i due punti
+! :active (al caricamento della pagina) :linked (valido solo per i collegamenti)
+:hover (comportamento al passaggio del mouse) :visited (alla visita)
+*/
+
+/* ALtre proprieta del testo */
+p { 
+    font-size: large;
+    /*interlinea */
+    line-height: 1.5;
+    /*rientro del paragrafo */
+    text-indent: 5%;
+    /*ombreggiatura con text shadow inserendo lo scostamenteo orizzonale
+    e il primo parametro e il secondo parametro e lo scostamento seguito
+    dal colore e possibile inserire la sfocatura*/
+
+    text-shadow: 1px 1px 0.1px black;
+    /*distanza tra o caratteri */
+    letter-spacing: 1px; 
+    /*distanza tra le parole */
+    word-spacing: 1px;
+}
+div {
+    /*short code del border: 1 pratmetro spessore tipologia e colore */
+    border:0.5px solid orange;
+    /* arrotondamento su tutti i 4 lati del bordo */
+    border-radius: 5px;
+    /* il rientro del contenitore rispetto al contenuto */
+    padding: 2%;
+    /* ombreggiature applicata al contenitore; parametri: scostamento
+    orizzontale e verticale, facoltativamente un terzo parametro
+    sta indicare la sfumatura e l'ultimo parametro e il colore */
+    box-shadow: 2px 2px 10px orange;
+}
+
+</style>
+
+<body>
+ <div>
+    <img src="https://cdn.pixabay.com/photo/2024/12/09/16/22/boat-9255590_960_720.jpg" alt="imbarcazioni" title="imbarcazioni">
+ <h1>Titolo</h1>
+ <p>  Don Matteo 15 si farà. Raoul Bova tornerà a vestire i panni di Don Massimo
+    nelle nuove puntate che sono attualmente in scrittura e andranno in onda nella
+    primavera del 2026. La fiction con Eugenio Mastrandrea nel ruolo di Diego,
+    Federica Sabatini nel ruolo di Giulia, Gaia Messerklinger nel ruolo di Vittoria
+    e Nino Frassica e Nathalie Guetta, rispettivamente Cecchini e Natalina è
+    sopravvissuta all'addio di Terence Hill,mantenendo ascolti altissimi. Fanpage.it
+    ne ha parlato con il supervisore alla sceneggiatura Mario Ruggeri, che ha raccontato
+    i retroscena della quattordicesima stagione, dalla morte di Patrizia Cecchini
+    al ritorno fugace di Terence Hill. Nell'intervista ha svelato anche quando inizieranno
+    le riprese di Don Matteo 15, quando andrà in onda la nuova stagione e alcune
+    anticipazioni sulla trama. E sul finale di Don Matteo 14, in onda giovedì
+    19 dicembre, commenta: "Nino Cecchini ha finalmente scoperto come è morta sua
+    figlia. Attraverserà una crisi. E poi ci sarà un momento importante che riguarderà
+    Don Massimo, interpretato da Raoul Bova. Vogliono ucciderlo".
+    <a href="https://it.wikipedia.org" rel="no-follow" target="_new">Collegamento</a>
+ </p>
+
+ </div>
+    
+
+
+</body>
+</html>

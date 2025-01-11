@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--inserimento di un css esterno-->
+    <link rel="stylesheet" href="css-esterno.css" type="text/css">
+<!--css in pagina -->
+<style>
+p {color:blueviolet;
+
+}
+
+</style>
+
+</head>
+<body>
+    <!--css in linea utilizzamo l'attributo style -->
+
+    <p style="background-color:lightblue">Il mio paragrafo</p>
+</body>
+</html>
+<!---qui c'è il contenuti del file css-esterno.css -->
+/*css esterno */
+/* l'asterisco è il selettore tutti i tag html */
+* { font-family: sans-serif;
+
+}
+body {
+    background-color: bisque;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* i colori: color è la proprieta colore del testo , possono essere indicati
+        in inglese, nelle codifica esadecimele #FFFFF (bianco) #0000 (nero), oppure
+        in codifica RGB o RGB con trasparenza 0 - 1 - 0.1 - 0.5  0.3, o in hsl o hsla 
+        aggiungendo come rgb la trasparenza
+        */
+        /* Attnzione se voglio dare le stesse proprieta a piu tag html mi bastera
+        applichera la virgola tra un tag e l'altro */
+h1 , h2 { color: #0a4e4b;
+    background-color: hsl(167, 63%, 48%);
+}
+
+div {color: rgb(241, 252, 220);
+     background-color: rgba(100,44,55,0.7) ;
+}
+/* lo spazio tra due selettori indica che solo l'oggetto contenuto nel contenitore
+di quella tipologia applichera quella proprieta in alternativa posso usare
+anche il simbolo del maggio ">"  */
+div  p , div h2 {color:lightcyan;
+
+}
+
+p  {color:#1128a7;
+
+}
+
+body {background-color: rgb(255,223,204);
+
+}
+/*Se vogliamo disciplinare un blocco o tag html con delle proprieta diverse
+devo abbinare al tag un nome utilizzando l'attributo class o id e per
+poterlo richiamare nel css devo utilizzare il . per richiamare l'oggetto
+con l'attributo class seguito dal valore di quell'attributo*/
+/* Per applicare una sfumaturua usiamo le proprieta di background image:
+seguito dalla tipologia di sfumature -linear gradient (lineare) e quella radialgradient
+(radiale) 
+ATTENZIONE (Background-image è una proprieta non applicabile a "color" quindi al 
+colore del testo)
+*/
+.secondo {background-color: orange;
+    /*i parametri accettati da linear gradient sono separati dalla virgola, 
+    e sono applicati in maniera lineare dall'alto verso il basso a comporre
+    un angolo piatto di 180 gradi, per cambiara l'angolo da applicazione
+    della sfumatura utilizziamo un grado angolare come primo parametro
+    ad'esempio con angolo di 45 gradi lo indichiamo come 45 deg, gli altri parametri
+    invece sono i colori applicati nella sfumatura, per ogni colore possiamo
+    anche indicarne la quantita in percentuale facoltativamente in alterativa all'angolo
+    di sfumatura posso indicare punto di partenza e arrivo top left */
+    background-image: linear-gradient(90deg,brown 30%,darkorange 70%);          
+}
+/* invece per richiamare l'attributo id nel css occorre utilizzare il 
+ # sequito dal valore dell'id (consigliabile riservasi l'uso dell'id
+ per combinare componenti e tag html al quale deve essere applicate proprietà
+ di altri linguaggi)*/
+
+#terzo {
+    color:#1128a7;
+}
+
+.radiale {height: 200px;
+/* Radial gradient ammette i parametri in base al colore e posso indicare la
+percentuale per ogni colore e come primo parametro posso scegliere
+di creare una radial gradient non ellittico, inserisco come primo parametro
+"circle" per avere un cerchio invece di un ellisse */          
+background-image: radial-gradient(circle,brown 30%,darkorange 70%);
+/* Per i browser meno recenti si puo definire la stessa proprieta
+indicando il browser di riferimento con la sintassi che segue */
+background-image: -moz-radial-gradient(brown,darkorange); 
+/* moz indicare browser mozilla di vecchia generazione la cui funzione
+radial o linear interpretate in versione beta */
+background-color: -webkit-radial-gradient(brown,darkorange); 
+}
+/*webkit indicare browser safari di vecchia generazione la cui funzione
+radial o linear interpretate in versione beta */
+    </style>
+</head>
+<body>
+    <h1>Titolo</h1>
+    <p>Il mio paragrafo</p>
+    <p>il miio secondo peragrafo</p>
+    <!--Ereditarieta delle proprietà del contenitore che li contiente-->
+    <div>
+        <h2>Ereditarietà delle proprieta</h2>
+        <p>paragrafo</p>
+        <address>Indirizzo</address>
+    </div>
+    <div class="secondo">
+     <ul>
+        <li>PRIMO</li>
+        <li>SECONDO</li>
+        <li id="terzo">TERZO</li>
+        <li class="quarto" id="squarto">QUARTO</li>
+
+     </ul>
+    </div>
+     <div class="radiale">
+        <p>LA casa del cavallo era rettangolare</p>
+     </div>
+
+
+
+</body>
+</html>

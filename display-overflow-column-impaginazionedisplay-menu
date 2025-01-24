@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impaginazione II Parte</title>
+    <!--CSS-->
+    <style>
+    header {
+        padding: 1px;
+    }
+    h1 {text-align: center;
+        border: 1px solid;
+        padding:5px;
+        
+        /*trasforma un oggetto testuale come paragrafi,titoli o elenchi
+        in oggetti al quale posso applicare le stesse proprieta di un div ad
+        esempio posso applicare il margin auto che non sarebbe ammesso; */
+        display:block;
+        margin:auto;
+        border-radius: 5%;
+
+    }
+    div {width: 75%;
+         height: auto;
+         border: 1px solid black;
+    /* Impostando i margini automatici centriamo un oggetto sullo schermo 
+    ai blocchi di tipo div, ul, ol, table,header,section,footer,article,aside
+    o addirittura a body per centrare tutti i contenuti di un pagina*/     
+         margin: auto;
+    /*Border radius arrotonda gli spigoli di un oggetto */     
+         border-radius: 2%;
+         font-family: 'Courier New', Courier, monospace;
+         padding: 10px;
+/* Per evitare che un oggetto invada un altro contenitore utlizziamo
+    le proprietà overflow che va applicato al contenitore e ammatte una serie
+    di valori come: auto che fa comparire una barra di scorrimento, mentre
+    scroll fa comparire due barre di scorrimento una orizzonta e una verticale
+    solo la barra orizzontale-mentre scoll-y la barra verticale, mentre hidden
+    ritaglia tutti gli oggetti che vanno oltre le dimensioni stabilite*/
+   /* overflow: hidden; */
+    
+
+    }
+    /* Led dimensioni delle immagini si adattano alla larghezza del blocco */
+    img {width:100%;
+    /* visibility invece è una proprieta che nasconde un oggetto ma non riumovere
+    lo spazio di inserimento */    
+    /*     visibility: hidden; */
+        
+        
+    
+    /* Il paramentro inherit serve a fare in modo che un oggetto erediti
+    gli stessi valori di un oggetto di un livello superiore */  
+    border-radius: inherit;  
+    }
+    p {font-family: inherit;
+       text-align: justify;
+    /* per dividere un paragrafo su piu colonne usiamo coloumnt-count
+    seguito dal numero di colonne; */    
+       column-count: 2;
+    /* Per ridefinire lo spazio tra le colonne usiamo column-gap indica lo
+    spazio tra lecolonne*/   
+       column-gap: 80px;
+       /* Per indicare una larghezza tra le colonne possiamo usare
+       column-width px o automatico*/
+       column-width: auto;
+      /* stabilisce il riempimento dei contenuti delle colonne con i valori
+      auto che riempe una colonna mentre balance li bilancia*/
+       column-fill: balance;
+     /* Al contrario di visibility display è una proprieta jolly che permette
+     di attivare funzioni speciali, la proprieta display non cancella gli oggetti
+     rimuovendo anche lo spazio che occupano; */  
+     /* display: none; */
+        display: inline-block;
+        
+
+    }
+    /*rimozione del cerchietto della lista con list-style-type con il parametro none,
+    con il parametro circle diventa un cerchio vuoto all'interno,mentre square in
+    un rettangolo*/
+    ul {list-style-type: none;
+        background-color: aqua;
+        padding:0px;
+        font-family: inherit;
+
+    }
+    li {background-color: aqua;
+        width: 100px;
+        
+/* Display permette un parametro chiamato inline-block che consente di allineare
+degli oggetti sulla stessa riga e di trasformali in blocchi */
+        display:inline-block;
+        padding: 10px;
+        
+    }
+    li:hover {
+        background-color: darkblue;
+    }
+    /* SPazio indica il cambio di valore di un oggetto contenuto in un altro oggetto
+    ad esempio modifico gli oggetti solo un  */
+    li a {text-decoration: none;
+          color:black;
+          font-weight:bold;
+          color:white;
+          
+          
+        }
+    li .attivo {
+        color: orange;
+     }
+     nav {padding:1px;
+         font-family: sans-serif;
+    }
+ .blocco1 , .blocco2 {width: 45.3%;
+                      height:200px;
+                      background-color: bisque;
+                      padding: 10px;
+                      margin: auto;
+  /* con il parametro solo inline l'oggetto viene trasformato in testo e gli oggetti
+  vengono allineati un accanto all'altro, aggiungendo -block alla modalità in linea
+  tornano a comportarsi come blocchi html; */                    
+                      display: inline-block;
+        }
+        
+.figura , .paragrafo {
+           width: 45%;
+           border-radius: 0px;
+           border: 0px;
+           display: inline-block;
+           height: 200px;
+
+}
+
+.contenitore {
+              vertical-align: top;
+}
+.grandeblocco {margin:auto;
+}
+.blocco2 {background-image: url('https://cdn.pixabay.com/photo/2025/01/17/16/06/building-9340309_960_720.jpg');
+          background-size: cover; 
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Impaginazione II Parte</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="attivo" href="#">Home</a></li>
+            <li><a href="#">Servizi</a></li>
+            <li><a href="#">Contatti</a></li>
+        </ul>
+    </nav>
+    <div class="contenitore">
+        <div class="paragrafo">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           Ad laboriosam voluptatum architecto explicabo porro quis 
+           quisquam aspernatur libero illo quibusdam, illum maxime dolores
+           alias repellendus similique accusamus eligendi perspiciatis tenetur.
+          </p>
+       </div>
+        <div class="figura">
+          <img src="https://cdn.pixabay.com/photo/2025/01/17/16/06/building-9340309_960_720.jpg">
+        </div>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Impedit dicta sint earum ea veniam, 
+             laudantium at modi maiores voluptatum dolor. 
+             Expedita ad quaerat quasi modi error doloribus voluptatum ea beatae.</p>
+    </div>
+    <div class="grandeblocco">
+    <div class="blocco1">Blocco 1</div>
+    <div class="blocco2">Blocco 2</div>
+</div>
+</body>
+</html>

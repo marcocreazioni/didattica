@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- Importazione carattere da google font e nella sezione head lo importo-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">   
+<style>
+/*IMportazione di carattere personalizzato */
+@font-face {
+    font-family:'Heligthon';
+    src: url(Heligthon-Signature.otf);
+}    
+
+
+/* l'asterisco è un jolly per applicare la proprieta a tutti contenuti html
+(i font è il preferito e gli altri sono di riserva) */    
+ * {font-family: Arial, Helvetica, sans-serif; 
+
+} 
+
+/*Solo i tag pagina del corpo */
+body {background-color: bisque;
+}
+
+
+/* allineamento con il css */
+h1 {text-align: center;
+    text-decoration: solid;
+/* inserire dove si vuole il nome del carattere importato nella sezione head */    
+    font-family: "Marck Script";
+/* Ombraggiuatura del test accetta tre parametri distanziamento orizzontale
+verticale e colore */    
+    text-shadow: 2px 2px orange;
+   
+}
+p {font-family: Arial, Helvetica, sans-serif, Times, serif;
+/*Grandezza e dimensione del testo (large xlarge ecc,punti,px, em) */
+   font-size: 12pt;
+/*Spessore del testo bold, normal per grassetto e normale dove 100 è il valore meno spesso*/
+   font-weight: 600;
+/* stile del carattere corsivo o normale */ 
+  font-style: oblique;
+/* FOnt strench espande o dimuiniche la qualita dei caratteri */
+  font-stretch:extra-condensed;  
+/* Distanza tra le parole */ 
+  word-spacing: 10px;
+  /*Distanza tra lettere */
+  letter-spacing: 1px;
+  /*trasforma il testo in maiuscolo,minuscolo, e prima lettera maiuscola uppercase,lowercase, */
+  text-transform: lowercase;
+  /*indica il rientro della prima riga */
+  text-indent: 20px;
+  /*distanza tra una linea e l'altra del testo */ 
+  line-height: 1.6;
+
+ /*RIduce la distanza tra i paragrafi che accetta parametri come 
+ wrap che è predefinito e il no wrap disattiva la formtazzione
+ delle distanze nel codice*/
+ white-space: wrap;
+}
+ .firma {
+    /* richiamo la famiglia di carattere" */ 
+        font-family: 'Heligthon';
+        font-size: 30pt;
+        
+
+  }
+
+</style>
+</head>
+<body>
+    <div>
+     <h1>Il mio titolo</h1>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Temporibus quidem magni, explicabo dolores quis assumenda iste est
+        deleniti eos commodi quisquam eveniet repellat. 
+        Numquam, odit debitis tenetur aliquid laudantium exercitationem!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Possimus asperiores minima minus! Aliquam suscipit, dolor vitae voluptas magni recusandae quod accusamus, 
+        maxime iste eos aut eaque <a href="#">inventore</a> perspiciatis laudantium?</p>
+
+
+    </div>
+    <a href="#">FIRMA</a></br></br>
+    <div class="firma">Mario Rossi</div>
+</body>
+</html>

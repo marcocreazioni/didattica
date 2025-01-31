@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {margin: -10px;
+    
+  }
+header {margin:0px;
+            Padding: 1px;
+            text-align: center;
+            /* position fixed permette ad un oggetto di agganciarsi ad uno schermo */
+            position:fixed;
+            background:white;
+            /* con position dobbiamo disciplinare le dimensioni */
+            width: 100%;
+            /* inoltre devo dare una distanza in top-left-right-bottom dallo schermo */
+           
+  }
+  nav {background-color: brown;
+         color: white;
+         min-height: 100px;
+         min-width: 100%;
+         
+
+
+    }
+    .box-1 {background-color: aqua;
+           min-height: 100px;
+           width: 36%;  
+           /* Proprieta float left: significa liberare spazio a destra e right a sinistra
+           destra*/
+           float: left;
+           margin-top: 10px;
+           border-radius: 10px;
+           margin-left: 0px;
+
+    }
+    .box-2{background-color: coral;
+          width: 29%;
+          min-height: 100px;
+          float:left;
+          margin-top: 10px;
+          border-radius: 10px;
+          margin-left: 10px;
+
+         
+    }
+
+    .box-3{background-color: lightgreen;
+          width: 29%;
+          min-height: 100px;
+          margin-left: 67%; 
+          margin-top: 10px;
+          border-radius: 10px;
+          /* Position relative fa un modo che un blocco si sovrapponga
+          ad un altro oggetto e devo inserire le cordinate della posizione
+          con top - left- bottom -right */
+          position:relative;
+          
+          /* clear interrompe il float in entrambi lati con both, left per bloccare
+          l'ingresso di altri oggetti a sinistra o con left a destra; */
+          /* clear:left;*/
+          
+          
+    }
+
+    
+    footer {background-color: lightgray;
+            color: darkorange;
+            font-weight: 800;
+            padding:20px;
+            text-shadow: 1px 1px black;
+            width: 100%;
+            margin-top: 10px;
+
+    }
+</style>
+</head>
+<body>
+    <header><h1>Testata</h1></header>
+    <nav>
+     Navigazione
+    </nav>
+    <div class="box-1">Blocco 1</div>
+    <div class="box-2">Blocco 2</div>
+    <div class="box-3">Blocco 3</div>
+    <footer>
+    Pie du pagina
+
+    </footer>
+    
+</body>
+</html>

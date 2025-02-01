@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <link rel="alternate" hreflang="x-default" href="https://esempio.com" />
+    <link rel="alternate" hreflang="en-us" href="https://esempio.com/en/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     /* l'asterisco displinta tutti i tag della pagina */   
+     * {font-family: sans-serif;
+        
+     }
+     
+     .primo {background:coral;
+          width: 200px;
+          height: 200px;
+          /* padding rientro dell'oggetto 
+          padding-top: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 30px; */
+          /* padding in modalita shorcode si segue l'andamento orario della lancetta */
+          padding: 20px 20px 30px 20px;
+          /*margin sposta l'oggetto all'interno del foglio 
+          margin-top: 0px;
+          margin-right: 400px;
+          margin-bottom: 0px;
+          margin-left: -20px; */
+          /*margin  in modalita shorcode si segue l'andamento orario della lancetta */
+          margin: 0px 400px 10px -20px;
+          /* parametri borodo */
+          border-color:aqua;
+          /*colore */
+          border-style: solid;
+          /*tipologia */
+          border-width: 10px;
+          /*spessore
+          border-top: 10px;
+          border-right: 10px;
+          border-bottom: 10px;
+          border-left: 10px;
+          /* border in short-code */
+          border: 10px 10px 10px 10px;
+          border-style: solid;
+          
+
+
+     }
+     .secondo {background:rgb(47, 29, 209);
+          color:white;
+          width: 200px;
+          height: 200px; 
+          padding: 20px 20px 30px 20px;
+          /* margin auto consento ad un oggetto di essere centrato nella pagina */
+          margin: auto;
+          /* short code con spessore-tipologia-colore 
+          border: 5px solid black; */
+        /* short code per lato con spessore-tipologia-colore */
+          border-top: 2px solid salmon;
+          border-left: 5px dotted orange;
+          border-bottom: 10px dashed green;
+          /* solid line dotted punteggiato dashed tratteggiato inset 3d e outset 3d esterno, double doppia
+          linea groove 3d a doppia linea 3d a doppia linea colori invertiti none lo fa sparire*/
+          border-right: 10px ridge goldenrod;
+          /* Proprieta border vincolante che arrotanda gli oggetti anche se non presente */
+          /* border-radius: 20px; */
+          /* con border radius posso indicare in px o % il grado di arrotondamento di un borod */
+          border-radius: 10px 10px 0px 30px; 
+          /* proprieta di ritaglio con parametri hidden */
+          overflow: hidden;
+
+     }
+         button {background-color: chartreuse;
+                 border: none;
+                 padding: 10px;
+                 color: black;
+                 font-weight: bold;
+                 border-radius: 12%;
+                }
+          button:hover {
+           background-color: aquamarine;
+          border: 1px inset orange;
+          box-shadow: 1px 1px 0px;
+        }      
+    </style>
+</head>
+<body>
+    <!--impaginazione con iframe sviluppo intranet non piu sul web
+    <iframe src="testata.html" width="100%" height="200px"></iframe>
+    <div> IL mio contentuto</div>
+    <iframe src="footer.html" width="100%" height="100px"></iframe>-->
+
+    <div class="primo"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Necessitatibus tenetur illo harum nostrum alias corrupti 
+        repudiandae quidem cumque expedita odio labore, eius maxime nobis 
+        consectetur possimus. Repudiandae, expedita quia! Dolore.</p> 
+    <br><button>ENTRA</button></div>  
+    <div class="secondo"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Necessitatibus tenetur illo harum nostrum alias corrupti 
+            repudiandae quidem cumque expedita odio labore, eius maxime nobis 
+            consectetur possimus. Repudiandae, expedita quia! Dolore.</p> 
+    <img src="https://cdn.pixabay.com/photo/2024/12/07/17/47/autumn-9251331_960_720.jpg" width="50%">
+    </div>    
+
+     
+</body>
+</html>

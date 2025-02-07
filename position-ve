@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .contenitore-1 {
+                
+                   
+
+ }
+
+.box-1 {min-height: 200px;
+        width: 50%;
+        
+}
+.box-1 img{width:100%;
+           height: 200px;
+
+}
+.box-2 { 
+    /*Position static è predefinita, fixed, agganci il blocco ad
+    una posizione dello schermo, postion relative*/
+        position: relative;
+        top: -220px;
+        left: 50%;
+        min-height: 200px;
+        font-weight: 700;
+        color: black;
+        font-style: normal;
+        text-transform: uppercase;
+        padding: 5px;
+         text-align: left;
+        /* quando ci sono piu oggetti in posizione
+        relativa z-index indica la posizone 
+        dell'oggetto rispetto allo sfondo quando
+        piu oggetti sono in position relative da -2 a 2 */
+
+        z-index: 1;
+        width: 50%;
+}
+.contenitore-2 {
+
+}
+/* blocchi successivi ai primi due */
+ .box-3 { margin: auto;
+        background-color: brown;
+        position: static;
+        margin-top: -200px;
+        min-height: 400px;
+        
+
+ }
+ /* la posizione assoluta fa riferimento allo schermo e a differenza 
+ della relative non tiene conto di altri oggetti che lo circondano */
+
+
+.box-4 {position: absolute;
+        min-height: 400px;
+        top: 200px;
+        font-weight: 700;
+        color: black;
+        font-style: normal;
+        text-transform: uppercase;
+        padding: 5px;
+        text-align: left;
+        /* quando ci sono piu oggetti in posizione
+        relativa z-index indica la posizone 
+        dell'oggetto rispetto allo sfondo quando
+        piu oggetti sono in position relative da -2 a 2 */
+
+        z-index: 1;
+        
+
+}
+
+    </style>
+</head>
+<body>
+    <!---contenitore 1-->
+    <div class="contenitore-1">
+        <div class="box-1">
+            <img src="https://cdn.pixabay.com/photo/2019/10/21/14/54/oranges-4566274_960_720.jpg">
+
+
+        </div>
+        <div class="box-2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi cum sequi soluta eos quidem dolorum, minima quos ea velit pariatur, illo consequuntur atque! Dolorum deleniti, 
+            similique doloribus maxime ratione illo!</p>
+
+
+
+
+       </div>
+    </div>
+    <!---contenitore 2-->
+    <div class="contenitore-2">
+
+       <div class="box-3">
+      
+
+
+       </div>
+        <div class="box-4">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic consequatur minus praesentium vitae. Facere laborum optio, aut dolor illo fugit. Blanditiis quos dolores maiores ratione 
+            error debitis architecto ad corrupti!</p>
+       </div>
+    </div>
+
+
+
+
+</body>
+</html>

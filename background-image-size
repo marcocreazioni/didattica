@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box {background-color: antiquewhite;
+      /* Immagine come sfondo con background image */
+     background-image: url(https://cdn.pixabay.com/photo/2024/10/03/04/49/mountains-9092630_960_720.jpg);
+     /* posizione dell'immagine rispetto allo sfondo e accetta
+     da 1 a 2 parametri se l'immagine è piu piccola del blocco decide la posizione */
+     background-position: left; 
+     /* Ridimensionare l'immagine di sfondo utilizziamo
+     background size che accetta come parametri: pixel di larghezza,pixel di altezza; in
+     alternativa possiamo usare altri paramentri "contain" scala l'immagine del contenitore
+     con auto si identifica con la sua dimensione senza background size cover si stira
+     e prova occupare le dimensioni del riquadro con le dimensione del contenitore
+     che vanno disciplinate
+     */
+     background-size: cover;
+     /* ripetizione dell'immagine di sfondo che ammette i seguenti paramentri principali
+     no-repeat; repeat; repeat; repeat-x; repeat y*/
+     background-repeat: no-repeat;
+     /* background-attachment sistam gli errori di cover* non tutti browser
+     interpretano la proprieta in maniera corretta e accetta il parametro fixed
+     local e scroll sono usati in presenza di altri blocchi contigui sroll viene
+     usato in un effetto css chiamato parallax*/
+     background-attachment:fixed;
+     
+     padding: 5px;
+     margin-top: 20px;
+     width: 100%;
+     height: 400px;  
+     text-align: center;
+     vertical-align: bottom;
+    
+      
+
+}
+.box h1
+{color:white;
+  padding-top: 100px;   
+}
+.box p {
+color:white;
+
+}
+.box h1 , .box p {
+    text-shadow: 1px 1px black; 
+    display: block
+}
+    </style>
+</head>
+<body>
+
+
+ <div class="box">
+    <h1>Titolo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Repudiandae provident 
+        aperiam saepe quod aliquam? Sequi nesciunt,
+        minus neque ab illum ducimus nihil officia quod, error vitae tenetur fuga nam placeat?</p>
+ </div>   
+</body>
+</html>

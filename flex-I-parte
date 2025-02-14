@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       * {box-sizing:border-box;
+    }
+
+    body {margin: -5px;
+        /* proprieta di impaginazione flex */  
+        display: flex;
+          /* fex direction stabilisce la direzione degli oggetti 
+          posiziona gli oggetti in riga(row)o colonna(column) aggiungendo
+          reverse gli oggetti si mettono a specchio*/
+          flex-direction:row;
+          /*flex-wrap permette aglio oggetti di essere responsivo o meno (wrap) e responsive
+          attenzione alla presenza di flex-direction */
+          flex-wrap: wrap;
+    } 
+/* css della card 1 */
+.card-1 {background-image: url('https://cdn.pixabay.com/photo/2021/10/27/09/36/elephants-6746586_960_720.jpg');
+       background-size:cover;
+       background-position:center;
+       overflow:hidden;
+       border-radius: 2%;
+       box-shadow: 1px 1px 1px black;
+       margin-top:10px;
+    /* Display flex rende inutile usa width */
+
+      /* width: 100%; */
+       height: auto;
+       /*display inline 
+       display:inline-block; */
+       /* Proporzione di grandezza degli oggetti tipica di display
+       flex*/
+       flex: 1;
+       margin: 5px;
+
+
+}
+/*css della card 2 */
+.card-2 {background-image: url('https://cdn.pixabay.com/photo/2020/03/10/13/53/flamingos-4919079_640.jpg');
+       background-size:cover;
+       background-position:center;
+       overflow:hidden;
+       border-radius: 2%;
+       box-shadow: 1px 1px 1px black;
+       margin-top: 10px;
+      /* margin-left: 50%; */
+       height: auto;
+       /* Display flex rende inutile usa width */
+       /* width: 100%; */
+
+       /*display inline 
+       display:inline-block; */
+       /*proporzioni stabilita dall'attivazione del contenitore flex */
+       flex: 1;
+       margin:5px;
+
+}
+
+.testo h1 {padding-top: 20px;
+          padding-left: 10px;
+          padding-right: 20px;
+          color:white;
+
+}
+.testo p {padding-top: 1px;
+          padding-left: 10px;
+          padding-right: 20px;
+          padding-bottom:10px;
+          color:white;
+}
+.testo { background-color: transparent;
+         opacity: 1;
+
+}
+.evidenziato {background-image: linear-gradient(cyan,darkblue);
+              margin-top: -10px;
+              opacity: 0.8 ;
+    
+}
+
+    </style>
+</head>
+<body>
+    <!--card 1 inizia qui -->
+    <div class="card-1">
+         <div class="testo">
+         <h1>Al Mare con gli elefanti</h1>
+          <p>Un eseperienza fantastica da 
+           fare almeno una volta nella vita 
+         </p>
+         </div>
+          <div class="evidenziato">
+            &nbsp;
+          </div>
+    </div>
+  
+    <!--Card 2 inizia qui -->
+    <div class="card-2">
+        <div class="testo">
+        <h1>Al Mare con i fenicotteri</h1>
+         <p>Un eseperienza meravigliosa e divertente 
+          sicuramente da ripetere
+        </p>
+        </div>
+         <div class="evidenziato">
+           &nbsp;
+         </div>
+   </div>
+
+
+
+</body>
+</html>

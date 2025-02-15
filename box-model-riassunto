@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <link rel="alternate" hreflang="x-default" href="https://esempio.com" />
+    <link rel="alternate" hreflang="en-us" href="https://esempio.com/en/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+  /* reset */
+* {margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/*margin: auto; serve per centrare un oggetto sullo
+schermo */
+.box {background-color:green;
+      color: white;
+      width: 300px;
+      margin: auto;
+      /*rientro la distanza tra contenuto e bordo 
+      1 solo valore tutti e 4 lati, o 4 valori uno
+      per lato 2 valori solo top e right*/
+      padding: 10px;
+      /* i bordi possono essere utilizzati in modalita
+      short-code,(spessore,colore e tipologia) */
+      border: 5px greenyellow solid; 
+      /*arrotondare una forma e puo seguire
+      la regola orologia e puo essere indicata in
+      px o in % al 50% l'oggetto diventa ellittico*/
+      border-radius: 20px;
+      
+
+
+
+
+}
+.box-2 {background-color:orange;
+      color: white;
+      width: 50%;
+      /* applicazione del margine ad orologio
+      con i valori; */
+      margin: 30px 10px 10px 20px;
+      /*rientro la distanza tra contenuto e bordo 
+      1 solo valore tutti e 4 lati, o 4 valori uno
+      per lato 2 valori solo top e bottom*/
+      padding: 10px;
+      /* i bordi possono essere utilizzati in modalita
+      separata */
+      /* allo spessopre posso applicare la regola orologio; */
+      border-width: 5px 5px 5px 5px;
+      /*colore*/
+      border-color:brown;
+      /*stile linea e il solid, dashed tratteggio,
+      dotted punteggiata, inset interno, outset
+      esterno,double doppia lienea,groove
+      una cornice, cornice rialzata 3D*/
+      border-style: ridge;
+      border-bottom: 5px solid yellow;
+      /*ombreggiatura in inset interna o rimossa
+      ed è indicata in pixel puo essere indicata
+      in short code (scostamento orizzontale,
+      scostamento verticale, disturbo-sfocatura
+      , colore) */
+      box-shadow: 1px 0px 5px orange;
+}
+
+
+
+</style>
+</head>
+</head>
+<body>
+   
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Necessitatibus tenetur illo harum nostrum alias corrupti 
+        repudiandae quidem cumque expedita odio labore, eius maxime nobis 
+        consectetur possimus. Repudiandae, expedita quia! Dolore.
+      </p> 
+    </div>
+    <div class="box-2">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae numquam quasi amet, cumque praesentium tempora quaerat excepturi cum labore sapiente odio expedita illo. Impedit reiciendis repudiandae reprehenderit necessitatibus quidem.</p>
+    </div>  
+
+
+</body>
+</html>

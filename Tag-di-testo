@@ -11,7 +11,8 @@
  <!--Tag di tipologia testo
   H1 a H6 Titolo di grandi dimensioni e piccole dimensioni
   Ogni tag possiede proprieta intrinseca che è possibile
-  modificare con l'uso di attributi -->   
+  modificare con l'uso di attributi -->
+
 <h1>Titolo Grande</h1>
 <h2>Sottotitolo</h2>
 <h3>Piccolo sottotitolo</h3>
@@ -21,7 +22,12 @@
 <!--TAg hr inserisce una line dritta-->
 <hr>
 <!--Tag p definisce dei paragrafi-->
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+<!--per allineare i blocchi di testo possiamo usare 
+l'attributo align che ammette una serie di valori:left,center,
+right,justify -->
+
+-->
+<p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 <!-- tag br manda un contenuto a capo-->
     Eos omnis voluptatum cum repellat</br> corrupti nihil magnam sit voluptatem.
     Saepe possimus incidunt quis eveniet sit quisquam ipsum in provident 
@@ -38,8 +44,13 @@ sub = testo in pedice -->
 <p>
     Lorem ipsum <strong>dolor</strong> sit <i>amet</i> <u>consectetur</u> adipisicing elit.
      Aliquam placeat eos atque, <mark>omnis animi</mark> omnis animi
-     , m<sup>2</sup> assumend<sub>a</sub> architecto,<strong><u>nulla reiciendis</u></strong> nulla reiciendis
-     nemo voluptas culpa nisi provident? <b>Corporis</b> laborum tempora officia omnis architecto quasi.
+     , m<sup>2</sup> assumend<sub>a</sub>
+     architecto,<strong><u>nulla reiciendis</u>
+    </strong>
+    <!-- tag a sta indicare un collegamento e puo attributi obbligatori
+     name e l'altro è href. In href dobbiamo
+     indicare il percorso dell'oggetto da collegare --> nulla reiciendis
+     nemo voluptas <a href="#">culpa</a> nisi provident? <b>Corporis</b> laborum tempora officia omnis architecto quasi.
 </p>
 <!--per centrare un contenuto-->
 <center>Contenuto Centrato</center>
@@ -60,6 +71,11 @@ sub = testo in pedice -->
 <!--TEsto in scorrimento-->
 <marquee>Testo a scorrimento</marquee>
 
+
+
+
+</body>
+</html>
 
 
 

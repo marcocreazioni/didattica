@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<!-- Title che compare nei motori di ricerca -->
+<title>TItolo della pagine</title>
+<!--name e conten sono attributi del tag html-->
+<meta name="keywords" content="dolor">
+
+
+</head>
+<body>
+ <!--Tag di tipologia testo
+  H1 a H6 Titolo di grandi dimensioni e piccole dimensioni
+  Ogni tag possiede proprieta intrinseca che è possibile
+  modificare con l'uso di attributi -->   
+<h1>Titolo Grande</h1>
+<h2>Sottotitolo</h2>
+<h3>Piccolo sottotitolo</h3>
+<h4>Ancora più piccolo</h4>
+<h5>Ancora piu piccolo</h5>
+<h6>Titolazioni limite</h6>
+<!--TAg hr inserisce una line dritta-->
+<hr>
+<!--Tag p definisce dei paragrafi-->
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+<!-- tag br manda un contenuto a capo-->
+    Eos omnis voluptatum cum repellat</br> corrupti nihil magnam sit voluptatem.
+    Saepe possimus incidunt quis eveniet sit quisquam ipsum in provident 
+    assumenda ducimus.
+</p>
+<!--altri tag
+strong = grassetto 
+i = corsivo 
+u = sottolineato
+mark = evidenziato
+b = grassetto (in disuso)
+sup = testo in apice
+sub = testo in pedice -->
+<p>
+    Lorem ipsum <strong>dolor</strong> sit <i>amet</i> <u>consectetur</u> adipisicing elit.
+     Aliquam placeat eos atque, <mark>omnis animi</mark> omnis animi
+     , m<sup>2</sup> assumend<sub>a</sub> architecto,<strong><u>nulla reiciendis</u></strong> nulla reiciendis
+     nemo voluptas culpa nisi provident? <b>Corporis</b> laborum tempora officia omnis architecto quasi.
+</p>
+<!--per centrare un contenuto-->
+<center>Contenuto Centrato</center>
+<p align="center">Blocco di testo centrato</p>
+<h1><mark>Titolo</mark></h1>
+<!--Testo in courer new-->
+<code>HTML Language</code>
+<!--Paragrafo con rientro-->
+<blockquote>Paragafro con rientro
+    sulla prima riga
+</blockquote>
+<!--Paragrafo in corsivo-->
+<address>
+ Martini srl <br>
+ Via Marini 56 <br>
+<strong> 20199 Sesto Sangiovanni (MI)</strong>
+</address>
+<!--TEsto in scorrimento-->
+<marquee>Testo a scorrimento</marquee>
+
+
+
+
+</body>
+</html>

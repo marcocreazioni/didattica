@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--attributo lang = lingua utilizzata nella pagine-->
+<html lang="it">
+<head>
+<!--Meta charset sta indicare che la pagina utilizza carattere alfanumerici latini-->        
+    <meta charset="UTF-8">
+<!--Meta viewport sta indicare al browser che i contenuti delle schermo devono essere scalati
+in base allo schermo del dispositivo-->    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I collegamenti</title>
+    <!--utilizzato dai motori di ricerca-->
+    <meta name="description" content="descrizione della pagina web">
+
+    <!--meta name robots content: index (compari sul motore di ricerca), noindex
+    dice al motore di ricerca che i conentuti non devono compariere, mentre follow dice di seguire
+    il percoroso nei collegamenti altrimento indichiamo come valore nofollow-->
+    <meta name="robots" content="noindex,follow">
+</head>
+<body>
+    <!--per collegarmi ad un segnalibro inserito
+    nella posizione desiderata usiamo href con #nome-del-segnalibro-->
+    <a href="#nome-del-segnalibro"><button>Vai giu alla pagina</button></a>
+
+
+    <!--collegamento esterno 
+    href che di target: _new (apre il collegamento in una nuova
+    finestra) _blank (apre il collegamento in una nuova scheda)
+    come proprieta intrinseca tutti i collegamenti si aprono
+    nella stessa finestra come se l'attributo di target
+    sia _self 
+    SOlo per i collegamenti esterni dobbiamo attribuire un orgine
+    al collegamento esterno usando un attributo rel se si tratta di un contenuto
+    sponsorizzato inseriamo "sponsored", per i collegamenti ai contenuti da non
+    indicizzare usiamo "nofollow" al contrario se vogliamo fare indicizzare un contenuto
+    esterno usiamo follow, ugc per i contenuti generati dagli utenti -->
+ <a href="https://www.virgilio.it/motori/notizie/multe-semafori-t-red-ricorsi/268301/" 
+ target="_blank" rel="ugc, nofollow">Collegamento</a>
+ <!--collegamento ad un indirizzo email, approno outlook o gmail --></br>
+ <a href="mailto:info@martini.it">Info@martini.it</a></br> 
+ <!--collegamenti a numeri di telefono, app telefono, o skype-->
+ <a href="tel:+393791503035">379 150 3035</a> </br> 
+ <!--Whatsapp %20 sta indicare uno spazio-->
+ <a href="https://wa.me/393791503035?text=ti%20contatto%20dal%20sito"><button>WHATSAPP</button></a>
+ <!--collegamenti interni inserisco il percorso interno
+ e facoltativamente l'attributo target-->
+ <a href="index.html"><h1>Vai alla home</h1></a>
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, id non. Consequatur earum enim doloribus cumque quas dignissimos! Quasi rerum omnis eaque minus exercitationem magnam ratione excepturi, repellat a atque.</p>
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis natus dolor est architecto illum, harum neque! Alias rem dignissimos et ad eius iure ipsum deserunt praesentium accusamus placeat? Eaque, ipsa.</p>
+ <!--crea prima i tag segnalibri-->
+ <a name="nome-del-segnalibro"></a>    
+</body>
+</html>

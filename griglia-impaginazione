@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="miobox.css">
+</head>
+
+<style>
+.box-1 {padding: 2px;
+          border: 1px solid;
+          background-color: aqua;
+}
+.box-2 {padding: 2px;
+          border:1px solid;
+          background-color: darkseagreen;
+          flex: 2;
+}
+ .box-3 {padding: 2px;
+          border:1px solid;
+          background-color: orchid;
+          flex: 2;
+}
+</style>
+<body>
+    <header>La mia impaginazione Personalizzata</header>
+    <div class="contenitore maxbox">
+        <div class="box-1 middlebox">
+          <p>box-1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat pariatur, explicabo impedit mollitia in quisquam molestias. 
+              Nemo natus dolores consequatur
+              cumque id qui fugiat omnis aliquam dolore? Nulla, quia.
+          </p>
+        </div>
+        <div class="box-2 middlebox">
+          <p>box-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat pariatur, explicabo impedit mollitia in quisquam molestias. 
+              Nemo natus dolores consequatur
+              cumque id qui fugiat omnis aliquam dolore? Nulla, quia.
+          </p>
+        </div>
+          <div class="box-3 middlebox">
+          <p>box 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat pariatur, explicabo impedit mollitia in quisquam molestias. 
+              Nemo natus dolores consequatur
+              cumque id qui fugiat omnis aliquam dolore? Nulla, quia.
+          </p>
+      </div>
+      </div>
+      <hr>
+      
+      <div class="box-4 maxbox sd">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat pariatur, explicabo impedit mollitia in quisquam molestias. 
+              Nemo natus dolores consequatur
+              cumque id qui fugiat omnis aliquam dolore? Nulla, quia.
+          </p>
+      </div>  
+       
+</body>
+</html>
+
+--------------------------------------------------CSS----------------------------------------------
+/* contenitore che occupa l'intero schermo */
+* {margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   }
+.maxbox {width: 100%;
+         height: fit-content;
+         margin-top: 5px;
+         padding: 10px;
+}
+.middlebox {
+    width: 50%;
+    height: fit-content;
+    float: left;
+    margin-top: 5px;
+    padding: 10px;
+}
+.media-middlebox {
+    width: 25%;
+    height: fit-content;
+    float: left;
+    padding: 10px;
+    margin-top: 5px;
+}
+.supermini {
+    width: 13.333%;
+    height: fit-content;
+    float: left;
+    padding: 10px;
+    margin-top: 5px;
+}
+.sd {
+    clear: both;
+}

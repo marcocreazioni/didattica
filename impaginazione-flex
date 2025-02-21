@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Impaginazione con display flex-->
+    <style>
+   /* Applicazione al contentitare della modalita display flex;*/     
+  .contenitore {background-color: blanchedalmond;
+                display:flex;
+   /* con flex direction le box vengono distribuite
+   in maniera diversa applicando ad esempio la direzione
+   in colonne con coloumn e con coloumn-reverse
+   cambiamo l'ordine di apparizione delle box,
+   per attivare la proprieta intrinseca della 
+   flex usiamo row al posto di coloumn ed anche a row
+   e possibile applicare row-reverse per invertire
+   l'ordine delle box*/             
+                flex-direction: row;
+  /* con la proprieta flex-wrap: wrap consentiamo alle box
+  di andare a capo in mancanza di spazio orizzontale "attiva una
+  modalità responsiva di flex" */
+                flex-wrap: wrap;
+  /* con la proprieta gap: 5px; si indica lo spazio in pixel 
+  da dare alle singole box e si attiva solo in presenza di flex; */
+                gap: 5px;
+  /* i singoli elementi possono essere centrati nel contenitore
+  piu grande utlizzando il parametro align items soprattuto 
+  in veritale*/              
+                align-items: center;
+  /* Per ottenere una maggiore responsive per l'altezza delle box
+  o del contenitore do il valore "fit-content" all'altezza */              
+                height: fit-content;
+  /* ai contenitore possiamo utilizzare sempre e cmq overflow
+  per evitare che vadano elementi fuori box; */              
+                overflow: auto;
+                
+  }
+  /* all'interno del contenitore dove e stata 
+  applicata la display flex possiamo usare le proprieta
+  flex */
+  .box-1 {padding: 2px;
+          border: 1px solid;
+          background-color: aqua;
+/* la proprieta flex ammette una serie di valori
+tra cui un indice tra cui un numero
+indica la proporzione in larghezza
+che la box deve occupare rispetto alle
+altre applicanndo invece al posto dell'indice
+vado ad utilizzare il parametro initial la box
+ottiene la maggioranza degli spazi sul contenitore
+del contenitore principale occupando tutta
+la sua lerghezza, usando la proprieta "none" viene
+disattivata la proprieta flex*/
+          flex: 2;
+          
+
+  }
+  .box-2 {padding: 2px;
+          border:1px solid;
+          background-color: darkseagreen;
+          flex: 2;
+}
+ .box-3 {padding: 2px;
+          border:1px solid;
+          background-color: orchid;
+          flex: 2;
+}
+
+    </style>
+</head>
+<body>
+<div class="contenitore">
+  <div class="box-1">
+    <p>box-1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat pariatur, explicabo impedit mollitia in quisquam molestias. 
+        Nemo natus dolores consequatur
+        cumque id qui fugiat omnis aliquam dolore? Nulla, quia.
+    </p>
+  </div>
+  <div class="box-2">
+    <p>box-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat pariatur, explicabo impedit mollitia in quisquam molestias. 
+        Nemo natus dolores consequatur
+        cumque id qui fugiat omnis aliquam dolore? Nulla, quia.
+    </p>
+  </div>
+    <div class="box-3">
+    <p>box 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat pariatur, explicabo impedit mollitia in quisquam molestias. 
+        Nemo natus dolores consequatur
+        cumque id qui fugiat omnis aliquam dolore? Nulla, quia.
+    </p>
+</div>
+</div>
+<hr>
+
+<div class="box-4">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat pariatur, explicabo impedit mollitia in quisquam molestias. 
+        Nemo natus dolores consequatur
+        cumque id qui fugiat omnis aliquam dolore? Nulla, quia.
+    </p>
+</div>  

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMpaginazione Flex</title>
+<style>
+/*impaginazione display: flex */
+.contenitore {
+    background-color: bisque;
+    height:auto;
+/* attivazione distribuzione flex --"vengono disattivate
+alcune proprieta relative alla larghezza" */    
+    display:flex;
+/* con flex-direction decidiamo la distribuzione degli oggetti
+del contenitore (row) - Orizzontale (coloumn) Veritale, per invertire
+l'ordine delle box a row e coloumn si puo aggiungere il parametro reverse 
+coloumn-reverse e row-reverse */    
+    flex-direction: row-reverse;
+/* flex-wrap:wrap permette agli oggetti della flexbox di distribuire in maniera
+corretta gli spazi mettendo a capo le box che non riuscirebbero a essere
+proporzionali per quelle dimensioni dello scherma */ 
+    flex-wrap: wrap;
+/* per inserire una distanza tra le box utilizziamo
+il parametro gap seguita dallo spazio in pixel dei blocchi */
+    gap:5px;    
+ /* width anche se disattivata in pixel con il paramentro fit-conent
+ puo essere utilizzato */ 
+ 
+    
+    
+
+
+}
+
+/* Oggetti interni alla flex box */
+.box-1 {background-color: chartreuse;
+        padding: 2px;
+ /*Flex accetta dei valori numerici per distribuire proporzionalmente
+ gli oggetti sullo schermo */       
+        flex: 2;
+        border-radius: 10px;
+       
+        
+     
+}
+.box-2 {background-color: burlywood;
+        padding: 2px;
+ /*per trasformare una box in una colonna principale al
+ posto di indicare un indice di rapporto piu elevato
+ usiamo il parametro initial */       
+        flex: 2;
+        border-radius: 10px; 
+}
+
+
+.box-3 {background-color: aquamarine;
+        padding: 2px;
+        flex: 2;
+        border-radius: 10px;
+/* oggetti esterni alla flex box */
+}
+.box-4 {background-color: coral;
+        padding: 2px;
+        border-radius: 10px;
+        
+}
+.shadow {
+    box-shadow:1px 1px;
+}
+
+</style>    
+</head>
+<body>
+<header><h1>Impaginazione Flex</h1></header>
+<!--contenitore con proprieta display flex-->
+<div class="contenitore">
+  <div class="box-1 shadow">
+   <p><strong>Box-1</strong> ipsum, dolor sit amet consectetur adipisicing
+    elit. Atque harum praesentium facilis numquam, unde 
+    dicta ad assumenda tenetur magnam fugit veritatis, 
+    beatae hic commodi iure dolorum iusto. Blanditiis, 
+    nisi dolores.
+   </p>
+  </div>
+  <div class="box-2 shadow">
+    <p><strong>Box-2</strong> ipsum, dolor sit amet consectetur adipisicing
+        elit. Atque harum praesentium facilis numquam, unde 
+        dicta ad assumenda tenetur magnam fugit veritatis, 
+        beatae hic commodi iure dolorum iusto. Blanditiis, 
+        nisi dolores.
+    </p>
+  </div>
+
+
+ <div class="box-3 shadow">
+    <p><strong>Box-3</strong> ipsum, dolor sit amet consectetur adipisicing
+        elit. Atque harum praesentium facilis numquam, unde 
+        dicta ad assumenda tenetur magnam fugit veritatis, 
+        beatae hic commodi iure dolorum iusto. Blanditiis, 
+        nisi dolores.
+    </p>
+</div>
+
+ </div>
+ <hr>
+ <div class="box-4 shadow">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Atque harum praesentium facilis numquam, unde 
+        dicta ad assumenda tenetur magnam fugit veritatis, 
+        beatae hic commodi iure dolorum iusto. Blanditiis, 
+        nisi dolores.
+    </p>
+ </div>  
+</body>
+</html>

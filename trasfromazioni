@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trasformazioni</title>
+    <style>
+     body {margin:10px}   
+        /* Trasformazione e trasposizione dei singoli oggetti */
+    .box {width: 50px;
+          height: 100px;
+          background-color: transparent;
+          background-image: url(https://pngimg.com/uploads/cat/cat_PNG50546.png);
+          background-size: 50px 100px;
+          /* parametri di transform-(un oggetto non puo avere piu di valore trasform) (translate - sposto un oggetto in un
+          altro punto dello schermo e bisogna indicare le coordinate orizzonali , verticali)
+           (rotate applica una rotazione bidimensionale  con un solo valore in gradi (30deg)
+           (scale applica il ridimensionamento in scala di un oggetto 
+           e ammette valori numerici per orizzontale e verticali
+           rispetto alla larghezza e altezza) (skew portarlo in obliquo con
+           due paremetri sinistra e destra)  (matrix è una poprieta di
+           deformazioni in tutti i lati di un oggetto per un totale di 6 parametri 
+           matrix(1,1,2,5,5,4);) */
+          transform: translate(60px,300px) rotate(0deg) scale(1,1) skew(0deg, 0deg); 
+          
+          
+
+    }
+    .box:hover {
+        transform: translate(60px,300px) scale(2,1) rotate(10deg);
+       /* background-image: url(https://pngimg.com/uploads/cat/cat_PNG50545.png); */
+
+
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+  <!--  <p>Lorem, ipsum dolor sit amet consectetur 
+        adipisicing elit. Fugit unde expedita repellendus 
+        quidem dolorum aspernatur, mollitia atque 
+        repudiandae praesentium commodi necessitatibus 
+        blanditiis explicabo eveniet? Dolores illum 
+        voluptatibus atque laborum inventore!
+    </p> 
+    -->
+    </div>
+
+</body>
+</html>

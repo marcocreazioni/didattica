@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.scalatore {
+    /* (solo per i div parametri calcolatore (nel primo paramentro indichiamo la proporzione dell'oggetto, e l'operazione
+    da svolgere sulla % applicata + - * /) */
+    width: calc(100% + 38px);
+    margin-left: calc(2% - 32px);
+    height: auto;
+    padding: 10px;
+}
+.box {
+    background-image: url('https://cdn.pixabay.com/photo/2024/09/15/13/03/cows-9049119_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin-top: 10px;
+    box-shadow: 2px 2px solid;
+    padding: 5px;
+    color:white;
+
+}
+.box p {padding: 10px;
+}
+    </style>
+</head>
+<body>
+
+   <div class="box scalatore">
+    &nbsp;
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe facere temporibus fugiat eius. Voluptate eveniet nostrum sapiente voluptas ipsum maxime optio qui molestias eum reprehenderit quam id, quos facere doloremque?</p>
+
+
+   </div>
+
+</body>
+</html>

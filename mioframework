@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="miocss.css" type="text/css">
+</head>
+<body>
+    <div class="box25 orange">
+        <p>
+        Lorem ipsum dolor sit amet 
+        consectetur, adipisicing elit. 
+        Consectetur commodi nesciunt veritatis 
+        fuga dolores dicta architecto ut cupiditate ad. 
+        Tempore corrupti beatae modi tenetur rerum
+         illum earum in, fuga dolores.
+        </p>
+    </div>
+    <div class="box25 green">
+        <p>
+        Lorem ipsum dolor sit amet 
+        consectetur, adipisicing elit. 
+        Consectetur commodi nesciunt veritatis 
+        fuga dolores dicta architecto ut cupiditate ad. 
+        Tempore corrupti beatae modi tenetur rerum
+         illum earum in, fuga dolores.
+        </p>
+    </div>
+</body>
+</html>
+<------------------------------------------css------------------------------------------------------------------->
+/* il mio framework css */
+* {box-sizing: border-box;
+   font-family:sans-serif;
+   padding: 0px;
+   margin: 0px;
+}
+.orange {
+    background-image: linear-gradient(orange,rgb(146, 107, 15));
+    color: white;
+    text-shadow: 1px 1px solid;
+}
+.green {
+    background-image: linear-gradient(rgb(20, 175, 28),rgb(15, 183, 124));
+    color: white;
+    text-shadow: 1px 1px solid;
+}
+.box25 p, .box50 p, .box100 p {
+    padding: 5px;
+    width: fit-content;
+}
+
+
+/* impaginazione cellulare */
+@media only screen and (max-width:380px) {
+ .box25 { width: 100%;
+          clear: both;
+
+        }
+ .box50 { width: 100%;
+          clear: both;
+
+          }
+ .box100 {width: 100%;
+    clear: both;
+         }  
+}
+
+/* Impaginazione a blocchi desktop */
+@media only screen and (min-width:761px) {
+ .box25 {width: 25%;
+         float: left;
+         
+        }
+ .box50 {width: 50%;
+         float:left;
+         }  
+ .box100 {width: 100%;
+          clear: both;
+         }  
+}  
+
+/* impaginazione tablet */
+@media screen and (min-width:381px) and (max-width:760px) {
+.box25 {width: calc(25% + 50%);
+       }
+.box50 {width: 100%;
+        clear: both;
+      }
+.box100 {width: 100%;
+    clear: both;
+         }  
+}

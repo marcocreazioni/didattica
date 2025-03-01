@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/*Caratteristiche comuni a tutti gli schermi */    
+* {box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+/* comportamento degli oggetti fino ad un massimo di 380px */
+
+.contenitore {
+    display:flex;
+    flex-direction: row;
+    gap: 2px;
+    height: auto;
+}
+
+
+.box-1 {
+    background-color: aquamarine;
+    padding: 5px;
+    color: darkgreen;
+/* dimensione minima entro cui non puo ridursi */
+/*  min-width: 300px;
+    max-width dimensione massima che l'oggetto puoi avere i parametri
+    possono essere indicati in px % o in fit-content (alternativa a overflow: hidden) 
+    max-width: 500px;
+*/
+    flex: 1;    
+}
+.box-2 {
+    background-color: rgb(25, 57, 201);
+    padding: 5px;
+    color: white;
+/*    min-width: 300px;
+      max-width: 500px;
+    
+*/ 
+   flex:1;
+}
+ 
+.box-3 { 
+    background-color: burlywood;
+    padding: 5px;
+    margin-top: 10px;
+ /*   min-width: 300px;
+      max-width: 500px;
+*/
+}
+.box-4 {display:none;
+}
+
+/* visualizzazione del cellulare */
+@media only screen and (max-width:380px) {
+    .contenitore { flex-direction:column;
+                   flex-wrap: wrap;
+                   gap: 2px;
+               
+             }                               
+    
+    .box-1 p , .box-2 p , .box-3 p { font-size: 10px;
+                               } 
+    h1 { font-size: 15px;
+         text-align:center;
+    }                              
+    .box-3 {display: none;
+           }
+    .box-4 {display: block;
+             background-color: blanchedalmond;
+             padding: 5px;
+
+     }       
+
+}
+/* visaulizzazione tablet */
+@media screen and (min-width:381px) and (max-width:760px) {
+    .box-1 p , .box-2 p , .box-3 p {font-size: 13px;
+                                    font-weight: 500;      
+                                    
+                                   } 
+}
+/*visualizzazione desktop */
+@media only screen and (min-width:761px) {
+    .box-1 p , .box-2 p , .box-3 p {font-size: 16px;
+                                    font-weight: 500;      
+                                    
+                                   } 
+
+
+
+}
+
+
+
+</style>
+</head>
+<body>
+    <header><h1>Media Screen</h1></header>
+    <!--contenitore con proprieta display flex-->
+<div class="contenitore">
+         <div class="box-1">
+       <p><strong>Box-1</strong> ipsum, dolor sit amet consectetur adipisicing
+        elit. Atque harum praesentium facilis numquam, unde 
+        dicta ad assumenda tenetur magnam fugit veritatis, 
+        beatae hic commodi iure dolorum iusto. Blanditiis, 
+        nisi dolores.
+       </p>
+      </div> 
+      <div class="box-2 ">
+        <p><strong>Box-1</strong> ipsum, dolor sit amet consectetur adipisicing
+         elit. Atque harum praesentium facilis numquam, unde 
+         dicta ad assumenda tenetur magnam fugit veritatis, 
+         beatae hic commodi iure dolorum iusto. Blanditiis, 
+         nisi dolores.
+        </p>
+       </div>
+</div>
+
+       <div class="box-3">
+         <p><strong>Box-2</strong> ipsum, dolor sit amet consectetur adipisicing
+             elit. Atque harum praesentium facilis numquam, unde 
+             dicta ad assumenda tenetur magnam fugit veritatis, 
+             beatae hic commodi iure dolorum iusto. Blanditiis, 
+             nisi dolores.
+         </p>
+       </div> 
+       <div class="box-4">
+        <p><strong>Box-4</strong> ipsum, dolor sit amet consectetur adipisicing
+            elit. Atque harum praesentium facilis numquam, unde 
+            dicta ad assumenda tenetur magnam fugit veritatis, 
+            beatae hic commodi iure dolorum iusto. Blanditiis, 
+            nisi dolores.
+        </p>
+      </div> 
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--implementazione del pulsante mi piace -->
+    <!--I parte -->
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v22.0"></script>
+   Iframe per inglobare contenuti esterni
+ <!--   <iframe src="testata.html" width="100%" height="200px"></iframe>-->
+    <!--incorporazione video youtube larghezza in %-->
+<iframe id="ytplayer" type="text/html" width="100%" height="405"
+src="https://www.youtube.com/embed/Ps-0f0K6izM?autoplay=1&color=white"
+frameborder="0" allowfullscreen><br>
+<!--Incorporazione mappa google-->
+<div>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.4831758679497!2d12.57108197648579!3d41.92546776244653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6373ba09b579%3A0x432933e41cf9ad79!2sVia%20Tiburtina%2C%20Citt%C3%A0%20metropolitana%20di%20Roma%20Capitale!5e0!3m2!1sit!2sit!4v1741113854652!5m2!1sit!2sit" width="100%" height="450" style="border:1px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!--Incorporazioni mappa personalizzata-->
+<iframe src="https://www.google.com/maps/d/embed?mid=1sisC0Rt3mYo0nYRrfTKNfQQSqP9e0-g&ehbc=2E312F" width="640" height="480"></iframe>
+<!--incorporazione pagina -->
+<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmartinispa.official%2F&tabs=timeline%2C%20events%2C%20messages&width=420&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="420" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<!--posizione del pulsante mi piace-->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v22.0"></script>
+<!--vimeo--><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1062520069?h=0b20c75829&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MEDY Agency"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGgy6dNXr4/c8jxuGW2v4XOu2MgS_A6Tw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<!--inizio incorparzione progetto canva-->
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGgy6dNXr4&#x2F;c8jxuGW2v4XOu2MgS_A6Tw&#x2F;view?utm_content=DAGgy6dNXr4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Progetto</a> di Marco Consiglio
+<!--fine-->
+
+<!--inizio incorporazione playlist shopify -->
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3nsvaOvpoBOoFoSp9cZwLt?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<!--fine-->
+<!--modulo joftform-->
+
+<iframe
+id="JotFormIFrame-242702696957369"
+title="New Customer Registration Form"
+onload="window.parent.scrollTo(0,0)"
+allowtransparency="true"
+allow="geolocation; microphone; camera; fullscreen"
+src="https://form.jotform.com/242702696957369"
+frameborder="0"
+style="min-width:100%;max-width:100%;height:539px;border:none;"
+scrolling="no"
+>
+</iframe>
+<script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242702696957369']", "https://form.jotform.com/")</script>
+<!--fine modulo-->
+
+</body>
+</html>

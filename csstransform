@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/*Trasformazion */
+.box-1 {width: 150px;
+        height: 150px;
+        background-color: blanchedalmond;
+        border:1px brown solid;
+        overflow: hidden;
+        /* proprieta trasform
+         Perspective crea una prospettiva
+         cambia il punto di partenza dell'effetto
+         di trasformazione applicato in (cm o mm)
+        /* transform:perspective(5cm); 
+          
+          Rotate ruota bidimensionalmente
+          l'immegine accetta solo valori(angolo + deg)
+             
+          Rotate 3d accetta 3 parametri
+            (X, y, z, + deg) 
+          Rotate puo essere parametrizzato anche solo
+            nell'asse x, y, o z
+            rotatex o rotatey o rotatez 
+           
+            Skew cambia l'inclinazione dell'oggetto  
+           e puo essere indicato in gradi (deg)
+           Skewx cambia l'inclinazione orizzantale e verticale
+           con skewy (deg)
+           
+           translate consente di spostare gli oggetti
+           dalla posizione originale in px (px)
+           posso abbinare piu valori se voglio spostare nell'asse
+           asse x e asse y (px, px)
+           translate ammette spostamenti in orizzontale,verticale
+           e obliquo con translatex o translatey o translatez
+           translate3d (x , y , z) puo accettare in px.
+           scale che puo essere applicato nell'asse x, y,z e 
+           3d scale in rapporto l'oggetto ovvero largheze
+           e altezza
+           matrix e la composizione di diversi effetti di trasformazione sia bidimensionale
+           che tridimensionale
+           matrix (scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) 
+           
+           */
+           transform: matrix(1, 0, 0.5, 1, 50, 50);
+          
+          
+        }
+  /* .box-1:hover {
+         transform: rotate3d(1,0,0,80deg); 
+
+   }*/
+img {width:100%;
+     height:100%;
+    }
+@media only screen and (max-width: 380px){
+  .box-1 {transform: scale(0.8,0.8);
+
+
+  }  
+    
+ }   
+    </style>
+</head>
+<body>
+<h1>Trasformation</h1>
+<div class="box-1">
+    <img src="https://cdn.pixabay.com/photo/2022/04/15/07/44/purple-roses-7133816_640.jpg">
+</div>    
+    
+</body>
+</html>

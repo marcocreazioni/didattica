@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* proprieta transform con rotazione bidimensionale rotate(deg)in gradi di
+    un angolo, con rotate3d vengono ammessi i 3 paramatri (x*deg,y*deg,z*deg, angolo di rotazione)
+    scale server invece per ridimensionare un oggetto in base ad rapporto (larghezza,altezza)
+    (numeri interi e con la virgola, matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+    .
+    */
+h1 { transform:translateY(20px) rotate3d(3, 1, 0, 45deg) scale(1,1);
+
+}    
+.box-1 {width: 150px;
+        height:150px;
+        background-color: aquamarine;
+/*proprieta transformation(transform) è unica ma gode di diversi parametri
+ad esempio translate (spostamente orizzonale,verticale)(PX), skew (inclinazione)
+(deg) con matrix */
+        transform: translate(0px , 167px) skew(45deg);
+           
+}
+/*.box-1:hover {transform:translateX(20px);
+
+}
+*/
+.box-2 {width: 150px;
+        height:150px;
+        background-color: bisque;
+        margin-top: 15px;
+        /* tranlate 3d a 3 parametri (x,y,z) */
+        transform:translate3d(200px, 240px, 70px);
+        /*z-index è un parametro di livello del blocco in position relative
+        (-1 sullo sfondo, 0 posizione originale, 1 un livello o 2 livelli 
+        al di sopra) */
+        position:relative;
+        z-index: -1;
+
+
+}
+.box-3 {width: 150px;
+        height:150px;
+        background-color: blueviolet;
+        transform-style: preserve-3d;
+        /*Perspective è un parametro che consente il cambio di visualizzazione
+        di oggetti composti ad esempio una serie di facciate di un cubo, e ammette 
+        valori in cm o in px */
+        transform: rotatex(45deg) rotatey(30deg) perspective(20cm);
+
+}
+.box-1 img {width: 100%;
+            height:100%;
+
+}
+@media only screen and (max-width:380px){
+               h1 {transform: translate(0px , 10px) skewy(5deg) scale(0.8,0.8);
+                   
+
+               }
+
+
+}
+
+</style>
+</head>
+<body>
+    <h1>Trasformation</h1>
+    <div class="box-1">
+        <img src="https://cdn.pixabay.com/photo/2022/02/27/17/03/stones-7037638_960_720.jpg">
+    </div>
+    <div class="box-2">
+
+    </div>
+    <div class="box-3">
+
+    </div>
+</body>
+</html>

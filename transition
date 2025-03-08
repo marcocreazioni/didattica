@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* transition efftti di movimento tra due azioni del mouse, permette
+    di creare contenuti intermedi tra due stati */
+    .box-1 {width:76px;
+            height:75px;
+            background-color: coral;
+            border: 5px solid green;
+            border-radius: 10%;
+            /*transition come transformation puo essere indicato una volta
+            soltanto seguito dalle proprieta e dal tempo di transizione
+            di ciascuna proprieta hover ogni transizione puo
+            essere indicata in s o microsecondi ms possiamo usare anche "all"
+            per attivare tutte le proprieta css hover di transizione*/
+            transform: rotate(0deg);
+            transition: width 1s, height 1s, transform 1s, border 1s, border-radius 1s , background-color 1s, box-shadow 1s;
+            /* sovrascrive la durata della transizione */
+            transition-duration: 4s;
+            /* applicare un ritardo alla transizione */
+            transition-delay: 0.2s;
+            /* per cambiare l'andamento in termini di velocita 
+            dell'animazione predefinita è in linear ma è possibile
+            cambiare questo algoritmo ma abbiamo diverse algoritmi di accelerazione
+            o decelerare la transizione con funzioni easy,step,cubic bezier cambiano 
+            lo schema di accelerazione e decelarazione */
+            transition-timing-function: linear;
+
+    }
+    .box-1:hover {transform: scale(2,2) translatex(100px) rotate(45deg);
+                  background-color: chartreuse;
+                  border: 10px dashed coral;
+                  border-radius: 40%;
+                  box-shadow: 1px 1px black;
+
+
+                     
+                  
+    }
+
+</style>
+</head>
+<body>
+    <h1>Transition </h1>
+    <div class="box-1">
+
+    </div>
+
+    
+</body>
+</html>

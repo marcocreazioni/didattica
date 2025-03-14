@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazioni</title>
+<style>
+/* ----------------------------Animazione box 1 ------------*/    
+
+.box-1 {width: 50px;
+        height: 50px;
+        background-color: aquamarine;
+        margin-top: 20PX;
+        
+
+}
+/* Con animation-name si da un nome all'animazione (expand) e
+si richiama nel @keyframe e la durata dell'animazione con 
+animation duration indicando la durata in (ms) o (s) */
+
+.box-1:hover {width: 50px;
+              height: 50px;
+              background-color: brown;
+              animation-name: expand;
+              animation-duration: 3s;
+
+}
+@keyframes expand {
+    /* from indica le posizione di partenza */
+    from {background-color: brown;
+          width: 50px;
+          height: 50px;
+
+    }
+    /* to indica la posizione terminale */
+    to {background-color: yellow;
+        width: 100px;
+        height:100px;
+    }
+/* -------------------Animazione della box 2 ------ */    
+    
+}
+/*.box-2 {width: 50px;
+        height: 50px;
+        background-color: orange;
+        margin-top: 20PX;
+}
+*/
+
+.box-2 {      width: 50px;
+              height: 50px;
+              background-color: brown;
+              margin-left: -600px;
+              animation-name: patrono;
+              animation-duration: 3s;
+
+/* animation-iteration-count stabilisce il numero
+di volte in cui devere ripetersi l'animazione per
+farla partie in loop mettiamo inifinite o il nuero
+di volte*/              
+              animation-iteration-count: 4;
+ /* animation-delay stabilisce il ritardo 
+ dell'animazione */             
+              animation-delay: 1s;
+ /*direzione dell'animazione è stabilita da animation-direction
+ ad esempio con alternate attivo i  due sensi
+ dell'animazione mentre reverse cambia solo
+ il senso dell'animazione*/             
+              animation-direction:alternate;
+/* possiamo cambiare l'accerazione  della funzione
+dell'animazione*/
+              animation-timing-function: ease-out;
+
+            }
+@keyframes patrono {
+   /* divisione temporale dei frame di animazione */ 
+   0% {background-color: brown;
+       width: 50px;
+       height: 50px;
+       transform: rotate();
+       margin-left: -400px;
+
+   }
+   35% {width: 75px;
+        height: 75px;
+        border-radius: 25%;
+        border: 1px solid orange;
+        margin-left: 200px;
+        transform: rotate(45deg) translate(150px,0);
+
+   } 
+
+
+   100%{background-color: yellow;
+        width: 100px;
+        height:100px;
+        border-radius: 25%;
+        border: 5px solid green;
+        margin-left: 400px;
+        transform:rotate(90deg) translate(400px,0);
+
+   }
+
+}
+.razzo {
+        font-size: 40pt ;
+        animation-name: travel;
+        animation-duration: 2s;
+        margin-top: 200px;
+        animation-direction: reverse;
+        animation-iteration-count: 1;  
+}
+@keyframes travel {
+   from { 
+     
+
+    }
+to     { 
+         transform: /* rotate(90deg) */ translate(-600px,0px);
+    }
+
+}
+</style>
+</head>
+<body>
+<div class="box-1">
+
+</div>
+<!-- <div class="box-2"> -->
+
+</div>   
+<div class="razzo">Missile &#128640;</div>
+
+</body>
+</html>

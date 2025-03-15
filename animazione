@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* -----------------Animazione Box 1 ----------------- */
+.box-1 {margin: 5px;
+        width: 50px;
+        height: 50px;
+        background-color: aquamarine;
+
+}
+.box-1:hover {
+        margin:5px;
+        width:50px;
+        height:50px;
+        background-color: aquamarine;
+/* attivatore dell'animazione sono nome dell'animazione e durata
+ */
+       animation-name: colorino;
+       animation-duration: 2s;
+/* Con il ritado si riduce il tempo di partenza */
+       animation-delay: 0s;
+/* Algoritmo di accelerazione dell'animazione */
+        animation-timing-function: linear;  
+/* direzione dell'animazione(normal va dal from al to,) reverse (va dal to
+al from) (alternate alterna da from a to e viceverse)(alternate reverse
+va da to a from e viceverse) */
+        animation-direction: alternate-reverse; 
+/* numero delle volte in cui si deve ripetere l'animazione con il
+parametro infinito si crea un loop, altrimenti si indica
+un numero intero di volte in cui si deve ripetere l'animazione */
+        animation-iteration-count: infinite;                              
+}
+/* con @keyframes + nome animazione si programmano i singoli frame */
+
+@keyframes colorino {
+/* con from indichiamo una situazione iniziale */
+   from {
+
+   }
+/* con to indichiamo lo stato finale dell'animazione */
+   to {background-color: burlywood;
+       width:100px;
+       height:100px;
+
+   }   
+}
+
+
+
+
+/*--------------------Animazione Box 2 ------------------- */
+.box-2 {margin-top: 5px;
+        width: 50px;
+        height: 50px;
+        background-color: orange;
+        animation-name: contrasform;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-direction: normal;
+        /*animation fill mode stabilisce un fermo dell'animazione */
+        animation-fill-mode: forwards;
+      /*  margin-left: -200px; */
+}
+@keyframes contrasform {
+ /* 0% sta per l'inizio del frame */
+    0% { transform: translate(-100px,0px);
+
+ }  
+/* 50% o altre percentuali inidicano posizioni intermedie piu 
+alti e il numero di passaggi intermedi piu fluida e l'animazione */
+
+    50% {transform: translate(0px,100px) rotate(45deg);
+         border-radius: 25%;
+
+    }
+/*100% indica la posizione finale dell'oggetto */
+
+    100% {transform:translate(200px,150px);
+          border-radius: 50%;
+
+   }
+}
+/*-----Animazione box ---*/
+.box-3 {background-color: trasparent;
+        margin-left: -200px;
+        animation-name: posizione;
+        animation-duration: 1s;
+        animation-fill-mode:forwards;
+
+}
+@keyframes posizione {
+                      from {
+                        margin-left: -200px;
+                      }
+                      to {
+                        margin-left: 100px;
+                        margin-top: 40px;
+                        filter: grayscale(50%);
+                      }
+    
+}
+</style>
+</head>
+<body>
+<div class="box-1"></div>
+<div class="box-2"></div>    
+<div class="box-3"><span style='font-size:50px;'>&#128641;</span></div> 
+</body>
+</html>

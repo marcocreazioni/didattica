@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--innesto del css esterno-->
+<link rel="stylesheet" href="stile.css" type="text/css">
+<!--innsesto del css in pagina-->
+<style>
+/* QUi scriviamo all'interno del tag style in linguaggio
+css */
+h1 {text-transform:uppercase;
+    /*text-transform permette di trasformare il carattere
+   con uppercase = MAIUSCOLO , lowercase = Minuscolo , 
+   capitalize = prime lettere in maiuscolo */ 
+}
+
+
+
+</style>
+</head>
+
+<body>
+<!--Csss in linea come attributo html-->    
+  <h1 style="color:yellow">Titolo</h1> 
+  <hr> 
+  <p style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Fugiat omnis aspernatur iure sapiente harum cupiditate, 
+    sit perferendis? Consectetur dolor, quae est incidunt, 
+    vero illo impedit nesciunt, possimus itaque vel placeat.</p>
+
+</body>
+</html>
+_______________________________________________CONTENUTO DEL FILE CSS_____________________________________
+  /* FOglio di stile per modificare l'aspetto dei tag html */
+/* Selettore del tag da modificare */
+
+body { 
+    /* All'interno della parentesti indichiamo la proprieta html
+    da modificare e successivamente indichiamo valori e/o parametri
+    ammessi */
+    background-color: black;
+    /* background-color indica la proprieta del colore di sfondo */
+} 
+h1 , p { color: white;
+   /* colore del testo del titolo h1 */
+      text-align:center;
+     /*Text-algin permette di allineare un testo
+     e i paramatri ammessi sono:
+     center,left,right,end,start,justify; */
+}
+
+
+  

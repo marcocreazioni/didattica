@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Ecommerce Space</h1>
+    <table width="100%">
+    <tr>    
+     <th width="50%">Prodotto A</th>
+     <th width="50%">Prodotto B</th>    
+    </tr>
+    <!---Prodotti-->
+     <tr>
+        <td align="center"><img src="https://cdn.pixabay.com/photo/2022/10/31/14/26/earphones-7559937_960_720.jpg" width="100%" height="240px">
+        <strong>48,80 €</strong></td>
+        <td align="center"><img src="https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983_960_720.jpg" width="100%" height="240px">
+        <strong>48,80 €</strong></td>
+     </tr>
+      <!--Acquisto-->
+      <tr>
+        <td align="center"><style>.pp-2TS5TZQ65S4FA{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+            <form action="https://www.paypal.com/ncp/payment/2TS5TZQ65S4FA" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+              <input class="pp-2TS5TZQ65S4FA" type="submit" value="Acquista ora" />
+              <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+              <section> Con tecnologia <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+            </form></td>
+        <td align="center"><style>.pp-2TS5TZQ65S4FA{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+            <form action="https://www.paypal.com/ncp/payment/2TS5TZQ65S4FA" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+              <input class="pp-2TS5TZQ65S4FA" type="submit" value="Acquista ora" />
+              <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+              <section> Con tecnologia <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+            </form></td>
+      </tr>
+
+    </table>
+    <br></br>
+    <img src="https://cdn.pixabay.com/photo/2017/08/02/19/09/people-2572972_960_720.jpg" width="100%">
+</body>
+</html>

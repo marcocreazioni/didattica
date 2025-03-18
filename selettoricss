@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+ p {color: orange
+
+ }  
+ /* selettore ID serve per dare un nome
+ ad un oggetto html al quale si da una proprieta specifica 
+ e viene richiamato con # + nome oggetto da usare in concomitanza
+ di altri linguaggi*/ 
+#one {color: green;
+
+}
+h1 {text-align: center;
+
+}
+/* selettore class serve per dare un nome
+ ad un oggetto html al quale si da una proprieta specifica 
+ e viene richiamato con . + nome oggetto*/ 
+ .two {color:blueviolet;
+ }
+.mioh1 {text-align: left;
+        font-family: arial;
+        color: brown;
+
+}
+</style>
+
+
+
+
+</head>
+<body>
+    <h1>Titolo</h1>
+    <h1 class="mioh1">Titolo</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius itaque voluptatem ut quidem adipisci quibusdam architecto? Nisi quas ullam quos ipsa accusantium, facere non porro molestias nam, ipsum quasi ab?
+
+    </p>
+    <p id="one">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt quia velit quaerat quidem maiores ea recusandae, distinctio quos cupiditate laboriosam explicabo fuga facere totam, perspiciatis dolor non magni commodi blanditiis!
+    </p>
+    <p class="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorem voluptatibus odit consequuntur ratione inventore asperiores? Ducimus fugit nihil enim sunt dolore, dignissimos esse animi autem at ipsam in sequi.
+
+    </p>
+</body>
+</html>

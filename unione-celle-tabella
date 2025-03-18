@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* border-width spessore, border-style: tipologia, bordar-collapse:bordo
+    a linea singola */
+table, td , th {border-width:1px;
+                border-style:solid;
+                border-collapse: collapse;
+}
+#uno {text-align: right;
+
+}
+
+</style>
+</head>
+<body>
+  <!--table è il contenitore principale-->
+  <table width="100%" >
+    <thead title="testata">
+       <tr bgcolor="yellow">
+            <th width="100px">Nome</th>
+            <th>Cognome</th>
+            <th>Telefono</th>
+       </tr>  
+    </thead>
+    
+    <tbody title="corpo della tabella" bgcolor="cyan">
+       <tr>
+             <td bgcolor="lightgreen">
+              <span style="background:yellow">Mario</span>
+             </td>
+             <td>Rossi</td>
+             <!--Per unire le celle (verticali) rowspan (celle da unire)-->
+             <td id="uno" rowspan="2">06 1245678</td>  
+       </tr> 
+       <tr>
+          <!--unione tra celle (orizzontali)colspan (celle da unire)-->
+            <td colspan="2">Alfredo Biondi</td>
+           
+               
+       </tr>
+    </tbody>
+
+     <tfoot title="pie di pagina di una tabella" bgcolor="orange">
+        <tr>
+            <td>Fondo</td>
+            <td>Uno</td>
+            <td id="uno"><strong>Fondo</strong></td>   
+       </tr>
+
+     </tfoot>
+       <caption title="didascalia">
+        Anagrafe
+      </caption>
+ </table>
+    
+
+
+    
+</body>
+</html>

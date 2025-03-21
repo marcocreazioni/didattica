@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--installazione bootstrap in locale-->
+    <link rel="stylesheet" href="Bootsrap/bootstrap/css/bootstrap.css" type="text/css">
+    
+
+    <title>Bootstrap</title>
+</head>
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, repudiandae perspiciatis, in magnam temporibus neque quod non excepturi facilis harum minus illum, laborum alias! Est nobis commodi necessitatibus laborum fugiat.</p>
+    
+
+
+
+<!--Installazione manuale libreria javascript-->
+<script src="Bootsrap/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>

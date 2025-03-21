@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italiano</title>
+    <!--Versione predefinita in italiano-->
+    <link rel="alternate" href="https://miosito.com/" hreflang="x-default" />
+    <!--Versione della stessa pagin in lingua inglese-->
+    <link rel="alternate" href="https://miosito.com/en/index.html" hreflang="en" />
+    <!--Richiamo alla libreria js di google translate-->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- reindirizzamento ad un versione mobile del sito -->
+<script type="text/javascript">
+            /* (se lo schermo e inferiore a 380 px va alla versione
+            mobile) */
+    if (screen.width <= 380) {
+    document.location = "https://miosito.com/mobile/index.html";
+    }
+    
+    </script>
+    
+</head>
+<body>
+    <h1>Versione Italiane Predefinita</h1>
+
+
+
+
+
+
+    <!--Pulsante di attivazione-->
+    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'it'}, 'google_translate_element');
+}
+</script>
+</body>
+</html>

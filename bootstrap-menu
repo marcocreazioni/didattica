@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+<style>
+    body {margin: 0px;
+          padding: 0px;
+    }
+</style>
+
+    </head>
+
+    <body>
+        
+            <!--proprieta navbar (expand allarga le voci del menu)(navbar dark da lo schema di colore
+            in modalita dark) bg-dark aggiunto allo schema ci da lo sfondo-->
+            <nav class="navbar navbar-expand-xl navbar-dark sticky-top" style="background-image: linear-gradient(orange,red);">
+
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+
+                            Azienda</a>
+                   <!--Bottone hamburger-->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                     <!--Area di navigazione-->
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   
+                   <!--da qui vengono distribuite le voci del menu-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <!--voce del menu è nav item-->
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                     <!-- fine voce del menu è nav item-->
+                     <li class="nav-item">
+                        <!--nav-link attiva lo evidenza - nav-link disable lo disattiva-->
+                        <a class="nav-link active" aria-current="page" href="#">CHi siamo</a>
+                      </li>
+                    <!-- fine voce del menu è nav item-->
+
+
+                      <li class="nav-item active">
+                        <a class="nav-link disabled" href="#">Link</a>
+                      </li>
+                      <!--voce del menu a tendina-->
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                   <!--fine voce del menu a tendina-->
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                      </li>
+                    <!--fine blocco del menu-->
+                    </ul>
+
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                  </div>
+                </div>
+              </nav> 
+       
+        <main></main>
+        <footer>
+          
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

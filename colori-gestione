@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* colori color: si usa per il testo e background color per lo sfondo
+i colori possono essere indicato in inglese
+*/
+.uno {color:coral;
+
+}
+.due {color: rgb(19,138,86);
+
+}
+.uno-p {color: hsl(204, 91%, 26%)
+
+}
+.due-p {color: #fbfbf9;
+
+}
+/*nello standard rgba l'ultimo valore è la luminosita che va da 0 a 1
+che è completamente sauturo */
+.uno-div {background-color: rgba(128,235,237,0.9);
+    /* radial gradient disegna un ellisse ma se voglio
+    un cerchio come primo parametro metto circle */
+          background-image: radial-gradient(circle,cyan 30%,blueviolet 70%)
+}
+/*con trasparent togliamo la colorazione */
+.due-div {
+   /* background-color: transparent; 
+   background image supporta immagini e sfumature: 
+   le sfumature vegono inserite come segue
+   Le sfumature due tipologie: linear e radial e ogni colore all'interno
+   di linear gradiente e sperato da una virgola. Per
+   cambiare l'angolo di sfumatura bisogna indicare l'angolo
+   come primo parametro ad esempio 90deg, per ogni colore possiamo 
+   indicare la quantita in percentuale*/
+      background-image: linear-gradient(45deg,rgb(235, 157, 12),rgb(162, 116, 59) 30%) ;
+}
+/* solo i blocchi (div, header,p, ecc) possono avere delle sfumature
+i testi no */
+body {background: lightgrey;
+
+}
+</style>
+</head>
+<body>
+
+<div class="uno-div">
+    <h2 class="uno">Titolo</h2>
+    <p class="uno-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Aliquid, ab explicabo. Incidunt
+        dolores similique minima. Corporis maiores sit, 
+        in debitis, soluta quia exercitationem dicta ullam, modi quo veritatis. Nostrum, quibusdam!
+    </p>
+</div>
+
+<div class="due-div">
+    <h2 class="due">Titolo Secondo</h2>
+    <p class="due-p">Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. 
+        Aliquid, 
+        ab explicabo.
+      <span> 
+        Incidunt dolores similique minima.
+      </span> Corporis maiores sit, in debitis, soluta quia exercitationem dicta ullam, modi quo veritatis. Nostrum, quibusdam!
+    </p>
+</div>
+</body>
+</html>

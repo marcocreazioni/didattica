@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* colori color: si usa per il testo e background color per lo sfondo
+i colori possono essere indicato in inglese
+*/
+.uno {color:coral;
+
+}
+.due {color: rgb(19,138,86);
+
+}
+.uno-p {color: hsl(204, 91%, 26%)
+
+}
+.due-p {color: #fbfbf9;
+
+}
+/*nello standard rgba l'ultimo valore è la luminosita che va da 0 a 1
+che è completamente sauturo */
+.uno-div {width:100%;
+          height:400px;
+          background-color: rgba(128,235,237,0.9);
+          
+          background-image: url('https://cdn.pixabay.com/photo/2024/12/28/13/28/tram-9296118_960_720.jpg');
+          
+          /*Proprieta dipendendeti di background image */   
+          /*Posizione dell'immagine di sfondo "center left ecc" */
+          background-position: left bottom;
+          /*ripetizione dell'immagine di sfondo repeat
+          è la prorieta predefinita no-repeat impedisce
+          la ripetizione */
+          background-repeat: no-repeat;
+          /* Per la dimensione dell'immagine si usa
+          la proprieta size: contain(scala l'immagine,auto
+          si allarga ma sempre in scala,cover
+          permette di adattarsi al blocco, possiamo
+          indicare dimensioni in px di altezza e larghezza) */
+          background-size: cover;
+          /*proprieta interattive che dipendono da altri parametri 
+          in fixed ne agganciamo la posizione dal basso o
+          scroll per applicare degli effetti abbinati
+          ad altre proprieta*/
+          background-attachment:auto;
+        }
+/*con trasparent togliamo la colorazione */
+.due-div {
+ 
+      background-image: url(https://cdn.pixabay.com/photo/2017/01/23/07/23/pink-leather-2001739_960_720.jpg);
+      background-size: 50px 50px;
+      
+    }
+/* solo i blocchi (div, header,p, ecc) possono avere delle sfumature
+i testi no */
+body {background: lightgrey;
+
+}
+.uno-p {color:white;
+}
+</style>
+</head>
+<body>
+
+<div class="uno-div">
+    <h2 class="uno">Titolo</h2>
+    <p class="uno-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Aliquid, ab explicabo. Incidunt
+        dolores similique minima. Corporis maiores sit, 
+        in debitis, soluta quia exercitationem dicta ullam, modi quo veritatis. Nostrum, quibusdam!
+    </p>
+</div>
+
+<div class="due-div">
+    <h2 class="due">Titolo Secondo</h2>
+    <p class="due-p">Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. 
+        Aliquid, 
+        ab explicabo.
+      <span> 
+        Incidunt dolores similique minima.
+      </span> Corporis maiores sit, in debitis, soluta quia exercitationem dicta ullam, modi quo veritatis. Nostrum, quibusdam!
+    </p>
+</div>
+
+</body>
+</html>

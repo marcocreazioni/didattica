@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+<style>
+body {margin:0px;
+      padding:0px;
+
+}
+.navbar {
+  /*  background-color: navy; */
+    background-image: linear-gradient(navy,blue);
+
+}
+.dropdown-item:hover {background-color: aqua;
+
+}
+
+</style>
+   </head>
+    <body>
+        <!--menu di navigazione-->
+                  <!--bg-danger e altri definiscono il colore di sfondo
+                  togliendo la classe bg-(colore-bootstra)possiamo usare un nosro colore in css 
+                  
+                  Aggiungendo la classe navbar-dark cambiamo il colore del testo in bianco.
+                  
+                  Con navbar-expand-(lg-sm-md-xl) decido l'espensione delle voci di menu al
+                  cambio dello schermo. 
+                  
+                  Aggiungendo fixed-(bottom oppure top) attacca il menu ad un punto dello schermo
+                  
+                  Aggiungendo la classe sticky il menu scrolla con lo scrollare
+                  della pagina 
+                  
+                  Aggiungento la casse text-(start-center-end) 
+                  -->
+        <nav class="navbar navbar-dark sticky-top navbar-expand-lg text-start">
+       <!--se voglio cambiare il comportamento di un contenitore posso applicare le diverse
+       proprieta display d-(inline)(block)(flex) per l'allienamento-->
+            <div class="container-fluid d-flex">
+                <!--inserimento del logo-->
+                <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+                 <a class="navbar-brand" href="#">&nbsp;Mio Sito</a>
+                 <!--Nel blocco navbar toggler si decite il comportamenteo del menu hamburger
+                 per modiciare il comportamento del menu posso cambiare l0 attributo
+                 di data-bs-toggle sostituendo collapse con offcanvas insieme al data-bs-targhet altri elementi per ottenere il menu laterale -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              
+            </button>
+<!--area di menu -->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!--lista delle voci di menu-->
+                <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+                    <!--ogni voce e rappresentata dalla class nav item-->
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Servizi</a>
+                  </li>
+<!--per inserire una nuova voce aggiungiamo un blocco li con la class nav-item
+-->
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contatti</a>
+                  </li>
+
+                  <!--voce del menu a discesa che ha la classe dropdown-->
+                  <li class="nav-item dropdown">
+                    <!--Voce primaria-->
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Grafica
+                    </a>
+                       <!--voci del dropdown-->
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <!--dropdown divider e il divisore-->
+                      <li><hr class="dropdown-divider"></li>
+                      <!--voce del menu a discesa ha la classe dropdown item-->
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Altra voce</a></li>
+                    </ul>
+                  </li>
+                      <!--fine del menu a discesa-->
+
+                 <!--aggiunta di un nuovo dropdown-->
+                 <li class="nav-item dropdown">
+                    <!--Voce primaria-->
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Accademy
+                    </a>
+                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">HTML</a></li>
+                    <li><a class="dropdown-item" href="#">CSS</a></li>
+                    <li><a class="dropdown-item" href="#">JAVASCRIPT</a></li>
+                    <li><a class="dropdown-item" href="#">PHP</a></li>
+                  </ul>
+                </li>
+                      <!--fine del menu a discesa-->
+
+  
+                  <li class="nav-item">
+                    <!--per cambiare le voci attive e disabilitate si usa "disabled"
+                    per non renderle attive e active per metterle in evidenza
+                    nella class nav-link -->
+                    <a class="nav-link active" href="#">Disabled</a>
+                  </li>
+
+
+                </ul>
+<!--form di ricerca del menu -->
+                <form class="d-flex" role="search">
+
+                 
+                  <!-- di un modulo ricerca -->
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+              </div>
+            </div>
+          </nav>

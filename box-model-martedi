@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /*reset css */
+    * {box-sizing:border-box;
+       padding: 0px;
+       margin: 0px;
+    }
+
+div {background-color: bisque;
+     width: 300px;
+     height: 300px;
+ /* box model padding rientro*/
+   /*  padding: 10px; 
+       padding-top: 20px;
+       padding-left: 40px;
+       padding-right: 20px;
+       padding-bottom: 0px; */
+
+  /* padding short code */
+    padding: 20px 40px 0px 60px;
+
+  /*box model border 
+   Modalita short */
+   /* border: 5px solid black; /
+   
+   border-top: 10px;
+   border-bottom: 20px;
+   border-right: 4px;
+   border-left: 30px;
+   */
+
+   /* border width con regola orologio */
+   border-width: 10px 20px 4px 30px;
+   /* tipologia solid inset outset dashed groove ridge
+   dotted*/
+   border-style: solid;
+   /*colore */
+   border-color: rgb(25, 153, 78);
+
+   /*distanza dell'oggetto rispetto al foglio */
+   /* indicando il margin auto loggetto al centro del foglio */
+   /* margin: auto; */
+     margin: 20px; 
+     margin-top: 50px;
+     margin-left: 40px;
+     margin-right: 20px;
+     margin-bottom: 10px;
+     margin: 30px 20px 10px 30px; 
+    /*  margin-left: 50%; */
+
+
+
+
+
+}
+</style>
+</head>
+<body>
+    <h1>BOX Models</h1>
+    <div>
+       <p>Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Aperiam quisquam exercitationem vel ipsa, 
+        deserunt quaerat sed quo illo? Nulla, veniam tempora quia laudantium laborum esse fugiat vitae? Similique, aliquid dolor.
+       </p>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat sed repudiandae obcaecati facere sapiente, molestiae assumenda, aspernatur aliquam exercitationem commodi omnis? Facere libero beatae aperiam laudantium commodi modi, numquam nisi?</p>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <style>
+            * {margin: 0px;
+               padding: 0px;
+               box-sizing: border-box;
+               font-family: sans-serif;
+            }
+            body {margin: 0px;
+                  padding: 0px;
+
+            }
+            #foto {
+                height: 350px;
+            }
+        </style>
+    </head>
+
+    <body>
+       <!--Menu di navigazione--->
+       <nav class="navbar navbar-expand-lg bg-warning sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+       <!--Fine menu di navigazione-->
+       <!--inizio del codice del carosello 
+       applicando e aggiungendo la classe "carousel fade" le immagini passano in trasparenza"
+       se vogliamo animare il carosella e metterlo in auto play inseriamo l'attributo
+       "data-bs-ride="carousel" -->
+       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <!--inidicatori carsosello-->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <!--per aggiungere una 4 slide una volta copiato il div "carousel-item" aggiungiamo l'indicato inoltre
+        nell'indicatore modifichiamo l'attributo javascript data-bs-slide-to="3" seguito dalla numerazione precedente
+        inoltre modifichiamo l'attributo etichetta "aria-label:Slide 4"-->
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    
+    </div>
+
+        <!--gruppo delle slide-->
+        <div class="carousel-inner">
+            <!--INizio del primo elemento del carosello-->
+          
+            <div class="carousel-item active">
+               <!--foto che scorre--><!--utilities della classe larghezza "w-100" sta indicare che l'immagine
+               prendera il 100% dell'immagina-->
+            <img src="https://cdn.pixabay.com/photo/2023/12/17/18/12/pine-cone-8454689_960_720.jpg" class="d-block w-100" id="foto" alt="pigna">
+                <!--testo sull'immagine-->
+                <!--per rendere visibile il paragrafo togliamo l'utilitis d-none che sta per 
+                "display: none"
+                 -->
+            <div class="carousel-caption d-md-block" 
+            style="background-color: rgba(333,44,355,0.1);
+            text-shadow: 1px 1px black;
+            padding:20px;
+            border-radius: 10%;">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+              <!--la classe btn trasforma un collegamento in bottone e aggiungendo
+              la classe "opacity-75" seguita dalla percentuale inidicata a numero (75%)
+              possiamo rendere l'oggetto trasparente-->
+              <a class="btn btn-info opacity-75" href="#">Scopri di piu</a><br>
+            </div>
+                <!--fine del blocco testo-->
+          </div>
+          <!--secondo elemento del carosello-->
+          <div class="carousel-item">
+            
+            <img src="https://cdn.pixabay.com/photo/2022/01/16/14/20/cat-6942183_960_720.jpg" class="d-block w-100" id="foto" alt="gattino">
+            
+            <div class="carousel-caption d-md-block">
+                <!--Rimane nel carousel caption dove posso inserire qualisiasi oggetto-->
+                <div class="card">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+              
+            </div>
+
+            <!--terzo elemento del carosello-->
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.pixabay.com/photo/2025/03/26/15/07/vineyard-9494646_960_720.jpg" class="d-block w-100" id="foto" alt="campi coltivati">
+            <div class="carousel-caption d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+              <!--quarto elemento del carosello-->
+              <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2025/03/26/09/08/ai-generated-9494063_960_720.jpg" class="d-block w-100" id="foto" alt="coniglietto">
+                <div class="carousel-caption d-md-block">
+                  <h5>Quarta slide</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+              
+        </div>
+        <!--terminie del gruppo degli elementi del carosello-->
+        <!--inizio pulsanti aventi e indietro-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+<!--fine pulsanti avanti e indietro-->
+      </div>
+
+<!--fine del carosello-->
+       
+       
+       
+       
+       <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

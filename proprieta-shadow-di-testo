@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Installazione del carattere -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonbon&display=swap" rel="stylesheet">
+   <!--fine installazione carattere-->
+   <style>
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+  /*importazione locale del font */
+@font-face {font-family: Barethelly Signature;
+            font-weight: 600;
+            src: url(BarethellySignature.ttf);
+}    
+/* fine blocco importazione del font */
+div {background-color: beige;
+     padding: 5px;
+  /* per ombreggiare un blocco div usiamo invece box-shadow
+  che ammette (scostamento orizzontale e verticale,sfocature e colore) */   
+     box-shadow: 2px 2px 1px green;
+   /* arrotondamento dei bordi con il border radius arrotondamento
+   puo arrotondare gli angoli sia di blocchi e che di immagini */
+   border-radius: 20px;  
+     
+}
+/* Font-size detta le dimensioni del carattere (large,small, pt, px,em, ) */
+ .txt {font-size: 12pt;
+/* per lo spessore del carattare font-weight - da 100 a 900 light-bolder */      
+   font-weight: 400;
+   /* Font-family definisce la famiglia di caratteri da utilizzare */
+   font-family: 'Titillium Web';
+   /* stile del carattere */
+   font-style: oblique;
+   /* direction modifica la direzione di un testo */
+   direction: rtl;
+   /* distanza delle singole lettere */
+   letter-spacing: 2pt;
+}
+/* richiamo del carattere */
+  h1 {
+   font-family: 'Bonbon';
+   font-size: 40px;
+   text-align: center; 
+   /*per ombreggiare il testo usiamo (scostamento orizzonale, scostamento verticale, sfocatura e colore) */
+   text-shadow: 2px 2px 1px orange;
+   /* definisce la distanza tra le parole */
+   word-spacing: 10pt;
+
+  }
+
+.firma {font-family: 'Barethelly Signature';
+        font-size: 30pt;
+        
+}
+/* altre propieta del test ad esempio text-decoration
+indica le sottolineature */
+.dec {text-decoration: underline;
+    /* text-transform crea delle varianti maiuscolo e minuscolo */
+      text-transform: uppercase;
+      /* con il text align allienamo il testo */
+      text-align: justify;
+      /* il colore si applica con color */
+      color:green;
+      /* allineamento testo con immagine se presente*/
+      text-indent: 2pt;
+      }
+      /* impaginazione del paragrafo */
+     .colsf { 
+        /* suddivisione del paragrafo in colonne */ 
+          
+          column-count: 3;
+          /* coloumn gap che gestisce gli spazi tra le colonne */
+          column-gap: 5px;
+          /* column fill riduce il numero delle colonne che gestisce
+          la densita tra le colonne */
+          column-fill: balance;
+          /*linea di divisione (spessore tipologie e colore)*/
+          column-rule: 4px solid orange;
+          /*Gestione dell'interlinea */
+          line-height: 10pt;
+          /*spessore delle collonne */
+          column-width: 200px;
+          
+}
+
+    </style>
+</head>
+<body>
+    <h1>Proprieta del Testo</h1>
+    <div>
+        <p class="txt">  Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Cum, facilis enim.
+             Esse, vero similique impedit sit eum quo quibusdam magni 
+             quaerat excepturi <span class="dec">quidem vel beatae?</span> 
+             Eveniet fugiat
+             ullam amet eligendi.
+
+        </p>
+    </div>
+<p class="firma">Mario Rossi</p>
+<div>
+    <p class="colsf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Praesentium, vero, placeat doloremque esse, veritatis accusantium
+         maxime expedita autem ea amet a possimus incidunt recusandae.
+         Asperiores esse quaerat quis expedita. Veritatis.
+     </p>
+
+</div>
+</body>
+</html>

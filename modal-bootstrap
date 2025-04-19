@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <h1>Popup con caricamento non automatico</h1>
+          
+
+<!-- Button trigger modal (attivtatore) puo essere un botton o un immagine o un div -->
+<img src="https://cdn.pixabay.com/photo/2017/06/22/14/50/google-plus-2431022_960_720.png" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="50px">
+    
+    </img>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    
+    <div class="modal-dialog">
+      <!--conteniito del popup-->
+        <div class="modal-content">
+      <!--testata
+      <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Testata</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>-->
+      <!--corpo-->
+
+        <div class="modal-body">
+            <div id="mc_embed_shell">
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+                  #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 100%;}
+                  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          </style>
+          <div id="mc_embed_signup">
+              <form action="https://fordid.us22.list-manage.com/subscribe/post?u=793a7eb01e35dcedcdf680a81&amp;id=6597de711a&amp;f_id=002dd9e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                  <div id="mc_embed_signup_scroll"><h2>Iscrivi</h2>
+                      <div class="indicates-required"><span class="asterisk">*</span> indica requisiti obbligatori</div>
+                      <div class="mc-field-group"><label for="mce-EMAIL">Indirizzo email <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div><div class="mc-field-group"><label for="mce-FNAME">Nome </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div><div class="mc-field-group"><label for="mce-LNAME">Cognome <span class="asterisk">*</span></label><input type="text" name="LNAME" class="required text" id="mce-LNAME" required="" value=""></div><div class="mc-field-group"><label for="mce-PHONE">Numero di telefono </label><input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value=""></div><div class="mc-field-group size1of2"><label for="mce-BIRTHDAY-month">Birthday </label><div class="datefield"><span class="subfield monthfield"><input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month" value=""></span> /<span class="subfield dayfield"><input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day" value=""></span><span class="small-meta nowrap">( mm / dd )</span></div></div>
+          <div hidden=""><input type="hidden" name="tags" value="55517"></div>
+                  <div id="mce-responses" class="clear foot">
+                      <div class="response" id="mce-error-response" style="display: none;"></div>
+                      <div class="response" id="mce-success-response" style="display: none;"></div>
+                  </div>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                  <input type="text" name="b_793a7eb01e35dcedcdf680a81_6597de711a" tabindex="-1" value="">
+              </div>
+                  <div class="optionalParent">
+                      <div class="clear foot">
+                          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                          <p style="margin: 0px auto;"><a href="http://eepurl.com/iSRLS-" title="Mailchimp: l’email marketing è facile e divertente"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                      </div>
+                  </div>
+              </div>
+          </form>
+          </div>
+          <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[3]='ADDRESS';ftypes[3]='address';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+          
+          
+          
+            <!--<form>
+           <input type="checkbox">
+           <label>Accetta i cookie</label>
+          </form> -->
+        </div>
+              <!--pie di pagina-->
+         <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+          
+
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

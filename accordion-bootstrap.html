@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link href="custom.css" rel="stylesheet" type="text-css">
+        <style>
+            .accordion-button:hover, .accordion-button:active {
+                background-color: bisque;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="d-flex justify-content-center ms-4">Oggetto Multimediali</h1>
+         <div class="container-fluid mt-1" >
+             <div class="row">
+                <div class="col-xl-6">
+                    <!--oggetto accordion-->
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <!--elemento accordion-->
+                        <div class="accordion-item">
+                          <!--testata dell'accordion-->
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                  <!--posso personalizzare la testata disciplinando le classi
+                                  button utlizzando le utilities-->
+                            <button class="accordion-button bg-light p-2"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                              Come si usa la carta di credito?
+                            </button>
+                          </h2>
+                              
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                           <!--Corpo interno dell'accordion-->
+                            <div class="accordion-body">
+                            </div>
+                                <p class="m-2">Verfica di avere con te la carta e segui questi step</p>
+                                <ul>
+                                    <li>Annota la sequenza di numeri nel fronte</li>
+                                    <li>Annota la data di scadenza presente in basso</li>
+                                    <li>Verifica l'icona del circuito</li>
+
+                                </ul>
+                          </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button collapsed bg-light p-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                              Nidificare la griglia di bootstrap negli oggetti?
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                                    <!--nidificazione della griglia di bootstrap-->
+                                     <div class="container-fluid m-1">
+                                       <div class="row">
+                                        <div class="col-md-6 p-1">
+                                            <div class="card" style="width: 100%;">
+                                                <div class="card-body">
+                                                  <h5 class="card-title">Card title</h5>
+                                                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                  <a href="#" class="card-link">Card link</a>
+                                                  <a href="#" class="card-link">Another link</a>
+                                                </div>
+                                              </div>   
+                                        </div>
+                                        <div class="col-md-6 p-1">
+                                            <div class="card" style="width: 100%;">
+                                                <div class="card-body">
+                                                  <h5 class="card-title">Card title</h5>
+                                                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                  <a href="#" class="card-link">Card link</a>
+                                                  <a href="#" class="card-link">Another link</a>
+                                                </div>
+                                              </div>
+                                        </div>
+                                       </div> 
+                                     </div>
+
+
+
+                            </div>
+                          </div>
+                        </div>
+<!--inizio item-->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed bg-light p-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                              Duplicare un nuovo item
+                            </button>
+                          </h2>
+
+                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                          
+<!--fine item-->
+                    <div class="accordion-item">
+                        <!--per aggiungere un quarto elemento verificare le seguenti corrispondenze nei diversi attributi-->
+                        <!--data-bs-target deve coincidere con id del div che apre l'accordion body 
+                        verficare l'incrociarsi degli attributi aria controls con il contenitiore dell'id che contiente card body
+                        e l'id della classe h2 con l'attributo aria-lalledby del pannello che contiente semppre l'accordion body-->
+                      <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                         <button class="accordion-button collapsed bg-light p-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                            Quarto gruppo
+                          </button>
+                      </h2>
+
+                     <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                           <div class="accordion-body">
+                           <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                           </div>
+                     </div>
+                   </div>
+
+
+                      </div>
+                </div>
+                
+             </div>
+         </div>
+
+
+
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

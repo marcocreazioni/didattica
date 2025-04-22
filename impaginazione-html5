@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {margin: 0px;
+      padding: 0px;
+    }    
+    /* Proprieta di accensione HTML5 (padding:1px) */
+header {background-color: aqua;
+        padding: 1px;
+        text-align: center;
+}
+nav {background-color: aquamarine;
+     padding: 1px;
+
+}
+main {background-color: blanchedalmond;
+      padding: 1px;
+}
+section{background-color: cadetblue;
+        padding: 1px; 
+}
+article {background-color: chocolate;
+}
+aside {background-color: darkkhaki;
+    
+}    
+footer {background-color: coral;
+        padding: 2px;
+
+}
+</style>
+
+</head>
+<body>
+<!--testata dal sito web-->    
+<header>
+<h1>Testata</h1>
+</header>
+<nav>
+    <p>Qui va il menu di navigazione</p>
+</nav>
+<main>
+ 
+ <p>Corpo della pagina</p>
+ 
+  <section>Sezione</section> 
+ 
+ <section>
+    
+ </section>
+
+</main> 
+<footer>
+    <p>Pie di pagina</p>
+</footer>
+
+</body>
+</html>

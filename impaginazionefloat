@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+ body {margin: 0px;
+       padding: 0px;
+       box-sizing: border-box;
+} 
+/*______________________________*/  
+.box1 {background-color: orange;
+       width:50%;
+       height: 200px;
+ /* float right lascia spazio libero a sinistra
+ mentre left a destra; */     
+       float: left;   
+}
+.box1 p {display:block;
+         width: 50%;
+         float:left;
+         
+
+
+}
+.box1 img {float: left;
+           width: 50%;
+           height: 200px;
+/*________________________________*/
+}
+.box2 {background-color: beige;
+       background-image: url(https://cdn.pixabay.com/photo/2025/04/08/13/56/great-tit-9521571_960_720.jpg);
+       background-size: cover;
+       width: 25%;
+       height: 200px;
+       float:left;
+}
+.box3 {background-color: rgb(0, 255, 106);
+       background-size: cover;
+       width: 25%;
+       height: 200px;
+       float:left;
+}
+.box4 {background-color: red;
+       background-size: cover;
+       width: 25%;
+       height: 200px;
+       clear:both;
+       /*la proprieta clear impedisce ai blocchi
+       di invadere la propria riga */
+} 
+ </style>   
+</head>
+<body>
+    <h1>Impaginazione floating - Compatibile con box model</h1>
+<div class="box1">
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa officia ad earum doloremque adipisci animi exercitationem ullam aliquid harum doloribus veritatis est, eos facere vitae, amet eum aperiam veniam?</p>
+  <img src="https://cdn.pixabay.com/photo/2024/12/31/23/46/bridge-9302956_960_720.jpg">
+</div>
+
+<div class="box2">Blocco 2</div>
+<div class="box3">Blocco 3</div> 
+<div class="box4">Blocco 4</div>    
+</body>
+</html>

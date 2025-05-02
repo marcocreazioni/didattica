@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+form {margin:10px;
+      padding: 10px;
+      border: 2px solid black;
+      border-radius: 5%;
+
+}
+label {color: orange;
+       font-weight: bold;
+
+}
+input {color: brown;
+       width: 100%;
+
+}
+.button{color:white;
+background-color: darkblue;
+border-radius: 5%;
+}
+    </style>   
+</head>
+<body>
+    <h1>Modulo</h1>
+<!--inizio dell'oggetto modulo con il tag form a diversi attributi obbligatori e 
+facoltativi (action: attributo dove si definisce dove inviare le informazioni (mailto o 
+si indentiva il file che deve processare le informazioni)) successivamente specifico
+la metodologia di prelievo delle informazioni al livello facoltativo posso
+migliorare o stimolare compilazione del modulo con le proprieta autocomplete con i valori
+on o off o aggiungere degli attributi di validazione -->
+<form action="inviamail.php" method="post" autocomplete="on">
+    <!--etichetta delle informazioni da inserire nel field (campo)-->
+    <label>Nome:</label>
+    <!--Successivamente all'eticheta inseriamo il tag di campo, il piu importante
+    tag e input al quale si aggiunge la tipologia di dato da inserire 
+    con type:  
+    text = (una riga di testo)
+    number = (accetta solo numeri)
+    mail = (accetta solo indirizzi email)
+    tel = (accetta solo numeri di telefono) 
+    
+    Attenzione se processo le informazioni in php devo aggiungere obbligatoriamente
+    l'attributo name="nome univoco da dare alle informazioni inserite"
+    Possiamo aggiungere anche attributi facoltativi ad esempio:
+    come: 
+    autocomplete: on o off; 
+    placeholder: testo segnaposto;
+    value: per un valore precompilato che puo essere sovrasritto;
+    min: valore minimo di inserimento
+    max: valore massimo
+    minlength="13" maxlength="13" indica il numero di caratteri da inserire;
+    required non ha valori ma obbliga un campo ad essere compilato
+    readonly specifica un campo di sola lettura che va acompagnato con
+    l'attribuo value
+    pattern specifica il formato da utilizzare ad andrebbe accompagnato dal placeholder
+    -->
+     <input type="text" name="nome" placeholder="inserisci nome" required>
+    <label>Cognome:</label><br>
+     <input type="text" name="cognome" placeholder="inserisci cognome" value="Rossi" required><br>
+     <label>Età:</label><br>
+     <input type="number" name="eta" placeholder="inserisci eta" min="18" max="80" required><br>
+     <label>Codice Fiscale:</label><br>
+     <input type="text" name="codfiscale" placeholder="inserisci il codice fiscale" minlength="13" maxlength="13"><br>
+      
+<br>
+<br>
+     <input type="submit" class="button"></submit>
+</form>
+
+
+
+</body>
+</html>

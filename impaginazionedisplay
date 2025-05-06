@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/*reset margine e padding */    
+body  {margin: 0px;
+       padding: 0%;
+       
+    
+}
+* {box-sizing: border-box;
+   padding: 0%;
+}
+/* area box */
+.box-1 { background-color: antiquewhite;
+         width: 100%; 
+         /* nasconde un ogetto nella proprieta none*/
+         display:none;  
+        
+}
+
+.contenitore {width:100%;
+              background-color: antiquewhite; 
+
+}
+.box-2 { background-color: yellow ;
+         padding: 1px;
+         display: inline-block;
+         width: 29.8%;
+         color: orange;
+         
+          
+}
+.box-3 { background-color: burlywood;
+         width: 69.30%;
+         display: inline-block;
+         padding-left:1px;
+        
+         
+         
+}
+/* fine area box */
+nav {background-color:green;
+     color: white;
+      width: 100%;
+     }
+/* impaginazione display e le sue innumerevoli proprieta */
+li {list-style-type: none;
+    /* la proprieta inline block mette gli oggetti
+    in linea sulla stessa riga */
+    display: inline-block;
+    padding: 10px;
+    margin: -1px;
+    
+
+
+}

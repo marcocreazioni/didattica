@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/*reset margine e padding */    
+body  {margin: 0px;
+       padding: 0px;
+    
+}
+/*____________box model non ha una buona compatibilita con le posizioni */
+.box-1 { background-color: antiquewhite;
+      /* la position static non permette la convivenza di più
+      oggetti sulla stessa riga 
+         la position absolute permette ad un oggetto di
+         posizionarsi in un qualsiasi punto rispetto al
+         foglio o al contenitore che lo contiene */
+         position: absolute;
+         width: 100%;
+      /* al posto del margin usiamo direttamente le proprieta
+      di puntamento come top, left, right, bottom anche 
+      se basterebbe disciplinare solo top e left*/         
+         
+        
+         
+}
+.box-1 img {width:50%;
+            height:180px;
+            border: 1px solid black;
+            /* nel caso dell'immagine la posizione assoluta
+            fa riferimento all'oggetto che lo contiente */
+            position: absolute;
+            left: 25%;
+            
+            
+}
+.box-1 p {width: 100%;
+          
+}
+/*--------------------------------- */
+.box-2 { background-color: yellow ;
+         width: 100%;
+         color: orange;
+         /*nella position relative viene riportato in una posizione di sovrascrituttura
+         ponendosi al di sopra di un oggetto in posizione static o absolute ma
+         al di sotto di un oggetto in posizione fixed */
+         position:relative;
+         top: 50px;
+         text-align: center;
+         /* nella position relative gli oggetti sono posizionati
+         su livelli. Per poter cambiare il livello di un contenitori
+         in position relative si usa la proprieta z-index 
+         che ammette valori tra -1 e 2 */
+         z-index: 1;
+}
+.box-3 { background-color: burlywood;
+         width:100%;
+         /* nella position fixed viene agganciato un 
+         contenitore al bordo del browser e le posizioni
+         top, left, ecc indicano l'offset ovvero
+         la distanza dal bordo del browser 
+         e il contenitore deve essere disciplinato
+         in larghezza e altezza utile per creare un footer
+         */
+         position: fixed;
+         bottom: 0px;
+         
+}
+nav {background-color:green;
+     color: white;
+     /* per la posizione menu alcuni browser vogliono
+     una proprieta posion non fixed ma sticky; */ 
+     position: fixed;
+     top: 0px;
+     width: 100%;
+     }
+
+h1 {margin-top: 40px; 
+
+}     
+</style>
+
+</head>
+<body>
+    <h1>Impaginare con le posizioni</h1>
+    <nav><ul><li>Home</li></ul></nav>
+    <div class="box-1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt natus voluptas doloribus, provident dolor suscipit id aut dolorem illum non nulla doloremque consectetur fugit earum facilis explicabo itaque ipsa 
+        dolore.</p>
+        <img src="https://cdn.pixabay.com/photo/2025/03/11/09/51/woman-9461838_960_720.jpg">
+    </div>
+    <div class="box-2">blocco 2</div>
+    <div class="box-3">blocco 3</div>
+    <div class="box-4">blocco 4</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+form {margin:10px;
+      padding: 10px;
+      border: 2px solid black;
+      border-radius: 5%;
+
+}
+label {color: orange;
+       font-weight: bold;
+
+}
+input {color: brown;
+       width: 100%;
+
+}
+.button{color:white;
+background-color: darkblue;
+border-radius: 5%;
+width: 40%;
+display:inline-block;
+}
+.clear {width: auto;
+
+}
+    </style>   
+</head>
+<body>
+    <h1>Modulo</h1>
+<!--inizio dell'oggetto modulo con il tag form a diversi attributi obbligatori e 
+facoltativi (action: attributo dove si definisce dove inviare le informazioni (mailto o 
+si indentiva il file che deve processare le informazioni)) successivamente specifico
+la metodologia di prelievo delle informazioni al livello facoltativo posso
+migliorare o stimolare compilazione del modulo con le proprieta autocomplete con i valori
+on o off o aggiungere degli attributi di validazione -->
+<form action="inviamail.php" method="post" autocomplete="on">
+    <!--etichetta delle informazioni da inserire nel field (campo)-->
+    <label>Nome:</label>
+    <!--Successivamente all'eticheta inseriamo il tag di campo, il piu importante
+    tag e input al quale si aggiunge la tipologia di dato da inserire 
+    con type:  
+    text = (una riga di testo)
+    number = (accetta solo numeri)
+    mail = (accetta solo indirizzi email)
+    tel = (accetta solo numeri di telefono) 
+    date, date-time-local, month, week = (accettano solo date e orari)
+    checkbox e radio = (ammettono valori booleani true(attivo) e false(non attivo))
+    hidden = campo nascosto ('utile per tracciamento' con attributo value obbligatorio)
+    textarea e select = (solo campi di testo)
+    password = (campo testuale (stringa))
+    range = (ammette valori numerici)
+
+    Attenzione se processo le informazioni in php devo aggiungere obbligatoriamente
+    l'attributo name="nome univoco da dare alle informazioni inserite"
+    Possiamo aggiungere anche attributi facoltativi ad esempio:
+    come: 
+    autocomplete: on o off; 
+    placeholder: testo segnaposto;
+    value: per un valore precompilato che puo essere sovrasritto;
+    min: valore minimo di inserimento
+    max: valore massimo
+    size: lunghezza del campo
+    minlength="13" maxlength="13" indica il numero di caratteri da inserire;
+    checked vale come elemento selezionato
+    uncheked vale come elemento non selezionato
+    required non ha valori ma obbliga un campo ad essere compilato
+    readonly specifica un campo di sola lettura che va acompagnato con
+    l'attribuo value
+    pattern specifica il formato da utilizzare ad andrebbe accompagnato dal placeholder
+    autofocus è un attributo che zumma il broswer sul campo da compilare
+    capitalize obbliga il campo all'inserimento maiuscolo
+    -->
+     <input type="text" name="nome" placeholder="inserisci nome" required>
+    <label>Cognome:</label><br>
+     <input type="text" name="cognome" placeholder="inserisci cognome" value="Rossi" required><br>
+     <label>Età:</label><br>
+     <input type="number" name="eta" placeholder="inserisci eta" min="18" max="80" required><br>
+     <label>Codice Fiscale:</label><br>
+     <input type="text" name="codfiscale" placeholder="inserisci il codice fiscale" minlength="13" maxlength="13"><br>
+      <br>
+      <!--raggruppamento di campi-->
+      <fieldset>
+    <legend>Tipologie di input data calendario</legend>
+<label>Data in cifre</label>
+<input type="date" name="data">
+<label>Iserisci una data</label>
+<input type="datetime-local" name="data-tempo">
+<label>Inserisci l'ora</label>
+<input type="time" name="ora">
+<label>Mese e Anno</label>
+<input type="month" name="mese">
+<label>Settimana</label>
+<input type="week" name="settimana">
+      </fieldset>
+      <!--campi di selezione devono avere un etichetta dopo l'input 
+      e l'etichetta deve avere l'attributo for con lo stessa valore
+      del value-->
+<label>Sesso</label><br>
+<input type="radio" name="M" class="clear" value="Maschio"><label for="Maschio">Mashio</label>      
+<input type="radio" name="F" class="clear" value="Femmina"><label for="Femmina">Femmina</label>      
+<br>
+<label>Privacy</label><br>
+<input type="checkbox" name="privacy" class="clear" required><label for="privacy">Accetta che i tuoi dati siano utilizzati
+    per le informazioni richieste e per scopi commerciali e di marketing <a href="#">Privacy</a> 
+</label><br><br>
+<label>Selezione a tendinza</label><br>
+<!--campo di selezione a tendina per definire
+un opzione predefinita aggiungere l'attributo "selected" se al tag
+select aggiungiamo "multiple" l'utente puo selezionare piu di un valore
+dalle opzioni-->
+<select name="scelta" multiple>Selezione
+ <option></option>
+ <option selected>Casa</option>
+ <option>Scuola</option>
+ <option>Servizi</option>
+</select>
+<label>&nbsp;</label>
+
+<!--utile per creare tracciamenenti o trasformarlo in campo per honeypot*-->
+<input type="hidden" name="honeypot" value="modulo"><br>
+<!--file consente di allegare un documento che finisce nella cartella del
+server (dove c'è la pagina web del modulo) e ammette una serie di attributi
+specifici: 
+accept="estensione ammessa ad esempio ".doc" per i documenti di word 97/2006"
+max-size="dimensione in bit dei file allegati* non sempre supportato
+puo occorre fare uno script di controllo dimensione"
+multiple è un attributo che consente di allegare piu file allo stesso modulo -->
+<label>Allega il tuo cv non piu grande di</label>
+<input type="file" name="cv" accept=".pdf,.doc,.docx,.txt" max-size="400000">
+<label>Passsword</label>
+<!--al campo password e possible collegare uno script che mostra la 
+password in chiaro-->
+<input type="password" name="password">
+<label>Inserimento di un range</label>
+<!--e obbligatorio inserire gli attributi max e min e facoltativamente
+si puo dare un attributo step per inserire valore in scala-->
+<input type="range" min="1" max="100" name="colore">
+<br>
+<br>
+<label>Scegli il colore</label>
+<input type="color" name="colore">
+<label>INserimento di un indizzo internet</label>
+<input type="url" name="indirizzo" placeholder="https://...">
+<!--textarea e una tipologia di input di testo multiriga e ammette alcuni 
+attributi facoltativi come width applicato nel css e "rows" nel numero di righe
+e cols come larghezze in punti -->  
+  <label>Scruvi il tuo messaggio</label>
+ <textarea name="messaggio" rows="4" cols="50"></textarea>   
+    <input type="submit" class="button" value="invia">
+     <input type="reset" class="button" value="cancella">
+    
+</form>
+<form action="#.php" method="get">
+    <label>Cerca</label>
+<!--è un campo di ricerca nella stessa pagina dove presente l'input per 
+funzione piu complesse bisogna associarlo ad uno script per la ricerca-->
+<input type="search"  name="cerca"><br><button>invia</button>
+
+</form>
+
+
+</body>
+</html>

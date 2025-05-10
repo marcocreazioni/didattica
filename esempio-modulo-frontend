@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+form {background-color: antiquewhite;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5%;
+      border: 1px solid orange;
+}
+h1 {text-align: center;
+    font-size: small;
+}
+label {color: purple;
+       font-family: sans-serif;
+       font-size: smaller;
+}
+.input-text {width: 100%;
+       font-size: smaller;
+       font-family: sans-serif;
+
+}
+span {font-size: xx-small;
+    font-family: sans-serif;
+
+}
+.invia {background-color: chartreuse;
+        padding: 2px;
+        color:blue;
+        border-radius: 10%;
+        width: auto;
+        float: left;
+        margin: 2px;
+
+}
+#sesso {width:auto;
+
+}
+    </style>
+</head>
+<body>
+    <h1>Modulo -Form</h1>
+    <!-- form è il contenitore del modulo 
+     e ha attributi obbligatori come:  "action" (file inviate tramite email(si usa l'inidirizzo del sito web)) o si inserisce il percorso
+     del file che processera le informazioni
+      nel caso del php o bisogno di definire il metodo
+      devo aggiungere l'attributo obbligatorio
+      "methods:" che ammette solo 2 valori "get" o 
+      "post". 
+     ci sono poi attributi facoltativi:
+     autocomplete: "on" informazioni memorizzate dal browser
+     per il completamento del modulo. "off" Invece impedisce
+     l'auto completamento
+      -->
+
+    <form action="inviomail.php" method="post" title="modulo info" autocomplete="on">
+     <!-- label è l'etichetta del campo-->
+      <label>Nome*</label>
+      <!--field campo di inserimento input  
+      Attributi obbligatori:
+      type = tipologia di informazione da inserire
+            valori ammessi:
+            text = riga di testo (variabile stringa)
+            mail = ammette solo mail (variabile stringa)
+            tel  = ammette solo numeri (variabile stringa)
+            number = ammette solo numeri (variabile numerica)
+            date = ammette solo date come valori (variabile stringhe)
+            datatime-local = ammette sia data che ora (variabile stringa)
+            month e week = ammettonon data (variabile stringa)
+            color = ammette solo colori (variabile stringa)
+            radio = ammtte il riempimento del cerchio di selezioine (variabile
+            booleana (selezionato=true non selezionato=false))
+            checkbox = inserische una casella di spunta (variabile booleana
+            (selezionato=true non selezionato=false))
+            file = consente di caricare dei file in allegato (variabile stringa*) 
+            url = ammette solo indirizzi https ecc ((variabile stringa)) 
+            password = ammette contenti nascosti ((variabile stringa)) 
+            search = ricerca nella stessa pagina del form (*)
+            reset = azzera la compilazione di un modulo (button)
+            submit = serve per inviare all'action le informazioni (button)
+
+      name= definizione di un nome per riconoscere l'informazione da prelevare      
+      Attributi facoltativi
+      placeholder = testo segnaposto "inserire il testo segnaposto"
+      value = attribuzione di un valore preimpostato ma che puo essere sovrascritto "valore da inserire"
+      required = obbliga l'utente alla compilazione del modulo 
+      autocomplete = on o off per un singolo campo
+      readonly = campo di sola lettura
+      pattern = rappresenta la formattazione obbligatoria di un campo
+             i valori ammessi sono o solo lettere [A-Za-z] o solo numeri [0-9] seguito dal
+             numero di cifre o lettere tra parentesi graffa {2}
+     autofocus = attributo per zummare un campo di testo a singola riga
+     minlength = numero minimo di caratteri o cifre presenti nel campo
+     maxlength = numero massimo di caratteri o cifre 
+     min = numero minimo ammesso (vale anche per le date)
+     max = numero massimo ammesso (vale anche per le date)
+     per le date aggiungiamo a min e max datemax per indicare una data massima e datemin
+     per indicare una data minimo
+     step = solo per i numeri indica l'interavallo prossimo tra un nmero precedente e successivo
+     ad step = 10 seleziona i numeri di 10 in 10 (10)(20)(30)  
+     checked = selezionato e uncheked non selezionato 
+     accept e size decidono i formati ammessi e le dimensioni in bit
+        -->
+     <input class="input-text" type="text" name="nome" placeholder="inserisci il nome" autocomplete="off" required autofocus>
+     <label>Cognome</label>
+     <input class="input-text" type="text" name="cognome" placeholder="inserisci il cognome" autocomplete="off" required>
+     <label>Mail</label>
+     <input class="input-text" type="mail" name="mail" placeholder="inserisci la tua mail" autocomplete="off" required>
+     <label>Telefono</label>
+     <input  class="input-text" type="tel" name="telefono" placeholder="333-123456" pattern="[0-9]{3}-[0-9]{6}" required>
+     <label>Partita Iva</label>
+     <input type="text" name="partitaiva" placeholder="IT02322444" pattern="[A-Za-z]{2}[0-9]{14}" minlength="16" maxlength="16"><br>
+     <label>Età</label>
+     <input  class="input-text" type="number" name="eta" min="18" max="90"><br>
+     <fieldset>
+     <label>Data di registrazione</label>
+     <input class="input-text" type="date" name="registrazioni" min="10-05-2025">
+     <legend>Date</legend>
+     <label>Data e Ora preferitie per l'appuntamento</label><br>
+     <input type="datetime-local" name="giorno-ora" required><br>
+     <label>Mese e Anno di nascita</label><br>
+     <input type="month" name="mese-anno"><br>
+     <label>Settimana preferita</label><br>
+     <input type="week" name="settimana"><br>
+     </fieldset>
+     <label>Il tuo colore preferito</label>
+     <input class="input-text" type="color" name="colore">
+     <label>Sesso</label><br>
+     
+     <!--l'attributo for applicato a label serve per concatenare
+     l'etichetta all'input type-->
+     
+     <input type="radio" name="sesso1" id="sesso" name="maschio" value="Maschio" checked>
+     <label for="sesso1">Maschio</label><br>
+     <input type="radio" name="sesso2" id="sesso" name="femmina" value="Femmina">
+     <label for="sesso2">Femmina</label><br>
+     <br>
+    <!--GDPR Privacy 1 chebox (autorizzazione all'uso dei dati)
+    2 checkbox (autorizzazione all'uso commerciale e di marketing) 
+    3 checkbox (autorizazione all'invio dei dati a terze parti e 
+    per la newsletter)--> 
+     <input type="checkbox" id="sesso"  required><label>Accetta che i tuoi dati 
+        siano inviato per elaborare la tua richesta di contatto e per 
+        scopi commerciali e di marketing
+     </label>
+     <br><br>
+     <!--gruppo di selezione dati -->
+     <label>Scegli tra i nostri servizi</label><br>
+     <!--a select possiamo abbinare una selezione multipla aggiungendo l'attributo
+     multiple-->
+     <select name="servizi">
+     <option></option>
+     <!--option ammette l'attributo selected se vogliamo un valore
+     pre selezionato-->
+     <option>Grafica</option>
+     <option selected>Sviluppo</option>
+     <option>Produzione</option>
+
+     </select>  <br>
+    <label>Messaggio</label><br>
+    <!--la text area ammette attributi dimensionali come rows e cols-->
+     <textarea name="messaggio" rows="4" cols="50"></textarea><br>
+
+     <!--campi di inserimento dati e allegati-->
+     <label>Inserisci l'indiruzzo del tuo sito</label>
+     <input type="url" placeholder="https://...">
+     <!--file per gli allegati archivia gli allegati nella stessa cartella
+     dovi si trova il form per inoltrarli in una cartella diversa bisogna
+     collegra un file php o uno script js ha un attributo facoltativo 
+     che è accept che decide quali file possono essere collegati
+     inserendone l'estensione se voglio limitare le dimensioni
+     caricabili devo collegare una funzione js o modificare il php -->
+     <label> Allega il tuo curriculum</label>
+     <input type="file" name="cv" required accept=".doc,.docx,.txt,.pdf">
+      <br><br>
+     <input type="submit" class="invia" value="INVIA">
+     <!--il pulsante reset cancela i contenuti del form-->
+     <input type="reset" class="invia" value="RESETTA"><br><br>
+     <span>* l'asterisco indica che si tratta di un campo obbligatorio</span>
+     <!--Il type hidden deve avere un valore preimpostato e serve per tracciare 
+     dove e quale modulo è stato compilato-->
+     <input type="hidden" name="tracciamente" value="modulo-contatti-1">
+    </form>
+
+    <form id="search">
+        <!--ricerca parole e frasi inserite nella stessa pagina del modulo
+        per ricerche complesse su piu pagine ecc necessita funzioni javascritp-->
+        <input type="search" name="ricerca" placeholder="cerca"><input type="submit" value="cerca">     </form>
+</body>
+</html>

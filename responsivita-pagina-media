@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proprieta Media Screen</title>
+<style>
+.contenitore {display: flex;
+              flex-direction: row;
+              text-align: center;
+}
+.blocco-1 {flex:1;
+           background-color: antiquewhite;
+           height: 250px;
+}
+.blocco-2 {flex:1;
+           background-color: aqua;
+           height: 250px;
+}
+/* Media rule che consente di applicare proprieta 
+diverse a secondo delle diminesioni dello schermo
+usando le proprieta max-width e min-width
+nel caso specifico disciplino le proprieta
+per schermi non piu grandi di 380px */
+@media only screen and (max-width:380px) {
+.contenitore {flex-direction: column;
+              
+
+  }        
+
+.blocco-1 {background-color: orange;
+           height: 250px;
+  }
+.blocco-2 {background-color: purple;
+           color:white;
+           height: 250px;
+          }
+h1 {text-align: center;
+
+    }             
+}
+/* Proprieta diverse per schermi tablet da x a y dimensioni */
+@media only screen and (min-width:381px) and (max-width: 720px) {
+
+.contenitore {flex-direction: row;
+
+}
+.blocco-1 {background-color:cyan;
+}
+.blocco-2 {background-color:chartreuse;
+    
+}
+}
+
+</style>    
+</head>
+<body>
+<h1>Media Screen</h1>
+<div class="contenitore">
+  <div class="blocco-1">Blocco 1</div>
+  <div class="blocco-2">Blocco 2</div>
+
+
+</div>    
+</body>
+</html>

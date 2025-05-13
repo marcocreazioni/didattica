@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/*reset margine e padding */    
+body  {margin: 0px;
+       padding: 0%;
+       
+    
+}
+* {box-sizing: border-box;
+   padding: 0%;
+}
+p {padding: 4px;
+}
+/* Contenitore con la proprieta display-flex */
+.contenitore {/*width: 100%; */
+              display:flex;
+/*Con flex direction da sinistra verso destra
+con row e per cambiare l'ordine dei blocchi
+usiamo row-reverse se invece
+vogliamo inserire i blocchi in colonna
+usiamo coloumn o column-reverse*/    
+               flex-direction: row;
+/* possiamo rendere fluidi i blocchi con 
+la proprieta flex-wrap con i valori no-wrap e wrap
+per renderli fluidi */
+                flex-wrap:wrap;
+/* aggiungendo la proprieta gap posso inserire
+uno spazio nei blocchi */                
+                gap:10px;
+/* Allinea i blocchi paragrafo, span, adress e
+        blockquote,code, h1 a h6 */
+                text-align: center;
+   /* Allinea elementi come figure,div,img,video
+   i frame all'interno di un contenitore */             
+                align-items: center;
+
+                
+               
+
+                               
+
+}
+/* area box */
+.box-1 {background-color: antiquewhite; 
+    /* si puo usare initial come proprieta flex
+    del primo contenitore */    
+    flex: 1;
+    
+    
+    
+        
+}
+
+.box-2 { background-color: aqua;
+        flex: 1;
+          
+}
+.box-3 { background-color: coral;
+         flex: 1;
+}
+.box-4 { background-color: cornflowerblue;
+       /* con flex possiamo dare una dimensione
+       proporzionale agli altri blocchi del contenitore */
+         flex: 1;
+}     
+/* fine area box */
+nav {background-color:green;
+     color: white;
+      width: 100%;
+     }
+/* impaginazione display e le sue innumerevoli proprieta */
+li {list-style-type: none;
+    /* la proprieta inline block mette gli oggetti
+    in linea sulla stessa riga */
+    display: inline-block;
+    padding: 10px;
+    margin: -1px;
+}
+
+h1 {margin-top: 40px; 
+
+} 
+.dentro-box {width: 50%;
+background-color: aqua;
+height: 50px;
+}
+/*Display Grid */
+.griglia {display: grid;
+          margin-top: 10px;
+          /* grid-template-cloumn e row va ad indicare
+          la distrubuzione su righe e colonne dei
+          diversi elementi della griglia (auto
+           auto)indica un modello su 2 colonee (auto
+           auto auto) su tre colonne. Al posto di
+           auto potete usare delle percentuali*/
+          grid-template-columns: 70% 30%;
+          /*coloumn-gap detta lo spazione tra
+          le colonne  o row gap*/
+          column-gap: 5px;
+
+}
+.griglia > div {background-color: antiquewhite;
+                border: 1px solid orange;
+
+
+}
+
+</style>
+
+</head>
+<body>
+    <h1>Impaginare Display Flex</h1>
+    <nav>
+    <ul>
+        <li>Home</li>
+        <li>Servizi</li>
+    </ul>
+    </nav>
+<!--contenitore-->
+<div class="contenitore">
+
+
+    <div class="box-1">
+        <p>Blocco 1</p>
+    <!--   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt natus voluptas doloribus, provident dolor suscipit id aut dolorem illum non nulla doloremque consectetur fugit earum facilis explicabo itaque ipsa 
+        dolore.</p>
+    
+        <div class="dentro-box"></div>--> 
+    </div>
+    
+    <div class="box-2">
+        <p>blocco 2</p>
+    </div>
+    <div class="box-3">
+        <p>blocco 3</p>
+    </div>
+  
+    <div class="box-4">
+        <p>Blocco 4</p>
+    </div>
+
+</div>
+<!--fine contenitore-->
+<div class="griglia">
+   <div>Elemento 1</div>
+   <div>Elemento 2</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<!-- Nella sezione head troviamo
+ le istruzioni per il browser e per 
+ i motori di ricerca    -->
+<head>
+    <!--meta informazione che dice al browser
+    che sono utilizzati i caratteri latini 
+    alfanumerici-->
+    <meta charset="UTF-8">
+    <!--Adatta proporzionalmente i contenuti allo schermo 
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titolo dato alla scheda del browser, ed è anche il titolo in
+     azzurro che compare sui motori di ricerca-->
+    <title>Home Page | Servizi di Sviluppo</title>
+    <!--Descrizione che compare sui motori di ricerca-->
+    <meta name="description" content="Servizi di Sviluppo Web">
+    <!--Parole chiave che aiutano a identificare il sito sulla ricerca-->
+    <meta name="keyword" content="sviluppo web, servizi web, Home Servizi, Home Sviluppo">
+    <!--Facoltativamente potrei inserire l'autore della pagina web-->
+    <meta name="author" content="Marco Consiglio">
+    <!--Applicazione usate per creare la pagina web-->
+    <meta name="generator" content="visual studio code">
+    <!--Meta tag robots servono ai motori di ricerca come istruzioni per capire se una
+    pagina deve essere indicizzata sul motore di ricerca(indicizza index) oppure no (se non voglio indi
+    cizzare noindex) , e follow se nella indicizzazione vanno seguiti i collegamenti ad altri contenuti
+    oppure no (nofollow)-->
+    <meta name="robots" content="index,follow">
+</head>
+<!--Nel body vanno i contenuti sullo schermo-->
+<body>
+<!--I titoli vanno dal tag h1 ad h6 dal piu grande al piu piccolo-->    
+<h1>Titolo Grande</h1>
+<h2>Sotto titoli</h2>
+<!--tag che crea un linea-->
+<hr>
+    <!--il tag p sta identificare un paragrafo e ogni tag a delle proprieta intrinseche che posso
+    modificare mediante attributi o con l'utlizzo di un altro linguaggio css-->
+<p>Lorem ipsum dolor sit amet, consectetur
+     adipisicing elit. In incidunt architecto
+     <!--strong serve per indicare una parola chiave e mette un testo in grassetto
+     mentre sup mette un testo in apice e sub in pedice, mentro con del un testo barrato al centro--> 
+     magni voluptatum <strong>quaerat</strong>  <del>ut</del> ea si<sup>t</sup> inventor<sub>e</sub> 
+     voluptas? 
+     <!--mark evidenzia un testo di colore giallo-->
+     <mark>Deserunt</mark> dignissimos
+     <!--br manda un testo a capo-->
+     <br> sed corrupti aspernatur <strong><i>aperiam?</i></strong>
+<!--u identifica un testo sottolineato mentre i in corsivo-->
+    Ad excepturi <u>provident</u> aperiam <i>provident</i></p> 
+    <!--paragrafo con rientro del testo-->   
+<blockquote>
+    Lorem, ipsum dolor sit amet consectetur <mark>adipisicing elit.</mark>elit. Optio incidunt in odio cupiditate unde sapiente, laboriosam praesentium, sequi quia, autem dicta placeat aut itaque dolore aliquid at eius quis omnis.
+</blockquote>
+<!--blocco di testo in corsivo per gli indirizzi di un attività-->
+<address>
+    Via nomentana <mark>25</mark>
+    <strong>Roma</strong><br> Cap 00100
+</address>
+<br>
+<!--blocco di testo in stile macchina da scrivere-->
+<code>
+    Testo in stile macchina da <strong>scrivere</strong>
+</code>
+<!--tag di scorrimento del testo da destra a sinistra sara marquee-->
+<br>
+<marquee>Testo in <mark>scorrimento</mark></marquee>
+</body>
+
+</html>

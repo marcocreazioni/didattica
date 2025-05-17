@@ -1,0 +1,53 @@
+<?php
+
+/* commento multi riga  */
+// COmmento in una riga
+/* if esprime una condizione (condizione che si deve verificare) dopo la condizione se verificata 
+deve eseguire il contenuto nella parentesi graffa {operazione da svolgere } 'else' ipotizza
+l'eventualita in cui la condizione di if {operazione da svolgere}. 
+($_POST(cattura) ['attributo name inserito nel form'] (posso diventare cosi valori di una variabile) != (diverso da) ('') vuoto) && significa and
+cio che significa che si devono verificare allo stesso tempo tutte le condizioni imposte 
+ (stringa da modificare a seconda del form e questa && $_POST['cognome']) */
+if($_POST['nome'] != '' && $_POST['cognome'] != '' && $_POST['email'] != '' && $_POST['telefono'] != ''  && $_POST['partitaiva'] != '' && $_POST['indirizzo2'] != ''  && $_POST['citta'] != '' && $_POST['stato'] != '' && $_POST['cap'] != '' && $_POST['oggetto'] != '' && $_POST['messaggio'] != '' && $_POST['privacy'] != '' && $_POST['giorno-ora'] != '') {
+	
+	/* qui vengono generate 3 variabili $header, $subject, $message */
+	$headers  = 'MIME-Version: 1.0' . "\r\n";
+	/* Richiamo delle proprieta di composizione del messaggio di posta elettronica */
+	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+     /* il simbolo . e una forma di concatenazione con .= abbiamo un completamento di altre infornmazioni
+	 associate alla variabile prinicipale 'Content-type: text/html;' sta ad indicare
+	 che sara un messaggio che puo usare il linguaggio html "charset=iso-8859-1'" Quantita di caratteri
+	 ovvero simboli supportati nellla mail  */
+	$headers .= 'From: ' . $_POST['nome'] . $_POST['cognome'] . $_POST['indirizzo'] . $_POST['telefono']. $_POST['indirizzo1'] . $_POST['indirizzo2'] . $_POST['citta'] . $_POST['stato'] .  $_POST['cap'] . '<' . $_POST['email'] .'>'. $_POST['privacy'] . "\r\n" .
+    'Reply-To: ' . $_POST['email'] . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+	/* successivamente aggiunge le informazioni che la mail dovra contanere e viene anche definita la mail
+	al quale rispondere e con X-Mailer indica che sara utilizzato il php come comando di invio (utilizzabile
+	dalla versione 7 e successivi */
+	$subject = 'Nuova mail dal sito ' . $_POST['oggetto'] ;
+	/* in subject inserisce l'oggetto del messaggio */
+	$message = '<b>Nome:</b> '.$_POST['nome'].'<br>
+	<b>Email:</b> '.$_POST['email'].'<br>
+    <b>Oggetto:</b> '.$_POST['oggetto'].'<br>
+	<b>Messaggio:</b> '.$_POST['messaggio'];
+	/* 'gli elementi presenti tra gli apici sono testi che posso personalizzare a piacimento e qui con
+	messagge viene formattato il messaggio */
+	
+	/* qui abbiamo una funzione preimpostata chiamata mail (phpmail) e dentro ci sono
+	degli argomenti di una funzione (indirizzo email a cui va inviato, seguito dall'oggetto $subject,
+	$message,$headers)   */
+	mail( "info@indirizzosito.it", $subject, $message, $headers ); //  Replace with your email 
+	/* se il server ci risponde positivamente stampa (echo) 'il messaggio e stato inviato' */
+	echo '<div class="alert alert-success alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			Il tuo messaggio è stato inviato
+		</div>';
+	
+}else{
+			/* echo stampa la condizione non verificata ' ci sono campi da compilare */
+	echo '<div class="alert alert-danger alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			<b>Ci sono dei campi da compilare!</b>
+		</div>';
+}
+?>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!--Attributi html (identazione del codice
+ scrittura formale del codice) e possono attivare opzioni
+ e funzioni all'interno di un tag align="" tra le virgolette
+ va sempre inserito un valore. Per ogni attributo
+ c'è sempre un elenco di uno o piu valori ammessi
+ per un determinato attributo 
+ Esempio i valori ammessi da align sono i seguenti:
+ left ("preimpostato")
+ center (centro) 
+ right (destra)
+ justify (giustica dispone il testo su 
+ un riga nel suo intero spazio)
+ -->
+   <h1 align="center">Titolo</h1>
+   <p align="justify" title="testo segnaposto">Lorem, ipsum dolor 
+    sit amet consectetur adipisicing elit. 
+    Assumenda, quisquam eveniet? Maxime commodi
+     excepturi dolore eligendi quos ex laudantium aliquam error delectus sint,
+      nam quis officiis quibusdam! Dolorum, quidem ducimus.</p>
+    <!--Contenitore delle immagini (HTML5)-->
+    <figure>
+     
+     <!--le immagini godono di un attributo obbligatorio
+     src (search) (URL >> posizione di un contenuto in una directory dello spazio
+     web di root(cartella principale) URL INTERNO (posizione all'interno della mia directory)
+     URL ESTERNO (posizione all'esterno della mia directory)  ) 
+     -->
+     <img src="https://cdn.pixabay.com/photo/2025/05/07/18/46/lake-9585821_960_720.jpg">
+      <!--url esterno-->
+      <!--didascalia dell'immagine-->
+    <figcaption>Imbarcazione sul lago</figcaption>
+
+    </figure>
+    <!--attributi facoltavi sono le dimensione 
+    (larghezza si usa width ammette diverse unita di misura
+    px,vw,em, senza mettere unita di misura il browser
+    interpreta il numero come pixel,la % sarebbe piu indicata
+    ) mentre per discliplinare l'altezza si puo usare attributo
+     height (da indicare in pixel) se vogliamo che 
+     l'immagine mantenga le stesse proporzioni, 
+     per i motori di ricerca e per i dispositivi voice 
+     usamio l'attributo alt che una descrizione testuale dell'immagine
+     facoltaviamente inoltre possiamo darne un titolo-->
+    <img src="immagini/immagine.jpg" width="140px" height="140px" alt="luna con sfondo stellato illustrazione" title="Luna"> 
+      <!-- url interno-->
+      <!--contenitore dei contenuti video (HTML5)
+      che ha attributi obbligatori come
+      ad esempio controls che attiva i controlli
+      del video altri attributi sono autoplay e muted e poster
+      seguito dall'immagine copertina-->
+    <br>
+       
+      <video width="400px" height="200px" controls poster="immagini/immagine.jpg">
+        <!--usiamo il tag source per inidicare
+        la posizione del video sorgente o eventualmente
+        alternativi-->
+      <source src="video/Project-2.mp4" type="video/mp4">
+      <!--eventuali versione o formati alternativi-->
+      <source src="video/Project-2.avi" type="video/avi">
+      
+    </video>  
+      <br>
+     <!--Contenitore suoni che richiede
+     l'attributo controls, autoplay, muted, preload,
+     loop per la ripetizione--> 
+       <audio controls>
+        <source src="suoni/voce.mp3" type="audio/mp3">
+       </audio>
+</body>
+</html>

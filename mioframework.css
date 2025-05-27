@@ -1,0 +1,45 @@
+/*impaginazione */
+.sezione {width: 100%;
+          overflow: auto;
+          display: flex;
+         
+}
+.mezzasezione {
+   flex: 4;
+   overflow: auto;
+
+}
+.terzo-sezione {
+    flex: 2;
+    overflow: auto;
+}
+/*colori */
+.arancio {
+    background-color: orange;
+}
+.blue {
+    background-color: aqua;
+}
+.corallo {background-color: coral;
+}
+
+/* reset */
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+* {box-sizing: border-box;
+
+}
+.menu li {display: inline-block;
+
+}
+.centra {
+      text-align: center;
+      display:block;
+      align-items: center;
+}
+.testogreen {
+    color: green;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<style>
+.blocco {
+min-height: 300px;
+width: 100%;
+background-color: black;
+background-image: url('https://pngimg.com/uploads/autumn_leaves/autumn_leaves_PNG3612.png');
+background-size: auto;
+background-repeat: no-repeat;
+/* background-clip: 300px; */
+/* Se vogliamo spostare la posizione di un oggetto privo di sfondo possiamo cambiarne 
+la posizione rispetto all'area di inserimento */
+background-position-x: 50%;
+background-position-y: 0px;
+text-align: center;
+margin-top: -50px;
+}
+.blocco p { 
+color: white;
+font-size: 50px;
+
+}
+/*parametri calcolati */
+@media only screen and (max-width: 380px) {
+/* proprieta dimensionale width: si aggiunge calc (50% - 25%) e l'operazione traparentesi da effettuare */
+.blocco {
+min-height: calc(300px - 50%);
+background-position-x: calc(50% - 25%);
+}
+.blocco p { 
+font-size: calc(50px - 25%);
+
+}
+</style>
+<body>
+<div class="blocco">
+<p>Testo</p>
+</div>
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>

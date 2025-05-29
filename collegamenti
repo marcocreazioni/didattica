@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collegamenti</title>
+</head>
+<body>
+    <!--segnalibro della parte superiore-->
+     <a name="su">parte alta</a>
+    <!--Attenzione quando rinominate un file o create un collegamento
+    non devono essere presenti simboli speciali ($#àò§ù"£€) neanche numeri
+    (123456+-*/)perchè non sono indicizzabili e spazi-->
+   <h1>Collegamenti</h1>
+    <p>Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Delectus hic est laudantium 
+        deserunt fugit vitae sapiente blanditiis alias molestiae modi consectetur sunt labore provident quibusdam 
+        facilis officia, sint assumenda
+        <!-- COllegamento ipertestuale a ha sempre obbligatoriamente l'attributo href="" 
+         con il percorso del collegamento 
+         facoltativamente ad un collegamento possiamo associare un
+         attributo chiamato target 
+         (valori ammessi da target: 
+          _self  (apre il collegamento nella stessa finestra)
+          _parent (apre il collegamento nella stessa finestra (sicuro ed esterno))
+          _blank (apre il colleamento aprendo una nuova scheda del
+          browser)
+          _new (apre il collegamento in una finostra del browser)
+          (!ATTENZIONE: Se il browser è impostato sull'appertura
+          di una nuova finestra aprendo una scheda _new funzionera
+          allo stesso modo di blak cioe aprendo una nuova scheda)
+          )
+         -->
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure et illum ab autem similique, explicabo distinctio provident obcaecati laborum fuga totam veritatis nobis, ut ratione? Hic commodi reiciendis reprehenderit in.</p>
+        <a href="index.html" target="_blank">Home</a>
+        <br>
+        <!-- Esempio di collegamento ad un contenuto presente
+         in una cartella secondaria rispetto alla cartella principale-->
+        <a href="inglese/collegamenti.html">English Version</a>
+        <br>
+        <!--Esempio di collegamento contenuto presente in iternet
+        inserisco quello che si vede nella barra degli indirizzi
+        del browser-->
+         <a href="https://it.wikipedia.org/wiki/Collegamento_ipertestuale">Wikipedia</a> 
+        explicabo.</p>
+        <!--collegamenti ad indirizzi di posta elettronica
+        vanno inseriti con la formula mailto:indirizzo di posta
+        elettronica aggiundo alla mail ?subject=oggetto si puo precompilare
+        l'oggetto del messaggio che sara inviato per i collegamenti
+        email non è ammesso l'attributo target-->
+        <a href="mailto:info@prova.it?subject=oggetto%messaggio">info@prova.it</a><br>
+        <!-- COllegamenti a numeri di telefono vanno inseriti con la formula 
+         tel:seguito dal numero di telefono compreso di prefisso internazionale-->
+         <a href="tel:+390813635">081 36 35</a><br>
+         <!--collegamento alla mmessaggistica di whatsapp
+         https//wa.me/seguito dal numero di telefono compreso di prefisso senza
+         lo zero o il + iniziale per aggiungere al collegamento
+         un messaggio di cortesia aggiungiamo al numero la formula ?text= seguito
+         dal messaggio di cortesia. Attenzione per indicare gli spazi
+         del messaggio usate la sequenza di caratteri %20
+          -->
+         <a href="https//wa.me/393791503035?text=ti%20contatto%20dal%20sito">Whatsapp</a><br> <br>
+         <!--collegamento ad una mappa con l'utilizzo di un pulsante (button è il tag
+         che genera un bottone)-->
+         <a href="https://maps.app.goo.gl/FpKQ59wYJVmysjwF9"><button>Vail Alla mappa</button></a><br><br>
+         <!--collegamenti sospesi si usa il cancelletto -->
+         <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422688.png"></a>
+         <!--Per un creare un collegamento interno ad una stessa pagina 
+         dobbiamo prima generare dei segnalibri ovvero i punti di destinazione
+         della pagina-->
+         <!--nella destinazione andiamo a creare un segnalibro-->
+         <br><br><br>
+
+         <!--esempio di segnalibro-->
+         <a name="giu">parte bassa</a><br><br>
+         <!--esempio di collegamento ad un segnalibro
+         inseriamo href="e al cui interno inseriamo il nome del segnalibro
+         inserendo il simbolo del # all'inizio"-->
+         <a href="#su">vai su</a>
+
+    </body>
+</html>

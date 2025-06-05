@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Liste ed elenchi</h1>
+<!--Blocco lista puntate ul gli elementi prendono il tag li-->
+<ul>
+    <li>Scuola</li>
+    <ul>
+        <li>Elementari</li>
+        <li>Superiore</li>
+        <li>Medie</li>
+        <li>Universita</li>
+        <ul>
+            <li>Triennale</li>
+            <li>Magistrale</li>  
+        </ul>
+    </ul>
+    <a href="#"><li>Casa</li></a>
+    <ol>
+        <li><a href="#">in città</a></li>
+        <li>al mare</li>
+    </ol>
+    <li>
+       <p>
+        La mie notizie del giorno sono promettenti
+       </p>
+    </li>
+    <li>Sport</li>
+</ul>
+
+<!--blocco liste numerate ol gli elementi prendono il tag li-->
+<ol>
+    <li>Roma</li>
+    <ol>
+        <li>Viterbo</li>
+        <li>Latina</li>
+        <ol>
+            <li>Formia</li>
+            <li>Gaeta</li>
+        </ol>
+        <li>Rieti</li>
+        <li>Frosinone</li>
+    </ol>
+    <li>Milano</li>
+    <ul>
+        <li>Bergamo</li>
+        <li>Brescia</li>
+    </ul>
+    <li>Torino</li>
+    <li>Napoli</li>
+</ol>
+</body>
+</html>

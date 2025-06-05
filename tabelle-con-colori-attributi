@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* Tabella */        
+table {border:1px solid;
+       border-collapse: collapse;
+}
+th , td {border:1px solid;
+         
+
+}
+caption {border: 1px solid;
+}
+/* Modifiche al paragrafo */
+p {text-align: justify;
+
+}
+
+    </style>
+</head>
+<body>
+    <center><h1>Tabelle</h1></center>
+    <!--Le tabelle vengono introdotte da table 
+    e le tabelle supportano attributi dimensionali-->
+    <table width="100%">
+        <caption>Contatti</caption>
+       <!--area di intestazione-->
+       <thead>
+        <!--Le righe si tracciano con <tr> -->
+              <tr style="background-color: cornflowerblue;color:white">
+                   <!--Le celle di intestazioni hanno il tag
+                   th e definiscono con il numero anche quelle che sono il numero di colonne
+                   -->
+                   <th>Nome</th><th>Cognome</th><th>Città</th>
+              </tr>
+       </thead>
+       <!--area del corpo tabella-->
+       <tbody style="background-color: aqua;">
+               <tr>
+                    <!--le celle non di intestazione hanno il td
+                    per unire due o piu celle verticalmente si
+                    usa rowspan-->
+                    <td><b>Mario</b></td><td>Rossi</td><td rowspan="2">Milano</td>
+
+               </tr>
+               <!--l'attributo bgcolor permette di aggiungere
+               un colore di sfondo in alternatuva al css-->
+               <tr bgcolor="red">
+                    <td>Mario</td><td>Aldebrandi</td>
+               </tr>
+       </tbody>
+       <!--pie di pagina dellla tabella-->
+        <tfoot style="background-color:bisque">
+               <tr>
+                <!--Attributo colspan permette di unire celle orizzontalmente-->
+                    <td colspan="2">nominativo</td><td align="center"><img src="https://cdn.pixabay.com/photo/2022/10/17/04/07/porto-7526614_960_720.jpg" width="50px" height="50px"></td>
+               </tr>
+        </tfoot>
+        </table> 
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iure aliquam assumenda quasi impedit cum! Temporibus quisquam doloribus ducimus, adipisci ea, impedit voluptatum eaque distinctio officiis, dignissimos illum nulla hic.
+</p>
+
+</body>
+</html>

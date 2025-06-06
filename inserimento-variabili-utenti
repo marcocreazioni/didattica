@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+h1 {text-align: center;}
+
+    </style>
+</head>
+<body>
+ <!--Variabili immesse dall'utente (numeri o stringhe)-->
+ <script>
+/* se ad una variabile assegnamo il valore prompt che una funzione
+che accetta due argomenti,il primo la descrizione del valore da inserire, mentre
+il secondo il valore da immettere */ 
+ var uno = prompt("Immetti il tuo nome","");
+ var due = prompt("Immetti il tuo cognome","" )
+ document.write("<h1>" + uno + " " + due + "</h1>");  
+  
+  </script>  
+
+
+</body>
+</html>

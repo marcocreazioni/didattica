@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+h1 {text-align: center;}
+
+    </style>
+</head>
+<body>
+    <!--attenzione l'id va messo sempre prima dell'attivazione dello script-->
+   <h1 id="stampa"></h1> 
+ <!--Variabili immesse dall'utente (numeri o stringhe)-->
+ <script>
+/* se ad una variabile assegnamo il valore prompt che una funzione
+che accetta due argomenti,il primo la descrizione del valore da inserire, mentre
+il secondo il valore da immettere */ 
+ var uno = prompt("Immetti il tuo nome","");
+ var due = prompt("Immetti il tuo cognome","");
+/* GLi operatori per fare calcoli con le variabili se sono variabili numeriche*/ 
+// + fa la somma di due variabili o semplici puo aggiunge dei numeri 
+// - sottrae due valori o due variabili
+// * moltiplica due valori o due variabili 
+// / divide due valori o due variabili 
+// Consiglio per piu operazioni di creare variabili che facciano delle operazioni 
+/* var ciao = 1;
+   var bao = 2; 
+var cao = bao * ciao;
+var divido = cao / 2;
+
+ var nominativo = uno + " " + due;
+ // document.write("<h1>" + uno + " " + due + "</h1>");  
+ /* Se vogliamo che il risultato di un operazione sia stampato su un popup
+ usiamo la funzione predefinita alert */
+ // alert(nominativo); 
+ /* Se vogliamo stampare un contenuto o attivare uno script all'interazione con
+ un contenuto usiamo le funzionano che prelevano l'ID di un tag html */ 
+document.getElementById("stampa").innerHTML = nominativo;
+/* Se vogliamo che il risultato nella console del broweser 
+console.log("Il nominativo è: " , nominativo); */
+  </script>  
+
+
+</body>
+</html>

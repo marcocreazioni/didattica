@@ -1,0 +1,63 @@
+/*HTML */
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+<style>
+h1 {text-shadow:1px 1px black;
+}
+
+
+
+</style>
+</head>
+<body>
+ <h1>Integrazione in pagina JS</h1>
+    
+<script>
+/* QUesto un commento in JS uguale al css */
+// Commento su singola riga
+/* var indica una variabile e nello spazio
+accanto si da un nome alla variabile nel nostro
+caso "ciao" e per ogni variabile va associato
+sempre un valore con il simbolo dell'uguale 
+= "benvenuti" per esempio è un valore o effettuare
+operazioni tra piu valori  */ 
+var ciao = "Benvenuti";
+var miao = "Allievi";
+var tutto = ciao + " " + miao;
+/* Attenzione posso effettuare operazioni con le 
+variabili a patto che le variabili siano della stessa
+tipologia. Ad esempio nel nostro caso sono stringhe
+altrimenti dovro convertire le variabili incompatibile */
+/*-----------------------------------------------*/
+/* una volta identificate le variabili posso generare
+delle funzioni che posso accettari le variabili
+come argomenti*/
+/* nell'esempio utlizziamo una funzione realizzata
+da chi ha generato il linguaggio di programmazione
+javascript che prende il nome 
+(document. è un oggetto, al cui interno ci sono
+delle sottofunzioni (classi)) dopo aver menzionato
+la funzione. 
+//------------------
+// Attenzione se nella stringa vogliamo fare uso del css
+// in linea non dobbiamo usare le doppie virgolette ma il singolo apice */
+document.write ("<h1 style='text-align:center;color:orange'>" + tutto + "</h1>");
+
+</script>
+<!--inserimento esterno di javascript-->
+<script src="mio.js"></script>
+
+
+</body>
+</html>
+
+/* javascript */
+var pasta = "la pasta è buona";
+/*nel caso voglia stampare un tasto da un javascript file esterno
+rispetto a document.write utilizziamo la piu funzionale document.writeln
+che permette di stampare il testo nel punto in cui c'è il javascript esterno */
+document.writeln (pasta);

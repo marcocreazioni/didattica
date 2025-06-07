@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Core di Jquery 3-0-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
+    <!--Jquery UI-->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+     integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+    <!--Temi grafici gia pronti-->
+    <script src="https://releases.jquery.com/git/ui/jquery-ui-git.js"></script>
+    
+    <!--css jequery-->
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+   <!-- <link rel="stylesheet" href="https://code.jquery.com/resources/demos/style.css"> -->
+  <style>
+  #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; border-radius: 5px;}
+ .ui-widget-content {border: none;
+    background: transparent;
+}
+.ui-state-highlight {background-color: orange;
+                     
+}
+  </style>
+</head>
+<body>
+
+
+
+<div id="draggable" class="ui-widget-content">
+  <img src="https://cdn-icons-png.flaticon.com/128/18020/18020038.png">
+</div>
+ 
+<div id="droppable" class="ui-widget-header">
+  <p>Drop here</p>
+</div>
+
+     
+     
+     
+     
+<!--script di funzionamento-->  
+     <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "img" )
+            .html( "Bravo hai centrato" );
+      }
+    });
+  } );
+  </script>
+</body>
+</html>

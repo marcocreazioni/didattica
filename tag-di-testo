@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!--QUesto è un commento-->
+    <meta charset="UTF-16">
+    <!--tipologio di simboli alfanumerici -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Indica al browser di scalare i contenuti in base 
+     alle dimenisione dello schermo-->
+
+    <title>Home Page di Mio sito</title>
+    <!--titolo sulla scheda del browser e sui motori di ricerca (non andate
+    oltre i 70 caratteri)-->
+    <meta name="description" content="descrizione della pagina web">
+    <!--Descrizione della pagina (consiglio seo (non creare descrizioni 
+    superiori a 160 caratteri) )-->
+    <meta name="robots" content="index,follow">
+    <!--istruzione per i motori di ricerca (index indicizza, noindex(non indicizzo)
+    , follow (segui i collegamenti) e nofollow non seguire i collegamenti)-->
+    
+    <!--meta tag facoltativi-->
+    <meta name="author" content="Mario ROssi">
+    <meta name="generator" content="visual studio code">
+    <!--parole chiave-->
+    <meta name="keyword" content="mio sito web, sito web, mio sito">
+     <!--favicon tipo immagine con estensione png-->
+    <link rel="icon" type="image/png" sizes="32x32" href="immagini/favicon-32x32.png">
+</head>
+
+<body>
+<!--center e un tag che posiziona un blocco al centro-->
+   <center><h1>Tag di tipo <mark>testo</mark></h1></center>
+   
+   <!--titolo grande-->
+   <h2>Sottotitolo</h2>
+   <h3>Titolo di un paragrafo</h3>
+   <h4>Titolo di un sotto paragrafo</h4>
+   <h5>Titolo di una sezione del paragrafo</h5>
+   <h6>Mini titolo</h6>
+   <!--titolo piu piccolo-->
+    <!--Paragrafo--> 
+<p>Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. <strong>Repellendus</strong> voluptates <del>porro</del>,
+     hic harum <u>aliquid</u> ab e<sub>x</sub> <i>aliquid</i> enim quaera<sup>t</sup> 
+     <!--br manda a capo di un riga, la u sottoline un testo, la i mette un testo
+     in corsivo, del è un testo sbarrato al centro, sup mette il testo in apice
+     mente sub in pedice-->
+<br>
+     praesentium quidem sed earum veniam? Est voluptatum 
+     dolore ratione provident earum!
+</p>
+<!--hr crea linee sullo schermo, br e hr non hanno tag di chiusura-->
+<hr>
+     <!--Indirizzo--> 
+<address>
+<strong>Marini</strong> Snc      <br>
+Via Marina <i>58</i>    <br>
+Roma         <br>
+</address>
+<!--Citazione--> 
+<blockquote>
+    Paragrafo con riento. Utile per citazioni
+</blockquote>
+<!--Blocco per inseri un contenuto scritto a macchina-->
+<code>
+    Testo per <b>inserire</b> un copyright o un contenuto di codice
+</code>
+<!--testo in scorrimento orizzonale mentre mark evidenzia il testo di giallo
+per comprendere meglio il codice facciamo rientrare i tag piu interni per
+non confonderli con quelli piu esterni (identazione) -->
+<marquee>
+   <mark>
+      <strong>testo</strong>
+   </mark> in scorrimento
+</marquee>
+
+</body>
+</html>

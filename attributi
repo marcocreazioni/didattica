@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributi</title>
+</head>
+<body>
+    <!--attributo di allineamento: align e ammette i seguenti valori
+    left (valore intrinseco),right per spostere l'allineamento a destra
+    , center invece allinea il testo al centro -->
+    <h1 align="center" title="titolo pagina">Attributi</h1>
+    <!--Justify allinea il test e lo distribuisce in maniera equa nello
+    spazio.-->
+    <p align="justify" title="Paragrafo segnaposto">Lorem ipsum dolor 
+    sit amet consectetur adipisicing elit.
+    <!--se abbiamo intenzione di creare un eccezzione all'interno
+    di un blocco di testo posso creare un blocco chiamato span
+    che puo avere proprieta divese rispetto al blocco che lo contiente--> 
+    Natus numquam possimus <span style="color:red">id neque similique</span><br> 
+    doloribus nobis, eum consequuntur cupiditate corrupti eius, ea necessitatibus, quas facere earum dignissimos quia quam dicta?</p>
+    <!--attributi facoltativi sono per esempio title che riassume
+    i contenuti di un tag-->
+</body>
+</html>

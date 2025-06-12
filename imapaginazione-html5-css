@@ -1,0 +1,76 @@
+<!-- documento html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Inserimento di un css esterno -->
+     <link rel="stylesheet" href="stile.css" type="text/css">
+    <!--inserimento di un css in pagina-->
+     <style>
+h1 {text-align: center; 
+
+}
+
+
+
+     </style>
+</head>
+<body>
+ <!-- Impaginazione HTMl5-->
+<!--testata del sito web con css in linea-->
+ <header style="background-color: darkorange;">
+  <h1> Impaginazione HTML 5 </h1>
+
+</header>
+<nav>
+    <!-- blocco che puo ospitare un menu-->
+</nav>    
+<!--corpo centrale della pagina-->
+<main>
+ <!--aree sezionali del maio-->   
+<section>Sezione</section>
+
+<section>Sezione</section>
+
+<section>
+   <!--aree sezionali fi un blog-->   
+  
+ <article>Artiocolo in stile blog </article>
+ <aside>Spalla dell'articolo</aside>
+
+
+</section>
+
+</main>
+<!--area footer del sito-->
+<footer>
+<p>Pie di pagina - parte bassa della pagina</p>
+</footer>
+
+</body>
+</html>
+
+<!-- documento css -->
+
+/* Creazione di un documento esterno 
+TAG HTML O UNA CLASSE O UN ID DA MODIFICARE (SELETTORE) { (INDICAZIONI DELLE PROPRIETA DI MODIFICARE) : VALORE DA MODIFICARE (E' POSSIBILE INSERIRE
+SOLO VALORI AMMESSI DALLA PROPRIETA) }   
+*/
+/*tag*/
+body { 
+    /* cambia lo sfondo del testo */
+    background-color: antiquewhite;
+    /* colore del testo */
+    color: black;
+    /* allineamento del testo text-align (center,left,right,justify, start, end) */
+    text-align: center;
+    /* larghezza e altezza (px, em, Vv, %) */
+    width: 90% ;
+    /* auto indica un valore automatico per l'altezza */
+    height: auto;
+
+      
+
+}

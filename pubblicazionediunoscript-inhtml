@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="ciao" class="ciao"></p>    
+<!-- applica una funzione su un elemento html di stampa al clic su un determinato oggetto -->
+<button type="button" onclick="document.write(quadrato)">Clicca qui</button>
+
+<script>
+  // X variabile 
+var x = 10;
+  //quadrato variabile 
+var quadrato = x * x;
+/* istruzione che riprende la funzione document che riprende oggetti che devono interagire con un documento(). dopo il . indichiamo
+Il comportamento che document deve avere se il comportamento richiede una funzione. le funzione
+si riconoscono per che hanno un un nome e un valore inserito tra parentesi e tra parentesi sono gli argomenti 
+accettati dalla funzione se presente un altro elemento dopo l'argomento vuol dire che la funzione ha a sua volta un comportamento
+implementato precedentemente nel casso di .innerHTML significa che il risultato va pubblicato accettando il linguaggio html
+*/ 
+document.getElementsById(ciao).innerHTML = quadrato;
+ 
+
+    
+
+  
+  // stapa un semplice messaggio
+//document.write("Hello World!" + " " + sum ); // Prints: Hello World!
+
+
+
+</script>
+  
+</body>
+</html>
+
+
+</body>
+</html>

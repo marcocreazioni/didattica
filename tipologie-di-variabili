@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabili</title>
+</head>
+
+<body>
+<h1>Le variabili base</h1>    
+
+<script>
+//alle variabile possono essere assegnate alcune tipologie di valori:
+// Variabile della famiglia numerica (integer (numero intero))    
+var a = 3;
+//variabile numerica (float (numero a virgola mobile)(la virgola e sostituita dal ".")) 
+var b = 3.5;
+/* variabili con esponenziali (Si concatena allla letterea e il numero di esponenti da aggiungere
+in termini di 0 e+5 ad esempio aggiungi 5 volte lo zero dopo il numero e-5 ad esempio meno 5 numeri); */
+var numeri = 4e+5;
+var neg = 4e-5;
+document.write("esponenziale positivo:" + numeri + " " + "esponenziale negativo:" + neg + "<br>");
+/* variabili di tipo stringa */
+var stringa = "questa è una stringa";
+
+/*variabili booleane */
+var booleane = true;
+var booleane_2 = false;
+
+
+/* sovrascrittura delle variabili l'ultima sostituisce le altre */
+var t = 5;
+var t = 10;
+/* in alternativa possiamo resettare un valore di una variabile assegnando il valor "null" */ 
+var t = null;
+/* altre tipologie di variabile possono essere (liste/array) (oggetti), (funzione) */
+//__________________//
+/* oggetto */
+var oggetto = {
+//elementi di cui è composto l'oggetto
+veicolo: "ford",
+telaio: "accaio",
+motore: "ibrido",
+versione: 2
+
+}
+//________________________//
+/* elenchi liste di variabili (array) */ 
+var elenco = ["prima","seconda","terza"];
+//per richiamare o stampare un elemento dell'elenco inserine l'indice che parte da 0 tra le parentesi quadre
+document.write(elenco[1]); //stampera il secondo elemento dell'elenco
+
+//_____________________//
+/* Funzioni */ 
+var associofunzione = function() {
+    /* calcolo e operazione che la funzione deve restiutire */
+    return 5+6;
+};
+document.write(associofunzione);
+
+/* Le variabile possono essere inserite dall'utente richiamando un casella di imput o da un popup; */
+/* variabile di tipo stringa inserite in imput popup */
+var da_assegnare = prompt("Inserisci il numero di mele",""); 
+document.write("le mele sono: " + da_assegnare);
+
+/* per usare funzione di estensioni js con ecma script sostituiamo var con let; */
+let n = 5;
+/* valari che rimangono gli stessi all'interno del problema (ad esempio il pi greco) */
+const pi = 3.14159; 
+document.write(n);
+/* nella funzione document write o in qualsiasi funzione di stampa inserendo typeof viene
+stampata come output la tipologia di dato*/
+var c = "casa";
+document.write(typeof c); // non stampa il valore ma la tipologia di variabile ad esempio string
+
+</script>
+
+
+
+</body>
+</html>

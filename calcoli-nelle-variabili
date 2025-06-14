@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area del quadrato</title>
+</head>
+<body>
+<h1>Calcolo dell'area del quadrato e del perimetro</h1>
+<p id="stampa"></p>
+<script>
+var lato = prompt("inserire la misura del lato del quadrato"," ");
+// creo una variabile che calcoli l'area del quadrato 
+// * = moltiplicazione / = divisione + = somma - sottrazione;
+var perimetro = lato * 4;
+
+var area = lato * lato;
+
+document.getElementById("stampa").innerHTML = "Il perimetro è: " + perimetro + "<br>" + "l'area è " + area;
+
+
+</script>    
+    
+</body>
+</html>

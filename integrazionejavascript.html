@@ -1,0 +1,61 @@
+<!--dcumento html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- integrazione di un javascrit esterno-->    
+<script src="miojavascript.js"></script>
+<style>
+.sc {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    text-align: center;
+
+}
+
+</style>
+
+</head>
+<body>
+<!--attivatori (attributo)(onclic,onkeypress,onmouseover) javascript in linea con la funzione
+da attivare -->
+    <button onclick="document.write('l' + ' acqua e poca e la papera non galleggia')">un pensiero per te</button>
+<h1>Javascript</h1>
+<!--Js fa uso dell'attributo ID per prelevare e pubblicare informazioni-->
+<p id="script" class="sc"></p>
+
+<script>
+/* alla variabile a è assegnato il valore 5 */
+var a = 5;
+// funzione che pubblica un contenuto sulla pagina
+document.write(a);
+//--------
+var p = "il gatto ha mangiato il topolino";
+// funzione che pubblica il contenuto in un particolare id che si trova nella pagina
+document.getElementById("script").innerHTML = p;
+/* javascript richiede la presenza di un ID univoco e non è possibile avere piu tag con
+lo stesso id 
+Javascript riconosce come oggetti diversi i caratteri e minuscolo 
+qui "A" e differente rispetto ad "a"*/
+
+var t = "Mario ha caricato la pagina";
+//funzioni che pubblica su un popup al caricamento della pagina 
+alert(t);
+
+var verifica = "vediamo se funzione";
+// pubblicazione sulla console del browser per verificare la corretta esecuzione di uno script
+console.log(verifica);
+</script>
+
+
+</body>
+</html>
+<!--file allegato in javascript -->
+// creazione di una variabile a
+var a;
+// assegnazione del valore a 
+a = 10;
+// stampa il contenuto
+document.writeln(a);
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immagini</title>
+</head>
+<body>
+    <h1>Immagini e contenuti multimediali</h1>
+<!--contenitore delle immagine-->
+    <figure>
+<!--img vuole l'attributo src seguito dal percorso delle immagini, alle immagini
+sarebbe meglio indicarne la larghezza in % con l'attributo width (px,em,vw)
+l'altezza viene disciplinata con height e non va mai indicata in % (no%) (px,em,vw)
+se vogliamo mantenere la proporzionalita, per la seo bisgonerebbe
+aggiungere alle immagini un attributo alt seguito dalla descrizione dell'immagini -->        
+<img src="immagini/studente.jpg" width="100%" height="250px" alt="studente che studio
+al compure in un immagine in bianco e nero" title="studente,computer,apple">
+<!--posso inserirlo solo in un tag figure-->
+<figcaption>Didascalia dell'immagine</figcaption>
+    </figure>
+<!--tag img senza contenitore ed esterne in questo caso necessiteremo
+del suo indirizzo http completo e con estensione incluse -->
+ <img src="https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_960_720.jpg">  
+<!--didascalia generica-->
+ <caption>didascalia generica</caption>
+ 
+<!--inglobare video nel tag video contenitore, il tag video però ha alcuni
+attributi obbligatori come: 
+controls: per inserire i controlli,
+muted: per silenziare l'audio del video
+autoplay: per la partenza video 
+loop: per la ripetizione-->
+<video controls>
+    <!--percorso della sorgente del video (src) facoltativamente si puo aggiungere
+    -->
+<source src="video/Project2.mp4" type="video/mp4">
+<!--inoltre posso aggiungere altri formati con il tag source con l'estensione
+alternativa-->
+</video>
+<!--inglobare video nel tag video contenitore, il tag video però ha alcuni
+attributi obbligatori come: 
+controls: per inserire i controlli,
+muted: per silenziare l'audio del video
+autoplay: per la partenza video 
+loop: per la ripetizione-->
+<audio controls>
+<source src="musica/laura.mp3" type="audio/mp3">
+</audio>
+
+
+</body>
+</html>

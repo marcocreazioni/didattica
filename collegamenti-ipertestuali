@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag di collegamento</title>
+    <meta name="description" content="Lorem ipsum dolor sit amet consectetu">
+</head>
+<body>
+ <!--segnalibro della parte alta della pagina-->   
+ <a name="top"></a>   
+<h1>Tag di Collegamento</h1>
+<!--collegamento ad un segnalibro appena creato usando href="# + nome del segnalibro"
+se vogliamo creare un collegamento ad unsegnalibro di un altra pagina indichiamo la posizione e il segnalibro
+dell'altra pagina a href="altrapagina.html#via" inseriamo il percorso del file + # + nome segnalibro -->
+<a href="#giu">Vai giu nella pagina</a>
+<!--collegamenti tra contenuti (interni) l'attributo href è
+obbligatorio e si inserisci il percorso di un file nella cartella
+di root, e possiamo aggiungere inoltre un attributo target="" 
+che ammette i seguenti valori _self (collegamento si apre nella 
+stessa pagina), _new (apre il collegamento in una finestra, se il browser
+ha impostato l'apertura delle finestre,in schede, aprira una nuova
+scheda),_blank apre il collegamento in una nuova scheda -->
+<p>Lorem <a href="index.html" target="_new">sit amet</a> ipsum dolor sit amet consectetur adipisicing elit. Rem aliquam distinctio dolorum quia delectus beatae quasi reprehenderit provident perferendis praesentium quaerat, minima voluptatem! Fugit eius aliquid corrupti quos, perspiciatis debitis?</p>    
+<a href="immagini/logo.png" target="_blank"><button>Clicca qui per il logo</button></a>    
+<hr>
+<!--collegamenti esterni al sito dove viene inserito l'intero percorso di un contenuto a partire
+la protocollo http o https e aggiungiamo per la SEO ai collegamenti aggiungiamo un attributo rel che puo indicare i seguenti valori:
+ugc (user generated content), sponsored (collegamento ad una sponsorizzazione),dofollow (indica al motere di ricerca di indicizzare il contenuto del collegamento),
+nofollow (diciamo ai motori di ricerca di tralasciare i contenuti del link)-->
+<p>Lorem<a href="https://it.wikipedia.org/wiki/Pagina_principale#/media/File:La_bataille_d'Austerlitz._2_decembre_1805_(Fran%C3%A7ois_G%C3%A9rard).jpg" rel="nofollow"> ipsum</a> dolor sit amet consectetur adipisicing elit. Rem aliquam distinctio dolorum quia delectus beatae quasi reprehenderit provident perferendis praesentium quaerat, minima voluptatem! Fugit eius aliquid corrupti quos, perspiciatis debitis?</p>
+<hr>
+<!--collegamento ad un indirizzo email se vogliamo che il collegamento vada a precompilare anche
+l'oggetto del messaggio aggiungiamo alla mail info@marcocreazioni.it?subject=oggetto_della_mail-->
+<p>Lorem,<a href="mailto:info@marcocreazioni.it">mail</a> ipsum dolor sit amet consectetur adipisicing elit. Accusantium asperiores numquam autem necessitatibus iste adipisci repellat at, aut voluptatem dolorum libero ex consequatur sint totam perferendis. Labore at illum debitis!</p>
+<hr>
+<!--collegamento ad un numero di telefono inseriamo tel:seguito dal numero di telefono senza spazi
+comprensivo di prefisso internazionale-->
+<p>Lorem <a href="tel:+393791503035">379 150 30 35</a> ipsum dolor sit amet consectetur, adipisicing elit. Nam obcaecati amet aspernatur voluptate nihil dolores aliquam culpa, non in alias nobis repellat provident laborum, nostrum tempora quis commodi molestias a.</p>
+<!--collegamento alla messaggistica di whatsapp https://wa.me/numeroditelefono incluso di prefisso
+senza lo zero https://wa.me/393791503035?text=la%20contatto%20%dal%20sito ?text=la%20contatto%20%dal%20sito messaggio
+di cortesia all'apertura della chat-->
+<p>Lorem <a href="https://wa.me/393791503035">Whatsapp</a> dolor sit amet consectetur adipisicing elit. Nobis numquam ex perferendis sunt nulla. Sequi quam, ratione quae, autem doloribus illum alias asperiores similique enim incidunt id deleniti obcaecati magnam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ad, aliquid voluptas officia accusantium at delectus ullam reprehenderit, doloribus ipsum sit quos mollitia deserunt dolores qui harum quis necessitatibus repellendus!</p>
+<!--Creazione di collegamento a segnalibro (prima inseriamo i segnalibri con a e attributo name="nome del segnalibro")-->
+<a name="giu">qui in basso</a>
+<!--segnalibro della parte bassa-->
+</body>
+</html>

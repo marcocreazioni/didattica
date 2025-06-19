@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* colori: color colore del carattere */
+h1 {color:yellowgreen;
+ }
+ /* colori esadecimali */
+ p {color:#c8a160;
+
+ }
+ /* condifica rgb */
+span { color: rgb(70, 112, 96);
+
+}
+/* per lo sfondo si usa background-color */
+div { background-color: hsl(191, 67%, 25%);
+/* rgb differtisce da rgba per la presanza del canale alfa 0 trasparente
+a 1 a colore pieno */    
+      background-color: rgba(222, 209, 30, 0.829);
+      /* con background image linear gradient otteniamo una sfumatura 
+      l'importante che ogni colore sia separato da un virgola, nel primo parametro
+      nella parentesi tonda l'orientamento della sfumatura,in gradi con il suffisso
+      angolo + deg, oppure aggiungendo to + la direzione in inglese dopo il colore
+      posso indicare una % in termini di quantita)  
+      */
+      background-image: linear-gradient(45deg,orange 10%,red);
+/* per dimensioni utilizziamo le proprieta width (larghezza,
+height per l'altezza) */     
+/* width:  100%;
+height: 300px; */
+
+}
+/* radial gradient è una sfumatura ellittica che parte dal centro in forma
+ellittica, ma se vogliamo che la sfumatura crei un cerchio basta inserire circle */
+blockquote {background-image: radial-gradient(circle,red 30%,orange); 
+
+}
+h2 {background: linear-gradient(45deg,cyan,blue);
+    /* proprieta che obbliga una sfumatura o un immagine a ritagliarsi su una forma o sun
+    testo */
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+
+}
+/* bakground-image url e il percorso dell'immagine nelle parentesi
+tonde che intendiamo applicare come sfondo*/
+section {background-image: url(immagini/immagine.jpg);
+    /* proprieta dipendenti di background-image:
+    position indica la posizione delle immagine; */
+         background-position: center left;
+    /* background size definisce le dimensioni dello
+       sfondo e come si deve distribuire nel contenitore
+       posso indicare altezza e larghezza
+       o posso utlizzare alcuni parametri speciali
+        come contain che scala l'immagine 
+        mentre cover spalmera l'immagine in
+        tutto il contenitore*/
+         background-size: 200px; 
+      /* proprieta che decide se l'immagine deve ripetersi o no
+      (no repeat blocca la ripetizione, reapet-x repeat-y stabiliscono
+      la ripetizione verticale*/   
+         background-repeat: repeat;
+       /*background-attachment e la prorieta che permette 
+       (fixed attacca ai bordi del div l'immagine mentre scroll
+       permette all'immagine di scrollare nel contenitore */
+       background-attachment:fixed;  
+         color: white;
+         width:  100%;
+         height: 300px;
+       
+}  
+body {background-image: url('https://cdn.pixabay.com/photo/2016/09/13/20/26/texture-1668149_960_720.jpg');
+}  
+</style>
+
+
+<body>
+ <div>
+   <h1>Gestione dei colori</h1>
+   <!--eccezione ad un tag di testo-->
+   <p>Paragrafo <span>eccezione</span></p>
+
+ </div>
+ <h2>Testo sfumato</h2>
+ <blockquote>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias esse! Sapiente vitae porro ut, recusandae iusto natus! Molestiae quaerat sit itaque quisquam quas quae eligendi consequatur harum qui. Eius!
+ </blockquote> 
+  <section>
+    Sezione
+  </section>  
+</body>
+</html>

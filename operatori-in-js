@@ -1,0 +1,101 @@
+* POssiamo effettuare operazioni in js nei metodi di stampa, nelle variabili, nelle funzioni */
+var x = 10;
+var y = 4;
+alert(x + y); // 0utputs: 14 SOmma
+alert(x - y); // 0utputs: 6 Sottrazione
+alert(x * y); // 0utputs: 40 Molitplicazione 
+alert(x / y); // 0utputs: 2.5 Divisione
+alert(x % y); // 0utputs: 2 resto della divisione
+/* Se vogliamo effettura operazioni sulla stessa variabile possiamo usare gli operatori di assegnazione */
+var x;    // Declaring Variable
+ 
+x = 10;
+alert(x); // Outputs: 10
+ 
+x = 20;
+x += 30; //aggiunge 30
+alert(x); // Outputs: 50
+ 
+x = 50;
+x -= 20; //sottrae 20
+alert(x); // Outputs: 30
+ 
+x = 5;
+x *= 25;//moltiplica
+alert(x); // Outputs: 125
+ 
+x = 50;
+x /= 10; //dividere
+alert(x); // Outputs: 5
+ 
+x = 100;
+x %= 15; //restituisce un resto 
+alert(x); // Outputs: 10
+
+var str1 = "Hello";
+var str2 = " World!";
+ 
+alert(str1 + str2); // Outputs: Hello World! (Concatena due testi)
+ 
+var str3 = "gatto";
+
+str1 += str2;
+
+str1 += str3;
+
+document.writeln("str1"); // Output: "Hello World! Gatto "
+
+str1 += str2;
+alert(str1); // Outputs: Hello World! a (aggiunge alla prima variabile stringa la seconda)
+
+// INcrementare il valore di una variabile
+var x; // Declaring Variable
+ 
+x = 10;
+alert(++x); // Outputs: 11
+alert(x);   // Outputs: 11
+ 
+x = 10;
+alert(x++); // Outputs: 10
+alert(x);   // Outputs: 11
+ 
+x = 10;
+alert(--x); // Outputs: 9
+alert(x);   // Outputs: 9
+ 
+x = 10;
+alert(x--); // Outputs: 10
+alert(x);   // Outputs: 9
+
+// calcoli sulla logica
+var year = 2025;
+// && = significa che devono verifica entrambe le condizione stabilita e nei calcoli logici && = and 
+// || = significa che si deve verficare o una condizione o un altra quidni l'una esclude l'altra nei calcoli
+// logici equivale ad OR ('oppure')
+// != = significa che non deve verificarsi quella condizione e nei calcoli logici è = a not (non deve verificarsi)
+
+
+// Un anno per essere bisestile deve essere divisibile per 4 o per 400 se non lo è non è bisestile
+// if se (condizione che si deve verificare){ operazione da fare se si verifica la condizione }
+// altrimenti se non si verifica la condizione di if "else" { effutta l'operazione inserita nella parentesi graffa}
+if((year % 400 == 0) || ((year % 100 != 0) && (year % 4 == 0))){
+    alert(year + " è un anno bisestile");
+} else {
+    alert(year + " non è un anno bisestile.");
+}
+
+// legati ad i calcoli logici  il confronto e restituisce comeri risultato vero o falso
+var x = 25;
+var y = 35;
+var z = "25";
+ 
+alert(x == z);  // Outputs: true (vero) == uguale a 
+alert(x === z); // Outputs: false (non proprio identi perche sono numero e stringa) === identico a
+alert(x != y);  // Outputs: true (vero è diverso ) != diverso da 
+alert(x !== z); // Outputs: true  (vero non è identico ) !== non identico a
+alert(x < y);   // Outputs: true (vero) < minore di
+alert(x > y);   // Outputs: false (falso) > maggiore di 
+alert(x <= y);  // Outputs: true (vero) <= minore o uguale 
+alert(x >= y);  // Outputs: false (falso) >= maggiore o uguale
+
+

@@ -1,0 +1,50 @@
+// variabili stringhe puo accettare gli operatori + e - che servono per rimuovere o concatenare 
+var a = 'Hi there!'; 
+/* quando una variabile non è compatibile con le altre puo restituire una serie di errori ad esempio
+"undefined" o in caso variabile numeriche "infinity" se accetta inifiniti risultato "NaN" o restiture
+un Not a Number */
+/* Se un numero non ha la virgola e un numero (integer) ovvero intero */
+var b = 13; 
+/* se un numero ha la virgola, la vigola va indicata con il carattere . o floater, floating o a virgola mobile;*/
+var c = 13.5;
+/* se un numero ha un elevata quantita di esponent si aggiunge + o - a seconda
+del numero di 0 da aggiungere dopo il numero principale */
+var c = 4.25e+6;    
+/* una variabile booleana ammette solo due valori true or false (ovvero vero e falso)
+o il risultato di un calcolo*/
+var d = true;
+/* esiste una tipologia di variabile che definiamo "null" che rappresenta una variabile il cui
+valore viene resettata */
+var d = 5;
+var d = null;
+var d = 10; 
+/* variabili particolari sono invece sono quelle a cui assegniamo il valore 0 che rappresenta un
+valore numerico e " " la stringa vuota che e semplicemente un valore stringa non inserito */
+var e = 0; numero  
+var f = " "; stringa
+
+/* oppure interi oggetti (elementi completi con funzioni
+e altre variabili)  */
+var aula = {
+    "banco": 3 ,
+    "lavagna": "digitale ",
+    "allievo": "Mario Rossi"  
+}
+
+
+/*elenco di piu valori chiamate array possonon essere abbinati ad una variabile */
+var elenco = ["primo","secondo","terzoo","quarto" ]
+
+
+/*variabili inserite degli utenti tramite una funzione (nello specifico la funzione inserice un valore
+immesso dall'utente*/
+ var g = prompt("Per favore inserisci i dati:", " ");
+
+ /* Posso Classificare delle variabili sfruttando Ecma Script definendole in: */
+ let h = 5; //variabile let la applico se voglio sfruttare funzione di Espansione */
+ 
+ /*Posso inoltre Classificare anche delle variabili immutabili come costante */
+ const pigreco = 3.14;
+ 
+ /* Variabile usata se intendiamo far uso anche di jquery (come Ecma e un espanzione di javascript)  */
+$_casa = 5;

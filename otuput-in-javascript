@@ -1,0 +1,26 @@
+var a = "casa";
+
+/* stampa di una variabile e uso */
+// Per verficare la presenza di un errore usiamo la console del browser
+console.log(a); //ammette variabli di tutte le tipologie, o semplicemente qualsiasi valore
+
+// Se vogliamo che stampi un popup 
+alert(a); //ammette qualsiasi valore 
+
+// Se vogliamo che pubblichi su una pagina dove inserito lo script
+document.write (a); // Attenzione perà write si usa solo se lo script è in pagina html 
+document.writeln (a); // Se lo script si trova un file js sostituire il metodo write con writeln
+
+//Se vogliamo che pubbliche il contenuto su uno specifico tag della pagina utiliziamo :
+
+//getElementbyId va prendere un id nella pagina html e per poterlo fare usando linguaggio html usiamo il 
+// metodo innerHTML = "valore da pubblicare" o metodo "innerText" se pubblichiamo solo stringhe di testo 
+/* Attenzione la pagina dovrebbe avere un oggetto univoco come id */
+document.getElementById("ID_di_un tag html").innerHTML=(a);
+//getElementbyClass va prendere un tag html con un nome classe
+document.getElementsByClassName("nome_della_classe").innerHTML=(a);
+//getElementbyName va a prendere un attributo name all'interno di un tag html
+document.getElementsByName("attributo_name_di_tag").innerHTML=(a); 
+
+/* la stampa di un operazione o di una variabile puo essere integrata ache all'interno di una funzione */
+

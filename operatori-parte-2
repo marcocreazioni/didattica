@@ -1,0 +1,102 @@
+var x = 10;
+var y = 4;
+alert(x + y); // 0utputs: 14 addizione
+alert(x - y); // 0utputs: 6 sottrazione
+alert(x * y); // 0utputs: 40 moltiplicazione 
+alert(x / y); // 0utputs: 2.5 divisione
+alert(x % y); // 0utputs: 2 resto della divisione
+
+var x;    // Declaring Variable
+ 
+x = 10;
+alert(x); // Outputs: 10
+ 
+x = 20;
+x += 30;
+alert(x); // Outputs: 50 20+30
+ 
+x = 50;
+x -= 20;
+alert(x); // Outputs: 30 50-20
+ 
+x = 5;
+x *= 25;
+alert(x); // Outputs: 125
+ 
+x = 50;
+x /= 10;
+alert(x); // Outputs: 5
+ 
+x = 100;
+x %= 15;
+alert(x); // Outputs: 10
+// Per quanto riguarda le stringhe esse possono essere solo addizionato e o concatenate 
+var stringa = "Hello";
+var stringa2 = " World!";
+var stringa3 = " ciao mondo ";
+ 
+alert(string + stringa2); // Outputs: Hello World!
+ 
+stringa += stringa2;
+
+stringa += stringa3;
+
+alert(stringa); // Outputs "Hello World! ciao mondo "
+
+// Incrementi e decrementi  per aumentare e diminuire la variabile di un numero successsivo 
+var x; // Declaring Variable
+ 
+x = 10;
+alert(++x); // Outputs: 11
+alert(x);   // Outputs: 11
+ 
+x = 10;
+alert(x++); // Outputs: 10
+alert(x);   // Outputs: 11
+ 
+x = 10;
+alert(--x); // Outputs: 9
+alert(x);   // Outputs: 9
+ 
+x = 10;
+alert(x--); // Outputs: 10
+alert(x);   // Outputs: 9
+
+// Operatori Logici - In sistemi condizionali 
+// && = and (comporta che due condizioni debbano verifica )
+// || = or (comporta che si deve verificare almeno 1 di due condizione)
+// != not (non deve verificarsi una particolare condizione)
+
+var year = 2025;
+ 
+// calcolo dellìanno bisestica
+// if indica il se (condizione) { fai questo operazioni }
+if ((year % 400 == 0) || ((year % 100 != 0) && (year % 4 == 0))){
+    alert(year + " l'anno è bisestile.");
+}
+/* else = altrimenti (se la condizione non si verifica) { fai questa altra operazione } (in mancanza di else
+svolgere solo l'operazione della condizione verificata) */
+ 
+else
+ {
+    alert(year + " l'anno non è bisestile.");
+}
+// operatori di confronto utili per le variabile e gli operatori logici
+var x = 25;
+var y = 35;
+var z = "25";
+ 
+alert(x == z);  // Outputs: true (vero uguale a(si ferma al contenuto della variabile))
+alert(x === z); // Outputs: false (falso identico a (uguale nel contenuto e nella tipologia))
+alert(x != y);  // Outputs: true (vero diverso da (si ferma sempre al contenuto della variabile) )
+alert(x !== z); // Outputs: true (vero non identico(per contenuto e tipologia))
+alert(x < y);   // Outputs: true (vero x è minore di y )
+alert(x > y);   // Outputs: false (falso x non è (maggiore) di y )
+alert(x <= y);  // Outputs: true (vero (minore di o uguale a) )
+alert(x >= y);  // Outputs: false (falso (x non è maggiore di y)) )
+
+
+
+
+
+

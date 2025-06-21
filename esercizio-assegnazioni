@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="risultato"></p>    
+
+<script>
+var prezzo = prompt("Inserisci il prezzo: ", " ");
+
+prezzo *= 1.22; 
+
+
+
+document.getElementById("risultato").innerHTML = ("Il prezzo con iva al 22% è il seguente: " + prezzo + " €");
+</script>
+
+
+
+</body>
+</html>

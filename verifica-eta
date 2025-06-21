@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="scrivo"></p>
+
+<script>
+var eta = prompt("inserisci la tua età: ", " ");
+
+if (eta >= 18)  {
+                document.getElementById("scrivo").innerHTML = ("Ottimo puoi accedere ai nostri contenuti"); 
+               } 
+else           {
+                document.getElementById("scrivo").innerHTML = ("Non puoi accedere ai nostri contenuti collegati tra qualche anno"); 
+               }
+
+
+
+</script>
+
+
+    
+</body>
+</html>

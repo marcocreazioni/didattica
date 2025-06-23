@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelle</title>
+</head>
+<body>
+    <h1>Tabelle</h1>
+<!--blocco Tabella-->
+<table width="100%">
+<!--descrizione della tabella-->    
+    <caption>Didascalia</caption>
+<!--testata della tabella-->     
+ <thead bgcolor="orange">
+    <!--Ogni colonna deve essere inclusa in un <tr>-->
+   <tr>
+       <!--solo le celle di intestazioni hanno le celle con tag <th>-->
+       <th>Nome</th><th>Cognome</th><th>Telefono</th>
+   </tr>
+ 
+ </thead>
+<!--corpo della tabella-->
+ <tbody bgcolor="cyan">
+   <tr>
+    <!--tuttel le celle hanno tag <td>-->
+      <td>Mario</td><td>Rossi</td><td>062133535</td>
+   </tr>
+   <tr>
+      <td>Ludovico</td><td>Ariosto</td><td>0213345535</td>
+   </tr>
+
+ </tbody>
+<!--Pie di pagina della tabella-->
+ <tfoot bgcolor="red">
+    <tr>
+     <td align="center">Nome</td><td align="center">Cognome</td><td align="center">Telefono</td>
+    </tr>
+ </tfoot>
+</table>
+  
+</body>
+</html>

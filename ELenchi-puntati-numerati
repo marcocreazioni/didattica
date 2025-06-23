@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Elenchi</h1>
+<!--blocco elenco di testo puntati-->
+<ul>
+    <!-- le voci di un elenco hanno il tag li-->
+   <a href="#"><li>Primo</li></a> 
+   <a href="#"><li>Secondo</li></a>
+   <a href="#"><li>Terzo</li></a>
+    <!--Secondo livelo-->
+   <ul>
+    <li>Terzo bis</li>
+    <!--terzo livello-->
+    <ul>
+        <li>Terzo Bis</li>
+        <li>Terzo Bis</li>
+    </ul>
+
+    <li>Terzo Tris</li>
+
+   </ul>
+</ul>
+<!--fine del blocco elenco di testo puntati-->
+<!--blocco elenco numerato-->
+<ol>
+    <li>Primo Classificato</li>
+    <!--secondo livello-->
+    <ul>
+       <li>Primo Bis</li>
+       <li>Primo Tris</li> 
+    </ul>
+    <li>Secondo Classificato</li>
+    <!--secondo livello-->
+    <ol>
+       <li>Secondo Bis</li> 
+    </ol>
+    <li>Terzo Classificato</li>
+    <!--un elenco puo essere composta da bottoni
+    o immagini-->
+    <li><a href="#">
+           <button>Quarto Classificato
+           </button>
+        </a>
+    </li>
+
+</ol>
+
+    
+</body>

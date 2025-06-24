@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+.box { background-color: darkgrey; 
+       width: 75px;
+       height: 75px;
+       /*Transizione ammette diversi parametri
+       1) l'azione da compiere 2) Il tempo
+       occorrente (in secondi s o microsecondi)
+       */
+       box-shadow: 0px 0px black;
+       
+       transition: background-color 1s, box-shadow 2s,
+       /* attenzione non si inserisce la tipologia di trasformazione
+       basta richimare solo trasform seguito dal tempo della transizione */
+       width 10s,transform 5s, border-radius 2s ;
+       /* la durata puo essere richiamata da transition duration */
+       transition-duration: 2s;
+       /* si puo modificare l'algoritmo ease-in accelera all'inizio
+       e easy-out ecc*/
+       transition-timing-function: ease-in;
+       /* ritardo nell'applicazione della transizione */
+       transition-delay: 0.5s;
+
+}
+
+.box:hover {
+       /* azione che deve svolgere in transition */
+          background-color: chartreuse;
+          box-shadow: 2px 2px  black;
+          width: 300px;
+          border-radius: 20px;
+         
+    }
+
+
+
+@keyframes rotazione {
+    from  
+         {color:orange; 
+            
+        }
+
+   
+    to {transform: rotatey(180deg);
+        color: blue;
+    }
+
+    
+}
+
+
+h1 {animation-name: rotazione;
+    animation-duration: 2s;
+    animation-delay: 0.5s; 
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+img {
+    
+transition: filter 2s;
+}
+/*filtri css sulle immagini  (filter + nome del filtro + Valore ammesso) */
+img:hover { filter: blur(1px) grayscale(100%);
+
+}
+/* filtri css 
+sfocatura
+. blur {filter: blur(4px);}
+luminosita
+.brightness {filter: brightness(0.30);}
+contrasto
+.contrast {filter: contrast(180%);}
+scaladi grigio
+.grayscale {filter: grayscale(100%);}
+cambio tonalita dei colori
+.huerotate {filter: hue-rotate(180deg);}
+inversione dei colori (negativo)
+.invert {filter: invert(100%);}
+trasparenza
+.opacity {filter: opacity(50%);}
+saturazione (vivacita dei colori)
+.saturate {filter: saturate(7);}
+effetti seppia (anticazione)
+.sepia {filter: sepia(100%);}
+ombreggiatura
+.shadow {filter: drop-shadow(8px 8px  green);
+}
+*/
+
+</style>
+
+
+
+</head>
+<body>
+    <h1>Transition</h1>
+<div class="box"></div><br>
+<img width="100px" src="https://cdn.pixabay.com/photo/2025/06/18/14/05/bull-9667294_960_720.jpg">
+
+</body>
+</html>

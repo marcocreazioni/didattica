@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+div { width: 200px;
+    /* la larghezza effettiva include padding e border */
+      height: 150px;
+      background-color: orange;
+/* se voglio posizionare al centro un contenitore uso margin: auto
+ATTENZIONE NEI TAG TESTUALI H1/P SI USA text-align:center */
+      margin:auto;
+ /* parametri singoli */
+ padding-top: 10px;
+ padding-bottom: 5px;
+ padding-right: 30px;
+ padding-left: 10px;
+/* il margine sposta l'oggetto sullo schermo/pagina (come Padding)
+e ha gli stessi parametri del padding */
+margin-top: 40px;
+margin-left: 10px;
+margin-bottom: 200px;
+margin-right: 30px;
+/* border aggiunge un bordo (modalita shortcode) Piu parametri
+nella stessa istruzione(1valore lo spessore 2valore la tipologia
+di bordo(solid,dashed,dottet,groove,inset,outset,double,ridge), 3valore il colore) */
+/* border: 5px solid black; */ 
+/* per i singoli parametri */
+border-style:ridge;
+border-width: 5px;
+border-top: 10px double;
+border-bottom: 5px ridge;
+border-left: 4px dashed;
+border-right: 4px groove;
+
+border-color: gray;
+/* per arrotondare le forme utilizziamo border-radius */
+border-radius: 10px 20px 10px 0px;
+}
+
+
+h1 {background-color: aqua;
+     margin:auto;
+/* applicazione del padding che aumenta la distanza tra contenuto e conteinitore */
+   /*  padding: 5px; aumenta la distanza in tutti e 4 i lati */   
+   /*  padding: 10px 25px;  2 parametri aggiunge spazio sopra(TOP-BOTTOM) e sotto e il secondo
+   (RIGHT-LEFT)  a sinistra e destra */
+    padding: 20px 10px 1px 40px; /* 1 spazio (TOP) 2*(RIGHT) 3* (BOTTOM) 4* (LEFT)
+    */
+    }
+</style>
+<body>
+
+
+    <div>
+    <h1>Testo</h1>
+    </div>

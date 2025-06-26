@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* importazione di carattere locale */
+@font-face {
+    font-family: 'Mitchel';
+    src: url('caratteri/mitchel.otf');
+    
+}
+/*uso in locale */
+h1 {font-family: 'Mitchel', Helvetica, serif;
+    text-align:center;
+/*---------------------------------------------*/
+}
+/* uso del carattere di google font */
+p {font-family: 'italianno';
+   font-size: medium;
+
+}
+
+
+</style> 
+<!--importazione da google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">   
+</head>
+<body>
+ <h1>Caratteri Scaricati</h1>   
+ <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis quia praesentium, necessitatibus quos sint rem ea, voluptatem saepe veniam, distinctio sapiente aperiam neque? A nobis sunt autem distinctio eligendi. Eaque.</p>
+</body>
+</html>

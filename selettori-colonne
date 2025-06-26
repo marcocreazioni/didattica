@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* colori: color colore del carattere */
+h1 {color:yellowgreen;
+    text-align: center;
+ }
+
+ p {color:#c8a160;
+/* proprieta legate all'allineamento (center,left,right,start,
+ed end, justify) */
+    text-align: end;
+ /* proprieta legata al testo maiuscolo (capitalize maiuscolo prime
+ parole,uppercase tutto maiuscolo,lowercase tutto minuscolo)
+ lowercase) */  
+    text-transform: uppercase;
+ /*allineamento in verticale del testo con immagini o altri
+ blocchi*/   
+    text-indent: 0px;
+ /* line-height detta le distanze tra le linee di un parargrafo */
+    line-height: 1pt; 
+    
+ /* spaziatura tra le lettere di un testo */ 
+    letter-spacing: 5px;         
+ }
+
+span { color: rgb(70, 112, 96);
+    /*  permette di aggiungere una formattazione al testo
+    none: rimuove tutte le decorazionei al testo
+    underline: crea una sottolineatura
+    overline: crea una sottolineatura in alto
+    line-through: sostitutisce la sottolineatura centrale
+     */   
+       text-decoration: underline;
+    /* font weight indica lo spessore 100 piu leggero 900 il piu
+    spesso, usiamo anche light e bolder */
+       font-weight: bold; 
+
+}
+div { background-color: bisque;
+    
+     
+
+}
+/*transparent crea uno sfondo trasparente */
+blockquote {background: transparent;
+            text-align: justify;
+/* font size indica la grandezza di un carattere
+in px,em,vw o pt */
+             font-size: 12pt;
+/* font style definisce il corsivo nel testo con
+oblique o italic  o resettarlo con normal */
+             font-style:oblique;
+/* serve per dare ai tag di testo 
+proprieta di impaginamento */
+             font-display:block; 
+/* spaziatura tra le parole */
+             word-spacing: 10pt;                       
+
+}
+h2 {background: linear-gradient(45deg,cyan,blue);
+    /* proprieta che obbliga una sfumatura o un immagine a ritagliarsi su una forma o sun
+    testo */
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    /* per creare un ombreggiatura al testo usiamo
+    text-shadow con 3 valori in px 
+    scostamento orizzontale e verticale 
+    seguito da colore e posso aggiungere
+    un sfocatura in px */
+    text-shadow: -1px -1px 0px blue
+
+}
+
+section {
+       
+}  
+/* applicando la proprieta text-decoration con il valore none
+rimuoviamo la sottolinatura predefinita ai collegamenti */
+a { text-decoration: none;
+    text-shadow: -1px -1px 1px blue;
+
+}
+body {
+/* la font family serve per utilizzare un determinato font
+o un intera categoria di font come serif(stile times new roman),
+e sans-serif (stile arial ad esempio) */    
+font-family: sans-serif;
+
+}
+/* per richiamare un attributo classe nel css si usa il . + nome
+della classe */
+.nuovo {letter-spacing: 1px;
+        line-height: normal;
+        text-align: start;
+        text-transform: none;
+/* divisione di un paragrafo in piu colonne cont in numero*/ 
+        column-count: 3;
+/* lo spazio tra le colonne e gestito da gap in px */
+        column-gap: 2px; 
+/* dimensione in larghezza di ogni colonna */
+        column-width:2 00px;
+/*distribuzione degli spazi delle colonne (attenzione potrebbe ignorare 
+coloumn count)  */
+         column-fill:balance; 
+/* inseriamo delle righe colorota */
+         column-rule: 3px solid chartreuse; 
+/* se ho uno span puo attraversale le colonne*/
+                           
+
+
+
+}
+.nuovo .c { color: orange;
+            column-span: all;
+
+}
+#ciao {line-height: normal;
+       
+
+}
+</style>           
+
+    
+<body>
+ <div>
+   <h1>Gestione dei colori</h1>
+   <!--eccezione ad un tag di testo-->
+   <p>Paragrafo <span>eccezione</span></p>
+
+ </div>
+ <h2>Testo <span class="c">Sfumato</span></h2>
+ <blockquote>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias esse! Sapiente vitae porro ut, recusandae iusto natus! Molestiae quaerat sit itaque quisquam quas quae eligendi consequatur harum qui. Eius!
+ </blockquote> 
+  <section>
+   <a href="#">Sezione</a>
+  </section>  
+<!--selettore personalizzati id o attributo class dove diamo un nome
+a un determinato oggetto-->
+<p class="nuovo">
+   <span class="c">Testo attraversa tutte le colonne</span>
+   Lorem ipsum dolor sit amet consectetur
+   adipisicing elit. Ipsum eos minus totam consectetur
+    suscipit incidunt quaerat, voluptate reprehenderit ipsa nostrum repellat vel? Vel dolorum autem assumenda optio labore accusamus ea!</p>
+<p id="ciao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magni modi, aliquam dolorem quis earum, veritatis, maxime mollitia assumenda in harum non inventore commodi quia deleniti voluptatum iste hic necessitatibus.</p>
+
+</body>
+</html>

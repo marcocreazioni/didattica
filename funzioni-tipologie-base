@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funzioni</h1>
+    
+
+<script>
+// funzioni (posso diventare variabili o parte di un oggetto) function + (nome funzione)
+// +  gli argomenti della funzione { operazioni che la funzione deve svolgere }
+// in una funzione si possono usare argomenti interni o esterni ad una funzione  
+// car è un variabile esterna alla funzione
+var car = "auto";
+
+function mia() {
+// modello variabile interna alla fuzione
+var modello = "fiat duna<br>";
+/* tra le operazioni amissibili troviamo return (attenzione questa funzione senza argomenti ne inserire
+variabili di calcolo/Parametri */ 
+
+return car + " " + modello; 
+
+
+}
+document.write(mia());
+// funzioni che svolgono solo operazioni di stampa senza operatori di calcolo
+function stampa(){
+ document.write("casa del cane! Benvenuti <br>");
+
+}
+
+/* le funzioni parametrizzate, chiedono che le variabili svolgano solo da elementi generici da utlizzare
+nella funzione */ 
+function veicoli(marca,modello_veicolo) {
+    var marca = prompt ("inserisci la marca del tuo veicoli");
+    var modello = prompt ("inserisci il modello del veicolo");
+    var modello_veicolo = marca + " " + modello + "<br>";
+    return modello_veicolo; 
+}
+/*Questa funzione fa uso di parametri inseriti nella funzione dall'utente */
+document.write(veicoli());
+
+
+/* funzione che svolge la somma di due numeri */
+function somma(numero1,numero2) {
+
+    var totale = numero1 + numero2;
+    return totale;
+}
+/* I parametri devono essere forniti da chi usa la funzione */
+document.write(somma(5,6));
+
+
+</script>
+</body>
+</html>

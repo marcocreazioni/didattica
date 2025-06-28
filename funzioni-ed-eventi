@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni JS</title>
+
+
+</head>
+<body>
+    <h1>Funzioni in JS ed eventi </h1>
+    <!--Applicazione di un evento al click del mouse lo facciamo con l'attributo
+    onclick seguito dall'operazione da attivare tra le virgolette 
+    "Attenzione se nella funzione attivita ci sono le "" sostituire le stesse con i singoli apici
+    come segue"-->
+<button type="button" onclick="document.write(stampa('') + '<br>');">Il cane come fa?</button><br>
+<!--on click abbinato ad un collegamento ipertestuale-->
+<a href="#" onclick="document.write(nome(''));">Clicca per avere il benvenuto</a><br>
+<!--applicazione di un evento al passaggio del mouse (negli eventi richiamo le funzioni)-->
+<img src="https://cdn.pixabay.com/photo/2013/07/12/17/11/add-151736_960_720.png" width="50px" height="auto"
+onmouseover="document.write(somma(5,10)+ '<br>');">
+<!--attivazione dell'evento o della funzione al tasto destro del mouse-->
+<button type="button" oncontextmenu="alert('You have right-clicked a button!');">Right Click on Me</button>
+<a href="#" oncontextmenu="alert('You have right-clicked a link!');">Right Click on Me</a>
+<!--Alla pressione di un tasto qualsiasi della tastiere-->
+<input type="text" onkeypress="alert('You have pressed a key inside text input!')">
+<textarea onkeypress="alert('You have pressed a key inside textarea!')"></textarea>
+
+<!--evento collegato al pulsante invio del modulo con onsubmit-->
+<form action="action.php" method="post" onsubmit="alert('grazie per aver inviato il modulo!');">
+    <label>First Name:</label>
+    <input type="text" name="first-name" required>
+    <input type="submit" value="Submit">
+</form>
+<!--Per impostazione predefinita i js vengono caricati al momento in cui la pagina viene caricata
+per forzarlo possiamo collegare un evento di caricamento window.onload da utilizzare direttamente sul body
+-->
+<body onload="window.alert('Page is loaded successfully!');">
+    <h1>This is a heading</h1>
+    <p>This is paragraph of text.</p>
+</body>
+<!--l'evento onunload si attiva alla chiusura della pagina web da parte dell'utente-->
+<body onunload="alert('Are you sure you want to leave this page?');">
+    <h1>This is a heading</h1>
+    <p>This is paragraph of text.</p>
+</body>
+<!--onresize invece è un evento specifio che si attiva solo al ridimensionamento di una pagina-->
+<!--qui applicato ad una funzione-->
+<p id="risultato"></p>
+<script>
+    function gatto() {
+        var w = window.outerWidth;
+        var h = window.outerHeight;
+        var txt = "Window size: width=" + w + ", height=" + h;
+        document.getElementById("risultato").innerHTML = txt;
+    }
+    /* richiemo all'evento onresize */
+    window.onresize = gatto;
+</script>
+
+
+
+<script>
+
+
+
+/* ricorda creare una variabile non comporta sempre assegnargli un valore in quanto
+puo essere fatto anche successivamente */    
+var c; 
+/* successivamente alla variabile c assegno il valore 10 */  
+c = 10; 
+// Le funzioni possono essere collegati ad eventi 
+/* per creare una funzione scriviamo function + il nome della funzione
+le funzioni servono a svolgere operazioni + (elementi e o variabili che comporronnao la
+funzione) se non indichiamo valori()in parentesi stiamo
+indicando che la funzione non necessita di argomenti o variabili specifiche + { qui deveono essere indicate
+le operazioni che le funzioni devono svolgere } */
+function stampa() {
+    /* Esempio di funzione che stampa un testo usando return si specifica il risultato da ottenere */
+   return ("il cane fa bauuu");
+}
+/* in uno step successivo una volta che la funzione è stata implementata per esser utilizzata
+deve essere richiamata,ed indicare gli argomenti della funzioni se previsti 
+ATTENZIONE quando richiamo una funzione anche se la funzione non ha argomenti, devo almeno indicare
+la tipologia di dato che verra pubblicato nell'esempio in questione una stringa */
+
+
+/*_______________________________*/
+/* una funzione puo utlizzare delle variabili esterne alla funzione a patto che siano
+assegnate PRIMA DELLA FUNZIONE STESSA altrimenti riceveremo un errore di non assegnazione
+"Undefined" */
+var ciao = "Benvenuto";
+
+function nome() {
+/* le variabili implementate in una funzione sono ad uso e consumo di questa funzione */
+var a = prompt("inserisci il nome:  ", " ");
+/* uso la variabile ciao che è esterna alla funzione al quale ho aggiunto uno spazio
+e successivamente aggiungo ed esso una variabile interna alla funzione*/ 
+return ciao + " " + a + "<br>";  
+
+}
+
+
+/*____________________________*/
+/* in una funzione posso indicare come argomenti/parametri anche variabili non assegnate */ 
+function somma(numero1,numero2){
+   /* i paramenti o gli argomenti della funzione possono essere assegnati a delle variabili */
+    var sum = numero1 + numero2;
+    return sum;
+}
+/* i valori/argomenti della funzione saranno assegnati al momento dell'applicazione delle funzione */ 
+
+
+
+function moltiplica(num3,num4) {
+    var prodotto = num3 * num4
+    return prodotto; 
+}
+document.write(moltiplica(3,10)+ "<br>") ;
+</script>
+</body>
+</html>

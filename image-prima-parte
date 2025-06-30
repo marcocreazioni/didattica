@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sfondi immagine</title>
+
+<style>
+div {
+/* la larghezza di un oggetto e meglio indicarla in % in modo
+si adatti a diversi schermi */    
+    width: 100%;
+/* l'alezza va indicata in pixel */
+    height: 250px;
+    color: white;
+/* applicazione di uno sfondo immagine aggiungiamo l'url
+(all'interno della url va inserito il percorso dell'immagina
+compreso di estensione) */
+   background-image: url(https://cdn.pixabay.com/photo/2025/06/14/17/27/nature-9659850_960_720.jpg);
+ /* Proprieta dipendenti da un proprieta principale
+ ad esempio background position indica l'are dell'immagine
+ da mostrare ammette uno o due valori come:
+ left;
+ right;
+ bottom;
+ center; */
+ background-position: top left;
+ /* Possiamo inoltre ridimensione uno sfondo ad esempio con
+ background size (valori ammessi)
+ altezza e altezza*/
+ background-size: 200px 200px ;  
+/* attaccare ad un bordo specifico l'immagine 
+fixed (attacco lo sfondo all'angolo alto a sinistra)
+scroll (si allunga nella sua altezza massima e larghezza)*/
+background-attachment: fixed;
+
+}
+
+
+
+</style>
+</head>
+<body>
+       <h1>Lavorare con le sfumature</h1>
+    <div>Blocco uno</div>
+    <br>
+    <!--
+    <div class="box">box</div>
+     -->
+</body>
+</html>

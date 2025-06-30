@@ -1,0 +1,58 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* prorpieta dimensionalei */
+div {
+/* la larghezza di un oggetto e meglio indicarla in % in modo
+si adatti a diversi schermi */    
+    width: 100%;
+/* l'alezza va indicata in pixel */
+    height: 250px;
+/* sfondo a tinta piatta */
+  background-color: beige;
+/* applichiamo una sfumatura di sfondo */
+/* usiamo background image: linear gradient (angolo di sfumatura(180 gradi - 180deg),colore a , colore b
+ecc) separato da virgole (l'angolo predefiniti) per quanto riguarda
+i colori e possibile indicare la quantita percentuale di 
+almeno un colore */
+  background-image: linear-gradient(270deg,red 10%,orange); 
+
+
+}
+.box {
+    /* sfumatura che parte dal centro   con radial gradient
+    ed e possibile indiciare le quantita % 
+    non e ammesso l'angolo di sfumature ma è possibile
+    sostituire l'ellisse con un cerchio inserendo
+    come primo paramentro un cerchio  */
+    background-image: radial-gradient(circle,red,orange);
+}
+/* le sfumature non possono essere applicate ad un testo
+se non usando una particolare serie di proprieta */
+h1 { 
+/*  innazitutto richiamare la sfumatura come un normale sfondo */    
+    background-image: linear-gradient(red,orange);
+/* applichiamo un ritaglio con le proprieta clip di background */
+   background-clip: text;
+/* richiamo inoltre una proprieta implementata in safari
+che rimuove il colore dal testo che verra sostituita
+dal backround clip */
+    -webkit-text-fill-color: transparent;
+   }   
+
+
+</style>
+
+</head>
+<body>
+    <h1>Lavorare con le sfumature</h1>
+    <div>Blocco uno</div>
+    <br>
+    <div class="box">box</div>
+
+</body>
+</html>

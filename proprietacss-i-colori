@@ -1,0 +1,32 @@
+/* Questo è un commento nel linguaggio css, che modifica le proprieta e l'aspetto di un tag html */
+/* per prima cosa inseriamo il tag html da modificare */
+/* TAG HTML DA MODIFICA { proprieta da modificare seguito dai ":" per ogni proprieta
+esistono valori ammessi e non ammessi (color: modifica il colore di un testo) 
+valori ammessi: (' colori in lingua inglese, #135355 codifica esadecimale, codifica RGB, codifica RGBA) 
+successivamente inseriamo il ; per chiudere l'istruzione  */
+body {color:darkturquoise;
+      /* background-color cambia il colore di sfondo di un oggetto */
+      
+}  
+    
+#alberto {
+/* aggiunge uno sfondo trasparente ad un oggetto */
+   background-color:transparent;
+}
+h1 {
+    /* Se scegliamo la codifica rgb tra parentesi indichiamo 
+      tra parentesi (quantita di rosso(255),verde (255) e ,blu)*/
+   background-color: rgb(20, 116, 46); 
+
+}
+p { /* colori esadecimali */
+    background-color: #873e23;
+
+
+}
+.romeo {
+    /* bakground-color ammette la codifica rgb piu canale alfa (ovvero un valore tra
+0 e 1)che indica la % di trasparenza */
+   background-color: rgba(44,334,55,0.2);
+
+}   

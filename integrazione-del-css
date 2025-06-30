@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrazione del css</title>
+<!--integrazione di un file css esterno da collegare a questa pagina-->
+<link rel="stylesheet" href="stile.css" type="text/css">
+<style>
+/* css in pagina */
+p {color:orange;
+
+}
+/* per richiamare una classe  si utilizza il . seguito dal nome della
+classe */
+.romeo {
+    color:lightsalmon;
+}
+/* per richiamare un id si utilizza il # seguita dal nome dell'id 
+ci serviamo degli id per introdurre funzionalita javascript (sarebbe quindi
+consigliato non usarlo eccessivamente */
+#alberto {
+    color: purple;
+}
+
+
+</style>
+</head>
+
+<body>
+    <!--css applicata in linea con il tag
+    si applica sottoforma di attributo style 
+    in questo caso la proprieta text-align: 
+    i valori ammessi sono:
+    center,left,right,justify,start,end
+    -->
+    <h1 style="text-align:end">INtegrazione del css</h1>
+    <p style="text-align:justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aut porro 
+        repudiandae modi inventore assumenda, sit, cumque exercitationem animi dicta,
+        veniam unde dolore? Est sit, omnis reiciendis ipsa vitae doloremque.</p>
+    <p style="color:blueviolet">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Obcaecati nobis voluptatum, exercitationem ex autem 
+        est nihil asperiores nemo corrupti distinctio sunt minus 
+        necessitatibus! Corporis id magnam dolor blanditiis, 
+        consectetur dolores.</p> 
+        <!--alternativa al css in linea e quello di applicare ad un oggetto
+        un selettore class seguito dal nome da attribuire o id seguito dal nome
+        da attribuire-->  
+     <p class="romeo">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+         Voluptate distinctio explicabo exercitationem dolore id eligendi 
+         aut aliquid quae doloribus architecto excepturi fugiat iure eum 
+         tenetur delectus,
+         pariatur quod! Ea, inventore?</p>
+      <p id="alberto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Repudiandae illo quod soluta sint libero aut eos, 
+        magni fugit iste nostrum dignissimos laborum quisquam sit ad 
+        ex consectetur beatae enim distinctio.</p>       
+</body>
+</html>

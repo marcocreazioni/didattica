@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <h1>Popup Bootstrap</h1>
+        <!-- Bottone di partenza -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ Apri Popup
+</button>
+
+<!-- contenuto del popup -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <!---testata del popup-->
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Il mio popup</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+       <!--fine del codice del popup-->
+        <!--corpo della finesta popup-->
+      <div class="modal-body">
+         <!--annidamento della griglia di bootstrap-->
+           <div class="conteiner-fluid">
+                <div class="row">
+                   <div class="col-sm-6">
+                        <div class="card mb-3" style="max-width: 100%;">
+                          <div class="row g-0">
+                             <div class="col-md-4">
+                                <img src="https://cdn.pixabay.com/photo/2022/07/17/13/41/sunflower-7327456_960_720.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                               <div class="col-md-8">
+                              <div class="card-body">
+                             <h5 class="card-title">Card title</h5>
+                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="col-sm-6">
+                       <div class="card text-bg-secondary mb-3" style="max-width: 100%;">
+                         <div class="card-header">Header</div>
+                            <div class="card-body">
+                              <h5 class="card-title">Secondary card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                             </div>
+                            </div>
+                   </div>
+                </div>
+           </div>
+      </div>
+      <!--fine del corpo della finestra-->
+      
+      <div class="modal-footer">
+    <!--Piè di pagina del popup-->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       <!-- <button type="button" class="btn btn-primary">Save changes</button> ---->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

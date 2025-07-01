@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.conteiner {
+    width: 100%;
+    height: 700px;
+    border: 1px solid;
+    border-radius: 3%;
+    background-color: bisque;
+    box-shadow: 1px 1px black;
+}
+label {padding: 10px;
+
+}
+input,select,textarea {margin-left: 10px;
+
+}
+</style>
+</head>
+<body>
+
+    <h1>Sviluppo Frontend</h1>
+ <div class="conteiner">
+
+    <!--form indentifica il gruppo modulo (attributo action per definire la destinazione
+    delle informazione) metodo di preliveo delle informazioni (get(max.8/10) e
+     post(pubblica e rielabora)), un modulo puo supportare l'utente con 
+     l'autocomplete attributo che prende informazioni dal browser (on) oppure (off)
+     se non vogliamo prelevare le informazioni 
+     -->
+  <form action="inviomail.php" method="post" autocomplete="on">
+    <!--etichetta delle informazione (facoltativamente lo si puo collegare al tag di input
+    con l'attributo for)--> 
+    <label for="nome">Il tuo nome</label><br>
+    <!--input è il tag che permette l'inserimento dell'informazione
+    con l'attributo type indichiamo la tipologia di informazione
+    utlizziamo l'attributo name per definire l'informazione da prelevare
+    posso aggiungere dimensioni e testo segnaposto (placeholder) seguito dal testo
+     o l'autocompletamento
+    mentre l'autofocus zumma il campo quando si compila sul telefono
+    se vogliamo precompile la casella con un valore predefinito 
+    utilizziamo l'attributo value seguita dal valore predefinita ed e considerato
+    un inserimento vero e proprio,inoltre possiamo rendere obbligatorio
+    la compilazione di un campo con required -->
+    <input type="text" name="nome" width="100%" autofocus placeholder="inserisci il tuo nome"
+    required><br>
+
+    <label for="cognome">Il tuo cognome</label><br>
+    <input type="text" name="cognome" width="100%" autofocus placeholder="inserisci il tuo cognome"
+    required><br>
+    
+    <label for="telefono">Il tuo telefono</label><br>
+    <!--attributo che definisce la forma di inserimento di un 
+    campo con pattern {caratteri ammessi da 0 a 9 o A alla z} seguite dal numero
+    di caratteri di quel formato-->
+    <input type="tel" name="telefono" pattern="{0-9}-(3)-{0-9}(3)-{0-9}(6)"
+    placeholder="039-123-123456" required><br>
+    
+    <label for="mail">La tua mail</label><br>
+    <!--con l'attributo size possiamo inserire una dimensione in larghezza-->
+    <input type="mail" name="mail" 
+    placeholder="tua@email.it" required size="50px"><br>
+
+    <label for="data">Metti la tua data di nascita</label><br>
+    <!--date ammette l'inserimento di una data ma possiamo anche
+    specifica data e ora con date-time-local solo time
+    per impostare un ora  con l'attributo min 
+    e max si stabilisce un valore minimo e massimo-->
+    <input type="date" name="nascita" min="1900" 
+     required><br>
+     <label for="eta">Metti la tua eta</label><br>
+    <!--date ammette l'inserimento di una data ma possiamo anche
+    specifica data e ora con date-time-local solo time
+    per impostare un ora  con l'attributo min 
+    e max si stabilisce un valore minimo e massimo
+    con l'attributo step possiamo impostare un progressione
+    da x valore a x+1 -->
+    <input type="number" name="eta" min="18" max="80"
+     required><br>
+    <label for="codicefiscale">Metti il tuo codice</label><br>
+    <!--i campi di testo posso avere una lunghezza minima e massima
+    minlength ad esempio è lunghezza massima maxlength="16"-->
+    <input type="text" minlength="16" maxlength="16" name="codice">
+<br><br>
+    <label for="seleziona">Scegli il servizio</label><br>
+    <!--tag select apre un campo di selezione 
+    Tramite un blocco. Se vogliamo una selezione multipla
+    aggiungiamo l'attributo multiple -->
+    <select name="servizio">
+         <!--i valori di un blocco vengono definiti con option
+         se vogliamo impostare un valore di default
+         aggiungiamo un attributo di selezione-->
+    <option>Grafica</option>
+    <option selected>Sviluppo</option>
+    <option>Seo e Sem</option>
+    </select>
+     <br><br>
+    <label for="messaggio">Messaggio</label><br>
+    <!--Per i testi lunghi quando un 
+    paragrafo usiamo il messaggio e ammette rows per 
+    definire un numero di righe e cols mi permette di scegliere il
+    numero di colonne o la larghezza-->
+    <textarea name="messaggio" rows="10" cols="50"></textarea>
+     <!--se vogliamo raggruppare alcuni campi per tipologia
+     usiamo fieldset-->
+     <fieldset>
+        <!--in fieldset possiamo integrare una didascalia
+        con il tag legend-->
+      <legend>Dati da selezionare</legend>  
+    <!--campi di selezione singola e permette di avere 
+    la voce preselezionata con l'attributo checked-->
+    Confermi che sei interessata<input type="radio" name="interessere" checked>
+    <br><br>
+    <!--come radio e ammesso l'attributo checked-->
+    <input type="checkbox" required>Accetta che i tuoi dati siano utlizzabile
+    per la richiesta in oggetto
+
+
+     </fieldset>
+     
+    <!-- le informazioni vengono inviate tramite un input type submit che genera un button
+     che determina l'invio delle informazioni-->
+    <br> <br><input type="submit">
+    <!--reset è un bottone che pulisce il modulo-->
+    <input type="reset">
+  </form>   
+ </div>   
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {margin: 0px;
+      padding: 0px;
+
+
+}    
+header {background-color: aquamarine;
+        padding: 1px;
+        /* visualizzazione nascosta (nasconde un oggetto ma
+        lascia lo spazio) 
+        visibility: hidden;*/
+        /* visualizzazione nascosta (nasconde un oggetto rimuove lo spazio) */
+        display: none;  
+    }
+nav {background-color: transparent;
+     height: 50px;
+     padding: 1px;
+}
+
+ul {overflow:hidden;
+    margin: 0px;
+    padding: 0px;
+
+}
+/* Un oggetti di tipo test quindi un tag testuale in un normale blocco */
+/* display e una proprieta che trasforma la tipologia di tag (display block)
+le proprieta block possono essere accompagnate da un proprieta
+inline (inline-block)*/
+li {display: inline-block;
+    background-color: blanchedalmond;
+    padding: 10px;
+    padding-right: 10px;
+    margin-right: -4px;
+   
+
+}
+li a {text-decoration: none;
+      color: black;
+
+}
+li a:hover {
+    color: orange;
+}
+li:hover {
+    background-color:cyan;
+}
+
+</style>
+</head>
+<body>
+<header>
+    <h1>Il mio sito</h1>
+</header>
+ <nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+       <li><a href="#">Servizi</a>
+    </ul>
+ </nav>   
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+* {box-sizing: border-box;
+}
+/* istruzioni a pieno schermo */
+body {margin:0px;
+      padding: 0px;
+
+}
+/* il padding viene usata come proprieta
+interruttore (parametrato ad 1px) */
+header {
+    background-color: bisque;
+    padding: 1px;
+}
+nav {
+    background-color: chocolate;
+    padding: 1px;
+}
+main {
+    background-color: aquamarine;
+    padding: 1px;
+    height:500px
+}
+section {
+    background-color: burlywood;
+    padding: 1px;
+}
+article {
+    background-color: coral;
+    padding:1px;
+}
+aside {background-color: chartreuse;
+       padding:1px;
+}
+footer {
+    background-color: brown;
+    padding: 1px;
+}
+</style>
+</head>
+<body>
+<!--Testata-->
+<header>
+    <h1>Testata</h1>
+</header>
+<!--area di navigazione-->    
+<nav>
+<ul><li>Menu di navigazione</li></ul>
+</nav>
+<!--blocco dei contenut-->
+<main>
+<!--sezione-->
+<section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat cupiditate, suscipit, impedit unde velit blanditiis, quia minus alias commodi iusto quasi accusamus eaque delectus dolore! Ipsa labore ut debitis voluptatibus.</p>
+<!--area articolo-->
+<article>
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae enim possimus repudiandae eos eum quos blanditiis at autem velit dolore, sed amet incidunt, ipsum magni nam et itaque totam culpa?</p>
+</article>
+<aside>
+   <p>Spalla</p> <!--spalla dell'articolo-->
+</aside>
+</section>
+<section>
+<p>Sezione 2</p>
+</section>
+</main>
+<!--Pie di pagina-->
+<footer>
+<p>&copy; Webdeveloper</p>
+</footer>
+</body>
+</html>

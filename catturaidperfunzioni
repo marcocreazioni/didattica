@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="nome"></p>
+
+<input type="text" id="numero1"><br><br>
+<input type="text" id="numero2"><br><br>
+
+<button onclick="valore()">Nome e COgnome</button>
+
+
+<script>
+
+function valore() {
+        var a = document.getElementById("numero1").value;
+       
+        var b = document.getElementById("numero2").value;
+        
+        var c = a + " " + b;
+      alert("il nomnativo è: " + c);
+        
+}
+
+
+</script>
+<hr>
+<input type="text" id="myInput">
+<button onclick="getValue()">Ottieni valore</button>
+
+<script>
+function getValue() {
+  const inputValue = document.getElementById("myInput").value;
+  alert("Il valore inserito è: " + inputValue);
+}
+</script>
+<p id="nome"></p>
+</body>
+</html> 

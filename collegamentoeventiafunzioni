@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+table {background-color: bisque;
+       border-collapse: collapse;
+}
+td , th {
+    border: 1px solid black;
+
+}
+#battezzato {position: relative;
+             top: -90px;
+             left: 125px;
+             font-size: larger;
+             color:coral;
+
+}
+ </style>   
+</head>
+<body>
+    <h1>Funzioni e Richiamo con un evento</h1>
+<!--Funzione richiamata al clic(evento) e stampata all'interno del tag con id mod-->    
+<button onclick="document.getElementById('mod').innerHTML = mia()">Clicca qui per il veicolo</button>     
+<table>
+<tr><th>Modello</th></tr>
+<tr><td id="mod"></td></tr>
+
+</table><br>
+<figure>
+<figcaption>Battezza il veicolo</figcaption>
+<img src="https://cdn.pixabay.com/photo/2022/11/05/15/54/cart-7572164_960_720.jpg" id="veicolo" width="300px" onmouseover="veicoli()">
+</figure>
+<div id="battezzato"></div>
+<p id="sum">QUi la somma</p>
+<!--evento gestito nello script-->
+<button id="somma" onclick="document.getElementById('sum').innerHTML = somma(10,20)">La somma è</button>
+<script>
+// funzioni (posso diventare variabili o parte di un oggetto) function + (nome funzione)
+// +  gli argomenti della funzione { operazioni che la funzione deve svolgere }
+// in una funzione si possono usare argomenti interni o esterni ad una funzione  
+// car è un variabile esterna alla funzione
+var car = "Moto";
+
+function mia() {
+// modello variabile interna alla fuzione
+var modello = "ducati barilla<br>";
+/* tra le operazioni amissibili troviamo return (attenzione questa funzione senza argomenti ne inserire
+variabili di calcolo/Parametri */ 
+
+return car + " " + modello; 
+
+
+}
+
+// funzioni che svolgono solo operazioni di stampa senza operatori di calcolo
+function stampa(){
+ document.write("casa del cane! Benvenuti <br>");
+
+}
+
+/* le funzioni parametrizzate, chiedono che le variabili svolgano solo da elementi generici da utlizzare
+nella funzione */ 
+function veicoli(marca,modello_veicolo) {
+    var marca = prompt ("inserisci la marca del tuo veicoli");
+    var modello = prompt ("inserisci il modello del veicolo");
+    var modello_veicolo = marca + " " + modello + "<br>";
+    document.getElementById("battezzato").innerHTML = modello_veicolo;
+
+}
+
+
+
+
+/* funzione che svolge la somma di due numeri */
+function somma(numero1,numero2) {
+
+    var totale = numero1 + numero2;
+    return totale;
+}
+
+
+
+
+</script>
+</body>
+</html>

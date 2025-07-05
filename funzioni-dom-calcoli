@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+table {
+border-collapse: collapse;
+}
+th , td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<h1>Interagire con il dom</h1>
+<label>Inserisci il tuo nome</label><br>
+<input type="text" id="nome" required><br>
+<label>Inserisci il tuo cognome</label><br>
+<input type="text" id="cognome" required><br><br>
+
+<!--Pulsante che attivera l'applicazione della funzione-->
+<button id="risultato" onclick="nominativo()">Nominativo</button>
+<hr>
+<table>
+<tr><th>Nominativo</th></tr>
+<tr><td id="nominativo"></td></tr>
+</table>
+
+<hr>
+<h3>Sommiamo</h3>
+<label>Sommiamo</label><br>
+<input type="number" id="numero1"><br><br>
+<input type="number" id="numero2"><br><br>
+<button id="attiva" onclick="somma()">Somma</button><br><br>
+<p id="sommiamo"></p>
+
+<script>
+
+function nominativo() {
+ 
+    var nome;
+    var cognome;
+    // assegno ad una variabile un id della pagina (solo per la caselle di input dove si immettono dei valori)aggiungiamo .value per 
+    // intercettare cosa  è stato inserito;
+    
+    nome = document.getElementById("nome").value;
+    cognome = document.getElementById("cognome").value;
+    // variabile che si incarichera di concatenare nome e cognome
+    var concatena = nome + " " + cognome; 
+    // la funnzione deve occuparsi di stampare all'interno di nominativo nella tabella
+    document.getElementById("nominativo").innerHTML = concatena;
+}
+
+</script>
+
+<script>
+
+function somma(){
+    // number è una funzione predefinita per estrarre numeri dalla stringa
+    var a = Number(document.getElementById("numero1").value);
+    var b = Number(document.getElementById("numero2").value);
+    var c = a + b;
+    document.getElementById("sommiamo").innerHTML = c;
+
+}
+</script>
+
+  
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impaginazione HTML5</title>
+</head>
+<style>
+ body {
+    /* reset della pagina a larghezza intera */
+    padding: 0px;
+ }   
+    /* per attivare le prorieta intrinseche usiamo
+    la proprieta padding di attivazione ad 1px di valore) */
+header {
+    background-color: beige;
+    padding: 1px;
+}
+nav {
+    background-color: chartreuse;
+    padding:1px;
+}
+main {
+    background-color: rgb(80, 176, 255);
+    /* Larghezza se possibile sempre inidica in % */
+    width: 100%;
+    /* altezza in px */
+    height: 300px;
+    padding: 1px;
+
+}
+section { 
+    background-color: rgb(80, 176, 255);
+    height: 150px;
+    padding: 1px;
+}
+article {
+    background-color: pink;
+    padding:1px;
+}  
+aside {
+    background-color: blue;
+    color: white;
+    padding: 1px;
+}
+footer{
+    background-color: darkgreen;
+    color: wheat;
+    padding: 1px;
+}
+
+</style>
+
+
+
+<body>
+ <!--Impaginazione HTML5-->
+ <!--Tag HTML5 per inidicare la testata-->
+ <header>
+<h1 align="center">Testata</h1>
+
+
+ </header>   
+<!--blocco di navigazione-->
+ <nav>
+    <ul>
+    <li>Home</li>
+    </ul>
+ </nav>
+<!--corpo delle pagine-->
+<main>
+ <!--sezione della pagina--> 
+  <section>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat beatae suscipit amet officiis soluta commodi dolores, quae esse in error iure, reprehenderit delectus molestiae quis natus hic cumque ut fuga!</p>
+
+  </section>
+  
+  <section>
+ <!--
+   una sezione puo ospitare un blocco chiamato article
+    <article>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tempore eius minus, quisquam sapiente provident aperiam enim quod illum soluta laboriosam possimus aliquam at deserunt, numquam error incidunt laudantium. Officia.</p>
+    </article>
+    colonna o sezione inferiore all'articolo
+     <aside>
+      <p>DI Antionio Rossi</p>
+     </aside>
+     -->
+  </section>
+</main>
+<!--pie di pagina-->
+<footer>
+<p>by Impaginazine</p>
+
+</footer>
+</body>
+</html>

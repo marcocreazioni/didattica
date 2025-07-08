@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavorare con jquery</title>
+<!--tema di jquery-->
+<!--modificando la url posso sostituire il tema base sostituiamo dopo base il tema galleria da utilizzare -->
+<!-- tema base https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/dark-hive/jquery-ui.css">
+<style>
+body { padding:0px;
+       font-family: sans-serif;
+}
+.c {background-color: chocolate;
+     padding: 10px;
+     overflow: hidden;
+}
+img {box-shadow: 1px 1px solid;
+     border: 3px solid orange;
+     border-radius: 5px;
+     width: 200px;
+     height :auto; 
+}
+
+</style>
+<!--installazione del core jquery -->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<!--libreria user interface di jquery UI-->
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js" integrity="sha256-9zljDKpE/mQxmaR4V2cGVaQ7arF3CcXxarvgr7Sj8Uc=" crossorigin="anonymous"></script>
+<!--per attivare gli oggetti ui c'è bisogno di uno script di funzionamento-->
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+
+  $( function() {
+    $( "#resizable" ).resizable();
+  } );
+// Scipt di funzionamento degli effetti 
+  $( function() {
+    // run the currently selected effect
+    function runEffect() {
+      // get effect type from
+      var selectedEffect = $( "#effectTypes" ).val();
+ 
+      // Most effect types need no options passed by default
+      var options = {};
+      // some effects have required parameters
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+ 
+      // Run the effect
+      $( "#effect" ).effect( selectedEffect, options, 500, callback );
+    };
+ 
+    // Callback function to bring a hidden box back
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+    };
+ 
+    // Set effect from select menu value (la funzione in button si attiva al click ma possiamo trasformarlo in mouseover evento del passaggio del mouse)
+    $( "#button" ).on( "click", function() {
+      runEffect();
+      return false;
+    });
+  } );
+
+
+
+  </script>
+</head>
+<body>
+
+    <div class="c" id="resizable">
+      <h1 id="draggable">Lavorare con Jquery</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum ab commodi delectus. Consequatur commodi animi sunt iste perferendis, dolor veritatis maxime numquam aliquid eaque possimus? Harum eum autem accusamus. Perferendis?</p>
+   <button class="ui-button ui-widget ui-corner-all">Tema</button>
+   </div>
+<br>
+<!--inserimento accordion del tema frog-->
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div>
+<hr>
+<div style="margin-left:5%" id="button">
+<figure>
+ <img id="effect" src="https://cdn.pixabay.com/photo/2025/03/31/21/30/italy-9505449_960_720.jpg">
+ <figcaption>Effetti</figcaption>
+</figure>
+</div>
+<select name="effects" id="effectTypes" style="display:none">
+  <!--<option value="blind">Blind</option>
+  <option value="bounce">Bounce</option>
+  <option value="clip">Clip</option>
+  <option value="drop">Drop</option>
+  <option value="explode">Explode</option>
+  <option value="fade">Fade</option>
+  <option value="fold">Fold</option>
+  <option value="highlight">Highlight</option> -->
+  <!--effetto da applciare-->
+  <option value="puff" selected>Puff</option>
+ <!--<option value="pulsate">Pulsate</option>
+  <option value="scale">Scale</option>
+  <option value="shake">Shake</option>
+  <option value="size">Size</option>
+  <option value="slide">Slide</option> -->
+</select>
+ <!--
+<button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+ --->
+
+   
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--ogni tag puo avere degli attributi che cambiano il comportamento
+del tag,-->
+<html lang="it">
+<!--Istruzione per il browser e i motori di ricerca-->
+<head>
+  <!--charset attributo che informa che la pagina usa caratteri latini-->
+    <meta charset="UTF-8">
+    <!--istruzione che indica alla pagina di scalare di 1.o i contenuti dello schermo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--per la seo occorrono almeno 70 caratteri -->
+    <title>Titolo presente sulla scheda</title>
+    <!--per la seo la descrizione deve essere almeno 160 caratteri-->
+    <meta name="description" content="descizione del contenuto della pagina">
+    <!--Per i siti che trattano un solo argomento (pneumatici) (keyword stuffling)-->
+    <meta name="keyword" content="titolo, titolo scheda, scheda titolo, titolo roma">
+     <!--istruzione per l'indicizzazione o meno dei contenuti (spybots,bots,crawler)(index indicizza)
+     (no index se non vogliamo indicizzarlo), follow(per seguire i link)no follow(non seguire i link) 
+     (none) sostituisce sia il no inedex che il no follow-->
+     <meta name="robots" content="index,follow">
+     <!---meta tag facoltativamente-->
+     <meta name="google" content="notranslate">
+     <meta mane="author" content="Marco">
+     <meta name="generator" content="visual studio code">
+     <!--ogp-me-->
+     <meta property="og:title" content="Titolo della scheda" />
+     <meta property="og:type" content="article" />
+     <meta property="og:url" content="https://miosito.it" />
+     <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+     <!--dati strutturati con json -->
+
+
+
+
+</head>
+<!-- Il body contiente i tag della area visibile -->
+<body>
+  <!--h1 è un tag di testo  (per il principio di coerenza SEO) center puo centrare i contenuti 
+  (center è in decadimento)-->
+  <center>
+    <h1>TItolo Presente sulla scheda</h1>
+    <h2>Titolo piu <strong>piccolo</strong></h2>
+    <h3>Titolo piu piccolo</h3>
+    <h4>Titolo piu piccolo</h3>
+    <h5>Titolo piu <mark>piccolo</mark></h3>
+    <h6>Titolo piu piccolo</h3>
+
+    <!--arriva ad h6-->
+  
+  </center>
+  <!--p tag di testo i cui contenuti devono essere presenti anche in description
+  con strong indichiamo parole chiave nel testo (b indica cmq il grassetto ma è in decadimento)-->
+  <!--tag di p sta per paragrafo-->
+  <p align="center">
+    Descrizione <del>barrato</del> del <strong>conte<u>nuto</u></strong> della <b>pagina</b>
+  </p>
+    <!--tag per le citazioni (span utile per le eccezioni ad un blocco di testo)-->
+  <blockquote>
+    Paragrafo con <span style="color:orange">rientro</span>
+  
+  </blockquote> 
+
+  <hr>
+
+  <marquee>
+    TEsto in <i>scorrimento</i>
+  </marquee>
+
+  <address>
+    <mark>Indirizzo</mark> di un <br>attivit<sup>a</sup>
+  </address>
+
+  <code>
+    Test<sub>o</sub>a&nbsp;<u>macchina &copy;</u>
+  </code>
+
+  <!--tag contenitori-->
+<ul>
+  <li>Elemento A</li>
+  <ul>
+    <li>Elemento A.1</li>
+    <ul>
+      <li>Elemento A.1.1</li>
+    </ul>
+    <li>Elemento A.2</li>
+  </ul>
+  <li>Elemento B</li> 
+</ul>
+
+<ol>
+  <li>Elemento A</li>
+  <li>Elemento B</li> 
+  <ol>
+    <li>Elemento B.1</li>
+  </ol>
+</ol>
+<!--tabelle-->
+<table width="100%">
+   <thead bgcolor="orange">
+      <tr>
+          <th>Nome</th>
+          <th>Cognome</th>
+      </tr>
+   </thead>
+   <tbody bgcolor="cyan">
+       <tr>
+           <td>Mario</td>
+           <td>Rossi</td>
+       </tr>
+        <tr>
+           <td>Mario</td>
+           <td>Esposito</td>
+       </tr>
+   </tbody>
+  <tfoot bgcolor="bisque">
+       <tr>
+           <td>Mario</td>
+           <td>Rossi</td>
+       </tr>
+  
+  </tfoot> 
+</table>
+<p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit mollitia vitae error ipsam ad optio cumque, voluptatem libero id in doloremque vel maxime consequuntur aperiam quos enim a vero sunt!</p>
+<!--blocco generico-->
+<div>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae nostrum mollitia iste illum, architecto ipsum ab distinctio culpa reiciendis, nisi minus quaerat deserunt dolore natus qui veniam exercitationem unde. Ea!</p>
+</div>
+<script async>
+//il contenuto di linguaggio javascript sarebbe meglio indicarli a chiusura della pagina
+
+
+</script>
+</body>
+
+</html>

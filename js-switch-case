@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="nome"></p>
+<label for="numero1">Inserisci cane o gatto</label>
+<select id="numero1">
+<option>Cane</option>
+<option>Gatto</option>
+</select><br><br>
+
+<button onclick="valore()">Risultato</button>
+<p id="risultato"></p>
+
+<script>
+
+function valore() {
+       /* FUnzione predefinita che converte le stringhe in numeri in input di testo */
+        var a = document.getElementById("numero1").value;
+       
+         
+// Switch verifica se si verificano diversi casi o diverse opzione
+/* nel nostro caso prendiamo in considerazione la variabile c */
+switch (a) {
+    /* dopo la parentesi graffa ipotizziamo i diversi casi usando la sintassi che segue 
+    case seguita dalla condizione da verificare (vero o falso) e nel caso l'ipotesia si vera
+    deve svolgere le operazioni indicate dopo i due punti  */
+    case "Cane":
+             document.getElementById("risultato").innerHTML = ("bene ti piacciono i cani");
+        /* break indica che se si verifica questo caso non devi verificare le altre ipotesi */
+        break;
+    case "Gatto": 
+            document.getElementById("risultato").innerHTML = ("bene ti piacciono i gatti");   
+        break;
+    
+       default:
+               document.getElementById("risultato").innerHTML = ("Non mi hai segnalato una risposta");
+     break;
+}
+
+ }
+    
+
+
+
+
+</script>

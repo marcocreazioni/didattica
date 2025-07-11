@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="nome"></p>
+<label for="numero1">Valore A</label>
+<input type="text" id="numero1"><br><br>
+<label for="numero2">Valore B</label>
+<input type="text" id="numero2"><br><br>
+
+<button onclick="valore()">Risultato</button>
+<p id="risultato"></p>
+
+<script>
+
+function valore() {
+       /* FUnzione predefinita che converte le stringhe in numeri in input di testo */
+        var a = Number(document.getElementById("numero1").value);
+       
+        var b = Number(document.getElementById("numero2").value);
+        
+        var c = a + b;
+  /*    document.getElementById("risultato").innerHTML = ("la somma è: " + c); */
+/* eccezione if Se ovvero condizione if (condizione da verificarse (SOno ammessi non solo valori
+di variabili ma anche elenchi ed oggetti e addirittura funzioni)) { operazione da svolgere se la condizione si
+verifica (una condizione puo avere come risultato True o False) */
+if ( c < 0 ) {
+    document.getElementById("risultato").innerHTML = ("La somma ha prodotto un numero negativo");
+    }
+ /*se si deve verificare dune condizione utilizziamo la formula else if (condizione da verificare) e indicare l'operazione
+ da svolgere { } (isNaN(variabile)) */
+ else if ((c == 0) || (isNaN(c))) {
+     document.getElementById("risultato").innerHTML = ("il valore e uguale a 0");
+ }
+ 
+    /* Se alla funzione diamo una volce else specifichiamo cosa deve accadere nel caso in cui non si verifica la prima
+ condizione else vuol dire altrimenti*/
+ 
+ else {
+      document.getElementById("risultato").innerHTML = ("la somma è: " + c);
+      
+
+ }
+    
+
+}

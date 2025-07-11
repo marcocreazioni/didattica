@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="nome"></p>
+<label for="numero1">Valore A</label>
+<input type="text" id="numero1"><br><br>
+<label for="numero2">Valore B</label>
+<input type="text" id="numero2"><br><br>
+
+<button onclick="valore()">Risultato</button>
+
+
+<script>
+
+function valore() {
+       /* FUnzione predefinita che converte le stringhe in numeri in input di testo */
+        var a = Number(document.getElementById("numero1").value);
+       
+        var b = Number(document.getElementById("numero2").value);
+        
+        var c = a + b;
+      alert("la somma è: " + c);
+        
+}
+
+
+</script>
+<hr>
+<input type="text" id="myInput">
+<button onclick="getValue()">Ottieni valore</button>
+
+<script>
+function getValue() {
+  const inputValue = document.getElementById("myInput").value;
+  alert("Il valore inserito è: " + inputValue);
+}
+</script>
+<p id="nome"></p>
+</body>
+</html> 

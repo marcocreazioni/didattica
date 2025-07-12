@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <h1>Seleziona l'auto</h1>
+    <select id="nome">
+        <option>Ferrari</option>
+        <option>Lamborghini</option>
+        <option>Mercedes</option>
+        <option>MacLaren</option>
+    </select>
+
+<p id="qui"></p>
+
+<!--Pulsante che attivera l'applicazione della funzione-->
+<button id="risultato" onclick="nominativo()">Nominativo</button>
+<hr>
+<script>
+
+function nominativo() {
+ 
+    
+    // assegno ad una variabile un id della pagina (solo per la caselle di input dove si immettono dei valori)aggiungiamo .value per 
+    // intercettare cosa  è stato inserito;
+   
+    nome = document.getElementById("nome").value;
+    concatena = nome;
+    
+ // Swich indica di quale variabile o risultato devo definire le condizioni sul valore
+   switch (concatena) {
+   //in case va indicato direttamente il valore che assumera la variabile e dopo i due punti ":" indichiamo
+   // le operazioni da svolgere
+    case "Ferrari":
+
+       var concatena = "Grandioso hai scelto un auto italiana: " + nome;
+        document.getElementById("qui").innerHTML = concatena;
+    //break interrompe l'esecuzione delle altre condizioni
+        break;
+    case "Lamborghini": 
+    var concatena = "Ottima scelta ti piace anche cantare sulla: " + nome;
+        document.getElementById("qui").innerHTML = concatena;
+        break;
+    
+    case "Mercedes": 
+    var concatena = "Ti piacciono le auto tedesche: " + nome;
+        document.getElementById("qui").innerHTML = concatena;
+        break;
+  
+
+
+    
+    default:
+        var concatena = "Hai scelto un auto: " + nome; 
+        document.getElementById("qui").innerHTML = concatena;
+
+        break;
+   } 

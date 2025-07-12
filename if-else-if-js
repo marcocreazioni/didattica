@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il ciclo if</title>
+</head>
+<body>
+    <h1>Condizioni del ciclo if</h1>
+
+<h3>Sommiamo</h3>
+<label>Sommiamo</label><br>
+<input type="number" id="numero1"><br><br>
+<input type="number" id="numero2"><br><br>
+<button id="attiva" onclick="somma()">Somma</button><br><br>
+
+<p id="sommiamo"></p>
+
+
+<script>
+
+function somma(){
+    // number è una funzione predefinita per estrarre numeri dalla stringa
+    var a = Number(document.getElementById("numero1").value);
+    var b = Number(document.getElementById("numero2").value);
+    var c = a + b;
+    
+// if indica una possibile condizione che si potrebbe verificare
+// in (indichiamo la condizione: (ovvero formule che possono restituire un risultato vero oppure falso))
+// in parentesi graffa inseriamo le operazioni che la funzione deve svolgere
+    if (c < 0 ) { 
+     var c = c + 10;
+     document.getElementById("sommiamo").innerHTML = "accidenti putroppo la tua somma ha restitutito un numero negativo: " + c;
+
+    }
+ // Se voglio che siano ammesse piu condizioni usiamo elese if seguito dalla altra possibile condizioni che si possono
+ // verificare   
+    else if (c == 0) {
+        document.getElementById("sommiamo").innerHTML = "il risultato e zero";
+    }
+// utilizziamo tante else if quante sono le condizione che ci occorrono
+    else if (c == (isNaN(c)) || c == "Undefined" ) {
+        document.getElementById("sommiamo").innerHTML = "La funzione a prodotto un risultato inaspettato";
+ 
+    }
+
+
+
+ // sta indicare un alternativa ad una o piu condizioni che non si dovessero verificare   
+    else {
+        document.getElementById("sommiamo").innerHTML = c;
+    }
+
+
+}
+</script>

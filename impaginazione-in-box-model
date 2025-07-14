@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+<style>
+/* Reset del body */
+body {
+      margin: 0px;
+      padding: 0px;
+      font-family: sans-serif;
+}
+.contenitoreuno {
+    background-color: blanchedalmond;
+    /*Larghezza */
+    width: 300px;
+    /* altezza */
+    height: 80px;
+    /* Padding ingrandimento del contenutire */
+    /* 1 parametro aggiunge spessore nei 4 lati 
+    padding: 5px; */
+    /* 2 parametri (top e bottom) (left-right) 
+    padding: 5px 20px; */
+    /* 3 parametri (top,left-right,bottom) 
+    padding: 0px 10px 30px; */
+    /* 4 parametri (top,right,bottom,left) */
+    padding: 0px 10px 30px 20px;
+    /* border in short code (spessore,tipologia,colore) */
+    border: 6px solid blue;
+    /*spostamento centrale di un oggetto con il parametro auto*/
+    margin: auto;
+
+}
+.contenitoreuno h2 {
+    background-color: yellowgreen;
+}
+
+.contenitoredue {
+    background-color: chocolate;
+    /*Larghezza */
+    width: 300px;
+    /* altezza */
+    height: 80px;
+     /*Padding alternativo */
+    padding-top: 10px;
+    padding-bottom:20px;
+    padding-left: 30px;
+    padding-right: 20px; 
+    /* parametri border separati
+    width spessore */
+    border-width: 5px 10px 4px 6px;
+    /*tipologia ammesse: solid,dashed,dotted,groove,ridge,inset e outset */
+    border-style: outset double ridge groove;
+   /*colore del bordo*/
+    border-color: blue turquoise gold cyan;
+    /* margin in shortcode (ammessi fino a 4 parametri) 
+    margin: 10px 5px 20px 50px; */
+    /* margin alternativo singolo (top left garantiscono lo spostamento dell'oggeto) */
+    margin-top: 30px;
+    margin-left: 60px;
+   /* margin alternativo non utile allo spostamento */
+   margin-right: 30px;
+   margin-bottom: 400px;
+}
+.contenitoredue h2 {
+    background-color: yellowgreen;
+}
+/* ATTENZIONE L'IMPAGINAZIONE IN BOX MODEL NON E' COMPATIBILE CON LE SEGUENTI IMPAGINAZIONI: 
+POSITION (i margin vengono sostituiti con Top,Left,bottom,right);
+DISPLAY FLEX (i margini sono incompatibili);
+DISPLAY GRID (i margini sono incompatibili);
+DISPLAY INLINE (compatiblita limitata)
+
+*/
+</style>
+</head>
+<body>
+<h1>Impaginare in box model</h1>
+<!--html del contenitore uno -->
+<div class="contenitoreuno">
+   <h2>Contenuto</h2>
+ 
+
+</div>
+<hr>
+ <!--html del contenitore due -->
+<div class="contenitoredue">
+   <h2>Contenuto</h2>
+ 
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testo e Css</title>
+<style>
+ /* allineamento center,left,right,start,end,justify*/   
+p {text-align: start;
+  /*le dimensioni del testo vanno in font-size come large, ma vengono ammessi dimenisoni in px,pt,vw,em */
+  font-size: 12pt;
+  /* proprieta di corsivo (italic,oblique,normal) */
+  font-style: italic;
+  /*ombreggiatura del testo */
+  text-shadow: 1px 1px orangered;
+  /* trasformazione del testo Uppercase = maiuscolo,Lowercase miniscole,capitalize iniziali
+  maiuscole */
+  text-transform: capitalize;
+  /* rientro della prima riga indicata in px */
+  text-indent: 20px;
+  /* distanziamento di parole e lettere */
+  word-spacing: 10px;
+  letter-spacing: 5px;
+  /* distanziamento tra le righe (interlinea) */
+  line-height: 15px;
+  /*proprieta responsiva del testo */ 
+  text-wrap: auto;
+  /* famiglie di caratteri (san-serif caretteri prive di decorazionie, serif caratteri decorativi con
+  grazie nel testo) (preinstallati nel browser:times new roman,courier new )attenziano dopo la virgola
+  inserisco i caratteri di riserva */
+  font-family: Arial,Helvetica;
+  /* varianti dele carattere implementato */
+  font-variant: small-caps;
+}
+
+span {
+   /*decorazioni del testo  ammette proprieta di sottolineature del testo sottolineature*/
+   text-decoration: underline;
+   /* spessore del testo (indicato con termini in inglese(bold-lightec ecc (100-900 e maggior
+   spesso)*/
+   font-weight: 800; 
+
+}
+
+
+
+</style>
+    </head>
+<body>
+    <h1>Proprieta del del testo</h1>
+<div>
+<p>Lorem ipsum dolor sit amet, <span>adipisicing</span> adipisicing elit. Numquam dignissimos odit voluptates facilis vitae dolorum consectetur omnis hic? Pariatur quia est commodi et officia corporis totam voluptatem in quaerat accusantium.</p>
+
+</div>
+
+
+</body>
+</html>

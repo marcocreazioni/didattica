@@ -1,0 +1,33 @@
+<-- Redirect a versioni mobile  -->
+<!DOCTYPE html>
+<head>
+<!-- Title che compare nei motori di ricerca -->
+<title>TItolo della pagine</title>
+<!--name e conten sono attributi del tag html-->
+<meta name="keywords" content="dolor">
+<script>
+/* Script che riconosce la grandezza della finestra nella versione mobile */
+/* la dimensione delllo schermo e la condizione ) (window.innerWidth < 368) */
+ if (window.innerWidth < 368) { // Soglia di larghezza per i dispositivi mobili
+       /* nelle "virgolette" si inserisce la cartella a cui viene reindirizzata */
+        window.location.href = "/mobile"; // Reindirizza alla versione mobile
+    }
+ /* aggiungere questa istruzione se vado a realizzare una versione per il tablet */   
+  else if ( (window.innerWidth > 368) && (window.innerWidth < 720) ) {
+               window.location.href = "/tablet";  
+            }
+   else     {   window.location.href = "/"; 
+
+ }
+</script> 
+
+</head>
+<body>
+ <h1>Versione Desktop </h1>
+
+
+</body>
+</html>
+
+
+

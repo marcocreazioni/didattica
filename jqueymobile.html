@@ -1,0 +1,98 @@
+<!--impaginazioe ed uso di jquery mobile -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Versione</title>
+<!--css di jquery mobile-->
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<style>
+/* fai uso degli id per personalizzarla */
+/* ad esempio qui abbiamo posizionato il foot a fondo schermata */
+#foot {
+  position:fixed;
+  width:100%;
+  bottom: 0px;
+}
+#head {background-color: antiquewhite;
+
+}
+.ui-grid-a {
+  background-color: aquamarine;
+}
+</style>
+</head>
+<body>
+
+<!--ogni contenuto mobile deve essere integrato in una page-->
+<div data-role="page">
+<!-- testata del corpo della pagina-->  
+  <div data-role="header" id="head">
+	 <!--toolbar (barra orizzonale)-->
+    <div data-role="toolbar" data-type="header">
+    <h1>Mobile</h1>
+    </div>
+   <!--barra di navigazione-->
+     <div data-role="navbar">
+       <ul>
+        <li><a href="#" class="ui-button-active">One</a></li>
+      </ul>
+    </div>
+  
+  </div>
+<!--corpo della pagina -->
+ <div role="main" class="ui-content">
+   <!--Griglie di layout (la lettera a indica una riga a due blocchi)a = 2 blochi b= 3 blocchi-->
+  <!--menu collassabile-->
+   <div data-role="collapsible">
+    <h4>Heading</h4>
+    <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
+</div>
+   
+   
+   
+   
+   <div class="ui-grid-a">
+    <!--i blocchi della colonna sono ui-block,se i blocchi sono piu di uno
+    si aggiunge una lettera dell'alfabeto ad ogni blocco a = I blocco b= II Blocco-->
+     <div class="ui-block-a">
+      <p>Colonna 1</p>
+      </div>
+       <div class="ui-block-b">
+      <p>Colonna 2</p>
+      </div>
+      
+
+   </div>
+ 
+ 
+ 
+ 
+  <p> Corpo della pagina</p>
+</div> 
+<!--pie di pagina -->
+<div data-role="footer" id="foot">
+		<h4>Footer della pagina</h4>
+	</div>
+
+</div>
+
+
+
+  
+
+
+
+
+
+
+ 	
+
+<!--core di programmazione jquery-->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!--jquery mobile library-->
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Interazioni con il DOM</h1>
+<!--Il DOM è rappresentato da principali elementi dell'html: 
+Tutti i tag, tutti gli attributi di un tag, e il protocollo di connessione ad una pagina web
+Relazione che si instaura tra javascript e html
+-->
+<button onclick="change()">Sfondo</button>
+<p class="ciao" id="ciao" name="ciao">Benvenuto</p>
+<p id="stampa"></p>
+<script>
+// document.getElementsByID preleva un Id dalla pagina e supporta il metodo Inner
+document.getElementById("ciao").innerHTML = "Hello!"; 
+// prelievo di id e class 
+document.getElementById("ciao").getElementsByClassName("ciao")[0].innerHTML = "Hello"; 
+// document.getElementsByClassName preleva una classe e non supporta il metodo inner (attenzione se l'indice non
+// dovesse essere prelevato richiamarlo in fase di output; 
+document.getElementsByClassName("ciao")[0].innerHTML = "ciao";
+// se sono presenti piu oggetto vanno richiamato come degli array [0].innerHTML specificando l'indice di partenza)
+// document.getElementsbyTagName preleva un particolare tag (attenzione pero in faste di stampa
+ document.getElementsByTagName("p")[0].innerHTML = "ciao";
+
+// se sono presenti piu oggetto vanno richiamato come degli array [0].innerHTML specificando l'indice di partenza)
+// document.QuerySelectorAll("p.ciao") puo richiamare una classe appartenente ad un determinato tag
+  document.QuerySelectorAll("p.ciao").innerHTML = "ciao";
+// document.querySelector(#ciao) o direttamente la classe (.ciao))
+  document.querySelector(.ciao).innerHTML = "ciao"; 
+//document anchors legge l'attributo name di un tag senza leggerne il valore al quale viene assegnato un indice che partono sempre
+// da zero
+  document.anchors[0].innerHTML;
+
+function change ()  {
+let a = document.getElementsByClassName("ciao");
+document.getElementById("stampa").innerHTML = a[0]; 
+}
+
+</script>

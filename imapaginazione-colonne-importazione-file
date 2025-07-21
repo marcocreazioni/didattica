@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* importazione/installazione del carattere */    
+@font-face {
+    font-family: "Master-Rumble" ;
+    /* ricordarsi sempre di inserire i nomi dei file con le estensioni */
+    src: url("font/MasterRumble-Regular.ttf");
+}
+/* uso del carattere installato */
+h1 {font-family: "Master-Rumble"; 
+    text-align: center;
+}
+/* uso del carattere Google */
+section { font-family: "Roboto Mono";
+/* suddivisione del paragrafo in colonne
+coloumn count detta il numero delle colonne di un blocco  */
+    column-count: 3;
+/* spazi tra le colonne*/
+    column-gap: 10px;
+/* distribuisce il testo tra le colonne" */    
+    column-fill: balance;
+/* spessore in px o % tra le colonne */
+    column-width: 50%;
+/* Linea centrale tra le colonne (linee) le tipologie sono identiche ad i bordi
+style = tipologia color = colore width = spessore*/
+    column-rule-style: solid;    
+    column-rule-color: brown;
+    column-rule-width: 5px;  
+}
+/* column span permette di avere un contenuto
+che attraversa la colonne ma deve essere applicato
+all'interno di un contenitore che comprende
+paragrafi e titoli */
+h2 {-webkit-column-span: all;
+    -moz-column-span:all;
+    column-span: all; 
+    color:orange;
+
+}
+</style>
+<!-- Imporatazione caratteri da Google Font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+<h1>Lavorare con i font</h1>    
+<section>  
+<h2>Column Span Proprieta </h2>
+<p>C'era una volta una grande casa della prateria 
+    Quod fuga fugiat ipsa, voluptas deserunt officia iusto? 
+    Error illum sint laudantium quis omnis, non nihil voluptatibus
+    distinctio ipsa, reprehenderit cum! Rerum!
+<!--<img src="https://cdn.pixabay.com/photo/2024/02/05/18/54/sunlight-8555108_960_720.jpg"> -->
+</p>
+</section>  
+</body>
+</html>

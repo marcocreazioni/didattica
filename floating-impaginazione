@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* Applico proprieta di reset */
+* {box-sizing: border-box;
+}
+body {padding: 0px;
+      margin: 0px;
+}
+/* fine del reset css */
+
+.contenitore {background-color: beige;
+              width: 100%;
+              height: 400px;
+              
+              
+}
+.box-1 { background-color: brown;
+         width: 50%;
+         height: 400px;
+/* per consentire a box-2 di aggianciarsi alla box-1
+attivo la proprieta float che consente di liberare spazio
+a destra o a sinistra dello schermo*/
+         float:right;   
+         
+/*         float:right; */     
+}
+.box-1 p {margin-top: 0px; 
+
+}
+.box-2 { background-color: goldenrod;
+         width: 50%;
+         height: 400px;
+/*la proprieta clear interrompe le proprieta float          
+         clear: both;*/
+         margin-left: 0%;
+/*         margin-left: 0%; */
+
+
+}
+/* la virgole consente di disciplinare con le stesse proprieta
+piu tag */
+p , img {padding: 5px; 
+   color: white
+}
+
+</style>
+
+</head>
+<body>
+<h1>Impaginazione Float</h1>
+
+<div class="contenitore">
+  <div class="box-1">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni error culpa nihil repudiandae. Voluptatum libero nulla vitae impedit, ullam officia culpa quidem non cumque rem corporis ipsum aliquid consectetur laboriosam?   
+    </p>
+  </div>
+  <div class="box-2">
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolore molestias consequatur sint maiores velit? Vitae harum, modi, officiis assumenda exercitationem fuga similique voluptatum eaque deleniti odit possimus ab! Odio.
+   </p>
+   <img src="https://staticfanpage.akamaized.net/wp-content/uploads/sites/25/2025/07/jovanottimamma-1200x675.jpg" alt="jovanotti">
+  </div>
+</div>
+</body>
+</html>

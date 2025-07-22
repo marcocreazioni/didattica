@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--integrazione di un javascript esterno-->
+<script src="documento.js"></script>
+</head>
+<body>
+
+    <h1>Integrazioni javascript</h1>
+<!-- Attributi js nei tag html (onclick)(onmouseover)(onkeypress)(onload) utili per attivare funzioni js -->
+ <button onclick="document.write('viva la speranza')">Accendi la speranza</button>     
+
+<!--Contenito HTML di Linguaggio javascript (posizionarlo prima della chiusura del tag body)-->    
+<script>
+/* I commenti in js sono uguali al css */ 
+
+// commento in singola riga
+document.write('Hello World');
+console.log('Proviamo questo codice');
+
+
+</script>
+
+
+</body>
+</html>
+
+_________________________________
+// QUI CE IL FILE JS ESTERNO
+// Qui posso utlizzare il linguaggio javascript
+document.writeln('Sono attivato da un file javascript esterno');

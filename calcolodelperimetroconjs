@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo del perimetro di un quadrato</title>
+</head>
+<body>
+    <h1>Calcolo di un perimetro di un quadrato</h1>
+    <table>
+    <tr>   
+    <th>Dati del problema</th>
+    </tr>
+    <tr>
+     <td>I lati del quadrato misurano 5 cm</td>
+    </tr>
+    </table>
+    <hr>
+    <p>Il perimetro è: <span id="qui"></span></p>
+
+    <script>
+     // dichiarazione di una variabile (var) (let o const) ($) 
+     // ad ogni variabile va dato un nome di battesimo lato 
+     // var lato;  
+     // alla variabile lato possiamo assegnare un valore con il simbolo dell uguale
+     // lato = 5;
+     // in alternativa nel momento in cui dichiaro una variabile ne assegno il valore 
+     var lato = 5;
+     // ATTENZIONE A DIFFERENZA DI HTML E CSS (LATO o Lato, lato non sono la stessa cosa)
+     // Per poter calcora un perimetro genera una funzione in grado di moltiplicare il lato per 4
+     // function genera una funzione mentre perimetro è il nome assegnato alla funzione
+     // nella parentesi tonda si indicano gli argomenti di una funzione () 
+     // lasciare vuota la parentesi fa in modo che la funzioni accetti al suo interno qualsiasi argomento
+     // dopo aver definito eventuali argomenti indichiamo le funzioni da svolgere all'interno
+     //della parentesi graffa { }
+     function perimetro() {
+     // in return indichiamo il risultato che vogliamo ottenere dalla funzione     
+        return lato * 4;
+     }
+     // facciamo uso della funzione e lo stampiamo all'interno di un tag con id "qui" 
+     // comprensibile e compatibile con il linguaggio html la funzione e document
+     document.getElementById("qui").innerHTML = perimetro() +  " cm";
+     // console.log(perimetro() + " cm");
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impaginazione Display</title>
+<style>
+* {box-sizing: border-box;
+}
+body {margin: 0px;
+      padding: 0px;
+}    
+header { 
+       /* testata con blocco nav che scrolla */
+         background-color: aquamarine;
+         padding: 1px;
+         text-align: center;
+         color: orange;
+         position: fixed;
+         width: 100%;
+         top: 0px;   
+}
+nav { 
+      text-align: left;
+      background-color: beige;
+      padding: 1px;
+      height: 20px;
+      margin-top: 0px;
+      
+      
+     
+
+}
+ul { margin-left: 0px;
+     padding: 2px;
+     margin-top: -3px;
+
+
+}
+/* list style type che cambio il punto elenco e lo rimuovo */
+li { list-style-type: none;
+     background-color: brown;
+     display: inline-block;
+     width: 100px;
+     height: 20px;
+     margin-left: -3px;
+     color:white;
+     text-transform: uppercase;
+     
+}
+li:hover {
+    background-color: burlywood;
+    color:white;
+}
+
+li a {text-decoration: none;
+      color: white;
+      padding: 10px;
+      width: 100px;
+
+}
+li a:hover {
+    color:aliceblue;
+}
+
+.contenitoregrande {background-color: coral;
+                    margin-top: 90px;
+                    height:200px;
+                    overflow:auto;
+
+}
+
+.box-1 {background-color: lightgreen;
+        width: 50%;
+        height: 200px;
+        display: inline-block;
+
+}
+.box-2 {background-color: mediumpurple;
+        width:50%;
+        margin-left: 50%;
+        height: 200px;
+        margin-top: -210px;
+}
+img {z-index: -1;
+
+}
+</style>
+</head>
+<body>
+<header>    
+<h1>Display</h1>
+
+<nav>
+     <ul>
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>Servizi</li></a>
+     </ul> 
+
+</nav>
+</header>
+<!--contenitore grande-->    
+<div class="contenitoregrande">
+   <!--    box 1     -->
+    <div class="box-1">
+     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, architecto sint similique assumenda repudiandae voluptate pariatur distinctio aspernatur odio sed temporibus fuga maxime obcaecati, odit at, eius consequatur commodi molestias.</p>
+   </div>
+   <!--- fine box 1  -->
+   <!--  box 2 -->
+   <div class="box-2">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatum eligendi ad, nesciunt ex explicabo blanditiis nam? Sapiente pariatur explicabo voluptas quam, ullam doloremque at totam quas, inventore obcaecati voluptates?</p>
+   </div>
+   <!--fine vox 2-->
+</div>
+<!--fine contenitore grande-->
+<!--<img src="https://cdn.pixabay.com/photo/2024/09/21/15/07/eiffel-tower-9064240_960_720.jpg">-->
+</body>
+</html>

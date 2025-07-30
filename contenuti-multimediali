@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELemnti Multimediali</title>
+</head>
+<body>
+    <h1>Elementi Multimediali</h1>
+<!--Tag contenitore per le immagini 
+l'attributo alt deve contenenere una descrizione dell'immagini
+-->
+<!--figure-->
+<figure>
+<img src="img/bufalo.jpg" alt="bufali con le corna"> 
+
+<figcaption>
+    Didascalia immagine
+</figcaption>
+
+</figure>
+<!-- contenitore dei video che ha necessita di un attributo per attivare i controlli
+ attributi di video:
+ controls (fa partire il tasto play)
+ muted (toglie il sonoro)
+ autoplay (partenza automatica)
+ loop (ripetizione continua puo ammettere un certo numero di riproduzione)
+ al video posso aggiungere widht e height
+poster="file.jpg" consente di aggiungere una copertina al video -->
+<video controls autoplay loop width="100%" height="auto" poster="https://cdn.pixabay.com/photo/2018/03/22/02/37/email-3249062_960_720.png">
+  <!--source si inserisce il tag video-->
+ <source src="video/comunicazione-efficace.mp4" type="video/mp4"  >
+ <!--per aggiungere formati alternativi uso una altro tag
+ source-->
+
+</video>
+<!--contenitore per file audio
+attributo audio:
+ controls (fa partire il tasto play) 
+ muted (toglie il sonoro) 
+ autoplay (partenza automatica)
+loop (ripetizione continua puo ammettere un certo numero di riproduzione) -->
+<audio controls>
+    <source src="audio/Clock.mp3" type="audio/mp3">
+    <source src="audio/Clock.wav" type="audio/wav">
+
+</audio>
+
+
+<!--integrazione immagini senza contenitore con inc-->
+<!--le immagini ammettono attributi dimensionali
+width e height (il valore auto scala i contenuti in base alle dimensioni della pagina)-->
+<img src="https://cdn.pixabay.com/photo/2025/04/30/13/05/cat-9569386_960_720.jpg" alt="bufali pezzati" width="50%" height="auto" title="coppia bufali">
+</body>
+</html>

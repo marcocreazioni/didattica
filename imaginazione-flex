@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* Applico proprieta di reset */
+* {box-sizing: border-box;
+}
+body {padding: 0px;
+      margin: 0px;
+}
+/* fine del reset css */
+/* l'impaginazione flex non richiede dimensioni in larghezza */
+
+.contenitore-grande {background-color: transparent;
+                     overflow: auto;
+/* Attivare le proprieta flex nel contenitore grande */                     
+                     display: flex;
+                     gap: 1px;
+/* un terzo contenitore va sotto quando lo spazione termina(wrap) */
+                     flex-wrap: wrap;  
+/* con la flex-direction cambiamo l'ordine dei contenitore */
+                      flex-direction: row; 
+                      
+}
+.scatola-1 { background-color: rgb(11, 223, 75);
+             padding: 5px;
+/* per definire le dimensioni attivata la proprieta flex */
+             flex: 2;
+
+
+
+}
+.scatola-2 { background-color: rgb(26, 116, 195);
+             padding: 5px;
+             flex: 1;
+}
+
+.scatola-3 { background-color: rgb(26, 195, 29);
+             padding: 5px;
+             flex: 1;
+}
+</style>
+
+</head>
+<body>
+<h1>Impaginazione Flex</h1>
+<div class="contenitore-grande">
+    <div class="scatola-1">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus amet quod est magnam! Necessitatibus, earum. Ratione nostrum possimus assumenda repudiandae, quibusdam accusamus, unde voluptates facere debitis sed odit totam!</p>
+
+    </div>  
+    
+    
+    <div class="scatola-2">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quasi placeat natus deleniti iure adipisci cum modi laborum, saepe aperiam optio veritatis. Dolore mollitia esse aliquid facilis accusantium optio perferendis?</p>   
+    </div> 
+    
+    <div class="scatola-3">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quasi placeat natus deleniti iure adipisci cum modi laborum, saepe aperiam optio veritatis. Dolore mollitia esse aliquid facilis accusantium optio perferendis?</p>   
+    </div>  
+
+</div>
+</body>
+</html>

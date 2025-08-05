@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Le Variabili</h1>
+
+
+<script>
+//Variabili (Elementi base di un algoritmo)
+var casa = "ciao";
+//dichiarazione con un valore assegnato ovvero "ciao" = stringa   
+var pasta;
+//dichiarazione di una variabile
+pasta = "benvenuti";
+//assegnazione di un valore
+let casabis = "a tutti";
+//variabile espansa adattabile a funzioni implementate in ecma-script (estensione del linguaggio
+//javascript) (Programmazione orientata al web) 
+const parametri = "base";
+//variabile al quale non sara assegnato un nuovo valore e figlia cmq dell'espansione ecma.scritp
+$casa = 3;
+//varabili generiche cmq accettate in javascript nate per lavorare con jquery
+
+//Le variabili possono essere suddivise per tipologie
+//tipologia di variabile chiamata stringa (le stringhe sono incompatibili con i numeri) 
+var a = "testo";
+document.write(typeof(a) + "<br>");
+//tipologia di variabile numerica (le stringhe sono incompatibili con i numeri) 
+//numero intero  
+
+var b = 5;
+document.write(typeof(b) + "<br>");
+//tipologia numerica ma con la virgola (la virgola viene sostituita con il punto) 
+var c = 5.4;
+//numero float ovvero con virgola
+document.write(typeof(c) + "<br>");
+
+var d = 5.4e+2; //moltiplica esponenzialmente x 100 o in negativo divide x 100  
+document.write(typeof(d) + " " + d + "<br>");
+
+// una variabile puo essere formato da valori booleani come vero e falso letgato pero a 
+//delle condizioni 
+document.write(typeof(e) + "<br>");
+
+// variabili possono essere funzioni, oggetti(insiemi), elenchi (array)
+
+
+</script>
+
+    
+</body>
+</html>

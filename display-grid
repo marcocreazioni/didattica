@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griglia</title>
+<style>
+* {box-sizing: border-box;
+   }
+body {margin: 0px;
+      padding: 5px;
+      
+}
+/* sopra istruzioni reset css */
+
+/*contenitore esterno */
+.contenitore {background: orange;
+/* attivazione della griglia */
+display: grid;            
+/*definizione della tipologie di griglia (divisione in colonne) */
+/* per definirla occorre inserire le dimensioni di ogni singola colonna da creare
+con auto: la colonna si distribuisce automaticamente negli spazi
+con fr: 1fr 2fr ecc dettano le proporzionialita delle colonne
+con px o %; 
+*/
+/* grid-template-columns: auto auto auto auto; */
+/* per griglie complesse usiamo direttamente un modello 
+grid template  
+grid-template: auto auto / auto auto;*/
+grid-template: 
+"a a" auto 
+"a a" auto
+; 
+/*definizione delle tipologia di griglia (divisione in righe)
+ATTENZIONE UN MODELLO ESCLUDE L'ALTRO 
+grid-template-rows: auto; */
+/* distanziare gli oggetti con gap (row-gap o column-gap) */
+gap: 2px;
+
+}
+
+/* contenitore interni */
+.primo {
+    background-color: beige;
+    
+
+}
+.secondo {
+    background-color: aqua;
+   
+}
+.terzo {
+    background-color: rgb(29, 135, 27);
+   
+}
+.quarto {
+    background-color: rgb(22, 156, 234);
+   
+}
+
+</style>
+</head>
+<body>
+ <div class="contenitore">
+    <div class="primo">
+        <p>PRIMO</p>
+    </div>
+    <div class="secondo">
+        <p>SECONDO</p>
+        </div>
+     <div class="terzo">
+        <p>TERZO</p>
+        </div>
+      <div class="quarto">
+        <p>QUARTO</p>
+        </div>
+ 
+    </div>   
+    
+</body>
+</html>

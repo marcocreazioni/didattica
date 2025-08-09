@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {padding: 5px;
+      margin: 0px; }
+.card {
+      
+      top: -300px;
+      position:relative;
+     
+}
+.card-body , card-text {
+background-color: transparent;
+color: red;
+}
+
+
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<body>
+
+
+<img src="https://cdn.pixabay.com/photo/2022/12/16/16/28/drinking-cups-7660115_960_720.jpg" onmouseover="ciao()" width="200px" height="300px">
+<div id="demo"></div>
+
+<script>
+
+function ciao() {
+
+document.getElementById("demo").innerHTML = "<div class='card' style='width: 200px;height:300px; background-color: transparent;'><div class='card-body'><h5 class='card-title'>Card title</h5><h6 class='card-subtitle mb-2 text-body-secondary'>Card subtitle</h6><p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card’s content.</p><a href='#' class='card-link'>Card link</a><a href='#' class='card-link'>Another link</a></div></div>";
+
+}
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

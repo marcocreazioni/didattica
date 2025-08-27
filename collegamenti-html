@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collegamenti</title>
+</head>
+<body>
+<a name="su"></a>    
+    <h1>Collegamenti</h1>
+<!--Collegamenti con il testo  
+attributo relativo al comportamento del collegamento
+target ="_self": collegamento aperto nella stessa finestra del clic
+target ="_blank": collegamento aperto in nuova scheda del broweser del clic
+target ="_new": collegamento in una nuova finestra del browser*
+-->
+<a href="Home.html" target="_new">Collegamento</a>
+<hr>
+<!--Apertura del programma di posta elettronica predefinito (esegue il client di posta elettronica)-->
+<a href="mailto:info@mail.it?subject=Ti scrivo dal sito">info@mail.it</a>
+<hr>
+<hr>
+<!--Collegamento ad un segnalibro # + nome del segnalibro-->
+<a href="#giu">vai al paragrafo</a>
+
+<a href="servizi.html#giu">collegamento a segnalibro su un altr pagina</a>
+<hr>
+<!--Apertura del applicazione di telefonia-->
+<a href="tel:+393209013280">320 90 13 280</a>
+<hr>
+<!--Collegamenti esterni 
+qualificazione dei link in uscita e se il motore di ricierca debba verificare o meno
+il contenuto del collegamento 
+rel: sponsored (annuncio sponsorizzazioe)
+rel: ugc (contenuto generato degli utenti)
+rel: follow (segui il contenuto)no follow (non seguire il contenuto)
+-->
+<a href="https://wikipedia.it" target="_new" rel="nofollow">vai su wikipedia</a>
+<hr>
+<!--Collegamento alla messaggistica di whatsapp-->
+<a href="https://wa.me/393701503035?text=ti%20scrivo%20dal%20sito%20web">Scrivimi su whatsapp</a>
+<hr>
+<!--Collegamenti con un bottone-->
+<a href="Home.html"><button>Clicca qui</button></a>
+<hr>
+<!--Collegamenti con un immagini e altri contenuti-->
+
+<a href="servizi.html"><img src="img/beach.png"></a> 
+<hr>
+<!--Collegamenti con elementi della lista-->
+<ul>
+  <a href="#"><li>Home</li></a>
+  <li><a href="#">Servizi</a></li>
+</ul>  
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat doloremque eveniet voluptatem quam, quas natus ad adipisci sapiente sunt ullam dolorum dicta repellat assumenda sed nobis laborum saepe dolorem alias!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ratione facilis accusantium, laborum, beatae, maiores dolor sequi officia praesentium reiciendis in. Tempora quisquam, perspiciatis neque aliquid sequi saepe accusamus quos?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, consectetur error perferendis molestiae debitis in? Iusto, ab nihil. Ducimus adipisci inventore eaque vero nam architecto exercitationem quae ipsam, quaerat eos?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veritatis iste provident, minima harum rem ipsa dolore, et laboriosam cum commodi excepturi vero recusandae eius ratione tempora hic facilis porro.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, facere quos facilis veniam vero odio aut vel natus, sint doloremque temporibus autem quae, sapiente saepe qui blanditiis eaque tempore sit?</p>
+<!-- <a name="nomedelsegnalibro">Destinazione del collegamento-->
+<p>Lorem ipsum dolor sit amet consectetur <a name="giu">adipisicing</a> elit. Dolore at neque aliquid sed. Est architecto cupiditate quia autem explicabo eius optio corrupti repellat magnam magni minima eos, repellendus ad eveniet?</p>
+</body>
+</html>

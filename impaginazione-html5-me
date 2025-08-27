@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--blocco della testa della pagina-->
+<header style="background-color: aqua;padding: 1px;">
+<h1>Testata della pagina</h1>
+</header>
+<!--blocco del menu di navigazione della pagina-->
+<nav style="background-color: rgb(180, 201, 235);padding: 1px;">
+    Menu della pagina web
+</nav>
+<!--blocco del corpo della pagina-->
+
+<main style="background-color: rgb(17, 245, 47);">
+
+  <!--sezioni del main della pagina-->
+   <section style="background-color: rgb(174, 117, 239);">Sezione della pagina</section>
+   <section style="background-color: rgba(224, 105, 107, 0.942);">
+     <!--articolo di un blog-->
+      <article style="background-color: rgba(133, 218, 233, 0.942);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolore doloremque veritatis ab vero odit iusto, ipsum maxime quod recusandae aliquam itaque omnis qui ducimus atque a placeat illo. Nemo.
+      </article> 
+      <!--didascalie e commenti-->
+      <aside style="background-color: rgb(11, 201, 201);">Didascalia
+      </aside> 
+   </section>
+    
+</main> 
+<!--blocco del pie di pagina-->
+
+<footer style="background-color: rgb(222, 245, 17);padding: 1px;">
+   <p>Pie di pagina</p>  
+</footer>
+
+<div>contenuto generico</div>
+</body>
+</html>

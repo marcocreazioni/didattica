@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* Applico proprieta di reset */
+* {box-sizing: border-box;
+}
+body {padding: 0px;
+      margin: 5px;
+}
+/* fine del reset css */
+/* l'impaginazione grid non richiede dimensioni in larghezza */
+
+.contenitore-grande {background-color: transparent;
+                     overflow: auto;
+/* attivatore della griglia display */
+                     display: grid;
+
+                    
+/*gap crea spazi tra i contenitori */ 
+
+                     gap: 0px;
+/*row gap crea spazi tra i contenitori in riga */ 
+                     row-gap: 5px;
+
+/*colonne gap crea spazi tra i contenitori in colonna */                 
+                    column-gap: 5px;
+
+/* per impaginazione piu complesse possiamo definire il modello di impaginazione */
+/* prima do una proprieta grid area a ciascun elemento con grid-area: a b ecc
+e poi definisco l'area da occupare da coascun elemento */
+ grid-template-areas: 
+                      "a a a"
+                      "b c c"
+                      "b d d"
+                      ;   
+                      
+}
+.scatola-1 { background-color: rgb(11, 223, 75);
+             padding: 5px;
+             border-radius: 20px;
+             /* ogni elmento della griglia
+             puo inglobare piu spazi 
+             Il primo valore indica la posizione
+             di inizio mentreo il secondo dopo lo
+             / gli spazi da occupare /span + spazi da
+             occupare */
+
+               
+              grid-area: a;
+
+             
+
+
+
+}
+.scatola-2 { background-color: rgb(26, 116, 195);
+             padding: 5px;
+             border-radius: 20px;
+
+
+              grid-area: b;
+            
+}
+
+.scatola-3 { background-color: rgb(26, 195, 29);
+             padding: 5px;
+             border-radius: 20px;
+             grid-area: c;
+
+             
+}
+.scatola-4 {background-color: aqua;
+            padding:5px;
+            border-radius: 20px;
+            grid-area: d;
+
+            }
+</style>
+
+</head>
+<body>
+<h1>Impaginazione Display Grid</h1>
+<div class="contenitore-grande">
+    <div class="scatola-1">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus amet quod est magnam! Necessitatibus, earum. Ratione nostrum possimus assumenda repudiandae, quibusdam accusamus, unde voluptates facere debitis sed odit totam!</p>
+
+    </div>  
+    
+    
+    <div class="scatola-2">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quasi placeat natus deleniti iure adipisci cum modi laborum, saepe aperiam optio veritatis. Dolore mollitia esse aliquid facilis accusantium optio perferendis?</p>   
+    </div> 
+    
+    <div class="scatola-3">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quasi placeat natus deleniti iure adipisci cum modi laborum, saepe aperiam optio veritatis. Dolore mollitia esse aliquid facilis accusantium optio perferendis?</p>   
+    </div>    
+
+    <div class="scatola-4">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quasi placeat natus deleniti iure adipisci cum modi laborum, saepe aperiam optio veritatis. Dolore mollitia esse aliquid facilis accusantium optio perferendis?</p>   
+    </div>  
+
+</div>
+</body>
+</html>

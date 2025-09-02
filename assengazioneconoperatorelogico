@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Assignments</h1>
+<h2>Logical Assegnazione con valori logici</h2>
+<h3>The &&= Operator</h3>
+
+<p id="stampat"></p>
+<p id="demo"></p>
+
+<script>
+t = prompt("Quanto hai preso all'esame", " ");
+z = t > 18;
+stampat.innerHTML = z;
+//se z da come risultato vero deve assegna a z il valore 10, se non è vero scrivero false
+// &&= and assegna un valore solo se t da come risultato "true" mentre ||= assogne un valore alla variabile solo se t da
+// come risultato true
+y = z &&= "Sei stato promosso";
+if (z = "false"){ 
+y = "sei stato bocciato diamine";
+}
+demo.innerHTML = "il valore è: " + y;
+</script>
+
+</body>
+</html>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Assegnazioni dei valori</h1>
+<button onclick="stampasomma()">Clicca qui</button>
+
+<p id="stampac"></p>
+
+<button onclick="calcoloiva()">Scopri l'iva</button>
+<p id="prezzoivato"></p>
+<script>
+function stampasomma() {
+a = 5 , b = 10;
+b = 5;
+//Per azzerare un assegnazione di un variabile gli assegnare il valore null;
+b = null;
+b = 20;
+c = a + b;
+
+stampac.innerHTML = "<h1>" + c + "</h1>";
+}
+function calcoloiva() {
+    prezzo = prompt("inserisci il prezzo da cui calcolare l'iva", "");
+    prezzo *= 1.22; //* se vogliamo moltiplicare il valore di un variabile / per dividere + sommare - sottrarre ecc
+
+    prezzoivato.innerHTML = prezzo + "€";
+
+}
+
+
+
+</script>
+  
+</body>
+</html>

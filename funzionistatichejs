@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Funzioni</h1>
+<img width="50px" src="https://cdn-icons-png.flaticon.com/512/18775/18775852.png" onclick="stampa()" >
+<p id="risultato"></p>
+<script>
+//function si attiva una funzione
+function icona() {
+     a = "<img width='50px' src='https://cdn-icons-png.flaticon.com/512/18775/18775856.png'>"
+  //Per fare un modo che una funzione restituisca una valore aldila che debba essere stampata o no usiamo "return"   
+    return a;
+
+}
+function numero() {
+    b = "Donna";
+    return b;
+}
+//generata da AI
+function radiceQuadrataDiDieci() {
+  return Math.sqrt(10);
+}
+
+
+//funzione di stampa
+function stampa() {
+ //stampa pubblichera il risultato della funzione numero su l'id risultato
+    risultato.innerHTML = icona() + "<br>" + numero() + radiceQuadrataDiDieci();
+
+}
+
+
+
+
+
+</script>
+    
+</body>
+</html>

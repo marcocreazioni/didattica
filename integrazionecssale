@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INegrazione del css</title>
+<!--integrazione di un css esterno al documento-->
+<link rel="stylesheet" href="/css/mio.css" type="text/css">    
+<!--integrazione del css in pagina ed è integrato nella sezione
+head e introdotto da un tag style-->
+<style>
+/* Qui posso usare solo linguaggio css */
+/* I step definire il selettore ovvero il tag html da modifica 
+e dentro la parentesi graffa aggiungo proprieta e assegno i 
+valori che vogliamo modificare nel tag*/
+p {color: darkblue;
+   background-color: blueviolet;
+
+}
+/* uso il . seguito dal nome inserito nell'attributo class*/
+.mario {color:white;
+        background-color: darkorange;
+
+}
+/* uso il # seguito dal nome inserito nell'attributo id*/
+#carlo {color: white;
+        background-color: brown;
+
+}
+</style>
+
+</head>
+<body>
+    <h1> Integrazione del css</h1>
+<!--Il css integrato tramite attributo ad un tag html
+css in linea ed è prioritari rispetto ad altre integrazioni-->
+<p style="text-align: justify;color:white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, eligendi excepturi. Deleniti, autem hic sequi aperiam ad doloribus rerum explicabo neque et voluptates praesentium voluptatem atque provident quisquam itaque ex?</p>
+<!--class come attributo idenitifca univocamente un selettore html-->
+<p class="mario">Nuovo paragrafo</p>
+<!--id come attributo idenitifca univocamente un selettore html-->
+<p id="carlo">Altro nuovo paragrafo</p>
+
+<p id="js"></p>
+<script>
+js.innerHTML = "Buongiorno";    
+</script>
+</body>
+</html>
+------------------------------contenuto del css---------------------------------------------
+/* qui devo utlizzare solo linguaggio css ed uso la 
+stessa sintassi del css in pagina */
+p {background-color: cyan;
+    padding: 5px;
+
+}
+

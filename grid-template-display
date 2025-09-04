@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+body {
+margin: 0px;
+padding: 0px; 
+color: white;
+}
+.contenitore {display: grid;
+              grid-template-columns: 30% auto;
+              gap: 10px;
+}
+.primo {
+     background-image: url('https://cdn.pixabay.com/photo/2025/04/24/22/36/beach-9556784_960_720.jpg'); 
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center bottom;
+     text-align: center;
+     overflow: auto;
+     height:500px;
+     
+}
+
+
+
+
+.primo > button {margin-left: calc(90% - 70px);
+              padding: 15px;
+              border: none;
+              background-color: orange;
+              border-radius: 15%;
+              width: 70px;
+}
+.secondo > button {margin-left: calc(90% - 70px);
+              padding: 15px;
+              border: none;
+              background-color: orange;
+              border-radius: 15%;
+              width: 70px;
+              margin-top: 25%;
+}
+
+.secondo {background-image: url('https://cdn.pixabay.com/photo/2025/06/26/16/05/building-9682225_960_720.jpg'); 
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center bottom;
+     text-align: center;
+     overflow: auto;
+     height:500px;
+}
+
+.distanziatore {height: 50px;
+}
+</style>
+</head>
+<body>
+<div class="contenitore">
+<div class="primo">
+  <p class="distanziatore"></p>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+   <button>Prova</button>
+   <p></p>
+</div>
+
+<div class="secondo">
+ <p class="distanziatore"></p>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+  <div class="distanziatore"></div>
+   <button>Prova</button>
+   <p></p>
+
+
+</div>
+
+</div>
+</body>
+
+</html>

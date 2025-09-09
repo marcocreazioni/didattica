@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUnzioni DIamniche</title>
+</head>
+<body>
+<h1>Funzioni</h1>
+<button onclick="stampa()">Clicca per vedere la somma</button>
+<p id="risultato"></p>
+<p id="tipovariabili"></p>
+<script>
+//funzione che effettua una somma tra due variabile, chi vuole sfruttare la funzione potra richiamarne gli
+//argomenti nella funzione stessa
+function somma(num1,num2) {
+    return num1 + num2
+  
+
+}
+//Applicazione della funzione
+function stampa() {
+  a = Number(prompt("inserisci il primo numero da sommare","")); //restituisce come risultato una stringa ma number la converte
+  //in numero Number(contenuto da trasforma in numero da stringa)
+  b = Number(prompt("inserisci il secondo numero"," "));
+  c = prompt("inserisci il tuo nome", "");
+  //Al richiamo di una funzione, ricordiamo di inserire i valori accettati dalla funzione che
+  //sono stati inseriti come argomenti nella funzione stessa
+    risultato.innerHTML = somma(a,b);
+    tipovariabili.innerHTML = typeof(a) + " " + typeof(b) + " " + typeof(c);
+    
+} 
+</script>
+    
+</body>
+</html>

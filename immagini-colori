@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* Proprieta css legato al colore */
+
+h1 { /*color inidica la propieta di colore del testo */
+     /* valori ammessi: colori indicati in inglese 
+     valori esadecimali #fffff o in alternativa
+     rgb non è piu supportato la codifica HSL, RGB
+     gode di una variante chiamata RGBA che includo
+     quattro valori anziche tre, l'ultimo valore
+     indica l'opacita e va da 0 a 1 che indica il
+     grado di trasparenza dove 0 inidica il 100%
+     di trasparenza e 1 indica che non vi e alcuna
+     trasparenza*/
+    color: rgba(21, 108, 15, 0.866);  
+    /* background color indica le proprieta di sfondo*/
+     /* valori ammessi: colori indicati in inglese */
+    background-color: rgba(170,60,355,0.5);
+}
+h2 {/* per sfumare il colore del testo serve una combinazione di 
+    proprieta css*/
+    background-image: linear-gradient(green,lightgreen);
+    /* poi attiviamo una proprieta di taglio della sfumatura in
+    text di background clip */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.primo { /* con background image possiamo ottenere delle
+    sfumature 
+    le sfumature lineari si indicano con linear
+    gradient, e puo ammettere diversi valori,
+    separati da virgola,nel primo valore in parenteso
+    e sono indicati con il suffisso deg seguito
+    dall'angolazione che si vuole dare alla sfumatura
+    accanto al colore possiamo indicare la quantita
+    di ciascun colore (meglio applicare quantita solo sun primo colore)*/
+    background-image: linear-gradient(45deg,red 40%,orange ,yellow);
+
+}
+.secondo {
+    /* sfumatuara radiale 
+    la sfumatura ammette uno o piu colori che partono dall'interno
+    verso l'esterno (con forma ellittica a meno che non venga specificata
+    la forma circolare indicandolo come parametro) */
+    background-image: radial-gradient(circle,orange 20%,yellow);
+}
+.terzo { /*immagini di sfondo url seguito dal percorso dell'immagine*/
+         background-image: url("https://cdn.pixabay.com/photo/2024/09/15/10/05/building-9048827_960_720.jpg"); 
+         /*proprieta secondari che si attivano solo all'applicazione
+         della proprieta principale ad esempio
+         con backgroun position scelgo la posizione dell'immagine
+         su cui focalizzarci ammette 1 o 2 valori*/
+        /* background-position: bottom; */
+         /* la proprieta attachment fissa l'angolo di applicazione 
+         delle sfondo o di distrubuzione dell'immagine (fixed o scroll)*/
+         background-attachment: fixed;
+         /* per scalare o ridimensionare l'immagine di sfondo e puo ammettere
+         2 parametri di larghezza o altezza (
+         PS non è consigliato quando si usa position), ma 
+         size ammette anche valori speciali come contain (dove l'immagine
+         viene scalata partendo dal centro ps non usare 
+         background-position in quanto incopatibile o cover (dove
+         l'immagine viene ingrandita per lo spazio disponibile) */
+         background-size: cover;
+         /* solo se l'immagini risula piu piccola rispetto alla dimensione
+         da occupare si usa la propreta repeat che ammette tre valori
+         repeat, no-repat, repeat-x o repeat y */
+         /* background-repeat: repeat; */
+         width: 100%;
+         height: 300px;
+         max-height: 300px;
+         color: white;
+}
+.distanza {
+    height: 180px;
+}
+    </style>
+</head>
+<body>
+    <h1>Proprieta css Colori e immagini</h1>
+    <h2>Testi sfumati</h2>
+    <p class="primo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, amet ipsam? Magnam, est asperiores sed architecto nisi accusantium tempora, ipsa ut ab inventore ratione a eius aut earum optio consequuntur?</p>
+<!--    <img src="https://cdn.pixabay.com/photo/2022/10/16/13/37/flowers-7525121_960_720.jpg"> -->
+    <p class="secondo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum fugit, error neque esse inventore consequuntur incidunt hic eum quas quod culpa sit ipsam exercitationem reiciendis laboriosam officiis quos autem voluptates.</p>
+    <div class="terzo">
+        <div class="distanza"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At saepe beatae, officia placeat aperiam quis quibusdam recusandae sequi doloremque deserunt, eius eaque quo quod aspernatur esse dolores voluptatem illum unde!</p>
+        <button>Clicca qui</button>
+    </div>
+     </body>
+</html>

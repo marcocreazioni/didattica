@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- Installaziione di Bootstrap css (in locale)
+<link href="bootstrap/bootstrap.css" rel="stylesheet">-->
+<!-- Installazione di Bootstrap CDN (esterna in cloud) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+<!--Foglio di stile per personalizzare bootstrap
+<link href="custom.css" rel="stylesheet">
+<style>
+/* CSS in pagina modifica le proprieta bootstrap */
+#test {background-color: blueviolet;
+       color:yellow;
+}
+#test:hover {background-color: aqua;
+
+}
+
+</style>
+</head>
+<body>
+<!--Menu di navigazione-->
+<!--bg-body- (si occupa dello sfondo della navbar) bg-info (cambia nei colori
+azzurro) bg-success (verde) bg-warning (arancione) bg-danger (rosso)
+bg-dark   -->
+<nav class="navbar navbar-expand-lg" style="background-image: linear-gradient(45deg,orange,red);" data-bs-theme="light">
+ <!--la classse text effettua modifiche alll'allineamento del testo-->
+    <div class="container-fluid">
+        <!--titolo del sito-->
+    <!--logo del sito puo essere inserita qui-->
+     <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+     
+     <a class="navbar-brand" href="#"> Il mio sito</a>
+   <!--menu hamburger del menu sul mobile-->
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--fine del menu hamburger-->
+    <!--contenitore che si attiva con il menu hamburger--> 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent mx-auto p-2 o text-center">
+      <!--elenco delle voci del menu per centrere un oggetto aggiungere -->
+      <ul class="navbar-nav mx-auto p-2">
+        <!--voce del menu-->
+        <li class="nav-item">
+            <!--cassi aggiuntive a navlink active permette di evidenzia la pagina dove mi trova o disabled per
+            non renderlo cliccabile-->
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <!--voce del menu-->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Servizi</a>
+        </li>
+        <!--nuova voce del menu-->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contatti</a>
+        </li>
+        <!--blocco menu a discesa-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Voce Primaria
+          </a>
+          <!--sotto voci della voce primaria-->
+          <ul class="dropdown-menu">
+            <!--voce del menu a discesa-->
+            <li><a class="dropdown-item" href="#">Action</a></li>
+
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <!--divisore del menu a discesa -->
+            <li><hr class="dropdown-divider"></li>
+            
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+       
+        </li>
+         <!--fine blocco a menu a discesa -->
+        <!--nuovo menu a discesa-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nuova Voce Primaria
+          </a>
+          <!--sotto voci della voce primaria-->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+       
+        </li>
+        <!--fine nuovo menu a discesa-->
+      </ul>
+
+    <!--cassella di ricerca del pulsante-->  
+    <form class="d-flex" role="search">
+        <!--casella di inpunt con placeholder c'è il testo suggerito-->
+       <input class="form-control me-2" type="search" placeholder="cerca" aria-label="Search"/>
+       <!--pulsante che attiva la ricerca in pagina-->
+       <button class="btn" type="submit" style="background-color: aqua;">Ricerca</button>
+      
+    </form>
+
+    </div>
+  </div>
+</nav>
+<br>
+<a class="btn" href="#" id="test">Impaginazione Bootstrap Framework</a>
+
+
+
+
+
+
+
+<!--installazzione Bootstap js 
+<script src="bootstrap/bootstrap.bundle.js"></script>-->
+<!--installazione Bootstrap CDN js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>-->
+</body>
+</html>

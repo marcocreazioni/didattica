@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--link di importazione font titilium da google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<!--importazione icone bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+/* importazione font locale*/
+@font-face {
+    font-family: "Vocago";
+    src: url('font/Vocago.ttf');
+}
+/* importazione da google font */
+body { font-family: "Titillium Web";
+
+}
+
+
+  /*allineamento con text-align */      
+h1 {text-align: center;
+    font-family: "Vocago";
+}
+
+.p1 {text-align: justify;
+    /*spessore del font*/
+    font-weight:600;
+    /*grandezza del font con font size da small a larger*/
+    font-size: 10pt;
+    /*stile del carattere per applicare il corsivo */
+    font-style: italic;
+    /*testo racco */
+    font-variant:small-caps;
+    /* distanze tra le lettere*/    
+    letter-spacing: 2px;
+    /* distamza tra la parole */
+    word-spacing: 10px;
+    /* interlinea*/
+    line-height: 10px;
+
+}
+/* usando lo spazio nel selettore voglio modificare solo le proprieta
+presenti in contenitore al suo interno */
+ /*testo sottolineato  con text-decoration*/
+
+.p1 > span {text-decoration: underline;
+            color:brown;
+            font-weight:normal;
+
+}
+/* text-trasform converte il testo da maiuscolo e minuscolo ecc*/
+.p2 {text-transform:uppercase;
+/* text shadow in shortcode permette di usare 3 valori (spostamento orizzonte)
+(spostamento verticale)(sfocatura)(colore) ombeggiando il testo*/    
+    text-shadow: 2px 2px 2px orange;
+
+}
+/* text indent lascia lo spazio nella prima riga */
+.p3 {text-indent: 20px; 
+/* famiglie di caratteri */
+     font-family: arial,sans-serif; 
+     /*ritaglia il teso dentro un contenitore */
+     text-overflow: clip;    
+}
+        
+a {text-decoration: none;
+
+}
+.prova {text-decoration: overline;
+
+}
+    </style>
+</head>
+<body>
+    <h1><i class="bi bi-check-lg" style="font-size: medium;color:orange"></i> Lavorare con il testo in css</h1>
+  <p class="p1">Lorem ipsum, dolor sit amet <span>consectetur</span> adipisicing elit. Nulla reiciendis expedita facilis maiores rem ab quidem exercitationem, corporis, quaerat animi cumque sunt vitae consequuntur consectetur suscipit vel eligendi? Quo, doloribus?</p>
+  <p class="p2"><a href="#">Lorem</a> ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate commodi maiores voluptatem itaque voluptas mollitia! Voluptatem omnis suscipit iusto atque veniam laboriosam, dolore aliquid facilis incidunt ullam repellat nihil?</p>
+  <p class="p3">Lorem <span class="prova">ipsum</span> dolor sit amet consectetur adipisicing elit. Sunt nobis possimus enim quia veritatis, alias omnis minus, dolore, dolor aliquid veniam numquam aperiam accusantium quibusdam laboriosam provident repudiandae magnam vero.</p>
+  <p class="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis possimus enim quia veritatis, alias omnis minus, dolore, dolor aliquid veniam numquam aperiam accusantium quibusdam laboriosam provident repudiandae magnam vero.</p>
+  <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis possimus enim quia veritatis, alias omnis minus, dolore, dolor aliquid veniam numquam aperiam accusantium quibusdam laboriosam provident repudiandae magnam vero.</p>
+  <p class="p6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis possimus enim quia veritatis, alias omnis minus, dolore, dolor aliquid veniam numquam aperiam accusantium quibusdam laboriosam provident repudiandae magnam vero.</p>
+  <p class="p7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis possimus enim quia veritatis, alias omnis minus, dolore, dolor aliquid veniam numquam aperiam accusantium quibusdam laboriosam provident repudiandae magnam vero.</p>
+  <p class="p8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis possimus enim quia veritatis, alias omnis minus, dolore, dolor aliquid veniam numquam aperiam accusantium quibusdam laboriosam provident repudiandae magnam vero.</p>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.box {width: 25%;
+      height: 100px;
+      background-color: rgb(6, 61, 226);
+      margin: auto;
+      border-radius: 20%;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      /* Attivato della transizione */
+      transition: /*proporeta css di cui si vuole la transizione + il tempo
+      della transizione e la proprieta vai po utlizzata al passaggio del mouse
+      se applichiamo piu transizione esse devono essere separate da un vigola*/
+      width 1s , background-color 1s, transform 2s;
+      /* transition possiede proprieta derivate
+      transition delay il ritardo nella partenza */
+      transition-delay: 0,5s;
+      /* durata di tutte le transizioni */
+      transition-duration: 1s;
+    /* algoritmo di durata della transizione o di accelerazione ease in ad esempio
+    accelera in partenza, easi out al termine */
+      transition-timing-function: ease-in;
+      
+}
+.box:hover {  
+    /* scale numero di volta che permette
+    di scalare un oggetto da 0.1 a 1 otteniamo
+    un contenuti 1 a 1 rispetto alle dimensioni
+    inseritea x possiamo anche solo scalare in larghezza x, altezza y , profondita Z,
+    posso usare anche scale3d ma devo indicare tutti e tre i parametri.
+    skew rende obliqua la forma con i  skewx , rotate indica una rotazione*/
+    /* scale(0.8) scaleX(3);  scale3d(1 , 2 , 0.5) skewy(30deg)*rotate(360deg) rotatex(90deg) 
+    translate invece sposta l'oggetto in un altro punto dello schermo ( x , y), disponibile
+    come altre trasformazioni in x, y, z, 3d */
+    /* matrix invece vuole piu parametri all'interno della tonda 
+     matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+    transform: matrix(1, 0 , 0.2, 1, 0 ,200px , 0px); */
+    
+    /* qui inserisco la proprieta che si dovra modificare stabilita da transition */
+    width: 70%; 
+    background-color: orange;
+    transform: rotate(360deg) scale(0.5);
+}
+/* animation */
+.box2 {width: 25%;
+      height: 100px;
+      background-color: rgb(6, 226, 46);
+      margin: auto;
+      border-radius: 20%;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    /* definire un nome per la animazione e durata dell'animazione */
+      animation-name: movimento;
+      animation-duration: 2s;
+    /* numero di volte in cui l'animazione si ripete da 1 a infinite */
+     animation-iteration-count:1;  
+    /* direction stabilisce la direzione dell'animazione (alternate alterna in pratica from e to)
+    o reverse da to a from*/
+    animation-direction:normal;
+    /* fill mode stabilisce il termine dell'animazione e la posizione in cui l'oggetto
+    deve terminare forwards (finale) backwords (iniziale)*/
+    animation-fill-mode: forwards;
+    /* algoritmo di accelerazione*/
+    transition-timing-function: ease-out;
+    }
+    /* @Keyfame attiva le istruzioni dell'animazione */
+@keyframes movimento {
+    /* from indica lo stato iniziale dell'oggetto prima della animazione */
+      from  {width: 25%;
+             margin-left: -50%; 
+             
+
+      }
+      /*indica il punto di arrivo */
+      to {width: 50%;
+          margin-left: 50%;
+          transform: rotate(90deg);
+          background-color: red;
+          font-size: 20pt;
+
+      }
+/* possiamo anche definire delle animazione intermedia 
+0% { }
+25% { }
+50% { }
+75% { } 
+*/
+}
+</style>
+
+</head>
+<body>
+<h3>Trasformation e Transition</h3>
+<div class="box">
+    <p>Ciao</p>
+</div>    
+
+<h3>Animation</h3>
+<div class="box2">
+    <p>Ciao</p>
+</div>    
+</body>
+</html>

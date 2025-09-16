@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+<style>
+table {border: 1px solid;
+
+}
+.campi {border:1px solid;
+        background-color: yellow;
+        font-weight: 700;
+        text-align: center
+} 
+.valori {border: 1px solid;
+         text-align: left;
+         width: 250px; 
+}   
+</style>
+</head>
+
+
+<body>
+<h1>Maschera di inserimento dati</h1>
+<button onclick="inserisci()">Clicca per inserire i tuoi dati</button>
+<br><br>
+
+<table>
+<tr><td class="campi">Nome</td><td class="valori" id="nome"></td></tr>
+<tr><td class="campi">Cognome</td><td class="valori" id="cognome"></td></tr>
+<tr><td class="campi">Telefono</td><td class="valori" id="telefono"></td></tr>
+<tr><tr><td class="campi">Indirizzo</td><td class="valori" id="indirizzo"></td></tr>
+
+</table>
+<p id="nominativo">Nominativo</p>
+<script>
+function inserisci() {
+//inserimento di un oggetto 
+var dati = {
+       nome: prompt("inserisci il tuo nome", " "),
+       cognome: prompt("inserisci il tuo cognome", " "),
+       telefono: prompt("inserisci il tuo telefono", " "),
+       indirizzo: prompt("inserisci il tuo indirizzo"," "),
+       //in oggetto possiamo trovare elementi che sono frutto 
+       //di operazione all'interno dell'oggetto stesso (ingoblando una funzione 
+       // al su interno)
+       nominativo: function() {
+       return this.nome + " " + this.cognome;
+       } 
+    };
+//stampa degli elementi di un oggetto su un id    
+    nome.innerHTML = dati.nome;
+    cognome.innerHTML = dati.cognome;
+    telefono.innerHTML = dati.telefono;
+    indirizzo.innerHTML = dati.indirizzo;
+    // se un oggetto contiente una funzione al proprio interno dobbiamo aggiungere l'oggetto
+    //funzione
+    nominativo.innerHTML = dati.nominativo();
+//termine funzione inserisci
+}
+console.log(inserisci());
+
+</script>
+
+
+</body>
+</html>

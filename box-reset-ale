@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX Model</title>
+<style>
+ /* istruzione reset css */
+ body {margin: 0px; 
+       padding: 0px;
+       font-family: sans-serif;
+ }
+ * {box-sizing: border-box; 
+
+ }
+ /* fine del reset css */
+.a {background-color: blanchedalmond;
+     width: 200px;
+     height: 200px;
+     /* rientro o padding 
+     aggiungendo un unico valori stabilisci
+     un rientro per i 4 lati (TOP,LEFT,BOTTOM E RIGHT)
+     ----------------------------
+     Se invece ne inserisco solo 2 (TOP-BOTTOM, LEFT E RIGHT )
+     ----------------------------
+     Se invece inserisci 3 parametri (TOP, LEFT E RIGHT,BOTTOM)
+     -----------------------------
+     Se invece inserisco 4 parametri (TOP, RIGHT, BOTTOM, LEFT)  */
+     /* padding: 0px 0px 0px 10px; */
+    padding-top: 10px;
+    padding-left: 10px;
+    /* spostamento dell'oggetto sul foglio margin 
+    aggiungendo un unico valori stabilisci
+     un rientro per i 4 lati (TOP,LEFT,BOTTOM E RIGHT)
+     ----------------------------
+     Se invece ne inserisco solo 2 (TOP-BOTTOM, LEFT E RIGHT )
+     ----------------------------
+     Se invece inserisci 3 parametri (TOP, LEFT E RIGHT,BOTTOM)
+     -----------------------------
+     Se invece inserisco 4 parametri (TOP, RIGHT, BOTTOM, LEFT)*/
+     /* margin: 0px 0px 0px 0px; */
+     margin-top: 10px;
+     margin-left: 0px;
+     /* border si aggiunge alla dimensioni oggetto 
+     nella modalita short (spessore, tipologia e colore)*/ 
+     /* border: 10px outset orangered; 
+     /*spessore che puo essre impostato a piu  parametri*/
+     border-width: 10px 5px 6px 10px;
+     /*tipologia per tutti i lati */
+     /* border-style:dashed;*/
+     /*per lati diversi 
+     border-right-style: double;
+     border-left-style: solid;
+     border-top-style: groove; */
+     border-style: dashed outset inset solid;
+     border-color: orange green yellow cyan;
+     /*arrotondamento con la regola orologio per i 4 lati*/
+     border-radius: 25px 5px 10px 2px;
+     /* per arrotondamenti diversi/
+     border-bottom-left-radius: 5px; */
+     
+    }
+.a p {margin-top: 70%; 
+
+}    
+.b {background-color: burlywood;
+    width: 200px;
+    height: 200px;
+    /* margin auto centro l'oggetto orizzontalmente */
+    margin: auto;
+}
+
+
+section {background-color: brown;
+         color:white;
+         width: 200px;
+         height: 200px;
+         /*attivazione automatica proprieta section
+         con padding: 1px che inserito anche nei
+         contenitore vicini ha un effetto collante */
+         
+}
+
+
+
+
+</style>
+</head>
+<body>
+    <h1>Box Model</h1>
+    <!--contenitore-->
+    <div class="a">
+     <p>IL mio paragrafo</p>
+
+
+    </div>
+    <!--
+    <section>
+        <p>Il mio paragrafo</p>
+    </section>
+-->
+    <div class="b">
+     <p>IL mio paragrafo</p>
+
+
+    </div>
+</body>
+</html>

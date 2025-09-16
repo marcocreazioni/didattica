@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+img {width: 200px;
+     height: 200px;
+   
+    }
+div {width: 200px;
+     height: 200px;
+     border: 1px solid;
+     margin: auto;
+}
+
+
+</style>
+</head>
+
+<body>
+    <h1 align="center">Spegni La fiamma</h1>
+    <h4 align="center">Clicca sulla fiamma per far comparire l'acqua</h4>
+ <div onclick="this.innerHTML=sostituzione()">  
+       <img src="https://pngimg.com/uploads/flame/flame_PNG13248.png">   
+  </div>
+
+</body>
+
+<script>
+function sostituzione() {
+var a = "<img src='https://pngimg.com/uploads/water_splash/water_splash_PNG73.png'>";
+
+return a;
+}    
+</script>
+</html>

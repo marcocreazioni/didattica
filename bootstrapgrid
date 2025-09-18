@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://cdn.pixabay.com/photo/2025/09/10/14/35/mushroom-9826526_960_720.jpg" class="d-block w-100" alt="..." style="height:650px">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2024/12/14/08/11/red-leaf-9266941_960_720.jpg" class="d-block w-100" alt="..." style="height:650px">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2022/04/15/08/53/roses-7133951_960_720.jpg" class="d-block w-100" alt="..." style="height:650px">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!--griglia di bootstrap (il primo elemento deve essere un container)-->
+<div class="container-fluid" style="background-color:blanchedalmond">
+<!--In ogni container deve essere presente una riga-->
+   <div class="row" style="background-color: aqua;">
+       <div class="col-xl-1" style="background-color: rgb(41, 217, 5);" >Prima</div>  
+       <div class="col-xl-10" style="background-color: rgb(5, 196, 217);" >Seconda</div>  
+     <div class="col-xl-1" style="background-color: rgb(217, 189, 5);" >Terza</div>  
+   </div>
+</div>
+<div class="container-fluid" style="background-color:blanchedalmond">
+<!--In ogni container deve essere presente una riga-->
+   <div class="row" style="background-color: aqua;">
+    <!--ogni colonna deve suddividersi in 12 spazi col-6 o col-xl-l6 xl-md-l-->
+       <div class="col-sm-6" style="background-color: rgb(41, 217, 5);" >Prima</div>  
+       <div class="col-sm-6" style="background-color: rgb(5, 196, 217);" >Seconda</div>  
+      
+   </div>
+</div>

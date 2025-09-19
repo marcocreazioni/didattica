@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX Model</title>
+<style>
+ /* istruzione reset css */
+ body {margin: 0px; 
+       padding: 0px;
+       font-family: sans-serif;
+ }
+ /* il padding e border (tutti i tag ) sono sommati alla grandezza
+ in larghezza dell'oggetto*/
+ * {box-sizing: border-box; 
+
+ } 
+ /* fine del reset css */
+.a {background-color: blanchedalmond;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE91ufZvs2FEQhdVzYqbQ_9g6-M0yoGDae7w&s);
+     width: 25%;
+     height: 200px;
+     padding: 5px;
+     overflow: auto;
+     /* vai a sinistra ma lascia libero spazio a destro
+     vai a destra ma lascia libero spazio a sinistra */
+     float:left;
+     border:2px solid;
+     
+     
+     
+     
+    }
+ .dist {height: 100px; 
+
+ }   
+ .a > p {
+         padding: 0px;
+         text-align: left;
+         
+ }   
+ .a > .gbutton > button {margin-top:-10px;
+              background-color:orange;
+              border: none;
+              padding: 5px;
+              border-radius: 10px;
+              width: 48%;
+              float:left;
+              margin-left: 2px;
+              
+         
+ }
+ .gbutton {width:100%;
+            text-align: center;
+ }
+    
+.b {background-color: rgb(13, 253, 73);
+    width: 25%;
+    height: 200px;
+    padding: 5px;
+    overflow:auto;
+    float: left;
+    border:2px solid;
+
+
+}
+.c {background-color: rgb(13, 253, 233);
+    width: 25%;
+    height: 200px;
+    padding: 5px;
+    overflow:auto;
+    float: left;
+    border:2px solid;
+
+
+}
+.d {background-color: rgb(15, 210, 25);
+    width: 25%;
+    height: 200px;
+    padding: 5px;
+    overflow:auto;
+    border:2px solid;
+
+
+
+
+}
+/*
+div {background-color: blanchedalmond;
+     width: 50%;
+     overflow: auto;
+     float: left; 
+     height: 200px;
+     border: 1px solid;
+}
+    
+clear disattiva il float left se è stato impostato un float left
+clear right se è stato impostato il float right se invece voglio
+resettare il float in entrambi lati uso both
+.c , .d {clear: left;
+         width: 50%;
+         float: left;
+
+}
+*/
+.ac {text-align: center;
+
+}
+</style>
+</head>
+<body>
+    <h1>Box Model</h1>
+    <!--contenitore-->
+    <div class="a">
+      <div class="dist"></div>  
+     <p>IL mio paragrafo A</p>
+     <!--ragruppamento-bottoni-->
+     <div class="gbutton">
+        <button>Clicca qui</button>
+        <button>Clicca qui</button>
+     </div>
+     <!--fine raggruppamento bottoni-->
+    </div>
+ 
+    <div class="b ac">
+     <p>IL mio paragrafo B</p>
+
+
+    </div>
+
+    <div class="c ac">
+     <p>IL mio paragrafo C</p>
+
+
+    </div>
+    <div class="d ac">
+     <p>IL mio paragrafo D</p>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Rivalutazione TFR</title>
+  <style>
+    body {
+      background-color: rgb(221, 216, 216);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 30px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: black;
+      font-weight: bold;
+    }
+    input {
+      margin: 5px 0;
+      padding: 5px;
+      width: 200px;
+      border: 2px solid black;
+      display: block;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      border: 2px solid black;
+      display: block;
+    }
+    #risultato {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Calcolo della Detrazione lavoro dipendente </h2>
+
+  <label>Reddito tra i 15.000 ai 28.000€</label>
+  <input type="number" id="redditoutente" placeholder="Inserisci il TFR annuo lordo">
+
+  <button onclick="calcolaora()">Calcola Rivalutazione</button>
+
+  <div id="risultatoA"></div>
+  <div id="risultatoA1"></div>
+   
+  <div id="risultatoB"></div>
+
+  
+
+  <script>  
+//input reddito dell'utente (definizione degli elementi del problema)
+var reddito = Number(redditoutente.value); //dal campo dobbiamo ottenere un numero
+const a = 1910; 
+const b = 1190;
+const c = 28000;
+const d = 15000;
+
+//operazione e calcoli con le variabili (uso un altra variabile per i calcoli o genero un funzione di calcolo)applicazione delle formule
+//varifichiamo per la corretta trascrizione della formula che i dati siano dello stesso tipo
+/* IPOTESO A usa una variabile per ottenere il risultato (X) */
+
+/* ipotesi A1 svolgo tutti i calcoli in una singola variabile*/
+var x = a + (b * ((c - reddito)/(c - d))); 
+/* ipotesi A2 divido le operazione in piu operazioni singole */
+let operazione_1 = c - reddito;
+let operazione_2 = c - d;
+let operazione_3 = operazione_1 / operazione_2;
+let operazione_4 = operazione_3 * b;
+
+var y = a + operazione_4;
+
+
+/* IPOTESI B uso una funzione per ottenere un il risultato */
+function calcola() {
+     let operazione_1 = c - reddito;
+     let operazione_2 = c - d;
+     let operazione_3 = operazione_1 / operazione_2;
+     let operazione_4 = operazione_3 * b;
+     let z = a + operazione_4;
+     return z.toFixed(2);
+}
+
+
+//output calcolare la detrazione e dove deve essere utilizzata o pubblicato il risultato
+function calcolaora() {
+risultatoA.innerHTML = x.toFixed(2) + " €" + "<br>";
+risultatoA1.innerHTML = y.toFixed(2) + " €" + "<br>";
+risultatoB.innerHTML = calcola() + " €" + "<br>";
+}
+
+  </script>
+
+</body>
+
+</html>

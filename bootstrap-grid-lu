@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--importazione grid bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-grid.css"
+rel="stylesheet" type="text/css">
+</head>
+<style>
+body {margin:0px;
+padding: 0px; }
+
+.container {background-color: bisque;
+min-height: 250px;
+}
+.row {background-color: aquamarine;
+
+}
+.col {background-color: cadetblue;
+     border: 1px solid black;
+     min-height: 200px;
+
+}
+
+</style>
+
+
+
+
+<body>
+<h1>Impaginazione Bootstrap</h1>
+<!--Contenitore come conteinera 2 margini ai lati
+o un full screen devo usare container fluid -->
+<div class="container-fluid">
+<!--riga-->
+   <div class="row">
+
+       <!--colonne che si distribuiscono equamente gli
+       spazi aggiungendo alla class col un indice
+       possiamo divedere gli spazio diversamente
+       il totale degli indici non puo andare oltre 12
+       spazi per rendere responsive le colonne posso assegnare
+       delle taglie col-sm-4 col-md-4 col-xl-4 col-xxl-4 cambiano
+       il comportamento delle colonne a ridimensionarsi dello scherma
+       -->
+       <div class="col-xl-4" style="background-color:orange"> Testo 1</div>
+       <div class="col-xl-4" style="background-color:yellow"> Testo 2</div>
+     <div class="col-xl-4" style="background-color:green"> Testo3 </div>
+   
+    <div>
+ <div class="row">
+       <!--colonne-->
+       <div class="col"> Testo 1</div>
+        <div class="col"> Testo 2</div>
+        
+   
+    <div>
+
+</div>
+
+
+
+</body>
+</html>

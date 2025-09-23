@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+h1 {transform: rotateX(50deg);
+}    
+    /* css transformation, transition, animation */
+.box {background-color: mediumvioletred;
+      width: 125px;
+      height: 125px;
+      border-radius: 15px;
+      /* ombraggiature scostamento x, scostamento verticale y, sfo-
+      catura, colore */ 
+      box-shadow: 1px 1px 0px black;
+      padding: 5px;
+      color: white;
+      /* modellare l'immagine
+      rotate rotazione in base ad un angolo
+      scale accetta paramentri da 1 e successivi aumentano
+      la dimensione originale da 0 a 1 riduco le dimensioni
+      originali 
+      skew inclina l'oggetto di x gradi, skewx() o skewy() se solo
+      in orizzontale e verticale y
+      translate invece sposta l'oggetto dalla posizione
+      originale e accetta due cordinate x,y in px
+     matrix e una sequenza di parametri 
+     matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()).*/
+      /* il 3d vuole il numero delle rotazione nell'asse x,y,z e l'angolo di rotazione*/
+      /* translate3D vuole 3 paramentri asse x, y, z */
+      
+      transform: rotateY(0deg);
+      /* transizione tra due stati nello stato a (attivo) specifico
+      la proprieta css da utlizzare e il tempo da impiegare per la transizione
+      in s o ms */
+      transition: background-color 1s , transform 1s;
+      /* durata dell'animazione */
+      transition-duration: 1s;
+      /* algoritmo di accelerazione dell'animazione */
+      transition-timing-function: ease-out;
+      /*ritardo dell'animazione */
+      transition-delay: 1s; 
+      
+    }
+.box:hover { transform: scale(1.5) translate(150px,0px) rotateY(180deg);
+             box-shadow: 1px 1px 0px black;
+             background-color: yellow;
+            
+
+
+
+}
+.boxanimation {
+               background-image: url(https://pngimg.com/uploads/birds/birds_PNG113.png);
+               background-size: 125px 125px;
+               background-repeat: no-repeat; 
+               width: 125px;
+      height: 125px;
+      border-radius: 15px;
+      /* ombraggiature scostamento x, scostamento verticale y, sfo-
+      catura, colore  
+      box-shadow: 1px 1px 0px black;*/
+      padding: 5px;
+      color: white;
+      /*animation e l'attivatore name e duration */
+      animation-name: spostamento;
+      animation-duration: 5s;
+      /* ripetizione dell'animazione (inifinita Loop) o un numero specifico*/
+      animation-iteration-count: 1;
+      /* inversione dell'animazione alternate va da from a to 
+      reverse inverto da to a from, normal riporta l'animazione
+      da from a to*/
+      animation-direction:normal;
+      /* ritardo dell'animazione */
+      animation-delay: 0.5s;  
+      /* algoritmo di accelerazione */
+      animation-timing-function: ease-in;
+      /* stopping dell'animazione  backwords stoppa alla posizione iniziale
+      forwards ferma allo stato finale*/
+      animation-fill-mode: forwards;
+}
+/* applicazione dell'animazione @keyframe + nome animazione */
+@keyframes spostamento {
+       /* step 0 */      
+       from {/*background-color: rgb(9, 158, 208); */
+             transform: translate(-200px,0px); 
+
+       }
+       /* step terminale */
+        to {/*background-color: rgb(9, 40, 151); */ 
+            transform: translate(50%,70px) rotate(3turn) rotateX(180deg);
+        }
+}
+/* al posto di from e to possiamo usare diversi stadi dell animazione 
+0% 25% 50% 75% 100% */
+
+</style>
+</head>
+<body>
+    <h1>Transformation e Transition</h1>
+    <div class="box">Testo</div>
+    <h1>Animation</h1>
+    <button onclick="attiva()">clicca per attivare</button>
+    <div class="boxanimation">Testo</div>
+    <div id="destinazione"></div>
+<script>
+
+function attiva() {
+ a = "animazione";
+    destinazione.innerHTML = a;
+}
+
+
+
+</script>
+</body>
+</html>

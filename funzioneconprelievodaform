@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {background-color: yellow;
+     text-align: center;
+     font-size: 24pt;
+     font-weight:bold;
+     color: black;
+     text-shadow: 1px 1px solid black;
+     font-family: sans-serif;
+     width:300px;
+     padding: 5px;
+     height: 100px;
+     margin: auto;
+     }
+</style>
+</head>
+<body>
+<form>
+<label>Nome</label>
+<input type="text" id="nome">
+<label>Eta</label>
+<input type="text" id="eta">
+</form>
+<hr>
+<button onclick="stampanome()">inserisci il nome ed eta</button>
+<hr>
+<p id="iltuonominativo">
+<span id="etas"></span>
+</p>
+
+
+<script>
+function stampanome() {
+/*variabile per prelevare il campo di un modulo */
+var nome = document.getElementById("nome").value; //prelevate un dato di tipo stringa
+var eta = Number(document.getElementById("eta").value); //preleva un dato e lo converte in numero
+
+/*output*/
+iltuonominativo.innerHTML = nome + "<BR> " + eta;
+
+}
+</script>
+
+</body>
+</html>

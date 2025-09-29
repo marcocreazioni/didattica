@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin: 0px;
+      padding: 0px;
+    }
+#voceadiscesa a {color:rgb(67, 7, 135) 
+
+}
+
+</style>
+</head>
+<body>
+<!--menu di navigazione-->
+            <!--la classe modifica le proprieta della navbar 
+            (bg body indica lo sfondo della navbar o bg-info o success) 
+            rimuovendo il bg posso applicare qualsiasi sfondo
+            aggiungendo la classe fixed-top-e-bottom mettiamo la barra in position fixed
+            per farlo scrollare con la pagina possiamo aggiungere la classe sticy-top o bottom-->
+<nav class="navbar navbar-expand-lg " style="background-image: linear-gradient(90deg,orange,red);">
+
+  <div class="container-fluid">
+    
+<!--il navbar brand e dedicato a icone e titolo del sito-->
+    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+
+    <a class="navbar-brand" href="#">Mr. Red</a>
+     <!--qui posso inserire un icona o prima dell'oggetto navbarbrand-->
+    <!--Hamburger Menu-->
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <!--Fine del menu hamburger-->
+     <!--area menu-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <!--elenco del mun-->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <!--voce del menu-->
+        <li class="nav-item">
+          <a class="nav-link active"  href="#">Home</a>
+        </li>
+            <!--fine voce del menu-->   
+        <li class="nav-item">
+               <!-- active identifica la pagina attuale , al quale facoltativamente si
+                aggiunge l'attributo aria current-->
+          <a class="nav-link active" aria-current="page" href="#">Servizi</a>
+        </li>
+              <!--voce del menu nuovo-->    
+        <li class="nav-item">
+          <a class="nav-link"  href="#">Chi siamo</a>
+        </li>
+              
+        <!--blocco del menu a discesa-->     
+        <li class="nav-item dropdown" id="voceadiscesa">
+            <!--voce primaria-->
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu a discesa 1
+           </a>
+           <!--elementi che compongono il menu a discesa-->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <!--divisore del menu  dropdown-divider-->
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+            <!--fine del menu a discesa-->
+        </li>
+         <!--finede dalla voce a discesa-->
+          <!--blocco del menu a discesa-->     
+        <li class="nav-item dropdown" id="voceadiscesa">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu a discesa 2
+          </a>
+          <ul class="dropdown-menu">
+            <!--elementi del menu a discesa dropdown-item-->
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Action 2</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+           
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+         <!--finede dalla voce a discesa-->
+
+
+        <li class="nav-item">
+            <!--con la classe disabled disattivo il click su una pagina-->
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+<!--blocco di ricerca-->
+      <form class="d-flex" role="search">
+        <!--casella di testo per inserimento-->
+        <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search"/>
+         <!--bottone di ricerca btn classe per i botton mentre il colore e la tipologia 
+         segue questa classe btn-outline-success-->
+        <button class="btn btn-warning" type="submit">Cerca </button>
+      </form>
+
+    </div>
+        <!--area menu-->
+    <!--fine del contenitore-->
+  </div>
+</nav>
+ <!--fine del codice navbar-->   
+
+
+
+
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<style>
+label {font-weight: 500;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       font-size: larger;
+       font-style: italic;
+       color: blue;
+}
+
+button {margin-top: 10px;
+        padding: 10px 10px 10px 10px;
+        border: dotted;
+        background-color: rgb(135, 6, 255);
+        color: white;
+        border-radius: 6px;
+}
+
+p {font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-style: italic;
+    color: blue;
+    border: solid;
+    margin-right: 70%;
+}
+</style>
+</head>
+
+<h1>Form</h1>
+
+<label>Prezzo senza iva</label><br>
+<input type="number" id="noniva"> €
+<br>
+
+<button type="button"onclick="stampainformazioni()">Invio</button>
+
+<p id="daticompleti">Dati completi</p>
+
+<script>
+function stampainformazioni() {
+
+var noiva = document.getElementById("noniva").value;
+
+
+   //if + (condizione che si deve verifica)se il risultato della formule = vero) { operazione da svolgere}  
+   
+   if (noiva == 0 ) { 
+    
+    daticompleti.innerHTML =  "Attenzione ti Maledico!!  hai inserito un importo  pari a zero";
+   
+   } 
+   //altrimenti se non si è varificato il primo caso, verifica che non si verifiche questo secondo caso
+   else if (noiva < 0) { 
+   
+   daticompleti.innerHTML =  "Hai messo un numero negativo è il caso di farti un caffe" ;
+  
+   }
+  
+   //else + {altrimenti per tutti gli altri casi in cui la formula condizionale restituisce false ovvero non si fossero verificati gli altri casi fai svolgero le operazioni in {}
+   
+   else {
+   
+        var noiva = noiva * 1.23;
+
+        daticompleti.innerHTML =  "Prezzo Ivato <br>" + noiva + "€";
+       
+       }
+
+}
+
+</script>
+</body>
+</html> 

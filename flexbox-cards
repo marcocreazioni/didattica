@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+<style>
+ /* istruzione reset css */
+ body {margin: 0px; 
+       padding: 0px;
+       font-family: sans-serif;
+ }
+ * {box-sizing: border-box; 
+
+ } 
+ /* fine del reset css */
+/* css del contenitore flex (incompatibile con float e position) */
+.contenitore {
+      background-color: rgb(255, 255, 255);
+      margin-left: 5%;
+      margin-right: 5%; 
+/* il contenitore piu grande disciplina i piu piccoli*/
+     display: flex;
+/* distanziamento dei contenitore */
+     gap: 5px;     
+ /* comportamento responsivo nowrap (non fluidificare i contenitori) o wrap per 
+ renderli fluidi*/
+     flex-wrap: wrap;
+
+/* flex direction cambia la direzione dei contenitore column e row */
+     flex-direction: row;
+     
+  
+
+}
+.height {height:50%;}
+
+.a {background-color: blanchedalmond;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE91ufZvs2FEQhdVzYqbQ_9g6-M0yoGDae7w&s);
+   
+     height: 200px;
+     padding: 5px;
+     /* vai a sinistra ma lascia libero spazio a destro
+     vai a destra ma lascia libero spazio a sinistra */
+ 
+     border:2px solid;
+     /* ad ogni oggetto per la grandezza posso definiare una
+     grandezza indice  su come si devono distribuire il contenitore*/
+     flex: auto;
+     border-radius:16px;
+     box-shadow: 2px 2px 3px black;
+
+     
+    }
+    
+.b {background-color: rgb(13, 253, 73);
+ 
+    height: 200px;
+    padding: 0px;
+    flex: auto;
+    border-radius:16px;
+    border:2px solid;
+    overflow: auto;
+    box-shadow: 2px 2px 3px black;
+
+
+}
+.b img { width:100%;
+         height:100px;
+         padding: -5px;
+         border-top-left-radius:16px;
+         border-top-right-radius:16px;
+
+
+
+}
+
+
+
+.c {background-color: rgb(13, 253, 233);
+    background-image: url(https://cdn.pixabay.com/photo/2023/11/21/19/47/fall-8404115_960_720.jpg);
+    background-size: 100% 100px;
+    background-repeat: no-repeat;
+    height: 200px;
+    padding: 5px;
+    flex: auto;
+   
+    border:2px solid;
+     border-radius:16px;
+     box-shadow: 2px 2px 3px black;
+     /* c si attiva in modalita contenitore */
+     display: flex;
+     flex-wrap: wrap;
+     overflow: auto;
+
+}
+
+.c p {margin-top: 100px; 
+      
+
+}
+.c3po {flex: auto; 
+
+}
+
+
+
+.d {background-color: rgb(15, 210, 25);
+
+    height: 200px;
+    padding: 5px;
+
+    border:2px solid;
+    flex:auto;
+    border-radius:16px;
+    box-shadow: 2px 2px 3px black;
+
+
+}
+.d button {border: none;
+           padding: 5px;
+           border-radius: 5px;
+           background-color: aquamarine;
+           font-weight: 600;
+           box-shadow: 1px 1px 1px aqua;
+}
+.d button:hover {
+          background-color: blue;
+          color: white;
+          cursor:pointer;
+}
+
+
+
+
+.ac {text-align: center;
+
+}
+</style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <!--contenitore box-->
+<div class="contenitore"> 
+    <div class="a ac">
+     <p>IL mio paragrafo A</p>
+
+
+    </div>
+ 
+    <div class="b ac">
+    <img src="https://cdn.pixabay.com/photo/2025/09/12/18/36/pumpkin-9830952_640.jpg">
+     <p>IL mio paragrafo B</p>
+
+
+    </div>
+
+    <div class="c ac">
+      <div class="c3po">
+        <p>IL mio paragrafo C1</p>
+      </div>
+     
+      
+      <div class="c3po">
+         <p>IL mio paragrafo C2</p>
+        </div>
+
+
+    </div>
+    <div class="d ac">
+     <p>IL mio paragrafo D</p>
+      <div class="height"></div>
+     <button>Clicca qui</button>
+    </div>
+</div>    
+</body>
+
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+<style>
+ /* istruzione reset css */
+ body {margin: 0px; 
+       padding: 0px;
+       font-family: sans-serif;
+ }
+ * {box-sizing: border-box; 
+
+ } 
+ /* fine del reset css */
+/* css del contenitore flex (incompatibile con float e position) */
+.contenitore {
+      background-color: rgb(255, 255, 255);
+              /* margin-left: 5%; */
+/* il contenitore piu grande disciplina i piu piccoli*/
+     display: flex;
+/* distanziamento dei contenitore */
+     gap: 5px;     
+ /* comportamento responsivo nowrap (non fluidificare i contenitori) o wrap per 
+ renderli fluidi*/
+     flex-wrap: wrap;
+
+/* flex direction cambia la direzione dei contenitore column e row */
+     flex-direction: row;
+     
+  
+
+}
+
+.a {background-color: blanchedalmond;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE91ufZvs2FEQhdVzYqbQ_9g6-M0yoGDae7w&s);
+   
+     height: 200px;
+     padding: 5px;
+     /* vai a sinistra ma lascia libero spazio a destro
+     vai a destra ma lascia libero spazio a sinistra */
+ 
+     border:2px solid;
+     /* ad ogni oggetto per la grandezza posso definiare una
+     grandezza indice  su come si devono distribuire il contenitore*/
+    flex: auto;
+     
+    }
+    
+.b {background-color: rgb(13, 253, 73);
+ 
+    height: 200px;
+    padding: 5px;
+    flex: auto;
+   
+    border:2px solid;
+ 
+
+}
+.c {background-color: rgb(13, 253, 233);
+  
+    height: 200px;
+    padding: 5px;
+    flex: auto;
+   
+    border:2px solid;
+   
+
+}
+.d {background-color: rgb(15, 210, 25);
+
+    height: 200px;
+    padding: 5px;
+
+    border:2px solid;
+    flex:auto;
+
+
+
+}
+
+.ac {text-align: center;
+
+}
+</style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <!--contenitore box-->
+<div class="contenitore"> 
+    <div class="a ac">
+     <p>IL mio paragrafo A</p>
+
+
+    </div>
+ 
+    <div class="b ac">
+     <p>IL mio paragrafo B</p>
+
+
+    </div>
+
+    <div class="c ac">
+     <p>IL mio paragrafo C</p>
+
+
+    </div>
+    <div class="d ac">
+     <p>IL mio paragrafo D</p>
+
+
+    </div>
+</div>    
+</body>
+
+
+</html>

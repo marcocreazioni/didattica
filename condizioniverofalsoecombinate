@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo Detrazione Lavoro Dipendente</title>
+    <style>
+         div {
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        
+        input {margin: 10px;}
+        
+    </style>
+</head>
+<body>
+    <div>
+       <h1>Calcolo Detrazione Lavoro Dipendente</h1>
+
+    <h2>Reddito tra i 28.000 e i 50.000</h2>
+    <label>Inserisci il valore senza usare punti: es. 28000</label><br>
+    <input type="text" id="redditoUtente" placeholder="Inserisci il TFR utente">
+
+    <button onclick="calcolaDetrazione()">Calcola la tua rivalutazione</button>
+
+    <p id="risultato"></p>
+
+    <script>
+    
+        function calcolaDetrazione() {
+//il reddito deve essere superiore a 280000
+     
+        
+        var reddito = redditoUtente.value;
+//Le formule condizionali servono per trasformare un valore inserito in una condizione logica vera o falsa        
+        var verifica = reddito >= 28000;
+        var verifica2 = reddito <= 50000;
+        // if + (formula condizionale che si deve verificare) && due condizione vere || basta una condizione vera //         ! basto che sia diverso da
+        if (reddito >= 28000 && reddito <= 50000) {
+      //in caso di condizione verificata (true) nella parentesi graffa inserisco l'operazione da svolgere
+         var a = 28000;
+        var b = 50000;
+        var c = 1910;
+        var x = c * (b - reddito)/(b-a);
+
+        risultato.innerHTML = "Detrazione:" + x.toFixed(2) + "Euro" + " " + verifica + " "  + verifica2;
+
+                              }//qui si chiude l'if
+               // per le condizione falsa fai questa operazione
+         else  { 
+                 risultato.innerHTML = "Perdonami l'importo che ha inserito non è quello che ti ho chiesto" + " " + verifica + " "  + verifica2;
+               }               
+                              
+        //chiusura della funzione detrazione
+        }
+        
+
+    </script> 
+   </div>
+    
+</body>
+</html>

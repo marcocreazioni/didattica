@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p> 
+
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+
+<script>
+function myMove() {
+//dichiarazione delle variabile
+  let id = null;
+  //riquadro rosso associato alla variabile elem
+  const elem = document.getElementById("animate");   
+  /*posizione iniziale dell'oggetto nel contenitore giallo e puntoi di 
+  partenza dell'animazione*/
+  let pos = 0;
+  
+  
+  
+  clearInterval(id);
+  //clear indica un animazione che deve interruzzione
+  
+  //ad id viene associata un funziona predefinita  setInteraval(funzione(frame), numero di passaggi dell'animazione(tempo))(usa GPU); 
+  id = setInterval(frame, 0.03);
+  
+  function frame() {
+  
+    if (pos == 350) {
+      clearInterval(id);
+    }
+    
+    else {
+    /* incremento della posizione +1 in base al movimento*/      
+      pos++; 
+    /*definizione del movimento */  
+      elem.style.top = pos + "px"; 
+      elem.style.bottom = pos + "px"; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>

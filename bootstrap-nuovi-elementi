@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin: 0px;
+      padding: 0px;
+    }
+#voceadiscesa a {color:rgb(67, 7, 135) 
+
+}
+#one:hover {box-shadow: 2px 2px black; 
+
+}
+
+#one {animation-name: entrata;
+      animation-duration:  1s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+}
+@keyframes entrata {
+   from {margin-left: -600px;
+
+  }
+   to {margin-left: 0;
+
+  }
+}
+a {text-decoration: none;
+
+}
+.list-group-item:hover {background-color: orange;
+
+}
+
+</style>
+<!--icone bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+<!--menu di navigazione-->
+            <!--la classe modifica le proprieta della navbar 
+            (bg body indica lo sfondo della navbar o bg-info o success) 
+            rimuovendo il bg posso applicare qualsiasi sfondo
+            aggiungendo la classe fixed-top-e-bottom mettiamo la barra in position fixed
+            per farlo scrollare con la pagina possiamo aggiungere la classe sticy-top o bottom-->
+<nav class="navbar navbar-expand-lg " style="background-image: linear-gradient(90deg,orange,red);">
+
+  <div class="container-fluid">
+    
+<!--il navbar brand e dedicato a icone e titolo del sito-->
+    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+
+    <a class="navbar-brand" href="#">Mr. Red</a>
+     <!--qui posso inserire un icona o prima dell'oggetto navbarbrand-->
+    <!--Hamburger Menu-->
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <!--Fine del menu hamburger-->
+     <!--area menu-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <!--elenco del mun-->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <!--voce del menu-->
+        <li class="nav-item">
+          <a class="nav-link active"  href="#">Home</a>
+        </li>
+            <!--fine voce del menu-->   
+        <li class="nav-item">
+               <!-- active identifica la pagina attuale , al quale facoltativamente si
+                aggiunge l'attributo aria current-->
+          <a class="nav-link active" aria-current="page" href="#">Servizi</a>
+        </li>
+              <!--voce del menu nuovo-->    
+        <li class="nav-item">
+          <a class="nav-link"  href="#">Chi siamo</a>
+        </li>
+              
+        <!--blocco del menu a discesa-->     
+        <li class="nav-item dropdown" id="voceadiscesa">
+            <!--voce primaria-->
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu a discesa 1
+           </a>
+           <!--elementi che compongono il menu a discesa-->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <!--divisore del menu  dropdown-divider-->
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+            <!--fine del menu a discesa-->
+        </li>
+         <!--finede dalla voce a discesa-->
+          <!--blocco del menu a discesa-->     
+        <li class="nav-item dropdown" id="voceadiscesa">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu a discesa 2
+          </a>
+          <ul class="dropdown-menu">
+            <!--elementi del menu a discesa dropdown-item-->
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Action 2</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+           
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+         <!--finede dalla voce a discesa-->
+
+
+        <li class="nav-item">
+            <!--con la classe disabled disattivo il click su una pagina-->
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+<!--blocco di ricerca-->
+      <form class="d-flex" role="search">
+        <!--casella di testo per inserimento-->
+        <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search"/>
+         <!--bottone di ricerca btn classe per i botton mentre il colore e la tipologia 
+         segue questa classe btn-outline-success-->
+        <button class="btn btn-warning" type="submit">Cerca </button>
+      </form>
+
+    </div>
+        <!--area menu-->
+    <!--fine del contenitore-->
+  </div>
+</nav>
+ <!--fine del codice navbar-->   
+<!--carosello bootstrap per l'autoplay aggiungere l'attributo
+ data-bs-ride="carousel"-->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<!--indicatori delle immagini del carosello-->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+ <!--aggiunta di un nuovo indicatore modifica l'attributo data-bs-slide-to="4" facoltativamente modificate
+ l'attributo  aria-label="Slide 4"-->
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+</div>
+
+  <div class="carousel-inner">
+<!--voce del carosello-->
+    <div class="carousel-item active">
+      <img src="https://cdn.pixabay.com/photo/2025/02/21/10/33/cat-9421720_960_720.jpg" class="d-block w-100" style="height: 270px;" alt="...">
+      <!--per mostrare la caption della slide rimuovere la classe d-none-->
+      <div class="carousel-caption d-md-block">
+        <!--contenuto della caption si inserisce qui-->
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      
+      </div>
+
+    </div>
+<!--termin della slide del carosello-->
+        <!--aggiungendo a ciascun elemento l'attributo data-bs-interval="10000" stabilisco
+        la durata in microsecondi di ciasuna slide-->
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="https://cdn.pixabay.com/photo/2025/09/10/12/32/tokyo-9826329_960_720.jpg" class="d-block w-100" style="height: 270px;" alt="...">
+      <div class="carousel-caption d-md-block">
+        <p>Some representative placeholder content for the second slide.</p>
+         <a href="#" class="btn btn-info">Clicca qui</a>
+        </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2025/02/05/08/07/man-9383629_960_720.jpg" style="height: 270px;" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+          <div class="card" style="background-color:rgba(253, 253, 252, 0.206)">
+  
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+       </div>
+    </div>
+<!--nuova voce del caroselleo-->
+     <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2025/09/12/16/42/dog-9830813_960_720.jpg"  style="height: 270px;" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+        <h5>Four slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+
+
+  </div> <!--aggiungi le altre slide prima della chiusura del carosello-->
+  <!--fine del raggruppamento carosello-->
+<!--freccia indietro-->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+<!--freccia avanti-->
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
+<!--fine del carosello-->
+<div class="container-fluid p-2">
+  <div class="row">
+     <div class="col-md-4">
+         <!--card bootstrap-->
+         <div class="card" style="width: 100%;background-color: orange;" id="one">
+           
+         <!-- <img src="https://cdn.pixabay.com/photo/2025/09/12/18/36/pumpkin-9830952_640.jpg" class="card-img-top" alt="..."> -->
+         <iframe class="card-img-top" width="100%" height="315" src="https://www.youtube.com/embed/GLjv3p2UqrY?si=NQBm2DQJod0wEGT1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <div class="card-body">
+          <!--contenuti della card -->
+          <h5 class="card-title">Segui la live</h5>
+         
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+         
+         <a href="#" class="btn btn-primary">Clicca qui</a>
+         <a href="#" class="btn btn-primary">Clicca qui</a>
+         <!--fine codice card-->
+  </div>
+</div>    
+
+
+     </div>
+     <div class="col-md-4">
+         
+
+   <div class="card" style="width: 100%;">
+        <!--elenco delle voci-->
+       <ul class="list-group list-group-flush">
+    <a href="#"><li class="list-group-item"><i class="bi bi-printer" style="font-size:14pt;color:red"></i> Calabria</li></a>
+    <a href="#"><li class="list-group-item"><i class="bi bi-printer" style="font-size:14pt;color:red"></i> Sicilia</li></a>
+    <a href="#"><li class="list-group-item"><i class="bi bi-printer" style="font-size:14pt;color:red"></i> Marche</li></a>
+    <!--voce del menu-->
+    <a href="#"><li class="list-group-item"><i class="bi bi-printer" style="font-size:14pt;color:red"></i> Piemonte</li></a>
+      </ul>
+    </div>
+    <br>
+<!--lancio di un popup-->
+<!-- Button attivatore del popup data-bs-target="#exampleModal" deve essere uguale al modulo popup-->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+   Attivatore popup
+</button>
+
+<!-- codice popup -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <!--contenuto-->
+      <div class="modal-header">
+        <!--testata del popup-->
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Iscriviti alla newsletter</h1>
+        <!--pulsante di chiusura-->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        
+      <div class="modal-body">
+        <!--corpo del popup-->
+
+          <div id="mc_embed_shell">
+         <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+           <style type="text/css">
+        #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 100%;}
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style><style type="text/css">
+        #mc-embedded-subscribe-form input[type=checkbox]{display: inline; width: auto;margin-right: 10px;}
+#mergeRow-gdpr {margin-top: 20px;}
+#mergeRow-gdpr fieldset label {font-weight: normal;}
+#mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
+</style>
+<div id="mc_embed_signup">
+    <form action="https://altervista.us21.list-manage.com/subscribe/post?u=29d958c5fdc0cbee92d95fdaf&amp;id=91b30a48fb&amp;f_id=00749ee6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll"><h2>Iscrivi</h2>
+            <div class="indicates-required"><span class="asterisk">*</span> indica requisiti obbligatori</div>
+            <div class="mc-field-group"><label for="mce-EMAIL">Indirizzo email <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div><div class="mc-field-group"><label for="mce-FNAME">Nome </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div><div class="mc-field-group"><label for="mce-LNAME">Cognome </label><input type="text" name="LNAME" class=" text" id="mce-LNAME" value=""></div><div class="mc-field-group size1of2"><label for="mce-BIRTHDAY-month">Birthday </label><div class="datefield"><span class="subfield monthfield"><input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month" value=""></span> /<span class="subfield dayfield"><input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day" value=""></span><span class="small-meta nowrap">( mm / dd )</span></div></div><div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group"><div class="content__gdpr"><label>Impostazioni della privacy</label><p>Inserendo i tuoi dati accetterai che siano trattati per l'invio di una newsletter e aggiornamenti sulla nostra attività</p><fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field"><label class="checkbox subfield" for="gdpr98288"><input type="checkbox" id="gdpr_98288" name="gdpr[98288]" class="gdpr" value="Y"><span>Accetta l'invio di comunicazionie commercali e di marketing per la proposta di vendita di nuovi prodotti</span></label></fieldset><p>Puoi disiscriverti in qualsiasi momento facendo clic sul link nel piè di pagina delle nostre email. Per informazioni sulle nostre pratiche in materia di privacy, visita il nostro sito web.</p></div><div class="content__gdprLegal"><p>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/terms">Learn more</a> about Mailchimp's privacy practices.</p></div></div>
+        <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+        </div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+        <input type="text" name="b_29d958c5fdc0cbee92d95fdaf_91b30a48fb" tabindex="-1" value="">
+    </div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                <p style="margin: 0px auto;"><a href="http://eepurl.com/i5L0g6" title="Mailchimp: l’email marketing è facile e divertente"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[6]='AGE';ftypes[6]='radio';/*
+ * Translated default messages for the $ validation plugin.
+ * Locale: IT
+ */
+$.extend($.validator.messages, {
+       required: "Campo obbligatorio.",
+       remote: "Controlla questo campo.",
+       email: "Inserisci un indirizzo email valido.",
+       url: "Inserisci un indirizzo web valido.",
+       date: "Inserisci una data valida.",
+       dateISO: "Inserisci una data valida (ISO).",
+       number: "Inserisci un numero valido.",
+       digits: "Inserisci solo numeri.",
+       creditcard: "Inserisci un numero di carta di credito valido.",
+       equalTo: "Il valore non corrisponde.",
+       accept: "Inserisci un valore con un&apos;estensione valida.",
+       maxlength: $.validator.format("Non inserire pi&ugrave; di {0} caratteri."),
+       minlength: $.validator.format("Inserisci almeno {0} caratteri."),
+       rangelength: $.validator.format("Inserisci un valore compreso tra {0} e {1} caratteri."),
+       range: $.validator.format("Inserisci un valore compreso tra {0} e {1}."),
+       max: $.validator.format("Inserisci un valore minore o uguale a {0}."),
+       min: $.validator.format("Inserisci un valore maggiore o uguale a {0}.")
+});}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+  
+
+
+      </div>
+      <div class="modal-footer">
+        <!--piè di pagina-->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+     </div>
+     <div class="col-md-4">
+<!--accordion inizio codice-->
+<div class="accordion" id="accordionExample">
+<!--blocco accordion ha la classe accordion item -->
+  <div class="accordion-item">
+       <!--testata dell'elemento accordion-->
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+      <!--fine della testata-->
+      <!--inizio del conenuto dell'accordin-->
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+         <!--contenuto dell'accordion inizia con accordion body-->
+      <div class="accordion-body">
+       
+        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+     
+      </div>
+        <!--fine del contenuto-->
+    </div>
+
+
+  </div>
+  <!-- fine del blocco accordion-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Seguici su Facebook
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+     <iframe 
+     src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBistrot64Roma%2F%3F&tabs=timeline%2Cevents%2Cmessages&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" 
+     width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
+     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <!--blocco accordion nuovo ricordati di inserire in data-bs-target lo stesso id del collaps
+  dove troviamo il suo body-->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuattro" aria-expanded="false" aria-controls="collapseThree">
+        Come si usa la carta di credito?
+      </button>
+    </h2>
+    <!--l'id di qeusto div deve avere lo stesso nome del data-bs-target del button-->
+    <div id="collapseQuattro" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+            <div class="containter-fluid">
+                <div class="row">
+                     <div class="col">
+                                <!--card 1-->
+                                <div class="card">
+                                  <h5 class="card-header">Featured</h5>
+                                  <div class="card-body">
+                                  <h5 class="card-title">Special title treatment</h5>
+                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                 </div>
+                              </div>
+                        </div>     
+                     <div class="col">
+                               <div class="card">
+                                 <h5 class="card-header">Featured</h5>
+                                  <div class="card-body">
+                                  <h5 class="card-title">Special title treatment</h5>
+                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                 </div>
+                               </div>
+                                 <!--card 2 --> 
+                     </div>     
+                </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div><!--chiusura dell'accirdion box-->
+
+
+
+
+
+
+     </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+       <div class="col">
+
+    <iframe
+      id="JotFormIFrame-252785668363371"
+      title="Appointment Request Form"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen; payment"
+      src="https://form.jotform.com/252785668363371"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:539px;border:none;"
+      scrolling="no"
+    >
+    </iframe>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252785668363371']", "https://form.jotform.com/")</script>
+    
+       </div>   
+
+    </div>
+
+</div>
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

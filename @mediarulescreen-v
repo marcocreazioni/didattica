@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {margin:0px;
+      padding: 0px;
+
+}
+.box {background-color: azure; 
+      text-align:left;
+      width: 100%;
+      padding: 10px;
+
+}
+/* schermo non piu grande di 380px */
+@media only screen and (max-width:380px){
+     .box {text-align:center;
+           background-color: rgb(248, 219, 30);
+           width: 75%;
+           margin: auto;
+        
+     }
+} 
+/* schermo tablet */
+@media only screen and (min-width: 381px) and (max-width:1064px){
+
+    .box {text-align:left;
+           background-color: rgb(20, 200, 110);
+           width: 90%;
+           margin: auto;
+
+    }
+
+} 
+
+</style>
+</head>
+
+<body>
+ <div class="box">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vel maiores iste. Repellendus beatae alias nostrum ex cum impedit provident natus, eius incidunt, odit molestiae doloremque voluptas, tempora laboriosam illum!</p>
+ </div>   
+</body>
+</html>

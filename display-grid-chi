@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid molde</title>
+<style>
+ /* istruzione reset css */
+ body {margin: 0px; 
+       padding: 0px;
+       font-family: sans-serif;
+ }
+ * {box-sizing: border-box; 
+
+ } 
+ /* fine del reset css */
+
+/* div contenitore */
+.contenitore {
+             margin-right: 5%;
+             margin-left: 5%;
+             /*attivatore della griglia */
+             display: grid;
+             /* modello delle colonne  1fr è un indice dimensionale altirmenti auto
+             si mettono tanti valori tante colonne si vogliono creare */
+             /* grid-template-columns: auto auto; */
+             /* grid template area ci consente di crere dei modelli di impaginazione
+             prima pero occorre battezzare ogni contenitore come grid-area: nome 
+             in modo da richiamarla nel modello*/
+             grid-template-areas:  "a b c"
+                                   "d d d"
+                                   ;
+             
+
+             gap:2px;
+
+
+
+
+}
+
+.a {background-color: blanchedalmond;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE91ufZvs2FEQhdVzYqbQ_9g6-M0yoGDae7w&s);
+     
+     height: 200px;
+     padding: 5px;
+     
+     /* vai a sinistra ma lascia libero spazio a destro
+     vai a destra ma lascia libero spazio a sinistra */
+   
+     border:2px solid;
+     /* grid area stabilisce un nome ad un modello della template area */
+     grid-area: a;
+     
+    }
+    
+.b {background-color: rgb(13, 253, 73);
+
+    height: 200px;
+    padding: 5px;
+    
+  
+    border:2px solid;
+    grid-area: b;
+
+}
+.c {background-color: rgb(13, 253, 233);
+ 
+    height: 200px;
+    padding: 5px;
+    
+  
+    border:2px solid;
+    grid-area: c;
+
+
+}
+.d {background-color: rgb(15, 210, 25);
+
+    height: 200px;
+    padding: 5px;
+ 
+    border:2px solid;
+    grid-area: d;
+
+
+
+}
+
+
+.ac {text-align: center;
+
+}
+</style>
+</head>
+<body>
+    <h1>Grid</h1>
+    <!--contenitore-->
+<div class="contenitore">
+    <div class="a ac">
+     <p>IL mio paragrafo A</p>
+
+
+    </div>
+ 
+    <div class="b ac">
+     <p>IL mio paragrafo B</p>
+
+
+    </div>
+
+    <div class="c ac">
+     <p>IL mio paragrafo C</p>
+
+
+    </div>
+    <div class="d ac">
+     <p>IL mio paragrafo D</p>
+
+
+    </div>
+</div>
+</body>
+</html>

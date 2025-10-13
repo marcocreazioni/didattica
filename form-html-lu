@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di contatto</title>
+    <style>
+body {padding:0px;
+      margin: 5px;
+    }        
+.box {width:75%;
+      height: 800px;
+      margin: auto;
+      background-color: cadetblue;
+      border-radius: 10%;
+      padding: 5px;
+      color: white;
+}
+form {padding:10px;}
+
+
+    </style>
+</head>
+<body>
+<h1>Modulo</h1>
+<div class="box">
+<!--action azione da compiere alla compilazione 
+e il metodo in cui saranno prelevate le informazioni metodo get 
+(informazioni prelevate campo per campo e inviate) 
+Rischio di mancato invio delle informazioni nel caso il server
+sia occupato con altre operazioni, metedo post le informazioni vengono 
+prelevate e pubblicate su un file o archivio e solo successivamente inviate
+quando il server e libero. 
+In form posso richiedere di prelevare i valori di un modulo dalle informazioni
+presenti nel browser con l'attributo autocomplete-->
+<form action="sendmail.php" method="post" autocomplete="on">
+    
+    <center><caption>Modulo di contatto</caption></center>
+    <!-- ogni campo contiente due elementi l'etichetta e l'input
+     label e input che sono vincolati da due attributi facoltativi 
+     for per il label e name per l'input per identificare l'appartenenza dei due tag-->
+     <label for="nome">Nome*</label><br>
+      <!--input indica che il campo input deve essere una stringa di caratteri
+      e name che identifica l'informazione da prelevare 
+      attributi facoltativi di un campo input 
+      width e style 
+      -->
+     <input type="text" name="nome" 
+     style="background-color: beige;font-family: sans-serif;width:100%"
+     placeholder="qui il tuo Nome" required><br>
+     <br> 
+
+     <label for="cognome">Cognome*</label><br>
+     <!--altri attributi di input: 
+     placeholder per il testo di suggerimento
+     required sancisce il campo obbligatorio
+     -->
+     <input type="text" name="cognome" 
+     style="background-color: beige;font-family: sans-serif;width:100%"
+     placeholder="qui il tuo cognome" required><br>
+     <br>
+     <label for="eta">Età*</label><br>
+     <!--attributi facoltativi 
+     value= aggiunge un valore precompilato
+     min= valore minimo ammesso 
+     max= valore massimo ammesso 
+     step= scala di numeri progressiva se mettiamo 10 avanza di 10 numeri per volta-->
+
+     <input type="number" name="eta" 
+     style="background-color: beige;font-family: sans-serif;width:100%"
+     placeholder="qui il tuo cognome" value="18" min="18" max="99" required><br>
+          
+     <label for="data_di_nascita">Data di nascita*</label><br>
+     <!--date restituisce una tipologia data, datetime local anche l'ora-
+      week, month, time -->
+     <input type="date" name="data-di-nascita" 
+     style="background-color: beige;font-family: sans-serif;width:100%" min="01-01'1900"
+     max="01-01-2007" required><br>
+
+     <label for="telefono">Telefono*</label><br>
+     <!--pattern e un attributo che decide il formato del testo inserito
+      e size viene usato per la dimensione del campo-->
+    <input type="tel" name="telefono" pattern="[A-Za-z]{1}[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+     placeholder="+39-379-150-3035" size="40" 
+     style="background-color: beige;font-family: sans-serif;" required><br>
+    <label for="codice-fiscale">Codice Fiscale*</label><br>
+    <!--minlebght= stabilisce il numero minimo e maxlenght=16-->
+    <input type="text" name="codice-fiscale" minlength="16" maxlength="16" required
+    style="background-color: beige;font-family: sans-serif;width:100%" ></br>
+      <label for="email">Email*</label><br>
+     <!--pattern e un attributo che decide il formato del testo inserito
+      e size viene usato per la dimensione del campo-->
+    <input type="email" name="email"  placeholder="tua@email.it"  
+     style="background-color: beige;font-family: sans-serif;width:100%" required><br>
+       <label for="il tuo sito web">Linka il tuo sito*</label><br>
+     <!--altri input type di inserimento 
+      url ammette un indirizzo internet 
+      color attiva il selettore dei color
+      image e file invece possono allegare contenuti-->
+    <input type="url" name="email" 
+     placeholder="https://"  
+     style="background-color: beige;font-family: sans-serif;width:100%" required><br>
+    <label for="allegatocv">Allega il tuo cv</label><br>
+ <!--con l'attributo accept indico la tipologia di file che l'utente puo allegare
+ tipologia seguita dell'estensione del file, l * indica tutte le estensioni-->
+     <input type="file" name="email" accept="doc/docx, doc/pdf"  
+     style="background-color: beige;font-family: sans-serif;width:100%" required><br><br>
+<!---->
+<fieldset value="altri dati">
+    <label for="messaggio">Il tuo messaggio</label><br>
+    <!--con l'attributo cols stabiliamo le dimensioni-->
+     <textarea name="massaggio" cols="35" row="40"></textarea>
+    
+     <label for="servizio">Seleziona il servizio</label><br>
+     <select name="servizio" multiple>
+        <!--ogni voce si crea dentro select con option e select 
+        e selected inidia il valore predefinito mentre multiple la selezione multipla-->
+        <option selected value="viaggio">Viaggio</option>
+        <option value="lavoro">Lavoro</option>
+     </select>
+      
+       <label for="privacy">Seleziona il servizio</label><br>
+<!--l'attributo checcked indica il valore gia flaggato o assegnato-->
+        <br> <input type="checkbox" checked required>Accetta la nostra privacy policy<br>
+        
+               <label for="radio">Voce</label><br>
+          <input type="radio" name="radio" requided checked>Accetta le condizioni commerciali 
+                     
+
+
+</fieldset>
+
+     <input type="submit" value="Invia le informazioni" 
+     style="background-color: lightskyblue;padding:3px;border-radius: 5px;border:none">
+     <input type="reset" value="cancella il form" 
+     style="background-color: lightskyblue;padding:3px;border-radius: 5px;border:none"></br>
+
+
+
+<span style="font-size:8pt">I campi con l'* sono obbligatori</span>
+</form>
+ </div>   
+
+
+</body>
+</html>

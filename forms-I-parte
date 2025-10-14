@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+.box {background-color: aquamarine;
+      margin:auto;
+      width:85%;
+      padding:10px;
+      height:auto;
+
+    }
+
+
+    </style>
+</head>
+<body>
+<h1>Modulo</h1>    
+<div class="box">
+<!--Form Raccchiude i tag del modulo 
+action permette di indicare la destinazionie delle informazioni
+insimeme ad action troviamo un altro attributo obbligatorio
+e method che definisce il processo di invio delle informazioni
+get (preleva->invia (campoxcampo)) task () post (preleva-stampa-invia) 
+attributo facoltativi autocompletamento di autocomplete che raccoglie informazione
+memorizzate dal browser (attributi di validazione delle informazioni
+legate a proprieta js)-->
+<form action="sendamail.php" method="post" autocomplete="on">
+<!--ogni informazione prevede due tag Etichetta label mentre il
+secondo e l'input-->
+<label for="nome">Nominativo</label>
+<!--tag di input con type che rappresenta la tipologia di informazione
+e per meglio gestire le informazioni da prelevare si usa name per
+selezionare le informazioni da prelevare in php 
+ci sono anche altri attributi facoltativi
+ad esempio l'obbligatorieta (required) 
+e possibile aggiungere dei suggerimenti con (placeholder)-->
+<input type="text" name="nome" placeholder="metti il tui nome qui" required></br></br>
+<!--infine abbiamo un input di invio delle informazioni
+submit è un type per inviare informazioni
+reset per cancellare il valore dei campi stessi-->
+<input type="submit" value="Invia Ora">
+<input type="reset" value="Cancella tutto">
+
+
+
+</form> 
+ </div>
+</body>
+</html>

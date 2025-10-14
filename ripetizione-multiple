@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Loops</h1>
+<h2>The for Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+let text = "";
+//for apre ad un espressione di ripetizione
+//valore iniziale ripetizione;valore massimo; valore incrementale
+for (let i = 10; i < 20; i++) {
+//operazione da svolegere
+  
+text += "The number is " + i + "<br>";
+//riassengazione progressive dalla variabile text
+
+}
+
+demo.innerHTML = text;
+</script>
+
+</body>
+</html>

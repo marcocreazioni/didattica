@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>piu condizioni per unico caso</h2>
+
+<p id="demo"></p>
+
+<script>
+var richiesta = prompt("inserisci il tuo segno zodiacale"," ");
+var modifica = richiesta.trim();
+var segno;
+
+
+ if (richiesta == " " || richiesta == (isNaN(richiesta))) {
+      segno = "non hai inserito un segno zodiacale";   
+ } else {
+
+ switch (modifica) {
+   case "ariete":
+   //ricorda di attivare un metodo per rimuovere spazi e di convertire in maiuscolo
+    segno = "Sei un tipo che sà sfondare le situazioni";
+    
+    break;
+  case "toro":
+    segno = "Non guardi in faccia a nessuno";
+    break;
+  case "leone":
+     segno= "Sei il re della forersta";
+    break;
+  case "vergine":
+    segno = "Te la cavi bene, sei fascinoso!";
+    break;
+  case "cancro":
+    segno = "facciamo la prova costume";
+    break;
+  case "bilancia":
+    segno = "Sai pesare le persone";
+    break;
+    case  "sagittario":
+    segno = "Sai tirare con le frecce";
+    break;  
+   default: 
+   segno = "Ottimo segno zodiacale"; 
+}
+
+}
+demo.innerHTML = "ho capito " + segno;
+</script>
+
+</body>
+</html>

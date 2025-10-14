@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript if .. else</h1>
+
+
+<p id="demo"></p>
+
+<script>
+const hour = "0";
+
+let greeting;
+//condizione vera (
+if (hour == 0) { 
+                 //pressupposto della prima condizione vera che puo ammetter piu risultati 
+                 if (hour === 0)  {
+                  greeting = "Numero";  
+                 }
+                 else {
+                 greeting = "Stringa";
+                 }
+} else 
+
+
+   {
+   greeting = "Buona Sera";
+   }
+
+document.getElementById("demo").innerHTML = greeting;
+</script>
+
+</body>
+</html>

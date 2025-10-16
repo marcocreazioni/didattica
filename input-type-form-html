@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.box-form {background-color: bisque;
+           margin: auto;
+           width: 75%;
+           min-height: 400px;
+           border-radius: 15px;
+
+}
+form {padding: 10px;
+
+}
+.invio {background-color: rgb(5, 146, 216);
+color:white;
+padding:5px;
+border-radius: 5px;
+border:none;
+
+
+}
+.invio:hover {background-color: blue; 
+
+}
+</style>
+
+
+
+
+</head>
+<body>
+    <header><h2>Form di Contatto</h2></header>
+<div class="box-form">
+ <!--modulo del form ha alcuni attributi obbligatori
+ action="file.php" o "mailto: con indirizzo del dominio
+ del sito @nomesito.it"   
+ per prelevare le informazioni inserite in un
+ modulo devo specificare un method con get prelevo e invio
+ senza una vera e propria memorizzazione o con method 
+ post dove le informazioni sono prelevate poi pubblicate
+ e successivamente inviate 
+ poi abbiamo degli attributi facoltativi come
+ autocomplete che compila i campi del modulo con i dati memorizzati dal browser-->
+    <form action="inviomail.php" method="post" autocomplete="on">
+        <!--ogni campo e formato da un label e un input si puo aggiungere
+        una descrizione con l'attributo for di quello che sara il name
+        del campo di input -->
+       <label for="nome">Il tuo nome<span style="color:red">*</span></label><br>
+       <!--campo del modulo bisogna inserire il type seguito
+       dalla tipologia "text" (string) 
+       ad ogni campo input aggiungiamo sempre un attributo name che sara utlizzato
+       per il prelievo delle informazioni.
+       Attributi comuni ad alcuni type di testo
+      placeholder: suggerimento all'interno del campo
+       required: indica che il campo e obbligatorio 
+       value: imposta un valore predefinito per un campo
+       autofocus: zumma il campo quando viene compilato
+       e supportato anche il css e l'attributo width-->
+       <input type="text" name="nome" width="100%" placeholder="qui il tuo nome" autofocus="on" 
+       ></input>
+         <br><br>
+        <label for="cognome">Il tuo cognome<span style="color:red">*</span></label><br>
+        <input type="text" name="cognome" width="100%" placeholder="qui il tuo cognome" required>
+        <br><br>
+        <label for="eta">La tua età<span style="color:red">*</span></label><br>
+        <!--input type number pu avere altri attributi 
+        con gli attributi min si stabilische un valore minimo e massimo
+        e step cambia i passaggi da un numero e l'altro-->
+        <input type="number" name="eta" width="100%" placeholder="qui" min="18" max="65" step="10" required><br>
+        <label for="codice">codice fiscale<span style="color:red">*</span></label><br>
+        <!--input massimo e minimo minlength="16" maxlength="16" che inidica il minimo
+        e il massimo dei carattteri--> 
+        <input type="text" name="codice" minlength="16" maxlength="16" placeholder="qui codice" style="text-transform: uppercase">
+         <br><br>
+        <label for="born">data di nascita<span style="color:red">*</span></label><br>
+        <input type="date" name="born" min="01-01-1900">
+        <br><br>
+        <label for="telefono">Telefono<span style="color:red">*</span></label><br>
+        <!--attributo pattern [caratteri ammessi]{numero di caratteri}-[0-9]{10}-[A-z]{3}   -->
+        <input type="tel" name="telefono" 
+        pattern="[A-z0-9]{3}-[0-9]{10}" 
+        placeholder="+39-1234567890123">
+         <br><br>  
+        <!--<label for="color">Colore preferito<span style="color:red">*</span></label><br>
+         <input type="color" name="color">
+         <br><br>   
+         
+
+        <label for="prova">Grado di soddisfazione<span style="color:red">*</span></label><br>
+         <input type="range" min="0" max="100" name="prova"> 
+         -->
+         <label for="sito">Il link del tuo sito <span style="color:red">*</span></label><br>
+         <input type="url" name="sito" placeholder="https://"> 
+          <br><br>
+
+          <label for="sito">Scegli la password <span style="color:red">*</span></label><br>
+         <!--se volete inserire il mostra occorre script js-->
+          <input type="password" name="password"> 
+          <br><br>
+
+          <label for="cv">Allega <span style="color:red">*</span></label><br>
+           <!--accept è un attributo per definire l'estensione
+           del documento da allegare (attenzione allo stesso modo
+           abbiamo input type) 
+           per poter inserire una dimensione massima per allegato
+           usare js -->
+          <input type="file" name="cv" accept=".doc,.docx,.pdf,.txt"> 
+          <br><br>
+         <label for="servizi">Servizio scelto <span style="color:red">*</span></label><br>
+         <!--usare multiple per definire piu di una scelta-->
+         <select name="servizi">
+<!--valore preselezionato usare l'attributo valore -->
+             <option value="valore A">Valore A</option>
+             <option value="valore B" selected>Valore B</option>
+             <option value="valore c" >Valore C</option>
+<!--attenzione per opzioni con molte scelte e possibile
+abbinare js o php-->
+         </select>
+          <br><br>
+  <label for="oggetto">Oggetto<span style="color:red">*</span></label><br>
+       <!--se lo si vuole gia preselezionato usare 
+       attributo checked-->
+        <input type="text" name="oggetto">
+<label for="messaggio">Messaggio<span style="color:red">*</span></label><br>
+       <!--attributi di grandezza ammessi cols,rows,size!-->
+        <textarea name="messaggio" cols="25"
+         rows="10" required></textarea>
+         <br><br>  
+         <!--fieldset e legend generara un raggrupamento
+         visivo di alcuni campi del form-->
+         <fieldset><legend>Seleziona una voce</legend>    
+ <!--Radio button-->   
+        <label for="conferma">Sesso 
+        <span style="color:red">*</span></label><br>
+       <!--se lo si vuole gia preselezionato usare 
+       attributo checked-->
+        <input type="radio" name="sesso" value="maschio" checked>Uomo
+            
+       <!--se lo si vuole gia preselezionato usare 
+       attributo checked-->
+        <input type="radio" name="sesso" value="femmina">Donna
+          <br><br>
+        </fieldset>  
+         <br>
+         <!--checked rende la checkbox selezionata-->
+        <input type="checkbox" name="privacy">
+        Accetta che i tuoi dati siano elaborati per la richiesta in oggetto
+         <br><br>
+         <!--pulsante di azione di invio modulo-->
+        <input class="invio" type="submit" value="INVIA ORA">
+        <!--pulsante per resettare i dati del modulo-->
+        <input class="invio" type="reset" value="CANCELLA">
+
+       
+
+    </form> 
+
+
+
+
+
+</div>
+    
+
+
+
+</body>
+</html>

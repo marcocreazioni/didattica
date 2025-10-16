@@ -1,0 +1,43 @@
+<?php
+//lo script si attiva solo se trasferito insiem al form in un server
+//[attirbuto name di cui voglio prelevare le informazioni ] 
+//$_POST['nome'] // divero da   !=  // '' //vuota* il campo non deve rimanere vuuoto //  && hanno il valore
+// and && significa che la condizione precedente e quella successiva
+// si devono verificare if(nessun campo deve rimanere vuoto) altrimenti si attiva } else { qui vienen
+// ordinato di stampare a video "ci sono altri campi da compilare" }  //
+if($_POST['nome'] != '' && $_POST['cognome'] != '' && $_POST['email'] != '' && $_POST['telefono'] != ''  && $_POST['indirizzo1'] != '' && $_POST['indirizzo2'] != ''  && $_POST['citta'] != '' && $_POST['stato'] != '' && $_POST['cap'] != '' && $_POST['oggetto'] != '' && $_POST['messaggio'] != '' && $_POST['privacy'] != '') {
+	
+	// se nessun campo rimane vuoto segue le istruzioni qui presenti 
+    //qui vengono dichiarate tre variabili necessarie per definire un oggetto
+    // inviato via mail il simbolo del . ha una proprieta di concatenazione di piu elementi
+
+	$headers  = 'MIME-Version: 1.0' . "\r\n";
+	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+	$headers .= 'From: ' . $_POST['nome'] . $_POST['cognome'] . $_POST['indirizzo'] . $_POST['telefono']. $_POST['indirizzo1'] . $_POST['indirizzo2'] . $_POST['citta'] . $_POST['stato'] .  $_POST['cap'] . '<' . $_POST['email'] .'>'. $_POST['privacy'] . "\r\n" .
+    'Reply-To: ' . $_POST['email'] . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+	// subject è un nuova variariabile con l'oggetto del modulo
+	$subject = $_POST['oggetto'] ;
+    // message è un nuova variabile della mail contente gli elementi del corpo della mail
+	$message = '<b>Name:</b> '.$_POST['nome'].'<br>
+	<b>Email:</b> '.$_POST['email'].'<br>
+    <b>Oggetto:</b> '.$_POST['oggetto'].'<br>
+	<b>Messaggio:</b> '.$_POST['messaggio'];
+	//mail introduce una funzione predefinita php della libreri sendmail (accetta diversi argomenti
+    // suddivisi dalla virgola(indirizzo email del destinatario,oggetto,messaggio,testata))
+	mail( "info@indirizzosito.it", $subject, $message, $headers ); //  Replace with your email 
+	// echo stampa 'il tuo messaggio è stato inviato ' 
+	echo '<div class="alert alert-success alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			Il tuo messaggio è stato inviato
+		</div>';
+	
+}else{
+			
+	echo '<div class="alert alert-danger alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			<b>Ci sono dei campi da compilare!</b>
+		</div>';
+}
+?>

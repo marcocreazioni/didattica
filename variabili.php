@@ -1,18 +1,26 @@
 <?php
-$mario = "Amici";
-$Mario = "benvenuti";
-$Mario = Null;
-$Mario = "WOW";
-$miodoc = fopen("documento.txt", "w");
-$operatore = 10;
-$operatorebis = 20;
-$casa = $operatore * $operatorebis;
+$casa = "Usare";
+define ("lavoro","diversi usi");
 
-echo ($operatore + $operatorebis) . "<br>";
-echo ($casa);
-define ('casa', "Ciao\nCiao" );
-echo " <h1 align='center' style='color:green'>  Ciao  $mario  $Mario !!!  </h1> " . "<h2>" . casa . "</h2>" ;
-var_dump($Mario);
-echo $miodoc;
+
+echo "<head><style>";
+include 'resetcssdue.php';
+echo "</style></head>"; 
+      
+include 'testata.php';
+echo "<h1 align='center'>$casa Variabili " . lavoro . "</h1>";
+
+
+
+
+include 'miofooter.php';        
+     
+        
+echo "<script>var c = 5;document.write(c);</script><body>";
+
+
+
+
+
 
 ?>

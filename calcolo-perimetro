@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo del perimetro di un quadrato</title>
+</head>
+<body>
+<h1>Il perimetro del quadrato di cui hai inserito i dati misura:</h1>
+<script>
+//dichiarazione di una variabile e assegnazione del valore    
+var lato = Number(prompt("inserisci il lato del quadrato",""));
+//la variabile lato restiutisce un testo(stringa) ma usando
+//la funzione numbero otterremo un numero
+function perimetro(){
+    var calcolo_perimetro = lato * 4;
+  //la funzione restiutira il lato moltilicato X 4 
+    return calcolo_perimetro;
+}
+//output
+document.write("il perimetro è:" + perimetro() + " cm");
+
+</script>
+
+
+
+    
+</body>
+</html>

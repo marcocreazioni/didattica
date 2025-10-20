@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INtegrazione js</title>
+</head>
+<body>
+<!--javscript come attributo ad un evento-->
+   
+<h1>Occorre riemipire un cestino con delle mele</h1>
+<p>Elementi del problema</p>
+<ul>
+    <li>Il cestino misuara 50 spazi</li>
+    <li>Ogni mela misura circa 5 spazi</li>
+</ul>
+<h2>Quante mele entrano nel cestino</h2>
+<!--tag che introduce js-->
+<script>
+// QUi uso la sintassi javascript (L'esecutore del codice js è il browser)
+//dichiarazione delle variabili
+var cestino;
+var mele;
+//assegnazione della variabile
+cestino = 50;
+mele = 5;
+//funzione che restituisce il numero di mele
+//nel cestino
+function riempicestino() {
+   var totalemele = cestino/mele;
+   //la funzione deve restituirci il totale mele
+   return totalemele;
+}
+//stampa del riultato della funzione
+document.write("Nel nostro cestino entrano:" + "<strong>" + riempicestino()  + "</strong>"+ " mele");
+
+
+</script>
+
+</body>
+</html>

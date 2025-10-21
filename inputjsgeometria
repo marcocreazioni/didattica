@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipologie di variabile</title>
+</head>
+<body>
+    <ul>
+        <li>Stringhe  = Caratteri --> " "</li>
+        <li>Number  = interi(integer = 5,Float= 5.5,esponenziali 2e2) -->Numeri</li>
+        <li>Boolean = Vero e Falso = True e False</li>
+
+        <li>Array = elenchi dello stesso tipo = [a,b,c]</li>
+        <li>Object = insieme di elmenti diversi = {a:motore,b:carrozzeria}</li>
+        <li>undefined  = Non definito -->String Carattere</li>
+        <li>Null (reset di assegnazione) =  -->Numero = 0</li>
+        <li>Function = FUnzioni x (argomento){ return x}  </li>
+
+   
+    </ul>
+    <p>Avviso molto tipologie di variabile non possno interagire
+        le stringhe ed i numeri non possono interagire 
+        in molti casi occorre effetture delle conversioni
+    </p>
+<h1> Calcolo del perimetro del quadrato</h1>
+<p>Qui sotto il risultato</p>
+<p id="qui"></p>
+<script>
+//input  (prompt(richiama un popup(testomvalore)) mentre Number(converte il conenuto stringa in numero);
+var lato = Number(prompt("INserisci il lato del quadrato",""));
+//perimentro moltiplica la variabile lato x 4
+var perimetro = lato*4;
+
+//output
+qui.innerHTML = "Il perimetro del quadrato è il seguente: " + perimetro +"cm";
+ </script>
+
+
+
+</body>
+</html>

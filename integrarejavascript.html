@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inetegrazione javascript</title>
+<style>
+    p {font-family: sans-serif;}
+    #qui {text-align: center;}
+</style>
+</head>
+
+
+
+<body>
+<h1>Integrazione javascript</h1>
+<!--attributi javascript nell'html-->
+<table>
+    <tr><th>Attributo</th></td><th>Evento</th></tr>
+    <tr><td>onclick</td></td><td>Al click del mouse</td></tr>
+    <tr><td>onmouseover</td></td><td>Al passaggio del mouse</td></tr>
+    <tr><td>onkeypress</td></td><td>Al pressione di un tasto</td></tr>
+    <tr><td>onload</td></td><td>Al caricamento della pagina</td></tr>
+<p>Si attivano solo se devono eseguira una funzione</p>
+</table>
+<p id="qui"></p>
+<p id="sotto"></p>
+<button onclick="document.getElementById('azione').innerHTML='ciao'">Clicca qui</button>
+<p id="azione"></p>
+
+
+<!--caricamento asyn permette di carica un
+codice javascript solo dopo il caricamento
+della pagina-->    
+<script async>
+sotto.innerHTML = "<u>Io so usare l'html";
+//document.getElementById("sotto").innerHTML("Io so usare l'html");    
+//Stampa di testo su un id 
+qui.innerText = "<u>Non uso Html</u>";
+//Metodi di stampa javascript definisce la pagina
+//html un documento
+//con document chiamiamo in causa il documento
+//ovvero la pagina web
+//commento su singola riga
+/* commento in stile css */ 
+document.write("<strong style='color:orange'>Ciao Mondo</strong><br>");
+//ordine di pubblicazione su popup
+alert("Ciao Mondo");
+//Pubblicazione di debug sulla console del browser
+console.log("CIao Bel Mondo");
+
+//Attenzione non posso pubblicare contenuti su uno stesso id
+</script>
+<!--integrazione di javascript esterno-->
+<script src="js/file.js"></script>
+</body>
+</html>

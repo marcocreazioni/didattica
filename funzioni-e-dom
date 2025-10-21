@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.casa {background-color: orange;}
+
+
+</style>
+
+</head>
+
+<body>
+<h1>Testata</h1>
+<p>Questo è il mio paragrafo</p>
+<table>
+<tr>
+<th>Funzione A</th><th>Funzione B</th><th>Funzione C</th>
+</tr>
+<tr>
+<td><button onclick="FunzioneA()">ATTIVA</button></td>
+<td><button onclick="FunzioneB(prompt('inserisci il tuo nome:',''),prompt('inserisci il tuo cognome',' '))">ATTIVA</button></td>   
+<td><button onclick="FunzioneC()">ATTIVA</button></td>   
+   
+</tr>
+</table>
+<p id="primo"></p>
+<p id="stampanominativo"></p>
+
+<script>
+//Funzioni con argomenti e senza
+
+function FunzioneA(){
+    //Crezione oggetti (crea un nuovo oggetto html)
+var a = document.createElement("div");
+    //creazione del contenuto testuale
+var b = document.createTextNode("Questo è un titolo");
+  
+a.appendChild(b);
+    //Per posizionare il nuovo oggetto prelevare una posizione di riferimento
+  //prelevando un tag o un oggetto id dove va posizionato il nuovo oggetto
+var c = document.getElementById("primo"); 
+   //Metodo di inserimento di un nuovo elemento
+ 
+ document.body.insertBefore(a,c);
+   
+}
+//funzione con argomenti
+function FunzioneB(nome,cognome){
+    
+stampanominativo.innerHTML = nome + " " + cognome;
+
+}
+//Funzione generate da AI 
+function FunzioneC(){
+    document.querySelector('table').classList.add('casa');
+
+}
+
+
+
+</script>    
+</body>
+</html>

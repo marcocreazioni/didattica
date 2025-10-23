@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trasformation ,Transition, animation</title>
+
+<style>
+.box1 {width: 125px;
+      height: 125px;
+      background-color: brown; 
+      margin: auto;
+/* transform attiva le proprieta di trasformazione */
+/*scale: parte da una scala 1:1 0.5:0.5 inferiore a 1
+rimpicciolisce, superiore a 1 ingrandisco raddoppia
+  skew: effetto obbliquo va indicato in gradi (20deg) 
+  skew e scale hanno una variante x e y, 
+  translate: permette di spostare un oggetto (larghezza e altezza)
+  rotate: ruota l'oggeto per gradi (deg in gradi) rotatey la rotazione e sull'asse */      
+      transform:scale(1) skew(20deg) translate(20px,-50px) rotatey(180deg);
+      margin-top:70px;
+      margin-bottom:70px;
+      text-align: center;     
+}
+.boxcontainer {width: 125px;
+      height: 185px;
+      background-image: url('https://pngimg.com/uploads/pistachio/pistachio_PNG42.png'); 
+      margin: auto;
+      background-size: 25px;
+      background-repeat: repeat;
+      transition: all;
+      transition-duration: 1s;
+      /*algoritmo di progressione easy accelera in entrate e o uscita, mentre linear
+      e la progressione di default, cubicbezier decide la progressione in un corva*/
+      transition-timing-function:linear;
+
+
+}
+.boxcontainer:hover {
+    width: 125px;
+    height: 185px;
+    background-image: url('https://pngimg.com/uploads/sun/sun_PNG13427.png');
+    margin: auto;
+    background-size: 25px;
+    background-repeat: repeat;
+   
+
+
+}
+.box2 {width: 125px;
+      height: 185px;
+      background-image: url('https://pngimg.com/uploads/pistachio/pistachio_PNG42.png'); 
+      margin: auto;
+      background-size: 125px 185px;
+      background-repeat: no-repeat;
+/*attivatore  transition seguito dalla proprieta della transizione da attivare
+              transition-duration seguito dai secondi o microsecondi          */    
+      transition: all;
+      transition-duration: 1s;
+}
+/* le transtion si attivano solo in modalit hover degli oggetti*/      
+.box2:hover { 
+      transform:scale(0.5) rotate(90deg) translate(0px,100px) ;
+      background-image: url('https://pngimg.com/uploads/sun/sun_PNG13427.png');
+}      
+
+
+.box3 {width: 125px;
+      height: 125px;
+      background-color: rgb(56, 20, 202); 
+      margin: auto;
+      text-align: center;
+      transition: all;
+      transition-duration: 1s;
+      /*transition-delay: indica il ritardo dell'animazione */
+      transition-delay: 0.5s;
+      /*algoritmo-di-progression */
+      font-size: 8pt;
+}
+.box3:hover {
+    background-color:aqua;
+    font-size: 20pt;
+    color:white;
+    
+    border-radius: 50%;
+}
+
+.box4 {width: 125px;
+      height: 125px;
+      background-color: rgb(219, 198, 15); 
+      margin: auto;
+      /*attivatore */
+      animation-name: cubo;
+      /*durata */
+      animation-duration: 5s;
+      /*stop della animazione forword utlimo punto e backwords nel punto di partenza*/
+      animation-fill-mode: forwards;
+      /* algoritmo di progressione */
+      animation-timing-function: linear;
+      /* NUmero di volte con il numero di volte in cui deve ripetersi
+      infinite (loop ripetzione infinita)altrimenti solo il numero */
+      animation-iteration-count: 2;
+      /* ritardo dell'animatione*/
+      animation-delay: 1s;
+      /*direzione dell'animazione */
+      animation-direction: alternate-reverse;
+    }
+@keyframes cubo {
+           
+       0% {transform: translate(-300px,0px);
+
+           }          
+       50%  {transform: translate(0,0) rotate(90deg) scale(2);
+
+       }
+       100% {background-color: orange; 
+
+       }
+
+
+}
+
+</style>
+</head>
+<body>
+    <h2>Transformation e transition</h2>
+<div class="box1">
+    <p>Paragrafo</p>
+</div>
+
+<div class="boxcontainer">
+<div class="box2"></div>
+</div>
+
+<div class="box3">
+     <p>Paragrafo</p>
+</div>
+<div class="box4"></div>
+
+</body>
+</html>

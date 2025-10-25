@@ -7,8 +7,19 @@
 </head>
 <body>
    <form action="gestione.php" method="post";>
+    <label>Nome</label><br>
     <input type="text" name="nome"><br><br>
+    <label>Cognome</label><br>
     <input type="text" name="cognome"><br><br>
+    <label>Prezzo sito web</label><br>
+    <input type="checkbox" name="sito" value="1200" required checked>1200€<br><br>
+    <label>Opzioni Aggiuntive</label><br>
+    <select name="servizi">
+         <option value="390" selected>Grafica 390€</option>
+         <option value="1200">Campagna Pubblicitaria 1200€</option>
+    </select><br><br>
+
+
     <input type="submit">
 
    </form>

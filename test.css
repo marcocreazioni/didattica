@@ -1,0 +1,13 @@
+/* reset css*/
+* {box-sizing: border-box;
+   font-family: sans-serif;}
+body {margin: 0px;
+      padding: 0px;
+}
+footer {background-color: blanchedalmond;
+        text-align: center;
+        padding: 1px;
+
+ }      
+
+   

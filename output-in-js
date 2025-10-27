@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo del perimetro di un quadrato</title>
+    <style>
+tr , td , th { border: 1px solid;
+}
+table {border: 1px solid;
+}
+
+    </style>
+</head>
+<body>
+<h1>Il perimetro del quadrato di cui hai inserito i dati misura:</h1>
+<table>
+<tr>
+    <th>Il perimetro è</th>
+</tr>
+<tr>
+   <td id="qui"></td>  
+</tr>
+<tr>
+   <td id="la"></td>  
+</tr>
+<tr>
+   <td id="laggiu"></td>  
+</tr>
+</table>
+<script>
+//dichiarazione di una variabile e assegnazione del valore    
+var lato = 5;
+//la variabile lato restiutisce un testo(stringa) ma usando
+//la funzione numbero otterremo un numero
+function perimetro(){
+    var calcolo_perimetro = lato * 4;
+  //la funzione restiutira il lato moltilicato X 4 
+    return calcolo_perimetro;
+}
+//output
+//stampa nel punto in cui si trova lo script
+document.write("<h3>il perimetro è:</h3>" + perimetro() + " cm");//
+// stampa su un popup il risultato del contenuto presente nella parentesi tonda
+alert("Il perimentro è " + perimetro() + " cm"); //non si puo utlizzare il linguaggio html
+// stampa sulla  console del browser (da usare per verificare se uno script funziona)
+console.log("Il perimentro è " + perimetro() + " cm");
+// stampa per la perfiferica che stampa su  carta o su pdf
+print("Il perimentro è " + perimetro() + " cm");
+//stampa su tag specifico con uno specifico id nel nostro caso l'id è "qui" e ha due metodi successivi di stampa
+
+//REGOLE DA RICORDARE 
+//1) L'id di stampa si deve trovarsi prima dello script nel codice (suggerisco di inserire gli script prima della chiusura del tag body)
+//2) non si stampa sullo stesso id altrimenti si verifca un conflitto su quale funzione deve riempire e usare quell'id 
+
+//innerHTML = è il contnuto da stampare che supporta l'html 
+document.getElementById("qui").innerHTML = perimetro() + "<strong> cm</strong>";
+// semplificazione al posto di document.getElementbyId viene sostituito dall'id
+laggiu.innerHTML = perimetro() + "<strong> cm</strong>";
+//innerText = è il contnuto da stampare che non supporta l'html 
+document.getElementById("la").innerText = perimetro() + "<strong> cm</strong>";
+
+
+
+</script>
+<p>Il cane fa bau</p>
+
+
+
+    
+</body>
+</html>

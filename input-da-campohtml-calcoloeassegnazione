@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo iva</title>
+</head>
+<body>
+   
+<h1> Calcolo iva</h1>
+
+<!--Prelievo da un input di un form-->
+
+<label>Inserisci il valore senza iva</label> 
+<!--non usare l'attributo name con lo stesso nome dato all'id-->   
+<input type="text" name="importo" id="prezzo">
+<input type="submit" onclick="calcoloiva()">
+
+<p>il prezzo ivato è il seguente</p>
+<p id="qui"></p>
+
+<script>
+    //contenitore per attivare il calcolo
+function calcoloiva() {
+//input di un dato tramite campo di un modutlo
+var prezzo = Number((document.getElementById("prezzo").value));
+//riassegnazione con operazione sulla stessa variabile e otteniamo un nuovo valore
+//della variabile come riusltato di un operazione
+prezzo += (prezzo *= 0.22);
+//output
+document.getElementById("qui").innerHTML = "prezzo con iva: " + prezzo;
+}
+//stampa il prezzo con iva
+
+ </script>
+
+
+</body>
+</html>

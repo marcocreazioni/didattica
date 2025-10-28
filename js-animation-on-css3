@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+#oggetto {width: 150px;
+          height: 150px;
+          background-color: bisque; 
+          background-image: url('https://cdn-icons-png.flaticon.com/512/3161/3161444.png');
+          background-size: cover;
+        }
+/* attivato dalle funzioni js */        
+@keyframes animazione {
+     from {transform:translate(-200px,0px) rotate(0deg);
+
+     }
+     to { transform: translate(0px,0px) rotate(90deg);
+          animation-fill-mode: forwards
+
+     }
+}
+@keyframes entrata {
+     from {transform:translate(-200px,0px);
+
+     }
+     to { transform: translate(400px,0px);
+          
+
+     }
+}
+
+
+
+</style>
+</head>
+<!--in unico evento e possibile richiamare piu funzione-->
+<body onload="load();move();css()">
+    
+<h1 id="entrata">Titolo</h1><hr>    
+<button onclick="modifica()">MODIFICA</button><br><br>
+<div id="oggetto"></div>
+<!--attenzione lo scriptdevestare nalle chisura del body-->
+<script>
+    //Funzione che muove il titolo al caricamento della pagina
+function move(){
+       entrata.style.animationName = "entrata";
+       entrata.style.animationDuration = "2s";        
+       entrata.style.animationDelay = "0.5s";
+       entrata.style.animationFillMode = "forwards";
+}
+
+    //Funzione al caricamento pagina
+function load(){ 
+    
+    document.body.style.backgroundColor = "yellow";
+    document.body.style.fontFamily = "sans-serif";
+    
+    
+   
+
+}
+
+
+//al click del mouse
+function modifica() {
+    //nome id seguito dal . + style + proprieta css che vogliamo modificare
+    //per identificare la proprieta css il secondo termine deve essere indicato
+    //in miuscolo
+    oggetto.style.backgroundColor = "orange";
+    oggetto.style.borderRadius = "25%";
+    oggetto.style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/3161/3161537.png')";
+    oggetto.style.backgroundSize = "cover";
+    oggetto.style.animationName = "animazione";
+    oggetto.style.animationDuration = "1s";
+    oggetto.style.animationFillMode = "forwards";
+
+}
+
+
+</script>
+
+</body>
+</html>

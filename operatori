@@ -1,0 +1,9 @@
+<p>
+    + (somma) number + string (il + nelle stringhe equivale ad un contatenazione)
+    - (sottrazione) number
+    * (moltipliocazione) number
+    / (divisione risultato) number
+    ** (elevazione a potenza) number
+    % (mod o resto della divisione) number
+    > < >= <= (operatori di confronto) (posso restituire solo valori boolean)
+</p>

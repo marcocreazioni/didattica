@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Varabili e prefissi</h1>
+<ul>
+    <li id="a"></li>
+    <li id="b"></li>
+    <li id="c"></li>
+    <li id="d"></li>
+    <li id="e"></li>
+    <li id="f"></li>
+    <li id="g"></li>
+    <li id="h"></li>
+    <li id="i"></li>
+    <li id="l"></li>
+    <li id="m"></li>
+    <li id="n"></li>
+    <li id="o"></li>
+
+
+</ul>
+    <script>
+//variabili in base al prefisso
+//dichiarazione di un variabile
+var x;
+//assegnazione di un valore
+x = 10; 
+//dichiarazione e assegnazione nella stessa stringa
+var y = 5; //le variabile con il profilo var possono cambiare il proprio valore assegnato
+var y = 10;
+var y = 15;  //nuovo valore della variabile y
+//stampa della variabile y nell'id a della lista
+a.innerHTML = y + " Prefisso var";
+//dichiarazione e assgnazione di un variabile con il prefisso let
+let z = 5; //il valore della variabile non puo essere riassegnato ne posso effettuare un altre operazione
+           // di somma o altro  
+//stampa della variabile z nell' id b
+b.innerHTML = z + " Prefisso let"; 
+
+const mx = 30; //il valore e immutabile e non e possibile riassagnarla  
+
+c.innerHTML = mx + z + " Prefisso const"; //const e let possono comuque essere utilizzati nelle funzioni e posso svolgeere operezioni
+//le variabili sono legate ed associato ad un valore 
+//e posso distinguerne la tipologia in base alla sintassi(come è stato scritto) del valore    
+var numerica = 500; //è un numero intero 
+//attenzione non tutte le tipologie posono interagire tra loro e occorre convertile sempre
+
+d.innerHTML = numerica + " " + typeof(numerica);//(integer)stampa del valore della variabile e della tipologia
+
+var numerodecimale = 20.5; //(float) numero con decimali separato da virgola ma convertito in " . "    
+
+e.innerHTML = numerodecimale + " " + typeof(numerodecimale);
+
+var testo = "Hello";
+
+f.innerHTML = testo + " " + typeof(testo); //(string) variabile composta da carattteri
+ 
+ var nulla = 5;
+ var nulla = null; //null cancella l'assegnazione di un valore (viene considerato un object)
+
+ g.innerHTML = nulla + " " + typeof(nulla); 
+    
+var nondefinita; //variabile dichiarata ma non assegnata alcun valore
+ h.innerHTML = nondefinita + " " + typeof(nondefinita); 
+
+var elenco = [20,30,40,50]; //(array insieme di una serie di elementi dalla stessere caratteristiche
+                            //comuni
+ i.innerHTML = elenco + " " + typeof(elenco); //indicando l'indice dello oggetto [0] viene
+ //stampato solo quell'elemento dell'array
+
+ var oggetto = { 
+                colore: "rosso<br>",
+                modello: "ferrari<br>",
+                quantita: 2
+
+ } //object in senso proprio a differenza degli elenchi possono contenere molteplici tipologie
+ //di valori
+//attenzione quando si stampa un oggetto devo indicare dopo oggetto l'elemento dell'oggetto
+// che voglio pubblicare dopo il "." 
+ l.innerHTML = oggetto.colore + oggetto.modello + oggetto.quantita  +" " + typeof(oggetto);
+
+ var verofalso = true; //true e false valori booleani che ammettono un determinta condizione
+
+m.innerHTML = verofalso +" " + typeof(verofalso);
+
+var funzione = function(a, b) {return a * b} // funzione a patto che indichi gli argomenti 
+//gli argomenti sono gli elementi di calcolo per la funzione
+
+n.innerHTML = funzione + " " + typeof(funzione);
+
+var esponenziale = 1e5;
+
+o.innerHTML = esponenziale + " " + typeof(esponenziale);
+    </script>
+
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Varabili e prefissi</h1>
+<ul>
+    <li id="a"></li>
+    <li id="b">  Prefisso let</li>
+    <li id="c">  Prefisso const</li>
+    <li id="d"></li>
+    <li id="e"></li>
+    <li id="f"></li>
+    <li id="g"></li>
+    <li id="h"></li>
+    <li id="i"></li>
+    <li id="l"></li>
+    <li id="m"></li>
+    <li id="n"></li>
+    <li id="o"></li>
+
+
+</ul>
+    <script>
+//variabili in base al prefisso
+//dichiarazione di un variabile
+var x;
+//assegnazione di un valore
+x = 10; 
+//dichiarazione e assegnazione nella stessa stringa
+var y = 5; //le variabile con il profilo var possono cambiare il proprio valore assegnato
+var y = 10;
+var y = 15;  //nuovo valore della variabile y
+//stampa della variabile y nell'id a della lista
+a.innerHTML = y + " Prefisso var";
+//dichiarazione e assgnazione di un variabile con il prefisso let
+let z = 5; //il valore della variabile non puo essere riassegnato ne posso effettuare un altre operazione
+           // di somma o altro  
+//stampa della variabile z nell' id b
+b.innerHTML = z + " Prefisso let"; 
+
+const mx = 30; //il valore e immutabile e non e possibile riassagnarla  
+
+c.innerHTML = mx + z + " Prefisso const"; //const e let possono comuque essere utilizzati nelle funzioni e posso svolgeere operezioni
+//le variabili sono legate ed associato ad un valore 
+//e posso distinguerne la tipologia in base alla sintassi(come è stato scritto) del valore    
+var numerica = 500; //è un numero intero 
+//attenzione non tutte le tipologie posono interagire tra loro e occorre convertile sempre
+
+d.innerHTML = numerica + " " + typeof(numerica);//(integer)stampa del valore della variabile e della tipologia
+
+var numerodecimale = 20.5; //(float) numero con decimali separato da virgola ma convertito in " . "    
+
+e.innerHTML = numerodecimale + " " + typeof(numerodecimale);
+
+var testo = "Hello";
+
+f.innerHTML = testo + " " + typeof(testo); //(string) variabile composta da carattteri
+ 
+ var nulla = 5;
+ var nulla = null; //null cancella l'assegnazione di un valore (viene considerato un object)
+
+ g.innerHTML = nulla + " " + typeof(nulla); 
+    
+var nondefinita; //variabile dichiarata ma non assegnata alcun valore
+ h.innerHTML = nondefinita + " " + typeof(nondefinita); 
+
+var elenco = [20,30,40,50]; //(array insieme di una serie di elementi dalla stessere caratteristiche
+                            //comuni
+ i.innerHTML = elenco + " " + typeof(elenco); //indicando l'indice dello oggetto [0] viene
+ //stampato solo quell'elemento dell'array
+
+ var oggetto = { 
+                colore: "rosso<br>",
+                modello: "ferrari<br>",
+                quantita: 2
+
+ } //object in senso proprio a differenza degli elenchi possono contenere molteplici tipologie
+ //di valori
+//attenzione quando si stampa un oggetto devo indicare dopo oggetto l'elemento dell'oggetto
+// che voglio pubblicare dopo il "." 
+ l.innerHTML = oggetto.colore + oggetto.modello + oggetto.quantita  +" " + typeof(oggetto);
+
+ var verofalso = true; //true e false valori booleani che ammettono un determinta condizione
+
+m.innerHTML = verofalso +" " + typeof(verofalso);
+
+var funzione = function(a, b) {return a * b} // funzione a patto che indichi gli argomenti 
+//gli argomenti sono gli elementi di calcolo per la funzione
+
+n.innerHTML = funzione + " " + typeof(funzione);
+
+var esponenziale = 1e5;
+
+o.innerHTML = esponenziale + " " + typeof(esponenziale);
+    </script>
+
+
+</body>
+</html>

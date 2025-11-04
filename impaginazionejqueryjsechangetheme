@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documenti</title>
+    <!--installazione jquery-->
+   <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!--jquery mobile thema -->
+     <link id="night" rel="stylesheet" href="https://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* .border {border: 1px solid black;} */
+ 
+.bka {background-color: aquamarine;}
+.bkb {background-color: bisque;}
+</style>
+</head>
+<body>
+    <!--il contenitore page ospita tutta la pagina-->
+<div data-role="page">
+    <!--la sezione header data role indica una area superiore-->
+    <div data-role="header">
+      
+        <h1>Impaginazione jquery mobile</h1>
+    </div>
+    <!--area dei contenuti-->
+    <div role="main" class="ui-content">
+
+       <!--sezione mobile del sito (ui-grid-solo solo 1 una sezione ad un blocco)altrimenti ()-->
+        <div class="ui-grid-solo border">
+       <!--blocco-->
+         <div class="ui-block-a"><strong></div>
+
+        </div>
+        <!--sezione mobile del sito (ui-grid-a per piu di un blocco)altrimenti ()-->
+          <div class="ui-grid-a border">
+       <!--blocco numerato da delle lettere ui-block-a  ui-block-b per il secondo e cosi via-->
+          
+         <div class="ui-block-a bka"><button onclick="change()">Cambia Tema</div>
+         <div class="ui-block-b bkb"><strong>I'm Block b</strong> and text inside will wrap</div>
+
+         </div>
+
+     </div>
+<!--Pie di pagina-->
+     	<div data-role="footer"><h4>by me</h4>
+        </div> 
+     
+</div>
+<script>
+    function change() { 
+        document.getElementById("night").href = "https://demos.jquerymobile.com/1.4.5/theme-classic/theme-classic.css"
+    }
+</script>
+    
+</body>
+</html>

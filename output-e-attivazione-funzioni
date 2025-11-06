@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documenti</title>
+</head>
+<!--attributo onload attivazione al caricamento della pagine-->
+<body onload="popup()">
+<h1 id="ciao" class="ciao" onclick="stampasuid()">Interazione</h1>
+<!--attivazione di una funzione al click sull'oggetto-->
+<button onclick="stampaschermo()">Clicca per scrivere</button>
+<!--attivazione di una funzione al doppioclick sull'oggetto-->
+<button ondblclick="stampaconsole()">Stampa su console</button><br>
+
+<!--attivazione di attivazione alla tastiera
+onkeypress al tasto premuto
+onkeyup al tasto alzato
+onkeydown al pulsante tenuto abbassato -->
+<input type="text" onkeypress="tastiera()" value="stampa ora"><hr>
+<!--al passaggio del mouse 
+onmouseover al passaggio del mouse 
+onmouseout all'allontanamento del mouse 
+onmouseup e onmouse dovwn interagisce con l'uso del mouse-->
+<img width="150px" id="immagine" src="https://cdn.pixabay.com/photo/2025/10/17/09/29/nature-9899712_960_720.jpg" onmouseover="change()">
+<br><button onclick="solotesto()">Stampa testo</button>
+<p id="c"></p>
+<script>
+function popup(){
+    //stampa di un popup
+    alert("Questo è un popup");//non supporta l'html come argomento della funzione
+}
+function stampaconsole() {
+    //stampa nella console del browser e non supporta l'html (verifica il corretto funzionamento
+    //
+     console.log("Questo testo compare solo sulla console"); 
+}
+function tastiera() { 
+    //invio alla stampa del contenuto della pagina
+     print();
+}
+function stampaschermo(){
+    document.write("ciao");
+}
+
+function stampasuid() {
+    //prelevo l'id e stampo in html su quell'id 
+  /*   document.getElementById("ciao").innerHTML = "Stampa su id"; */
+        ciao.innerHTML ="<h1 style='color:red'>benvenuto<h1>";    
+
+  /* se si usa className occorre indicare la posizione dell'oggetto con quella specifica classe
+        [0] = primo elemento con quel nome class [1] = al secondo elemento e cosi via 
+    
+  /*   document.getElementsByClassName("ciao")[0].innerHTML = "Stampa su class"; */
+
+}
+function change() {
+   immagine.src = "https://cdn.pixabay.com/photo/2025/10/17/15/16/halloween-9900545_960_720.jpg";
+   immagine.style.transitionDuration = "2s";
+   immagine.style.transform = "rotate(360deg)"; 
+}
+
+function solotesto(){
+    c.innerText = "<strong>TEsto</testo>"   
+}
+
+</script>
+   
+</body>
+</html>

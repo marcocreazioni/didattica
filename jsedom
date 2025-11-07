@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interazioni con il dom js</title>
+<style>
+img {width: 100%;
+height:300px;
+       }
+.box1 {margin:auto;
+       width: 50%;
+       height: 500px; 
+       
+
+}
+
+@Keyframes start {
+    from {margin-left: -3500px; 
+
+    }
+    to {margin-left: 0; 
+
+    }
+}
+
+
+</style>
+</head>
+<body>
+  
+<div class="box1" id="box1">   
+  <h1 id="titolo">Il mio titolo</h1>
+  <p id="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Iure libero amet quidem beatae earum quod suscipit, 
+     tempore quasi qui exercitationem reiciendis ea molestias nostrum assumenda fugit. 
+     Officia quod unde maxime.
+  </p>
+   <img id="fotografia" src="https://cdn.pixabay.com/photo/2024/09/28/20/09/city-9082149_960_720.jpg"> 
+</div>
+<button onclick="change()">Cambia Sfondo</button>
+<button onclick="cambiafoto()">Cambia Immagine</button>    
+<button onclick="animazione()">Attiva Animazione</button>  
+<script>
+/* roma https://cdn.pixabay.com/photo/2022/08/10/05/23/rome-7376377_960_720.jpg */
+function change() {
+    //id da modificare + . + style(css) + .proprieta css da modificare (se nel css la proprieta include
+    // piu di una parola il secondo termina va attacata con il maiuscolo) 
+   box1.style.backgroundColor = "orange";
+   box1.style.padding = "15px";
+   box1.style.borderRadius = "10px";
+   box1.style.boxShadow = "2px 2px black";
+   box1.style.height = "1000px";
+   //recupero della classe utilizzata
+   document.getElementsByClassName("box1")[0].style.color = "white";
+      
+}
+function cambiafoto() {
+    fotografia.src = "https://cdn.pixabay.com/photo/2022/08/10/05/23/rome-7376377_960_720.jpg";
+    fotografia.style.height = "700px";
+}
+
+function animazione() {
+       box1.style.animationName = "start";
+       box1.style.animationDuration = "1s";
+       box1.style.animationIterationCount = "1";
+       box1.style.animationFillMode = "forwards";
+
+}
+
+</script>
+
+</body>
+</html>

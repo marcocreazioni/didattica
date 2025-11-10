@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+<style>
+* {font-family: sans-serif;
+}   
+p {font-weight: bold;
+
+}
+
+</style>
+</head>
+<body>
+<h1>Calcolo del perimetro e dell'area del quadrato</h1>
+<HR>
+<p id="uno"></P>   
+<p id="due"></P>   
+
+<p id="tipologia"></p>
+
+<script>
+//*INSERIMENTO DELLA VARIABILE LATO *//
+var lato;
+// l'utente inserira il valore del lato del quadrato Se prompt restituisce una stringa usiamo
+//number per cambiarne la tipologia
+lato = Number(prompt("Scrivi il valore in cm del lato del quardro",""));
+
+
+// variabile calcolante il perimetro
+var perimetro = lato * 4;
+
+// variabile che calcola l'area del quadrato
+var area = lato * lato;
+
+//stampa del perimetro prendo l'id risultato e stampo il contenuto dopo l'uguale.
+//se alla stampa della variabile aggiungiamo .toFixed(2) possiamo ottenere il risultao con
+// il numero di decimali arrotondati alla variabile
+document.getElementById("uno").innerHTML = "Il perimetro del quadrato è il seguente: " + perimetro.toFixed(2) + " cm";
+document.getElementById("due").innerHTML = "L'area del quadrato è la seguente: " + area.toFixed(2) + " cm";
+
+// stampa della tipologia di variabile
+document.getElementById("tipologia").innerHTML = typeof(lato) + " " + typeof(perimetro);
+
+
+</script>
+ 
+</body>
+</html>

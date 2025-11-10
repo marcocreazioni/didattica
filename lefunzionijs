@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavorare con le funzioni</title>
+</head>
+<body>
+    <h1>Le funzioni</h1>
+
+<script>
+/* usare le funzioni */ 
+/*struttura della funzione function + nome della funzione, nella parentesi vanno indicati
+se la funzione accetta argomenti oppure no. Nel nostro caso abbiamo due argomenti (a e b) + { nella partentesi
+graffa si indica cosa deve fare la funzione*/
+function somma(a,b,c) {
+     
+    /* se la funzione deve restituire un valore usiamo return Seguito dalle operazioni da svolgere con 
+    gli argomenti */
+    return a + b + c;
+
+}
+function moltiplica(a,b) {
+    return a*b;
+}
+function dividi(a,b) {
+    return a/b;
+}
+function ciao(){
+    
+    document.write("ciao");
+    
+}
+
+/* richiamo di una funzione con argomenti 
+dobbiamo indicare il nome della funzione seguita dagli argomenti accettati !
+Attenzione gli argomenti accettati possono essere di vario genere, Possiamo usare 
+varaibili, elenchi, prompt e altri valori */
+var primo = Number(prompt("inserisci il primonumero"," "));
+var secondo = Number(prompt("inserisci il secondo numero"," "));
+//quando si richiama una funzione con argomenti, bisogna inserire gli arogmenti ammessi dalla funzione stessa
+document.write(somma(primo,secondo,10));
+document.write(somma(" Mario"," Rossi", " Calamaio<br>" ));
+/* funzione senza argomenti */
+function casa() {
+    var a = " la casa del cane fa'";
+    var b = "bau<br>";
+    var c = a + b;
+    return c;
+
+}
+/*Richiamo della funzione priva di argomenti specifici () questo significa che non siamo
+obbligati ad dinserire valore nella funzione */
+document.write(casa());
+
+/*richiamo della funzione ciao */
+ciao();
+
+</script>
+</body>
+</html>

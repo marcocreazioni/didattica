@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggiore età</title>
+</head>
+<body onload="ageverify()">
+
+
+
+
+<script>
+function ageverify(){ 
+
+    var age = Number(prompt("quanti anni hai?"," ")); //immadiatamente convertiamo in numero il prompt dell'utente
+       //if identifica la condizione da verificare 
+       //(formula condizionale che restituisce un valoree booleano "vero o falso")--Nell'if diamo per scontato che la formula
+       //ci restituisca sempre un valore vero 
+
+       //operatori condizionali ( > , >= , == , ===, < , <==)
+       
+      if (age>=18) {
+        document.write("bene sei maggiorenne clicca sul bottone<br><a href='#''><button>Voglio Vedere</button></a>") 
+        
+      } 
+    //else stabilisce cosa la funzione deve fare se la prima condizione non si realizza
+      else {
+        document.write("accidenti io non credo tu possa vedere questi contenuti");
+
+      }  
+
+
+}    
+
+</script>    
+</body>
+</html>

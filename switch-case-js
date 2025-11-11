@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cioccolata</title>
+</head>
+<body>
+<h1>La tua cioccolata preferita</h1><hr>
+<select id="x">
+  <option value="fondente">Fondente</option>
+  <option value="latte">Al latte</option>
+  <option value="bianca">bianca</option>
+  <option value="ruby">ruby</option>
+
+</select><br><br>
+<button type="submit" onclick="chocolate()">invia</button>
+
+</form>
+
+
+<script>
+function chocolate(){ 
+
+    var preferenza = document.getElementById("x").value;
+       //if identifica la condizione da verificare 
+       //(formula condizionale che restituisce un valoree booleano "vero o falso")--Nell'if diamo per scontato che la formula
+       //ci restituisca sempre un valore vero 
+
+       //operatori condizionali ( > , >= , == , ===, < , <==)
+       //dentro swich indichi cosa vuoi verificare (nel nostro case il risultato della variabile preferenza)
+    switch (preferenza) {
+//I condizione  case - valori che puo assumere una variabile (attenzione! alla tipologia di variabile inserita)
+        case "fondente": 
+         //azione da effettuare se la variabile assume quel valore
+        document.write("bene ti piace la cioccolata fondente");
+         //break serve ad interrompere una condizione se tutte le altre si verificano
+        break;
+             
+ //II condizione    
+       case "latte":
+       document.write("bene ti piace la cioccolata al latte");
+       break;
+     
+//III condizione
+       case "bianca":
+       document.write("bene ti piace la cioccolata bianca");
+       break;
+//IV  condizione o tutte quelle non disciplinate non si verificano
+      default: 
+      document.write("bene ti piace la cioccolata ruby");
+      }
+
+}    
+
+</script>    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cioccolata</title>
+</head>
+<body>
+<h1>La tua cioccolata preferita</h1><hr>
+<select id="x">
+  <option value="fondente">Fondente</option>
+  <option value="latte">Al latte</option>
+  <option value="bianca">bianca</option>
+</select><br><br>
+<button type="submit" onclick="chocolate()">invia</button>
+
+</form>
+
+
+<script>
+function chocolate(){ 
+
+    var preferenza = document.getElementById("x").value;
+       //if identifica la condizione da verificare 
+       //(formula condizionale che restituisce un valoree booleano "vero o falso")--Nell'if diamo per scontato che la formula
+       //ci restituisca sempre un valore vero 
+
+       //operatori condizionali ( > , >= , == , ===, < , <==)
+//I condizione
+      if (preferenza=="fondente") {
+
+        document.write("bene ti piace la cioccolata fondente");
+
+        
+      /* con questa funzione si reindirizza ad un altra pagina  
+      window.location.replace("ok.html"); */
+ //II condizione       
+      } 
+    //else if stabilisce cosa la funzione deve fare se la prima condizione non si realizza ma si realizza un altra condizione indicata
+      else if (preferenza=="latte") {
+
+        document.write("bene ti piace la cioccolata al latte");
+
+      }  
+//III condizione rimananente
+      else { 
+          
+        document.write("bene ti piace la cioccolata bianca");
+
+
+      }
+
+}    
+
+</script>    
+</body>
+</html>

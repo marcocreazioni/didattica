@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserimento dati</title>
+<style>
+table {border:1px solid;
+       border-collapse: collapse; 
+
+}
+td, th {border: 1px solid black;
+
+}
+th {background-color: orange;}
+
+
+
+</style>
+
+</head>
+<body>
+<p>Inserimento scheda</p>
+<table>
+  <tr> 
+    <th>Nome</th><th>Cognome</th><th>Telefono</th><th>Indirizzo</th>
+  </tr>
+  <tr>
+    <td id="a"></td><td id="b"></td><td id="c"></td><td id="d"></td>
+
+  </tr>
+
+
+</table>
+<script>
+//input oggetto
+var scheda = { 
+  nome: prompt("inserisci il tuo nome","") ,
+  cognome: prompt("inserisci il tuo cognome","") ,
+  telefono: prompt("inserisci il tuo telefono","") ,
+  indirizzo: prompt("inserisci il tuo indirizzo","")
+}
+//output dati (richiamando gli oggetti (nome oggetto.elemento dell'oggetto da richiamare))
+a.innerHTML = scheda.nome;
+b.innerHTML = scheda.cognome;
+c.innerHTML = scheda.telefono;
+d.innerHTML = scheda.indirizzo;
+
+
+</script>
+
+    
+</body>
+</html>

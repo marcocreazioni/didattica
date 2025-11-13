@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcola l'area e il perimetro di un quadrato</title>
+</head>
+<body>
+    <h1>Calcola l'area e il perimetro di un quadrato</h1>
+<p></p>    
+<p>L'area è di cm: <span id="area"></span></p>
+<p>Il perimetro è di cm: <span id="perimetro"></span></p>
+
+<script>
+//input manuale
+// var lato = 10;
+//input da prompt utente con popup ("messaggio del popup","") "" = il valore e immesso dall'utente
+var lato = prompt("Inserisci il lato in cm",""); //attenzione il valore e di tipo stringa su cui viene estratto un numero
+
+//variabili di calcolo (area) ATTENZIONE se voglia utlizzare una variabile dentro un altra o all'interno di una funzione
+// deve essere cronologicamente dichiarate e assegnata in precedenza
+var areaquadrato = lato * lato;
+
+var perimetroquadrato = lato * 4;
+
+
+
+//Output
+area.innerHTML = areaquadrato;//da inserire l'area;
+perimetro.innerHTML = perimetroquadrato; //da inserire il perimetro calcolato;
+</script>
+
+
+    
+</body>
+</html>

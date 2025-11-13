@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Operare con le variabili</h1>
+<p>Tiplogie di variabili</p>
+<ul> 
+<li id="a"></li>
+<li id="b"></li>
+<li id="c"></li>
+<li id="d"></li>
+<li id="e"></li>
+<li id="f"></li>
+<li id="g"></li>
+<li id="h"></li>
+<li id="i"></li>
+<li id="l"></li>
+<li id="m"></li>
+</ul>
+
+<p> Categorie e prefissi</p>
+<p>Prefisso var: variabile che è possibile riassegnare un valore
+    <span id="x"></span><br>
+   Indico una variabile senza un prefisso 
+    <span id="x1"></span><br>
+ Indico una variabile con il simbolo del $ (jquery e php) 
+    <span id="x2"></span><br>
+
+Il prefisso let rende non riassegnabile una variabile 
+    <span id="x3"></span><br>
+Il prefisso const rende non riassegnabile una variabile indicato come constante 
+    <span id="x4"></span><br>
+
+</p>
+
+<script>
+//dichiarazione di una variabile
+var prima;
+//assegnazione del valore alla variabile
+prima = 10; //number integer
+//+ permette di stampare una concatenazione di valori 
+a.innerHTML = prima + " " + typeof(prima);
+//dichiarazione e assegnazione di una variabile con decimali
+var seconda = 10.5; //number float
+
+b.innerHTML = seconda + " " + typeof(seconda);
+
+var terza = 2e8; //number esponential
+c.innerHTML = terza + " " + typeof(terza);
+
+var quarta = "50";
+d.innerHTML = quarta + " " + typeof(quarta); //stringa di testo 
+//attenzione non è possibile effetture operazioni tra stringe numero 
+//perchè genera un errore NaN (non è un numero)
+//per operare con le strighe e con i numeri bisogna trovare un compromesso ed effettura una conversione
+
+var quinta = true;
+e.innerHTML = quinta + " " + typeof(quinta); //true o false (e possono essere generate automaticamente
+//mediante gli operatori "> + < + >= + == + ===" ) 
+
+var sesta = ["pane","pasta","sale"];
+//insieme di valori della stessa tipologia crea un array ovvero un elenco
+f.innerHTML = sesta + " " + typeof(sesta);
+//variabile di tipo oggetto
+var settima = {
+    veicolo: "fiat",
+    modello: "500",
+    numero: 1
+}
+g.innerHTML = settima.veicolo + " " + settima.modello + " " + settima.numero + " " + typeof(settima);
+// variabile funzione 
+
+var ottava = function stringa() {
+   a = "testo"
+   document.write(a);
+}
+
+h.innerHTML = ottava + " " + typeof(ottava);
+
+// variabile non definitia (variabili figlie di un risultato di una funzione) 
+var nona;
+i.innerHTML = nona + " " + typeof(nona);
+// variabile NaN e una variabile non riconosciuta come numero ma risultato di una funzione
+var decima = NaN;
+l.innerHTML = decima + " " + typeof(decima);
+// variabili legata ad una funzione predefinita con metodo
+var undicesima = Math.PI;
+m.innerHTML = undicesima + " " + typeof(undicesima);
+
+//_______PREFISSI___________________//
+
+var t = 10;
+var t = 20;
+x.innerHTML = t;
+
+t1 = 10;
+t1 = 20;
+x1.innerHTML = t1;
+
+$t2 = 10;
+$t2 = 20;
+x2.innerHTML = $t2;
+//Con l'introduzione di Ecma Script e le nuove versioni javascript
+//let impone che la variabile non riassegnabile
+let t3 = 10;
+x3.innerHTML = t3;
+//LE constati si comportano come let e si dichiarano con const
+const t4 = 10;
+x4.innerHTML = t4;
+
+
+</script>
+
+</body>
+</html>

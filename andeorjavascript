@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggiore età</title>
+</head>
+
+<body onload="ageverify()">
+
+<script>
+function ageverify(){
+    
+   var age = Number(prompt("quanti anni hai?"," ")); //immadiatamente convertiamo in numero il prompt dell'utente
+     //condizioni && and due condizioni si devono verifica || or solo una delle due condizioni si deve verificare
+     //in esempio voglio che la pagina venga caricata solo se si verificano 2 condizioni la prima che abbia piu di 18 anni
+     // e la seconda che ne abbia meno di 66 
+    if ((age>=18) && (age<=65))  {
+        document.write("bene sei maturo per vedere i contenuti clicca sul bottone<br><a href='#''><button>Voglio Vedere</button></a>")
+      }
+
+    //else if stabilisce che debba verificarsi che una delle due condizione si vada a verificare
+      else if ((age==16) || (age==17)) {
+        document.write("Se sei spostato clicca su<br><a href='#''><button>Voglio Vedere</button></a><br>altrimenti chiudi la pagina")
+      }
+
+      else {
+             document.write("accidenti io non credo tu possa vedere questi contenuti");
+      }
+}
+</script>
+</body>
+</html>

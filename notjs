@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggiore età</title>
+</head>
+
+<body onload="ageverify()">
+
+<script>
+function ageverify(){
+    
+   var age = Number(prompt("quanti anni hai?"," ")); //immadiatamente convertiamo in numero il prompt dell'utente
+     //condizioni ! not dove si specifica che non deve verificarsi la condizione tra partentesi per attivare il contenuto
+     
+    if (!(age>=18))  {
+            document.write("accidenti io non credo tu possa vedere questi contenuti");
+        
+      }
+
+    
+      else {
+             document.write("bene sei maturo per vedere i contenuti clicca sul bottone<br><a href='#''><button>Voglio Vedere</button></a>")
+             
+      }
+}
+</script>
+</body>
+</html>

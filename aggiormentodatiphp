@@ -1,0 +1,31 @@
+<?php
+
+//connessione al database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "contatti";
+
+//variabile con funzione di connessione al dabase e facoltativamente
+//a mysql connect aggiungiamo il database
+$conn = mysqli_connect($servername, $username, $password, $database);
+//verifica sei dati di connessione al database sono corretti e se sono effettivamente connesso
+if (!$conn) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+
+/* se l'aggiornamento avviene da un modulo si puo usare il seguente codice
+/* $aggiornamenti_cognome = $_POST['cognome];
+$update = "UPDATE clienti SET COGNOME='$aggiornamenti_cognome' WHERE id='1'";
+*/
+$aggiornamento = "UPDATE postaelettronica SET EMAILDUE='martini@gaslini.it' WHERE IND='3'";
+
+//Verifica aggiornamenti
+if ($conn->query($aggiornamento) === TRUE) {
+  echo "Informazione Aggiornata con sucesso";
+} else {
+  echo "Errore nell'aggiornamento: " . $conn->error;
+}
+
+$conn->close();
+?>

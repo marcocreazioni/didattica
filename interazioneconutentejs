@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interazioni con il documento</title>
+    <style>
+img {width: 100%;
+     height: 300px;
+
+}
+button {border: none;
+        background-color: purple;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+
+}
+button:hover {
+    background-color: lightpink;
+    color:black;
+    
+
+}
+input {margin-top: 6px;
+       padding-bottom: 3px; 
+
+}
+@keyframes rotazione {
+
+    from {margin-top: 10px;
+          transform: rotate(0deg);
+
+    }
+    to {margin-top: 20px;
+         transform: rotate(360deg);
+
+    }
+}
+
+    </style>
+</head>
+<body>
+ <div id="box">
+   <h1 id="titolo">Interazioni con la pagina web</h1>
+   <p id="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit asperiores quidem non cum aliquid! Dolore rerum excepturi ut sunt totam 
+    accusantium quod inventore omnis voluptas facere.
+    Inventore quam quasi cupiditate.</p>
+    <img id="immagine" src="https://cdn.pixabay.com/photo/2025/11/17/10/40/hoopoe-9961456_640.jpg">
+    <!--ogni bottone ha una proprieta onclick-->
+     <!--il primo bottone e collegato alla funzione formattabox()-->
+    <input type="color" id="colore">
+    <button onclick="formattabox()">Formatta</button>
+    <button onclick="allineamento()">Allinea</button>
+    <button onclick="animazione()">Animazione</button>
+    <button onclick="cambiafoto()">Cambia Foto</button>
+    
+</div>
+<script>
+    // per prelevare un informazione da un campo form associo ad una qualsiasi variabile
+    // un id prelevato tramite document.getElementbyId + . value (ovvero il valore immesso
+    // dall'utente del campo
+var sceltacolore =  document.getElementById("colore").value;
+
+
+// function + nome() + {operazioni della funzione}   
+function formattabox() {
+    //Preleva l'id del documento " ".style (modifico una proprieta del css) . proprieta css che vogliamo cambiare
+    //se la proprieta e composta da due termini il secondo termine va indicato in maiuscolo = valore della proprieta
+    //css il valore associato alla proprieta css puo anche essere un variabile definita dell'utente   
+    document.getElementById("box").style.backgroundColor = sceltacolore;
+    //posso semplificare le proprieta direttamente inserendo l'id da modificare
+    box.style.padding = "5px";
+    box.style.borderRadius = "15px";
+    box.style.fontFamily = "Sans-Serif";
+}
+function allineamento() {
+    titolo.style.textAlign = "center";
+    paragrafo.style.textAlign = "justify";
+
+}
+function animazione() { 
+    box.style.animationName = "rotazione";
+    box.style.animationDuration = "2s";
+    box.style.animationIterationCount = "1";
+    box.style.animationFillMode = "forwards";
+     
+
+}
+function cambiafoto() {
+    //se voglioamo cambiare o aggiungere attributi usiamo l'attributo che desideriamo modificare
+    immagine.src = "https://cdn.pixabay.com/photo/2025/11/11/16/45/warthog-9950838_640.jpg";
+    //possiamo inoltre attributi non implementati
+    immagine.alt = "Animali di campagne";
+    titolo.innerHTML = "Ho un nuovo titolo";
+
+}
+
+
+</script>
+<!-- https://cdn.pixabay.com/photo/2025/11/11/16/45/warthog-9950838_640.jpg -->
+</body>
+</html>

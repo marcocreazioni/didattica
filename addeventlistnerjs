@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <title>Eventi</title>
+<style>
+body {margin:0px;
+padding:0px;}    
+#popup {position: fixed;
+        width: 300px;
+        height: 300px;
+        border: 1px solid darkblue;
+        background-color: cyan;
+        /*posizione del popuo */
+        top: 200px;
+        left: 40%;
+        border-radius: 5px;
+        /*nascondo il popup */
+        display: none;
+
+
+}
+.conteiner {position:static;
+            width: 25%;
+            height: auto;
+            padding: 10px;
+
+}
+
+
+
+</style>
+
+
+
+
+
+<body>
+    <!-- per il popup in caricament attributo onload="nome-funzione()"-->
+    <!--oggetto realizzato con il css-->
+<div id="popup"></div>
+<div class="conteiner">
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<button id="myBtn">Try it</button>
+<p id="casa">clicca</p>
+<p id="demo"></p>
+<button id="apri">apri</button>
+<button onclick="openpopup()">apri finestra</button>
+</div>
+
+<script>
+apri.addEventListener("click",display);
+
+function openpopup(){
+    window.open("open.html","","width=200,height=200");
+}
+
+
+function display() { 
+    document.getElementById("popup").style.display = "block";
+   
+
+}
+
+casa.addEventListener("click",popup);
+
+myBtn.addEventListener("mouseover", displayDate);
+
+function popup(){
+
+    alert("ciao my friend");
+
+
+}
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,19 @@
+<?php
+//Variabili del php 
+//assegnazione e dichiarazione di una variabile ad uso e consummo anche di una funzione specifica
+$a = "sono contento";
+//variabile dichierata e assegnata con define non viene richiamata con il simbolo del $
+//(nome della variabile, valore assegnato) 
+$head = "<style> h1, h2 {color:orange;}</style>";
+//variabile della famiglia (utlizzabile in tutte le funzioni)
+define("b","a questa lezione");
+
+echo $head;
+//output con variabile php
+echo "<h1 style='text-align:center'>Ciao $a<h1>";
+//output php
+print "<h2 id='uno' onclick='centra()'>Benvenuti ".b."<h2>";
+
+echo "<script>function centra(){uno.style.textAlign = 'center'}</script>"
+
+?>

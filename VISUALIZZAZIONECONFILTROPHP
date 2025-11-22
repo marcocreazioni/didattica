@@ -1,0 +1,71 @@
+ <?php
+//dati dell'archivio
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "contatti";
+//variabile per la connessione al database
+$connessione = mysqli_connect($servername, $username, $password, $database);
+// Verrifica la connessio
+if (!$connessione) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+/* inclusione di file esterni necessari al funzionamento di questo file
+require('dataconnect.php');
+*/
+/* La funzione php info ci dice tutto sulla versione del php nella macchina server 
+$info = phpinfo();
+echo $info;
+*/
+/* variabile per comprendere la versione del php 
+$versione = phpversion();
+echo $versione;
+*/ 
+$css = "<head><style>td , th {border:1px solid;} table {border-collapse:collapse;}</style></head>";
+echo $css;
+/* la variabile visualizza ma non stampa i dati  con i campi da stampare o " * " che li prende tutti 
+aggiungendo alla queri il valore WHERE filtriamo i dati per una particolare colonna*/
+$opendata = "SELECT * FROM postaelettronica WHERE NOME = 'MARIO'";
+/* con la funzione mysqli_query(con 2 argomenti, il primo e la variabbile connessione e il secondo argomento era la query) */
+if ($risultato = mysqli_query($connessione,$opendata))   {
+         // in questo if verifichiamo quante righe sono nella tabella e se ci sono 
+    if (mysqli_num_rows($risultato)>0) {
+
+         echo "<table style='border:1px'>" . "<tr>". "<th>IND</th>" . "<th>NOME</th>" . "<th>COGNOME</th>" . "<th>EMAIL</th>" . "<th>EMAILDUE</th>" . "<tr>";
+  //while permette di crere delle ripretizioni in questo caso la ripetizione delle diverse righe tabella
+         while($row = mysqli_fetch_array($risultato)){
+             echo "<tr>";
+                    echo "<td>" . $row['IND'] . "</td>";
+                    echo "<td>" . $row['NOME'] . "</td>";
+                    echo "<td>" . $row['COGNOME'] . "</td>";
+                    echo "<td>" . $row['EMAIL'] . "</td>";
+                    echo "<td>" . $row['EMAILDUE'] . "</td>";
+                echo "</tr>"; 
+
+            }
+   //chiusura delle righe          
+         echo "</table>"; 
+            
+         mysqli_free_result($risultato);
+
+         }
+         //chiusura dell'if che verificava la presemza di dati nella tabella (riga 29)
+            else { 
+               echo "Mi spiace non ci sono righe.";
+            };  
+  //chiusura dell'if che chiude mysqli:query
+  
+        }
+
+    else {
+  echo "Non posso eseguire la query $opendata" . mysqli_error($link);
+};
+    
+    
+    
+    
+        
+
+
+/*Chiusura del database */
+mysqli_close($connessione);

@@ -1,0 +1,18 @@
+* {box-sizing: border-box;
+}
+
+body {margin:0px;
+      padding:0px;
+}
+
+header {
+background-color: bisque;
+width: 100%;
+padding: 1px;
+
+
+}
+footer {
+background-color: yellow;
+padding: 5px;    
+}

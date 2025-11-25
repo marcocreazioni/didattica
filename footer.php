@@ -1,5 +1,6 @@
-<?php
+<?php 
+$credits = "<footer><code>sito web by marco</code></footer><script src='javascript.js'></script></body>";
 
-echo "<footer style='background:lightgreen;width:100%;position:fixed;bottom:0px;margin 0px;height:200px' id='footer'><h1 style='color:red;'>" . "Creato da: " .  "</h1></footer>"; 
+echo $credits;
 
 ?>

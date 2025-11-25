@@ -1,10 +1,11 @@
 <?php 
-//colori di background
-$arancio = "background-color: orange";
-//allineamento centrale
-$centra = "text-align:center";
-$padding = "padding:10px;margin-top:-8px";
-//stampa testata
-echo "<header><h1 style='$centra;$arancio;$padding'>testata</h1></header>";
+//sezione Head comune a tutte le pagina
+$head = "<head><style> h1, h2 {color:orange;text-align:center}</style>";
+$css = "<link href='stile.css' rel='stylesheet' type='text/css'></head>";
+
+//Pubblicazione della sezione head 
+echo $head . $css;
+
+
 
 ?>

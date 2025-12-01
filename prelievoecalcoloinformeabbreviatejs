@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventivo</title>
+<style>
+body {font-family: sans-serif;
+      background-color:antiquewhite;
+      margin: 30px;
+      padding: 0px;
+      box-sizing: border-box;
+     }
+table {border: 1px solid;
+       border-collapse: collapse;
+       padding: 5px;
+       margin-bottom: 5px;
+       margin-top: -10px;
+
+}
+th , td {border:1px solid;
+         text-align: center;
+
+}
+label {padding:1px;
+       display:block;
+       margin-bottom: -20px;
+       margin-top: -1px; 
+    }
+button,input,select {padding:5px;
+}
+</style>
+</head>
+<body>
+ <h1>Preventivo</h1>
+ <!--input dei dati (non inseriamo il tag form!ma inseriamo i dati di input da prelevare(da prendere) )-->
+ 
+
+  <label for="nome">Nome:</label><br> <!--etichetta del campo-->
+
+  <input type="text" name="nome" id="camponome"><br><!--a ogni campo di input diamo un id negli attributi-->
+
+  <label for="cognome">Cognome:</label><br>
+  <input type="text" name="cognome" id="campocognome">
+  
+  <label for="servizi">Servizi Scelti: </label><br><!--per la tipologia di campo select indichiamo un id-->
+  <select name="servizi" id="camposervizi" required>
+    <option value="1200">Sito Web 1200 €</option><!--per ogni option(ovvero opzione bisogna dare un attributo value
+    che sarà assegnao come valore di questo campo-->
+    <option value="500">Grafica 500 €</option>
+    <option value="200">Campagne Pubblicitarie 200 €</option>
+  </select><br>
+
+<label for="backup">Frequenza Backup disponibli a partire da 1 al mese 40€ </label><br>
+<input type="number" name="backup" id="bk" placeholder="indica il numero"><br><br><!--la tipologia di campo 
+number restituisce all'id sempre un valore numerico-->
+
+
+ <input type="submit" value="Clicca per Il preventivo" onclick="calcolopreventivo()"><br><br>
+ 
+ <hr>
+<!--nell'id calcolo viene stampato il risultato della funzione richiamate dal pulsante submint-->
+<p id="calcolo"></p>
+<p id="stampatipoligievariabili"></p>
+<script>
+
+function calcolopreventivo() {
+//ara varaibli di prelievo dati (al posto di document.getelementby id inseriamo direttamente seguito da value) 
+var nomeinput = camponome.value; //valore stringa (sequenza di caratteri) 
+var cognomeimput = campocognome.value;
+var serviziselect = Number(camposervizi.value);
+var archiviazione = Number(bk.value);
+
+//variabili di area calcoli
+
+    var nome = nomeinput + " " + cognomeimput; //testo
+    var calcolobackup = archiviazione * 40;
+    var preventivo = (calcolobackup + serviziselect) * 1.22 //+ aggiornamenti + backup + servizimail + antivirus; //numerico
+    
+
+document.getElementById("calcolo").innerHTML = "<strong>" + nome + "</strong>" + " Il totale del preventivo + iva è: <strong>" + preventivo.toFixed(2) + "</strong> €";
+
+}
+
+
+</script>
+</body>
+</html>

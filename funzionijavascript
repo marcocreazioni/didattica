@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventivo</title>
+<style>
+body {font-family: sans-serif;
+      background-color:antiquewhite;
+      margin: 30px;
+      padding: 0px;
+      box-sizing: border-box;
+     }
+table {border: 1px solid;
+       border-collapse: collapse;
+       padding: 5px;
+       margin-bottom: 5px;
+       margin-top: -10px;
+
+}
+th , td {border:1px solid;
+         text-align: center;
+
+}
+label {padding:1px;
+       display:block;
+       margin-bottom: -20px;
+       margin-top: -1px; 
+    }
+button,input,select {padding:5px;
+}
+</style>
+</head>
+<body>
+ <h1>Preventivo</h1>
+ <!--input dei dati (non inseriamo il tag form!ma inseriamo i dati di input da prelevare(da prendere) )-->
+ 
+
+  <label for="nome">Nome:</label><br> <!--etichetta del campo-->
+
+  <input type="text" name="nome" id="camponome"><br><!--a ogni campo di input diamo un id negli attributi-->
+
+  <label for="cognome">Cognome:</label><br>
+  <input type="text" name="cognome" id="campocognome">
+  
+  <label for="servizi">Servizi Scelti: </label><br><!--per la tipologia di campo select indichiamo un id-->
+  <select name="servizi" id="camposervizi" required>
+    <option value="1200">Sito Web 1200 €</option><!--per ogni option(ovvero opzione bisogna dare un attributo value
+    che sarà assegnao come valore di questo campo-->
+    <option value="500">Grafica 500 €</option>
+    <option value="200">Campagne Pubblicitarie 200 €</option>
+  </select><br>
+
+<label for="backup">Frequenza Backup disponibli a partire da 1 al mese 40€ </label><br>
+<input type="number" name="backup" id="bk" placeholder="indica il numero"><br><br><!--la tipologia di campo 
+number restituisce all'id sempre un valore numerico-->
+
+ 
+
+<!-- il pulsante submit attivera la funzione di calcolo quindi assegnare un value non ha alcuna importanza
+tuttavia deve essere presente l'attributo onclick che al proprio interno richiama la funzione
+che si occupera dei eleaborare i dati -->
+ <input type="submit" value="Clicca per Il preventivo" onclick="calcolopreventivo()"><br>
+ 
+ 
+ <hr>
+<!--nell'id calcolo viene stampato il risultato della funzione richiamate dal pulsante submint-->
+<p id="calcolo"></p>
+<script>
+// I Step creare un elenco di variabili il cui compito e prelevare i valori degli id  
+//input
+// alla variabile nomeinput assegnamo il valore inserito nell'id nome
+// var nomeinput = document.getElementbyId() ovvero prendi dal documento il tag con l'id da
+// indicare tra parentesi occorre anche aggiungere .value per non solo prendere quell id ma anche il valore inserito
+// al suo interno ovvero il valore del campo
+var nomeinput = document.getElementById("camponome").value; //valore stringa (sequenza di caratteri) 
+// nomeimput ha preso il nome inserito nel campo input
+var cognomeimput = document.getElementById("campocognome").value;
+//qui a cognome input ho preso il cognome   
+var serviziselect = Number(document.getElementById("camposervizi").value);
+//qui in serviziselect ho preso il servizio richiesto prelevato da un 'elenco a tendina' questo valore e stato anche convertito
+// tramite una funazione predefinita chiamata number in un dato numerico
+var archiviazione = Number(document.getElementById("bk").value);
+// qui invece archiviazione a preso il numero dei bakckup
+//campo numerico 
+//II step scrivo una funzione che usera i valori delle variabile che ho prelevato
+function calcolopreventivo() {
+// nella funzione ho creare una variabile che sommasse nome e congnome in unico testo con incluso
+// uno spazione per separare il nome dal cognome   
+    var nome = nomeinput + " " + cognomeimput; //testo
+// nella funzione ho creato un altra variabile usando gli operatori della calcolatrice * / ^ + - 
+//per moltipliciare il valre inserito in bk per 40€ valore di ogni backup
+    var calcolobackup = archiviazione * 40;
+//nella funzione ho anche crea una variabile che sommasse il valore che viene fuori da calcolo
+//backup con quello proveniente dall campo seriviselect ovvero il valore proveniente dal menu a tendina
+//con l'id camposeevizi il cui risultato moltiplicato * 1,22 ci restituisse il valore 
+//del preventivo  comprensiva di iva o VAT     
+    var preventivo = (calcolobackup + serviziselect) * 1.22 //+ aggiornamenti + backup + servizimail + antivirus; //numerico
+    
+//alla stessa funzione ho detto di stampare alla voce "calcolo" la variabile nome e il risultato della variabile preventivo al quale ho aggiunto al risultato un metodo/funzione
+// .tofixed(2) che arrotondasse il risultato della variabili con due cifre decimali  
+document.getElementById("calcolo").innerHTML = "<strong>" + nome + "</strong>" + " Il totale del preventivo + iva è: <strong>" + preventivo.toFixed(2) + "</strong> €";
+
+}
+//solo per didattica stampo la tipologia di dati che javascript ha letto nei campi assegnati 
+//La funzione typeof consente di stampare la tipologia di dato senza il valore della variabile
+document.write("nomeinput = a " + typeof(nomeinput) +  " cognomeimput = a " + typeof(cognomeimput) +  " serviziselect = a " + typeof(serviziselect) +  " archiviazione = a " + typeof(archiviazione));
+
+</script>
+</body>
+</html>

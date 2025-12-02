@@ -1,0 +1,25 @@
+<?php
+//inizializzazione variabili del database
+$servername = "localhost";
+$username = "root";
+$password = ""; 
+
+// Crea la connessione $servername, $username; $passord ; $database (se c'è gia o è gia stato creato)
+$connessione = mysqli_connect($servername, $username, $password);
+
+
+/* Create database serve per creare database */
+$sql = "CREATE DATABASE magazzino"; 
+
+/*Gestione degli errori */
+if (mysqli_query($connessione, $sql)) {
+  echo "Database connesso e creato archivio";
+} else {
+  echo "C'è un errore di connessionessione: " . mysqli_error($connessione);
+}
+
+
+
+
+
+?>

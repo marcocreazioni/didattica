@@ -1,0 +1,20 @@
+<?php
+$stringhe = "testo";
+$numeri = 56;
+$numericonlavirgola = 5.35;
+$numeriesponente = 10e2;
+
+
+//array vuole essere sempre definitio in quanto tale e creare insiemi eterogenei ed assegnare dei valori ad un
+//elemento di un elenco   => con il valore da associare ad ogni elemento dell'insieme (matrice bidimensionale)
+$elenco = array ("Ferrari","Maserati","TX","Volvo", 50);
+//glielementi dell'elenco possono essere richiamati indicando [0] per il primo elemento
+echo $elenco[0];
+
+//VAR DAMP SOSTITTUISCE TYPEOF DI JS
+//echo var_dump($stringhe).var_dump($numeri).var_dump($numericonlavirgola).var_dump($numeriesponente); 
+
+
+
+
+?>

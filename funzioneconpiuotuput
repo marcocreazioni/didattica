@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni</title>
+<style>
+:root {  
+--color: orange;
+
+}    
+body {margin:30px;
+    background-color: antiquewhite;
+     
+
+}  
+.separatore {border-right: 2px solid;
+             border-bottom: 2px solid;
+             border-color: var(--color);
+             width: 50%;
+             height: 200px;
+
+            
+
+}
+
+</style>
+
+
+
+</head>
+<body>
+<h1>Funzioni</h1>
+<div class="separatore">
+
+<label for="nome">Nome</label><br>
+<input type="text" name="nome" id="nome"><br>
+<label for="cognome">Cognome</label><br>
+<input type="text" name="cognome" id="cognome"><br><br>
+<label for="eta">Età</label><br>
+<input type="number" name="eta" id="eta"><br><br>
+
+<!--attivatore funzioni js che si vanno aggiungere agli oggetti:
+onclick: al click del mouse
+onmouseover: al passaggio del mouse
+ondoubleclick: al doppio clicc del mouse 
+onload: al caricamento del contenuto
+onkeypress: alla click del tasto della tastiera-->
+<input type="submit"  onclick="stampanominativo()" value="stampa nominativo"><br><br> 
+<hr>
+
+ </div>
+<p id="x"></p>
+
+<label>Inserisci il tuo reddito</label>
+<input type="text" name="reddito" id="reddito"><br><br>
+<input type="submit" onclick="calcoloirpef() ">
+<p id="stampareddito"></p>
+<p id="redditodisponibile"></p>
+
+
+ <script>
+
+function temporiempimento() {
+    var vascadabagno = 300;
+   /*300 è la capienza in litri */
+    var acquametrocubo = "1 mc";
+    var acquametrocuboanumero = parseInt(acquametrocubo);
+    /*1 metro cubo al secondo */ 
+var conversioneinlitri = acquametrocuboanumero * 1000;
+
+ 
+    return vascadabagno / conversioneinlitri; 
+
+
+}
+
+
+
+function calcoloirpef() {
+let redditoinput = Number(document.getElementById("reddito").value);//il reddito deve diventare un numero
+const aliquota = 15;
+
+let irpef = redditoinput * (aliquota / 100);
+var netto = redditoinput - irpef;  
+
+ /* return restituisce solo il risultato ma non fa altre attivita */   
+ // return irpef 
+ /* in alternativa stampa direttamente la variabile che resitutisce il risultato 
+   stampareddito.innerHTML = "l'irpef ammonta a : " + irpef + " €";
+*/
+stampareddito.innerHTML = "l'irpef ammonta a : " + irpef + " €";
+redditodisponibile.innerHTML = "il reddito restante è il seguente: " + netto + " €";
+
+     
+}
+
+
+
+document.write("<br>" + temporiempimento() + " è il tempo in secondi che impiega la vasca a riempirsi");
+
+/* function + nomefunzione + (argomenti-variabili obbligatorie) {operazioni
+da svolgere la funzioni } */
+function stampanominativo() {
+      a = document.getElementById("nome").value; //stringa
+      b = document.getElementById("cognome").value; //stringa
+      //per convertire il valore di un campo da stringa a numero
+      c = Number(eta.value);
+      //definizione aoutput 
+      x.innerHTML = a + " " +  b + "di età:" + c;
+     }
+/* funzione con argomenti *
+function areatriangolo (base,altezza) {
+       return base * altezza;
+
+}
+/* richiamo della funzione bivalore 
+document.write(areatriangolo(prompt("inserisci la base",""),prompt("inserisci l'altezza",""))); */
+
+ </script>
+ 
+</body>
+</html>

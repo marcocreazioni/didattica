@@ -1,0 +1,45 @@
+<?php
+$stringhe = "testo";
+$numeri = 56;
+$numericonlavirgola = 5.35;
+$numeriesponente = 10e2;
+// CONVERSIONA DA NUMERO con virgola mobile e float
+$A = 5.6; //float
+
+$B = 4.6; //float
+$B  = round($B); //la funzione round arrotonda e converte
+
+$A = (int) $A; //non arrotonda il valore semplicemente rimuove il decimale  
+//conversione da numero a stringa
+$D = 64;
+$D = (string) $D;
+//conversione da stringa a numero 
+$E = "56 TESTO";
+$E = (int) $E;
+
+$F = "TESTO: 180";
+$G = filter_var($F,FILTER_SANITIZE_NUMBER_INT); //estrae numero da stringa e resituisce il numero intero mentre NUMER_FLOAT Metodo Preimpostato
+
+$H = "TESTO: 200";
+$H = substr($H,7);//substring permette di rimuovere un certo numero di caratteri da una string
+$H = (int) $H; //una volta estratto il testo numerico lo converto in un integer (numero intero)
+
+$I = "TESTO: 250";
+$I = trim($I,"TESTO:");
+//attenzione se nella stringa il testo compare prima esso viene associato a 0
+echo $A . "<br>" . $B . "<br>". $D . "<br>". $E . "<br>" . $G  . "<br>" . $H  . "<br>".  $I  . "<br>";
+
+
+
+
+
+//array vuole essere sempre definitio in quanto tale e creare insiemi eterogenei ed assegnare dei valori ad un
+//elemento di un elenco   => con il valore da associare ad ogni elemento dell'insieme (matrice bidimensionale)
+$elenco = array ("Ferrari","Maserati","TX","Volvo", 50);
+//glielementi dell'elenco possono essere richiamati indicando [0] per il primo elemento
+echo $elenco[0];
+
+//VAR DAMP SOSTITTUISCE TYPEOF DI JS
+//echo var_dump($stringhe).var_dump($numeri).var_dump($numericonlavirgola).var_dump($numeriesponente); 
+
+

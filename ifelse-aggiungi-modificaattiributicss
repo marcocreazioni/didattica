@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito per adulti</title>
+    
+<style>
+    body {
+        background-color: crimson;
+        color: white;
+        font-family: sans-serif;
+    }
+   #adult {filter: blur(20px);
+
+    }
+</style>
+</head>
+<!--attributo onload attiva una funzione js al caricamento della pagine-->
+<body onload="verificaeta()" id="sfondo">
+<h1>Logica Condizionale</h1>
+<p id="risposta"></p>
+<img id="adult" src="https://cdn.pixabay.com/photo/2022/10/07/17/31/beauty-7505578_960_720.jpg">    
+   
+
+<script>
+
+function verificaeta () {
+
+    let etautente = prompt("Inserisci la tua età",""); 
+         //if + (condizione che si deve verificare) {operazione
+         //che deve fare la pagina se l'utente e maggiorenee}
+       if (etautente >= 18) {
+         //id con stampa html = con html pubblicato 
+        risposta.innerHTML = "Sei un adulto";
+         //id e style che rappresenta il css e la proprieta che si 
+         //intende modificare seguuto dal valore
+        adult.style.filter = "blur(0px)";
+
+        sfondo.style.backgroundColor = "green";
+
+       }
+       //per tutte le altre condizioni inseriamo else 
+     else  {
+        //id e attributo e valore che intendo modificare all'interno del tag
+        adult.src = "https://cdn.pixabay.com/photo/2023/11/13/18/01/fall-8386067_960_720.jpg"; ;
+        //possiamo anche creare o aggiungere nuovi attributi che sia compatibile con il tag
+        adult.alt = "foglie invernali";
+     }
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

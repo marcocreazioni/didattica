@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica a tre vie</title>
+</head>
+<style>
+ body {background-color: brown;
+ color:white}   
+</style>
+<body>
+
+    <h1>Selezione</h1>
+    <p>Dimmi il cioccolato che ti piace qui sotto</p>
+    <!--non usare il tag form-->
+    <label>Scegli ora</label><br>
+    <select id="cioccolato">
+        <option value="bianco">Cioccolato Bianco</option>
+        <option value="fondente">Cioccolato Fondente</option>
+        <option value="latte">Cioccolato al Latte</option>
+    </select>
+    <br><br>
+  <input type="submit" onclick="mipiace()" value="Scopri">
+  <hr> 
+  <p id="output"></p>
+ 
+  
+
+    
+    <script>
+     function mipiace() {
+          //id seguito da .value permette di prelevare il valore 
+          // da un campo di input
+        var preferenza = document.getElementById("cioccolato").value;
+                 //per le stringhe un doppio uguele significa che se un numero
+                 //oppure una stringe cerchera nella stessa sequenza
+                 //per il triplo uguale la variabile deve essere identica per numero
+                 //e per tipologia
+            if (preferenza === "bianco") {
+
+             output.innerHTML = "Woow ti piace il cioccolato bianco ma attento<br>al colesterolo";
+            }
+              
+           else if (preferenza === "fondente") {
+              output.innerHTML = "Il fondente ti aiuta con la serotonia";
+           }
+
+           else {
+              output.innerHTML = "sei proprio un bambino ti piace il ciccolato al latte";
+           }
+
+     }
+
+    </script>
+
+</body>
+</html>

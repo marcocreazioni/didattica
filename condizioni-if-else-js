@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagine per un pubblico adulto</title>
+<style>
+body {background-color: brown;
+      color: white;  
+      font-family: sans-serif;   
+
+}
+#titolo {text-align: center;
+    display: none;
+
+}
+#beer {width:100%;
+       display: none;
+
+
+}
+#minorenne {text-align: center;
+            display: none;
+}
+</style>
+
+
+
+</head>
+<!--attiviamo la verifica al caricamento della pagina
+per caricare lo script di verifica usamo l'attribuot onload-->
+<body onload="ageverify()">
+<h1 id="titolo"> Bevi la nostra birra </h1>
+<h1 id="minorenne">Non puoi guardare questa pagina</h1>
+<img id="beer" src="https://cdn.pixabay.com/photo/2017/01/21/21/15/beer-1998293_960_720.jpg">
+
+
+<script>
+function ageverify(){
+    //variabile di input dell'eta il cui valore è inserito dall'utente
+    var eta = prompt("inserisci la tua età","");   
+      //Per poter mostrare la birra abbia un età superiore ai 18 anni
+      //if seguita dalla (condizione da verificare) e il primo step
+       if (eta >= 18 ) { //operazione che la funzione deve svolgere al verificarsi della condizione
+        //Javascript opererà nel DOM per rendere visibile o modificare alcune proprieta css
+           //id.style(modifica il css).(la proprieta css da modificare) = "valore della proprieta"
+           titolo.style.display = "block";
+           beer.style.display = "block";
+              
+
+        }
+     //se la condizione non si verifica possiamo aggiungere un else 
+        else {
+      //operazioni da svolgere in caso di mancata verifica
+        minorenne.style.display = "block";
+        beer.style.filter = "blur(20px)";
+        beer.style.display = "block";
+
+    }
+
+
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scegli il cioccolato che ti piace</title>
+
+</head>
+<body>
+    <h1>Selezione il cioccolato che ti piace di piu</h1>
+
+    <label>Seleziona del menu il ciccolato che preferisci</label><bR>
+    <select id="selezione">
+      <option value="bianco">Bianco</option>
+      <option value="fondente">Fondente</option>
+      <option value="latte">Al Latte</option>
+    </select>
+    <br> <br>
+    <input type="submit" value="invia" onclick="cioccolatapreferita()">
+<hr>
+<p id="scrivoqui"></p>
+<script>
+function cioccolatapreferita() {
+//la variabile scelta preleva il valore della cioccolata dal campo selezione
+var scelta = selezione.value;
+
+
+ //condizione I 
+ if (scelta == "bianco" ) {
+       scrivoqui.innerHTML = "Wow il ciccolato bianco è buono ma attento al colesterolo";
+ }
+ //condizione II 
+ else if (scelta == "fondente") {
+    scrivoqui.innerHTML = "Caspita sei un amante del fondente";
+ } 
+//condizione III o tutte le altre  verificabili
+else {
+   scrivoqui.innerHTML = "Sei dolce come un bambino vedo che ti piace la cioccolata al latte";
+
+}
+}
+</script>
+</body>
+</html>

@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parametri</title>
 </head>
 <body>
-    
-    <form action='elaborazione.php' method='post'>
-<label>Nome</label><br>
-<input type='text' name='nome'><br>
-<label>Cognome</label><br>
-<input type='text' name='cognome'><br>
-<label>Prezzo Fisso</label><br>
-<input type="number" name="prezzofisso" value="500"><br>
-<label>Servizi Abbinati</label><br>
-<select name="servizi"><br>
-  <option value="1200">Sito web 1200€</option>
-  <option value="400">Grafica 400€</option>
-</select><br><br>
-<input type='submit' value="invia">
+    <h1>Parametri larghezza gonna</h1>
+    <!-- a differenza di javascript php ha bisogno sempre
+     del tag form per prelevare i dati e aggiungere l'attributo
+     action con il file php al quale sono destinati i dati 
+     shhiunhismo anche un metodo di prelievo dati 
+     method per la raccolta dei dati POST o GET  -->
+<form action="funzioni.php" method="post">
+    <label>Inserisci la circonferenza Fianchi</label><br>
+    <input type="number" name="circonferenza" required><br>
+    <label>Inserisci la vestibilita</label><br>
+       <select name="vestibilita" required>
+        <option value="1">Tessuto Elastico</option>
+        <option value="2">Tessuto Rigido</option>
+       </select><br><br>
+<!--invia i dati all'action-->
+<input type="submit"> 
+
 </form>
+
 
 
 </body>

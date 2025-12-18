@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+<style>
+body {background-color: aqua;}
+h1 {text-align: center;}
+#popup {width:350px;
+        height:350px;
+        position: relative;
+        left: 25%;
+        top: 200px;
+        border-radius:15px;
+        display:none;
+
+}
+#popup img{width:350px;
+           height:350px;
+           border-radius:15px;
+}
+#popup #close{position:absolute;
+              top:1px;
+              left:96%;
+              color:white;
+              cursor: pointer;
+              display: none;
+
+
+}
+#layer {background-color: cyan}
+
+#popup #form {position:absolute;
+              left: 40px;
+              bottom: 80px;
+
+
+}
+#invia {border: none;
+        padding:10px;
+        background: orange;
+        border-radius:10px;
+    }
+#invia:hover {
+    background: darkorange;
+}    
+
+#popupminore {width:350px;
+        height:350px;
+        position: relative;
+        left: 25%;
+        top: 200px;
+        border-radius:15px;
+        display:none;
+        background-color: beige;
+        color:red;
+}
+#popupminore p{
+              position:absolute;
+              left: 10px;
+              bottom: 80px;
+              font-size: 20px;
+
+
+
+}
+</style>
+
+
+
+
+</head>
+<body onload="divpopup()">
+   
+ <div id="layer">
+    <h1>Benevenuti</h1> 
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam! Quas deleniti aperiam magni, delectus consequatur quaerat labore error incidunt neque. Dolor, eaque. Assumenda fuga cumque recusandae vel quisquam placeat!</p>
+
+ </div>
+
+
+
+
+
+<div id="popup">
+ <span id="close" onclick="chiudi()" >X</span>    
+ <img src="https://images.pexels.com/photos/14733025/pexels-photo-14733025.jpeg">
+  <div id="form">
+ <label style="color:white">Inserisci l'eta</label><br>  
+ <input type="number" id="verifica"><br><br>  
+ <input type="submit" id="invia" onclick="eta()" value="Invia"> 
+  </div> 
+</div>    
+
+<div id="popupminore">
+    <p>Sei minorenne non puoi guarde questo sito</p>
+
+</div>
+
+
+<script>
+function eta() {    
+  var etainserita = verifica.value;
+ 
+   if (etainserita>=18) { 
+        popup.style.display = "none";
+        layer.style.filter = "blur(0px)";
+        close.style.display = "block";
+
+  }
+   else {
+       popup.style.display = "none";
+       layer.style.filter = "blur(20px)";
+       popupminore.style.display = "block";
+
+   }
+
+}
+ 
+function divpopup() {
+     popup.style.display = "block";
+     layer.style.filter = "blur(20px)";
+     
+}
+function chiudi() {
+     popup.style.display = "none";
+     layer.style.filter = "blur(0px)";
+     
+}
+
+
+</script>
+
+
+</body>
+</html>

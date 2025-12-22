@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagine per un pubblico adulto</title>
+<style>
+body {background-color: lightblue;
+      color: white;  
+      font-family: sans-serif;   
+
+}
+#titolo {text-align: center;
+         text-shadow: 1px 1px darkblue;
+  
+
+}
+.box {margin:auto;
+      border:1px 1px solid blue;
+      border-radius: 5%;
+      background-color: lightgoldenrodyellow;
+      width: 50%;
+      height:auto;
+      padding:10px;
+      line-height: 20px;
+      color:green;
+      text-align: center;
+
+}
+.button {border: none;
+         background-color: blue;
+         color:white; 
+         padding: 10px;
+         margin-top: 10px;
+         border-radius: 5%;
+
+}
+.button:hover {background-color: aqua;
+               color:blue;
+}
+#tuoreddito {width: 100%;
+             margin-left: -5px;
+             height:30px;
+             font-family: sans-serif;
+
+}
+#risultato {font-size: larger;
+            text-align: center;
+
+}
+
+</style>
+<!--attiviamo la verifica al caricamento della pagina
+per caricare lo script di verifica usamo l'attribuot onload-->
+<body>
+<h1 id="titolo">Verifica se hai diritto al bonus fiscale </h1>
+<div class="box">
+  <label>Inserisci qui il tuo reddito</label><br>
+  <input type="text" id="tuoreddito"><br>
+  <input class="button" type="submit" onclick="calcolabonus()">
+
+
+</div>
+<p id="risultato"></p>
+
+
+<script>
+function calcolabonus() {
+//l'utente inserisce il reddito convertito in numero dentro la casella di input "tuo reddito"
+    let reddito = Number(tuoreddito.value);
+    
+    //condizione per ricevere il bonus un reddito che va tra 8000€ e 45000€  
+    // cio significa che percepire il bonus il reddito deve essere allo stesso tempo > 8000€ e minore di 45.000€
+    if ((reddito>=8000) && (reddito<=45000)) {
+        //se si verifcano entrambe le condizionini stampera nel paragrafo risultato il testo sottostante
+        risultato.innerHTML = "Hai diritto al bonus fiscale grandioso";
+        //cambio del colore del testo del paragrafo
+        risultato.style.color = "yellow";
+        //per cambiare un oggetto del dom come il body non basta richiamaro o assegnare un id al body 
+        //ma dobbiamo attivare "document.body"
+        document.body.style.backgroundColor = "green";
+         
+    }   
+    //se entrambe le condizione precedenti ovvero se il reddito è inferiore a 8000 o se superiore hai 45000€
+    //faremo stampare in risultato che l'utente non ha diritto al bonus 
+    else {
+        risultato.innerHTML = "Accidenti che diamine non hai diritto al bonus";
+        //inoltre cambiermo il colore del testo e lo sfondo della pagina
+        
+        //cambio del colore del testo del paragrafo
+        risultato.style.color = "yellow";
+        //per cambiare un oggetto del dom come il body non basta richiamaro o assegnare un id al body 
+        //ma dobbiamo attivare "document.body"
+        document.body.style.backgroundColor = "brown";
+
+    }
+    
+
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiaco</title>
+</head>
+<body>
+    <h1>Giochiamo con lo zodiaco</h1>
+    <label>Scrivi il tuo segno</label>
+    <input type="text" id="segnozodiacale">
+    <input type="submit" onclick="zodiaco()">
+
+<hr>
+<p id="scrivoqui"></p>
+
+    <script>
+function zodiaco(){
+   
+    var segno = (segnozodiacale.value);
+    //la nuova variabile segnonew rimuove dalla variabile segno gli spazi che erroneamente vengono messi dagli utenti
+    var segnonew = segno.trim();
+
+    switch (segnonew) { 
+        //I condizione  case - valori che puo assumere una variabile (attenzione! alla tipologia di variabile inserita)
+       case "ariete":
+        //operazione da svolgere se si verifica la condizione 
+        scrivoqui.innerHTML = "Sei una persona di sfondamento";
+        break;
+        //interruzzione delle operazioni
+        case "toro":
+        //operazione da svolgere se si verifica la condizione 
+        scrivoqui.innerHTML = "vedi completamente rosso";
+        break;
+
+        case "gemelli":
+        scrivoqui.innerHTML = "ci vedo doppio";
+        break;
+        //interruzzione delle operazioni
+        default:
+        //operazione da svolgere se si verifica la condizione 
+        scrivoqui.innerHTML = "sei sicura di aver messo un segno";
+        break;
+        //interruzzione delle operazioni
+      
+    }
+
+
+
+}
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

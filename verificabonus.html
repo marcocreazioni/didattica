@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>MIo titolo</title>
+<style>
+* {font-family: sans-serif;
+text-align: center;}    
+form {
+    margin: auto;
+    background-color: brown;
+    color: white;
+    width: 25%;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 24px;
+    
+}
+.button {border: none;
+        background-color: beige;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+
+
+}
+.button:hover {background-color: azure;
+
+}
+input {width: 100%;
+}
+
+</style>
+
+
+</head>
+<body>
+  <h1>Inserisci dati</h1> 
+  <form action="verificabonus.php" method="post" onmouseover="shadow()" id="rs">
+      <label>Inserisci reddito</label><br>
+    <input type="text" name="reddito" id="primocampo" required><br>
+       
+      <label>Figli che vivono con te</label><br>
+      <input type="number" name="figli" min="0" required><br>
+      <label>Persone conviveti</label><br>
+       <input type="number" name="conviventi" min="0" required><br><br>
+       <input type="submit" class="button"  value="Verifica"> 
+
+
+  </form> 
+<script>
+function shadow() {
+   rs.style.boxShadow = "2px 2px black";
+}
+
+
+</script>
+</body>
+</html>
+

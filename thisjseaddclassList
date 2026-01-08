@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+.allinea {
+    text-align: center;
+    font-family: sans-serif;
+    color: brown;
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+}
+.allinea:hover {
+    color:green;
+}
+#immagine {position: absolute;
+           left: 25%;
+}
+</style>
+
+</head>
+
+<body onload="formattazione()">
+  <!--onload evento che attiva la funzione al caricamento
+  mentre onmouseiver al passaggio del mouse e onmouseleave quando
+  il mouse abbandona l'area dell'oggetto-->
+  <div ><h1 id="titolo" onmouseover="changetext()" onmouseleave="ritorna()">Titolo</h1></div>
+  <!--Se la modifica js coinvolge un singolo oggetto anziche collegare
+  l'evento ad una funzione, applicando la sintassi This-->
+  <h2 id="sottotitolo">Sotto Titolo</h2>
+  <p id="paragrafo">Lorem, ipsum dolor <span style="font-weight: bold" onclick="this.innerHTML='benvenuti';this.style.color='blue'">ciao</span> sit amet consectetur adipisicing elit. Unde dicta voluptatum quaerat repellendus rem, laudantium quas, delectus consequatur incidunt sed, hic facilis voluptatem non. Quod necessitatibus at nobis ducimus aliquid.</p>
+  <img src="https://pngimg.com/uploads/goldfish/goldfish_PNG95.png" id="immagine" onclick="this.src='https://pngimg.com/uploads/goldfish/goldfish_PNG98.png'">
+  <script>
+function formattazione() {
+    //classList applicato ad un id o ad uno oggetto permette di aggiungere
+    //una classe definita nel css
+    titolo.classList.add("allinea");
+    sottotitolo.classList.add("allinea");
+    paragrafo.classList.add("allinea"); 
+    immagine.classList.add("allinea"); 
+  //  p.calssList.add("allinea");
+
+}  
+function changetext(){
+    titolo.innerHTML = "Prova";
+
+}
+function ritorna(){
+    titolo.innerHTML= "Testo";
+}
+  </script>
+</body>
+</html>

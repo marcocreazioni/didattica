@@ -1,0 +1,87 @@
+<?php
+$page = '<html>
+<head>
+<title>MIo titolo</title>
+<style>
+* {font-family: sans-serif;
+text-align: center;}    
+form {
+    margin: auto;
+    background-color: brown;
+    color: white;
+    width: 25%;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 24px;
+    
+}
+.button {border: none;
+        background-color: beige;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+
+
+}
+.button:hover {background-color: azure;
+
+}
+input {width: 100%;
+}
+
+</style>
+
+
+</head>
+<body>
+  <h1>Inserisci dati</h1> 
+  <form action="verificabonus.php" method="post" onmouseover="shadow()" id="rs">
+      <label>Inserisci reddito</label><br>
+    <input type="text" name="reddito" id="primocampo" required><br>
+       
+      <label>Figli che vivono con te</label><br>
+      <input type="number" name="figli" min="0" required><br>
+      <label>Persone conviveti</label><br>
+       <input type="number" name="conviventi" min="0" required><br><br>
+       <input type="submit" class="button"  value="Verifica"> 
+
+
+  </form> 
+<script>
+function shadow() {
+   rs.style.boxShadow = "2px 2px black";
+}
+
+
+</script>
+</body>
+</html>';
+//prelievo le informazioni dal modulo verifcabonushtml
+$redditoinserito = $_POST['reddito'];
+$figliinseriti = $_POST['figli'];
+$conviventiinseriti = $_POST['conviventi'];
+$script = "<body onload='change()'>";
+$function = "<script = 'async'>function change(){document.body.style.backgroundColor='orange';document.body.style.textAlign='center';}</script></body>";
+
+   // per percepire il reddito deve avere almeno 1 figlio o (OR||) o un convivente
+ if (($figliinseriti>0)||($conviventiinseriti>0)) {
+        //se la prima condizione si è verifica occorre verificare l'appartenza a quella fascia di reddito
+        //e devono verificarsi contemporaneamente due condizioni ovvero che il suo reddito sia
+        //superiore a 8000 ma non superiore a 45000 
+          if(($redditoinserito>=8000)&&($redditoinserito<=45000)){
+             echo $page."$script <p>Grandeee hai diritto al bonus fiscale<p> $function";
+          } else { 
+            echo $page."<p>Sembra che per motivi reddituali non hai diritto al bonus</p>";
+          }
+
+
+  } else  {
+            echo "<p>Mi spiace non hai diritto</p>"; 
+  }
+
+
+
+
+
+?>

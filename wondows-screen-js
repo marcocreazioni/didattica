@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proprieta windows</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>    
+<body onload="verifiwindows()">
+
+<h2>JavaScript</h2>
+<!--collegamento ad un segnalibro-->
+<button onclick="">Bottone</button>
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+function verifiwindows() {
+/* le veriabili a e b prendono le dimensioni attuali di una finestra (finestra del browser)    
+let a =  window.innerWidth;
+let b =  window.innerHeight;
+*/
+/* le variabili c e d prendono le dimensioni dello schermo disponibile (Monitor) */
+ let c = screen.width;
+ let d = screen.height;
+  
+    if ((c>=381)&&(c<=720)) {
+        //vai alla versione tabelt
+  window.location.assign("https//miosito.it/tablet.html");
+    }
+       //vai alla versone mobile
+    else if (c<380) {
+     window.location.assign("https//miosito.it/mobile.html");
+    }
+     //Vai alla versione
+    else {
+    window.location.assign("/")
+    }
+
+/*document.getElementById("demo").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;*/
+}
+</script>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consequatur placeat ipsum fugit, aliquid amet alias! Tempore officia repellendus cumque numquam ab commodi reiciendis quasi? Fugit alias soluta illo sed.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo vero nisi, nesciunt, ab magni saepe accusantium voluptates cupiditate esse, reprehenderit consequuntur ad sed? Nam magnam in minus libero placeat eos!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut unde maxime, consequuntur est corrupti autem placeat, asperiores eius, ratione similique aliquam hic inventore? Doloremque tempore provident quia adipisci et dolores.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consequatur placeat ipsum fugit, aliquid amet alias! Tempore officia repellendus cumque numquam ab commodi reiciendis quasi? Fugit alias soluta illo sed.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo vero nisi, nesciunt, ab magni saepe accusantium voluptates cupiditate esse, reprehenderit consequuntur ad sed? Nam magnam in minus libero placeat eos!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut unde maxime, consequuntur est corrupti autem placeat, asperiores eius, ratione similique aliquam hic inventore? Doloremque tempore provident quia adipisci et dolores.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consequatur placeat ipsum fugit, aliquid amet alias! Tempore officia repellendus cumque numquam ab commodi reiciendis quasi? Fugit alias soluta illo sed.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo vero nisi, nesciunt, ab magni saepe accusantium voluptates cupiditate esse, reprehenderit consequuntur ad sed? Nam magnam in minus libero placeat eos!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut unde maxime, consequuntur est corrupti autem placeat, asperiores eius, ratione similique aliquam hic inventore? Doloremque tempore provident quia adipisci et dolores.</p>
+<!--Segnalibro-->
+<!--Segnalibro-->
+<!--Segnalibro-->
+<a name="segnalibro"></a>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>test</title>
+     <style>
+        h1 {color:red}
+     </style>
+<?php //inserire fopen per un file css     ?>     
+     </head>
+    <body>
+        <h1>Form</h1>
+    <form action="miofile.php" method="post">
+        <label>Inserisci<label><br>
+        <input type="text" name="test" value="prova">    
+            <input type="submit">
+</form>
+<?php
+$preleva = $_POST["test"];
+$aprifile = fopen("testo.txt", "r") or die("Non posso aprire il file");
+
+echo "<p>hai insereito: $preleva </p>".fread($aprifile,filesize("testo.txt"));
+fclose($aprifile);
+
+?>
+<?php //inserire fopen per un file css     ?>     
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--nodo I livello della gerarchia-->
+  <html lang="en">
+ <!--nodi di II livello della gerarchio-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interazioni con il dom</title>
+  </head>
+  <!--nodo di II livello della gerarchio--> 
+ <body>
+       <!--align attributo del nodo / e dominio e il contenuto-->    
+    <h1 align="center">Dominio</h1> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam illo eos expedita laborum veniam, voluptate ea? Atque nihil, in non, alias tenetur vel eaque ipsum nemo possimus illo quidem!</p>
+    <button onclick="one()">Pulsante 1</button>
+    <button onclick="two()">Pulsante 2</button>
+     <button onclick="tree()">Pulsante 3</button>
+     <button onclick="four()">Pulsante 4</button>
+     <button onclick="five()">Pulsante 5</button>
+ <!--nodo di III livello-->    
+     <hr>
+    <p id="stampauno"></p>
+    <image id="immagine" src="https://cdn.pixabay.com/photo/2025/12/22/06/15/06-15-56-634_960_720.jpg">
+    <!--se non selezioniamo il nodo ad ogni evento e possibile
+    applicare una funzione richiamando quel particolare tag con this-->
+    <p onmouseover="this.innerHTML='ci sei passato sopra'" onmouseleave="this.innerHTML='sono andato via'">Questo paragrafo cambiera al passaggio del mouse</p>
+ <!--tag, dell proprieta, valori assegnati-->
+    <p id="stampadata"></p>
+    <hr id="riga">
+    <!--contenitore generato da five-->
+
+    
+
+
+<script>
+     function one() { 
+        //innerHTML interagisce con il contentenuto
+     stampauno.innerHTML = "contenuto";
+        
+
+     }
+     function two() {
+        immagine.src = "https://cdn.pixabay.com/photo/2025/12/29/17/13/haan-10041654_960_720.jpg";
+        immagine.alt = "gallina"; 
+     }
+     function tree(){
+        //con il dom possiamo interagire anche con le funzioni predefinite
+        //nel caso di date javascript quindi js interazioni server Prelevando
+        //la data
+        stampadata.innerHTML= Date();
+        
+     }
+    function four(){
+        //se invece voglio interagire con un elemento o nodo di II livello
+        //richiamiamo la funzione document seguito dal nodo id II livello
+        document.body.style.backgroundColor="orange";
+    }
+     function five(){
+       //richiamo il dom per poter generare nuovi elementi
+       //la variabile a crea un nuovo elemento
+     var a = document.createElement("div");
+      //la varbile contenuto crea il contenuto da associare al div
+     var contenuto = document.createTextNode("Nuovo Contenuto");
+       //aggiungiamo al contenitore a il contenuto ovvero la variabile contenuto
+       //i due elementi var contenuto e var a vengono correlati 
+       //a addesso hai un figlio 
+       a.appendChild(contenuto);
+
+      //posizionare l'oggetto nel dom quindi nel documento
+        var segnalibro = document.getElementById("riga");
+        
+    //inserimento del nuovo conentenuto 
+       document.body.insertBefore(a,segnalibro);
+       //successivamente possiamo integrare tutte le funzionalita 
+       // e stili del contenuto
+       a.style.color = "green";
+
+     }
+</script>
+
+  </body>
+</html>

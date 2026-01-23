@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="a" onclick="clic()"><h1>CASA</h1>
+     
+  </div>
+  <div id="b" onclick="clicdue()">
+    <p>Questo è un paragafo</p>  
+  <div id="c">
+    <p>Eventi Multipli</p>
+  </div>
+
+
+<script>
+function clic(){
+    a.style.color="red";
+    a.style.backgroundColor="orange";
+   //implementazione futura
+   //implementazione futura
+}
+function clicdue() {
+    b.style.color="green";
+    b.style.textAlign="center";
+}
+//con addEventListner (genero gli eventi e poi
+//le associa alle funzioni)
+//ad ogni id posso inizializare un evento clic, mouseout ecc
+//associo la funzione che si attiva all'evento
+//quindi ho necessita di scrivere prima le funzioni
+function eventi() {
+    c.addEventListner("clic",clicdue);
+    
+}
+
+
+
+</script>
+  
+</body>
+</html>

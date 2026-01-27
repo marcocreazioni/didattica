@@ -1,0 +1,26 @@
+<?php
+//accesso ai dati della connessione non solo al server ma anche al database job
+require ("connessione.php");
+
+//istruzione sql per le creazione della tabelle all'interno di job
+//(ID(NOME CAMPO)(PRIMARY KEY=CAMPO PER ORDINARE I DATI), NOT NUL=Nessun valore nullo, AUTO-INCREMENT=
+// aumenta di 1 ad ogni riga aggiunta UNIQUE=non ammette duplicati)
+// ogni nome campo non deve contentere spazi, e non posso esserci campi con lo stesso nome
+$sql = "CREATE TABLE profili(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT UNIQUE,
+                             NOME VARCHAR(60) NOT NULL,
+                             COGNOME VARCHAR(60) NOT NULL,
+                             EMAIL VARCHAR(60) NOT NULL UNIQUE,
+                             LAVORO_PRECEDENTE VARCHAR(60) NOT NULL,
+                             TELEFONO VARCHAR(13) NOT NULL UNIQUE
+                             )"; 
+
+if(mysqli_query($abilitaconnessione, $sql)) {
+  echo "Tabella Creata con successo";
+} else{
+  echo "Non posso creare la tabella $sql. " . mysqli_error($abilitaconnessione);
+}
+
+//mysqli_close($abilitaconnessione);
+
+
+?>

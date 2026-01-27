@@ -1,0 +1,29 @@
+<?php
+//variabili necessarie al collegamento al database
+$servername = "localhost";
+$username = "root";
+$password = "";
+//con la creazione del database inseriamo anche il nome del database
+$database = "Job";
+
+//variabile con implementazione di connessione 
+$abilitaconnessione = mysqli_connect($servername,$username,$password,$database);
+
+//verifica se la connessione e stabilita o meno
+if (!$abilitaconnessione) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+else {
+    echo "il database è connessso";
+}
+
+
+
+//chiusura della connessione
+//mysqli_close($abilitaconnessione);
+
+
+
+
+
+?>

@@ -1,0 +1,27 @@
+<?php
+//variabili necessarie al collegamento al database
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+//variabile con implementazione di connessione 
+$abilitaconnessione = mysqli_connect($servername,$username,$password);
+
+//verifica se la connessione e stabilita o meno
+if (!$abilitaconnessione) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+/*else {
+    echo "la connessione è stata stabilità";
+}
+*/
+
+
+//chiusura della connessione
+//mysqli_close($abilitaconnessione);
+
+
+
+
+
+?>

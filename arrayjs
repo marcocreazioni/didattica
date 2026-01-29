@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenchio</title>
+    <style>
+table {border:1px solid; 
+       margin:auto;
+       width: 50%;
+       border-collapse: collapse;  
+       }
+ th,td,tr {border:1px solid;
+        
+
+ }      
+    </style>
+</head>
+<body>
+
+    <h1>Elenchi </h1>
+<p>Inserisci i nomi e cognomi</p>
+<label>Nomi e cognomi</label> <br><br>
+<input type="text" id="insernomeuno">&nbsp;<input type="text" id="insercognomeuno"><br><br>
+<input type="text" id="insernomedue">&nbsp;<input type="text" id="insercognomedue"><br><br>
+<input type="text" id="insernomtre">&nbsp;<input type="text" id="insercognometre"><br><br>
+<input type="text" id="insernomequattro">&nbsp;<input type="text" id="insercognomequattro"><br><br>
+<input type="submit" onclick="arrayelenco()" value="inserisci">
+
+<hr>
+<table>
+<tr><th>Nomi</th><th>Cognomi</th></tr>
+<tr><td id="stuno"></td><td id="couno"></td></tr>
+<tr><td id="stdue"></td><td id="codue"></td></tr>
+<tr><td id="sttre"></td><td id="cotre"></td></tr>
+<tr><td id="stquattro"></td><td id="coquattro"></td></tr>
+
+</table>
+<script>
+function arrayelenco(){
+    //array un unica variabile con diversi elementi dello stesso tipo
+    var elenconomi = [ insernomeuno.value,insernomedue.value,insernomtre.value,insernomequattro.value];
+    var elencognomi = [ insercognomeuno.value,insercognomedue.value ,insercognometre.value , insercognomequattro.value ];
+    //stampa delle elenco dei nomi
+    stuno.innerHTML= elenconomi[0];
+    stdue.innerHTML= elenconomi[1];
+    sttre.innerHTML= elenconomi[2];  
+    stquattro.innerHTML= elenconomi[3];
+//stampa dell'elenco dei cognomi
+    couno.innerHTML= elencognomi[0];
+    codue.innerHTML= elencognomi[1];
+    cotre.innerHTML= elencognomi[2];  
+    coquattro.innerHTML= elencognomi[3];
+
+
+}    
+
+
+
+</script>
+
+</body>
+</html>

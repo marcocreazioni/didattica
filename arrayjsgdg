@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+<style>
+table {width:70%;
+margin:auto;
+border: 1px solid;
+border-collapse: collapse;
+}
+tr , td , th {border:1px solid}
+td {text-align:center}
+
+</style>
+</head>
+<body>
+<h1>Inserisci i dati nella tabella</h1>
+<label>Nome</label><br>
+<input type="text" id="nome"><br>
+ <label>Cognome</label><br>
+<input type="text" id="cognome"><br>
+<label>Telefono</label><br>
+<input type="text" id="telefono"><br><br>
+<input type="submit" onclick="scrivi()">
+<hr>
+
+<table>
+ <tr>
+  <th>
+    Nome
+  </th>
+  <th>
+    Cognome
+  </th>
+   <th>
+    Telefono
+   </tr>
+ </tr>
+ <tr>
+   <td id="stampanome">
+   
+   </td>
+  <td id="stampacognome">
+
+  </td>
+   <td id="stampatelefono">
+
+   </td>
+ </tr>
+</table>
+<script>
+  function scrivi() {
+    //variabile composte da un elenco. sei i valori sono delle stringhe ciascun
+    //valore e inserito "" nel nostro caso sono campi non occorre
+   var prelevacampi = [nome.value,cognome.value,telefono.value];
+     //per prelevare il singolovalore di un array occorre richiamare
+     //anche l'indice
+   stampanome.innerHTML = prelevacampi[0];
+   stampacognome.innerHTML = prelevacampi[1];
+   stampatelefono.innerHTML = prelevacampi[2];  
+   
+    
+}
+
+
+
+
+</script>
+</body>
+</html>

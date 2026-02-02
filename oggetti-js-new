@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+</head>
+<body onload="stampadati()">
+    <h1>Uso degli oggetti</h1>
+<p id="stampaoggetto"></p>
+<script>
+function stampadati() {
+//variabile acui è assegnato un oggetto (dati etogenei che possono contenere funzioni)
+    var mio = {Nome: "Mario",
+               Cognome: "Rossi",
+               eta: 56,
+               pensione:75,
+               annipensione() { return this.pensione - this.eta;}
+    };
+ //output stampaggoetto con nome variabile . nome dell'oggetto
+    stampaoggetto.innerHTML = mio.Nome + " " + mio.Cognome + " " + mio.eta + " " + mio.annipensione();
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>

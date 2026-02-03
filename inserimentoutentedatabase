@@ -1,0 +1,40 @@
+<?php
+//accesso ai dati della connessione non solo al server ma anche al database job
+require ("connessione.php");
+echo "<h2>Form di inserimento</h2>";
+echo "<form action='inserimentomanuale.php' method='post'>
+<label>Nome</label><br>
+<input type='text' name='nome' required><br>
+<label>Cognome</label><br>
+<input type='text' name='cognome' required><br>
+<label>Email</label><br>
+<input type='email' name='email' required><br>
+<label>Lavoro precedente<label><br>
+<input type='text' name='lavoroprecedente' required><br>
+<label>Telefono<label><br>
+<input type='text' name='telefono' required><br><br>
+<input type='submit' value='invia'>
+</form>";
+//Preleviamo i dati dal form di inserimento
+$nome = $_POST['nome'];
+$cognome = $_POST['cognome'];
+$email = $_POST['email'];
+$lavoroprecedente = $_POST['lavoroprecedente'];
+$telefono = $_POST['telefono'];
+
+
+//insert into = inserisci dentro + nome tabella(campi delle tabelle) VALUES + 
+// (valore per ogni 'campo o variabili del form prelevate')
+$sql = "INSERT INTO Profili(NOME,COGNOME,EMAIL,LAVORO_PRECEDENTE,TELEFONO) VALUES ('$nome', 
+                                                                                   '$cognome',
+                                                                                     '$email',
+                                                                                     '$lavoroprecedente',
+                                                                                     '$telefono'
+                                                                                   )";
+
+
+ if(mysqli_query($abilitaconnessione, $sql)) {
+  echo "<br>Dati inseriti con successo";
+} else{
+  echo "Non posso inserire dati $sql. " . mysqli_error($abilitaconnessione);
+};

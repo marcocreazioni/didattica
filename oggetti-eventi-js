@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti e Eventi</title>
+</head>
+<body>
+   <p>Oggetti</p>
+    <button id="object">Clicca qui per il modello</button>
+
+    <p id="stampa"></p>
+
+<script>
+//id al quale associare l'evento. il metodo di aggiunta e (tipologie evento e funzione da richiamare);
+object.addEventListener("click",veicoli);
+
+
+function veicoli() {
+//Oggetto con valori che ne fanno parte
+var car =  {modello: "Utlitaria",
+            motore: ["Multijet","Benzina"],
+            brand: "fiat",
+            targa: prompt("inserisci la targa",""),
+            numero_serie: 1245000,
+            //un elemento di un oggetto può ospitare una funzione, e se nella funzione vogliamo usare gli elementi dello stesso
+            //oggetto usiamo this. + nome del valore sui cui operare
+            motorbrand: function() { return  this.motore + " " + this.brand;    }
+           }
+//assegnazione di un oggetto
+var carmodel = {};
+// valori con le prorieta dell'oggetto
+carmodel.modello = "Ferrari";
+carmodel.motore = "12 cilindri";
+
+var auto = new Object(
+{modello: "Mercedes",
+ motore: "10 cilindri"
+        }
+)
+
+           //per stampare singoloi elementi di un oggetto, devo usare nome della variabile
+           // nome del campo oggetto
+stampa.innerHTML = "Modello: " + 
+                    car.modello + 
+                    "<br> Motore: " 
+                    + car.motore[1] + 
+                    "<br>Motore e Brand: " 
+                    + car.motorbrand() + 
+                    "<br>Numero di serie: " 
+                    + car.numero_serie + 
+                    "<br>Targa veicolo: "+
+                    car.targa;
+
+
+}
+
+
+</script>  
+ </body>
+</html>

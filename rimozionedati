@@ -1,0 +1,35 @@
+<?php 
+/*connessine al database */
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "archivio";
+
+
+
+
+// Crea la connessione $servername, $username; $passord ; $database (se c'è gia o è gia stato creato)
+$connessione = mysqli_connect($servername, $username, $password, $database);
+// Verrifica la connessio
+if (!$connessione) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+
+echo "<form action='rimuovitabella.php' method='post'>
+<label>Rimuovi</label><br>
+<input type='number' name='rimuovi'><br><br>
+<input type='submit'>
+</form>";
+
+$cancella = $_POST["rimuovi"];
+
+$cancellazione = " DELETE FROM clienti WHERE ID=$cancella ";
+
+
+if (mysqli_query($connessione, $cancellazione)) {
+  echo "Record Aggiornato correttamente <a href='datiarchivio.php'>controlla ora</a>";
+} else {
+  echo "Error updating record: " . mysqli_error($connessione);
+}
+
+mysqli_close($connessione);

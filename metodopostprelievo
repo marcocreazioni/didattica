@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Estrarre Valori</title>
+</head>    
+<body>
+<p>Prelevare i valori  da un form</p>
+<!--aggiungere in action il file php che gestire le informazioni 
+aggiungiomo una tipologia di prelievo informazioni ovvero
+post per molti  dati get per pchi dati-->
+<form action="variabilietipologie.php" method="post">
+<label>Nome</label><br>
+<!--aggiungi a ogni campo imput l'attributo name
+ogni campo imput può avere un solo valore dell'attributo--> 
+<input type="text" name="nome"><br>
+<label>Cognome</label><br>
+<input type="text" name="cognome"><br>
+<label>Reddito Familiare</label><br>
+<input type="text" name="reddito"><input type="text" name="centesimi" width="10px"><br>
+<br>
+<input type="submit"><br>
+
+</form>
+
+<?php
+//dichiariamo una variabile e assegniamo il valore inserito
+//nel campo
+$a; 
+$b;
+//assegno un valore a ciascuna variabile 
+//uso un valore speciale che permette il prelievo 
+//deti dati da un campo al quale è stato applicaato
+//il metodo get $_POST["prendo il valore dell'attributo neme
+// inserito tra virgolette"]
+$a = $_POST["nome"];
+$b = $_POST["cognome"];
+$c = $_POST["reddito"];
+$f = $_POST["centesimi"];
+//con var_dump che è in realtà una funzione 
+//prelevo il valore assegnato ad una variabile e la
+//tipologie e la stampo sullo schermo
+var_dump($a);
+var_dump($b);
+var_dump($c);
+
+
+//conversione dei valori da stringa a numeri
+//dichiaro la variabile e assegno la tipologia tra
+//parentesi (integer) per convertire in un numero 
+//intero ma se voglio che sia compreso anche
+//il valore dopo la virgola di un numero
+//usi floats
+$c_conv = (float) $c;
+//verifica se la conversione a funzionato
+var_dump($c_conv);
+//estrazione di un numero dalla stringa viene fatta in automatico
+$d = $c_conv + 5000; 
+
+//ipotesi A stampo con una concatenzione di valori
+echo "<hr>".$a." ".$b." "."reddito + bonus:$d".",".$f;
+
+
+?>
+<body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Estrarre Valori</title>
+</head>    
+<body>
+<p>Prelevare i valori  da un form</p>
+<!--aggiungere in action il file php che gestire le informazioni 
+aggiungiomo una tipologia di prelievo informazioni ovvero
+post per molti  dati get per pchi dati-->
+<form action="variabilietipologie.php" method="get">
+<label>Nome</label><br>
+<!--aggiungi a ogni campo imput l'attributo name
+ogni campo imput può avere un solo valore dell'attributo--> 
+<input type="text" name="nome"><br><br>
+<label>Cognome</label><br>
+<input type="text" name="cognome"><br>
+<br>
+<input type="submit"><br>
+
+</form>
+
+<?php
+//dichiariamo una variabile e assegniamo il valore inserito
+//nel campo
+$a; 
+$b;
+//assegno un valore a ciascuna variabile 
+//uso un valore speciale che permette il prelievo 
+//deti dati da un campo al quale è stato applicaato
+//il metodo get $_GET["prendo il valore dell'attributo neme
+// inserito tra virgolette"]
+$a = $_GET["nome"];
+$b = $_GET["cognome"];
+//con var_dump che è in realtà una funzione 
+//prelevo il valore assegnato ad una variabile e la
+//tipologie e la stampo sullo schermo
+var_dump($a);
+var_dump($b);
+
+//ipotesi A stampo con una concatenzione di valori
+echo "<hr>".$a." ".$b;
+//ipotesi B genero una nuova variabile con nome e cognome
+//e stampo quest'ultima
+/* $spazio = " "; 
+$c = $a + $spazio + $b;
+//al posto di echo possiamo usare anche print
+print $c; 
+*/
+
+?>
+<body>
+</html>

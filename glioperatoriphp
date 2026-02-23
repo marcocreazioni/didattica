@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Estrarre Valori</title>
+    <style>
+table {border:1px solid;}
+td, tr {border: 1px solid;
+text-align:right;}
+    </style>
+</head>    
+<body>
+<p>Prelevare i valori  da un form</p>
+<!--aggiungere in action il file php che gestire le informazioni 
+aggiungiomo una tipologia di prelievo informazioni ovvero
+post per molti  dati get per pchi dati-->
+<form action="variabilietipologie.php" method="post">
+<label>Nome</label><br>
+<!--aggiungi a ogni campo imput l'attributo name
+ogni campo imput può avere un solo valore dell'attributo--> 
+<input type="text" name="nome"><br>
+<label>Cognome</label><br>
+<input type="text" name="cognome"><br>
+<label>Reddito Familiare</label><br>
+<input type="number" name="reddito"><br>
+<label>Figli</label></br>
+<input type="number" name="figli"></br></br>   
+<input type="submit"><br>
+
+</form>
+
+<?php
+//assegno un valore a ciascuna variabile 
+//uso un valore speciale che permette il prelievo 
+//deti dati da un campo al quale è stato applicaato
+//il metodo get $_POST["prendo il valore dell'attributo neme
+// inserito tra virgolette"]
+$a = $_POST["nome"];
+$b = $_POST["cognome"];
+$c = $_POST["reddito"];
+$f = $_POST["figli"];
+//operare con le variabili  
+// se abbiamo due numeri possiamo sommarli "+"
+$somma = $c + $f + 4000;
+// moltiplicazione tra due o piu numeri *
+$prodotto = $c * $f;
+// sottrazione 
+$sottrazione = $c - $f;
+// divsione 
+$divisione = $c / $f;
+// resto della divisione
+$resto = $c % $f; //per il resto javascript usava mod
+// potenza di un numero
+$potenza = $c ** $f; //per la potenza javascript usava ^
+
+//estrazione di un numero dalla stringa viene fatta in automatico
+
+
+//ipotesi A stampo con una concatenzione di valori
+echo "<table>
+    <tr>
+       <th>Somma</th>
+       <th>Moltiplicazione</th>
+       <th>Sottrazione</th>
+       <th>Divisione</th>
+       <th>resto</th>
+       <th>Potenza</th>
+      </tr>
+      <tr>
+       <td>$somma</td>
+       <td>$prodotto</td>
+       <td>$sottrazione</td>
+       <td>$divisione</td>
+       <td>$resto</td>
+       <td>$potenza</td>
+      </tr>
+      </table>";
+
+
+?>
+<body>
+</html>

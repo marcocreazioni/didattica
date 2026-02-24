@@ -1,0 +1,42 @@
+<?php
+/*connessine al database */
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "archivio";
+
+$connessione = mysqli_connect($servername, $username, $password, $database);
+// Verrifica la connessione
+if (!$connessione) {
+  die("Connessione al database: " . mysqli_connect_error());
+}
+
+/*creazione della tabella merci in archivio */
+$sqlarchivio = "CREATE TABLE prodotti    (ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT UNIQUE,
+                                       MERCE VARCHAR(120) NOT NULL,
+                                       /* DECIMAL (quantita di numeri interi, quantita di decimali*/
+                                       PREZZO DECIMAL(65,2) NOT NULL,
+                                       IVA DECIMAL(12,2) NOT NULL,
+                                       /* DECIMAL -> FLOAT + GENERATED ALWAYS PERMETTE DI GENERARE AS (assimili i campi da calcolare)
+                                       (CAMPI A + asterisco  /   - ) */
+                                       PREZZOIVATO DECIMAL(12,2) GENERATED ALWAYS AS (PREZZO * 0.22)
+
+                                       /* PREZZOIVATO AS MERCE * IVA  ma MariaDB vuole GENERETED ALWAYS IN AGGIUNTA A AS*/ 
+                                        )"; 
+
+
+/*$sqlmagazzino = "CREATE TABLE magazzino (IDMAG INT PRIMARY KEY NOT NULL AUTO_INCREMENT UNIQUE,
+                                          MERCE VARCHAR(120) NOT NULL, 
+                                          MAGAZZINO VARCHAR(120) NOT NULL,)";
+*/
+/* Gestione degli errori */
+if(mysqli_query($connessione, $sqlarchivio)){
+  echo "<p style='margin:10px;'>Tabella Creata con successo torna al modulo <a href='Calcolatoreiva.html'>qui</a></p>";
+} else {
+  echo "Non posso creare la tabella $sqlarchivio. " . mysqli_error($connessione);
+}
+/* Funzione che permette di terminare la connessione del database */
+mysqli_close($connessione);
+
+
+?> 

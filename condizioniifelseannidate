@@ -1,0 +1,87 @@
+<html>
+  <head>
+  <title>Condizioni</title>
+  
+<?php
+require ('bootstrap.php');
+$body = "<style>body {padding: 10px;background-color:bisque;</style>";
+print $body;
+
+?>
+</head>
+  <body>
+    <h1>Logic condizionale</h1>
+    <form action='condizioni.php' method='POST'>
+       <label>Nome</label><br>
+      <!--per prelevare le informazione di un campo usiamo
+      l'attributo name -->
+       <input type='text' name='nome' value=' '><br>
+      <label>Cognome</label><br>
+      <input type='text' name='cognome' value=' '><br>
+      <label for='reddito'>Reddito</label><br>
+      <input type='text' name='reddito' value=' '><br><br>
+      <select name="animale">
+        <option value="gatto">Gatto</option>
+        <option value="Cane">Cane</option>
+      <select><br><br>
+      <input type='submit' value='invia'>
+      </form>
+ <hr>
+ 
+
+<?php
+//variabile esterna alla funzione
+$reddito = $_POST['reddito'];
+$dimensioni = "<style>img {width: 25px;height:25px;}</style>";
+$animale = $_POST['animale'];
+//funzione test
+function test()  {
+//variabili usate nella funzione     
+$cssgreen = "<style>body {background-color:green;color:white;}</style>";
+$imageplus = "<img src='https://cdn.pixabay.com/photo/2015/01/17/21/50/insect-602547_960_720.png'>";
+$cssred = "<style>body {background-color:red;color:white;}</style>";  
+$imagenegative = "<img src='https://cdn.pixabay.com/photo/2013/07/12/19/01/cannabis-154209_960_720.png'>";
+
+//if (test di verifica) 
+//-----------------------IF--PRINCIPALE---------------------
+   if ($GLOBALS['reddito']>0)
+//operazioni da svolgere se il test è positivo 
+//return indica quale sara il risultato del test o dell'operazione     
+    {
+
+
+      //condizione annidata conseguente del primo if verifica se reddito
+      //è maggiore di 10000 
+ //---------------IF-ELSE-ANNIDATO--AL--RPINCIPALE-------------------       
+      if($GLOBALS['reddito']>10000){ 
+        return "POSITIVO E MAGGIORE DI 10000".$cssgreen.$GLOBALS['dimensioni'].$imageplus;
+       }
+      //condizione else conseguente del primo if se >0 e inferiore a 10000   
+      else {
+         return "POSITIVO MAGGIORE DI ZERO E MINORE DI 100000".$cssgreen.$GLOBALS['dimensioni'].$imageplus;
+      }
+    }
+//--------------FINE IF ELSE--ANNIDATO AL PRINCIPALE-------------  
+   
+//---------------------------FINE IF PRINCIPALE-----------------------    
+//se il test restiuisce un valore negativo usiamo else
+//--------------------------ELSE PRINCIPALE ------------------------    
+    else 
+    { 
+   
+      return "NEGATIVO".$cssred.$GLOBALS['dimensioni'].$imagenegative;
+    
+    } 
+ //----------------------FINE ELSE PRINCIPALE------------------------        
+                  }   
+//-----------------------FINE DELLA FUNZIONE-------------------------
+//stampa della funzione
+echo "Qui il risultato del test: ".test();
+?>
+</body>
+</html>
+
+
+
+
+

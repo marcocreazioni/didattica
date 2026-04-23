@@ -1,0 +1,32 @@
+<?php
+//connessione al server 
+
+//dati di accesso al server
+$servername = "localhost"; //"38.58.181.44"
+$user = "root"; //marcocre_testg26 
+$password = ""; //Kxsd453eee
+// mysqli_connect (variabili per comunicare al server)
+$sql = mysqli_connect($servername,$user,$password);
+      /* Verifica la connessione
+if (!$sql) {
+  die("Connessione fallita: " . mysqli_connect_error());
+}
+else {
+    echo "connessione effettuata";
+}
+//fine connessione
+*/
+
+//creazioe database
+$sqldatabase = "CREATE DATABASE Archivio27";
+if (mysqli_query($sql, $sqldatabase)) {
+  echo "Database creato con successo";
+} else {
+  echo "Non riesco a creare il database: " . mysqli_error($conn);
+}
+
+//chiusura connessione al database
+mysqli_close($sql);
+
+
+?>

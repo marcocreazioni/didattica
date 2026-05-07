@@ -1,0 +1,18 @@
+*  {font-family: sans-serif;
+
+}
+
+body {background-color: bisque;
+      margin: 10px;
+
+}
+
+table {border: 1px solid;
+       border-collapse: collapse;
+
+}
+
+td, th {
+    border:1px solid;
+    text-align:center;
+}
